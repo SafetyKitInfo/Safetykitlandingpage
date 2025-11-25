@@ -2,60 +2,109 @@ import ContactForm from './ContactForm';
 import TrustLogos from './TrustLogos';
 import Testimonial from './Testimonial';
 
+// Utility: small Pill component
+function Pill({ children }) {
+  return <span className="inline-block bg-white/60 backdrop-blur px-3 py-1 rounded-full text-sm text-gray-700 mx-1 my-1">{children}</span>
+}
+
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      {/* Urgency banner */}
-      <div className="bg-amber-50 text-amber-800 text-center py-2 text-sm">
-        Limited demo slots available — book a demo to secure your spot.
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white text-slate-900">
+      {/* Top nav */}
+      <div className="py-6 bg-white/60 backdrop-blur sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <img src="/logo.svg" alt="SafetyKit Tracker" className="w-8 h-8" />
+            <div className="text-lg font-semibold">SafetyKit <span className="text-blue-600">Tracker</span></div>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
+            <a href="#about" className="text-sm text-slate-600 hover:text-slate-900">About</a>
+            <a href="#contact" className="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+            <a href="#" className="ml-3 px-4 py-2 bg-white border border-slate-200 rounded text-sm hover:shadow">Sign in</a>
+            <a href="#contact" className="ml-2 px-4 py-2 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">Get Started</a>
+          </div>
+        </div>
       </div>
 
       {/* Hero */}
-      <header className="py-12 text-center bg-gradient-to-b from-blue-50 to-white">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-1 text-left">
-            <img src="/logo.svg" alt="SafetyKit Logo" className="w-20 h-20 mb-4" />
-            <h1 className="text-4xl font-bold mb-2">Effortless Safety & Compliance for Modern Workplaces</h1>
-            <p className="text-lg text-gray-600 mb-6">Track, audit, and maintain first aid kits and compliance—all in one place.</p>
+      <header className="py-16">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded-full">Faster audits. Fewer surprises.</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              Manage First Aid Kits with
+              <span className="block text-blue-600">clarity and confidence</span>
+            </h1>
+            <p className="mt-4 text-lg text-slate-600 max-w-xl">Real-time visibility into kit inventory, expirations, and maintenance—built for teams in safety-critical environments.</p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <a href="#contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">
-                Book a Demo
-              </a>
-              <a href="#contact" className="bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
-                Contact Us
-              </a>
-              <div className="text-sm text-gray-500 mt-2 md:mt-0">No credit card required • Data is secure</div>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700">Start free</a>
+              <a href="#" className="inline-block bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-lg hover:bg-slate-50">Sign in</a>
+            </div>
+
+            <div className="mt-4 text-sm text-slate-500 flex items-center gap-4">
+              <div>Secure by design</div>
+              <div className="hidden md:block">·</div>
+              <div>Offline-ready web app</div>
+              <div className="hidden md:block">·</div>
+              <div>30‑day pilot available</div>
             </div>
           </div>
 
-          <div className="flex-1">
-            <img src="/hero.svg" alt="SafetyKit product preview" className="mx-auto rounded shadow" />
+          <div className="order-first md:order-last">
+            <div className="shadow-xl rounded-xl overflow-hidden">
+              <img src="/hero.svg" alt="SafetyKit dashboard preview" className="w-full block" />
+            </div>
           </div>
         </div>
       </header>
 
       {/* Features */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center px-4">
-          <Feature icon="🩹" title="Real-Time Kit Tracking" desc="Track inventory, get expiry and maintenance reminders." />
-          <Feature icon="📋" title="Compliance & Audits" desc="Automated logs and instant compliance reports." />
-          <Feature icon="⚠️" title="Incident Management" desc="Log incidents, manage risks, and stay prepared." />
-          <Feature icon="☁️" title="Cloud Access" desc="Access your safety data anywhere, anytime." />
+      <section id="features" className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <div className="text-2xl">🩹</div>
+              <h3 className="font-semibold mt-3">Smart Kit Management</h3>
+              <p className="text-sm text-slate-500 mt-2">Track inventory and expirations across locations with one glance. Instant flags for low stock.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <div className="text-2xl">🗓️</div>
+              <h3 className="font-semibold mt-3">Maintenance Scheduling</h3>
+              <p className="text-sm text-slate-500 mt-2">Automated schedules with reminders and a full logbook for compliance.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <div className="text-2xl">📊</div>
+              <h3 className="font-semibold mt-3">Audit-Ready Reporting</h3>
+              <p className="text-sm text-slate-500 mt-2">Export reports that meet policy requirements—no spreadsheets needed.</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Trust / Social Proof */}
       <TrustLogos />
-      <Testimonial quote="SafetyKit made compliance easy for our team!" by="Early Learning Center, Australia" />
+      <Testimonial quote="SafetyKit Tracker saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" />
 
       {/* How It Works */}
       <section className="py-12 bg-white">
         <h2 className="text-2xl font-bold text-center mb-6">How it works</h2>
-        <div className="flex flex-col md:flex-row justify-center gap-8 text-center px-4">
-          <Step number={1} text="Scan QR" />
-          <Step number={2} text="Track" />
-          <Step number={3} text="Stay Compliant" />
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center px-4">
+          <div className="p-6">
+            <div className="text-3xl text-blue-600 font-bold">1</div>
+            <div className="font-semibold mt-2">Scan QR</div>
+          </div>
+          <div className="p-6">
+            <div className="text-3xl text-blue-600 font-bold">2</div>
+            <div className="font-semibold mt-2">Track</div>
+          </div>
+          <div className="p-6">
+            <div className="text-3xl text-blue-600 font-bold">3</div>
+            <div className="font-semibold mt-2">Stay Compliant</div>
+          </div>
         </div>
       </section>
 
