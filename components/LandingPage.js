@@ -1,6 +1,7 @@
 import ContactForm from './ContactForm';
 import TrustLogos from './TrustLogos';
 import Testimonial from './Testimonial';
+import Industries from './Industries';
 
 // Utility: small Pill component
 function Pill({ children }) {
@@ -85,9 +86,26 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Industries */}
+      <Industries />
+
       {/* Trust / Social Proof */}
       <TrustLogos />
-      <Testimonial quote="SafetyKit Tracker saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" />
+      <Testimonial quote="SafetyKit Tracker saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" logoSrc="/logos/logo1.svg" metric="Saved 15 hours per month on auditing and maintenance" />
+
+      {/* Mid-page CTA band */}
+      <div className="py-8">
+        <div className="max-w-6xl mx-auto px-4 bg-blue-600 text-white rounded-lg p-6 flex flex-col md:flex-row items-center justify-between">
+          <div>
+            <div className="font-bold text-lg">Ready to get started?</div>
+            <div className="text-sm opacity-90">Join organizations that trust SafetyKit Tracker for safety management.</div>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <a href="#contact" className="bg-white text-blue-600 px-5 py-2 rounded font-semibold mr-3">Create account</a>
+            <a href="#" className="border border-white text-white px-4 py-2 rounded">Sign in</a>
+          </div>
+        </div>
+      </div>
 
       {/* How It Works */}
       <section className="py-12 bg-white">
