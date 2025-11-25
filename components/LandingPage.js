@@ -1,4 +1,6 @@
 import ContactForm from './ContactForm';
+import TrustLogos from './TrustLogos';
+import Testimonial from './Testimonial';
 
 export default function LandingPage() {
   return (
@@ -30,13 +32,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-8 text-center">
-        <blockquote className="italic text-xl text-gray-700 max-w-2xl mx-auto">
-          “SafetyKit made compliance easy for our team!”
-        </blockquote>
-        <div className="mt-2 text-gray-500">— Early Learning Center, Australia</div>
-      </section>
+      {/* Trust / Social Proof */}
+      <TrustLogos />
+      <Testimonial quote="SafetyKit made compliance easy for our team!" by="Early Learning Center, Australia" />
 
       {/* How It Works */}
       <section className="py-12 bg-white">
