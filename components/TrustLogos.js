@@ -7,14 +7,14 @@ export default function TrustLogos({ logos = [] }) {
         <div className="flex items-center justify-center gap-8 flex-wrap">
           {logos.length ? (
             logos.map((l, i) => (
-              <img key={i} src={l.src} alt={l.alt || 'logo'} className="h-10 opacity-80" />
+              <img key={i} src={l.src} alt={l.alt || 'logo'} className="h-10 opacity-90" />
             ))
           ) : (
-            // placeholders
+            // auto-load default logos from /public/logos if available
             <>
-              <div className="h-10 w-28 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400">Logo</div>
-              <div className="h-10 w-28 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400">Logo</div>
-              <div className="h-10 w-28 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-400">Logo</div>
+              <img src="/logos/logo1.svg" alt="Client 1" className="h-10 opacity-90" />
+              <img src="/logos/logo2.svg" alt="Client 2" className="h-10 opacity-90" />
+              <img src="/logos/logo3.svg" alt="Client 3" className="h-10 opacity-90" />
             </>
           )}
         </div>
