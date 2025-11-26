@@ -19,16 +19,16 @@ export default function HeroCopy(){
           <div className="mt-6 flex items-center gap-3 max-w-md">
             <div className="flex-1 grid grid-cols-3 gap-3">
               <div className="p-3 bg-white rounded-lg shadow-sm text-center">
-                <div className="text-lg font-extrabold text-blue-600">90% faster</div>
-                <div className="text-xs text-slate-600">kit checks</div>
+                <div className="text-lg font-extrabold text-blue-600">Faster checks</div>
+                <div className="text-xs text-slate-600">reduce time spent on kit rounds</div>
               </div>
               <div className="p-3 bg-white rounded-lg shadow-sm text-center">
-                <div className="text-lg font-extrabold text-blue-600">100%</div>
-                <div className="text-xs text-slate-600">expiry capture</div>
+                <div className="text-lg font-extrabold text-blue-600">Expiry capture</div>
+                <div className="text-xs text-slate-600">automated expiry & stock alerts</div>
               </div>
               <div className="p-3 bg-white rounded-lg shadow-sm text-center">
-                <div className="text-lg font-extrabold text-blue-600">$1,800</div>
-                <div className="text-xs text-slate-600">saved / year per centre (est.)</div>
+                <div className="text-lg font-extrabold text-blue-600">Reduced admin</div>
+                <div className="text-xs text-slate-600">less time on audit prep and record keeping</div>
               </div>
             </div>
           </div>

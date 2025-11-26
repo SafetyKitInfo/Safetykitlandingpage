@@ -2,11 +2,7 @@
   "hero": {
     "headline": "Eliminate expired kits and cut audit prep from hours to minutes.",
     "subhead": "Monitor every kit, prevent expiry incidents, and streamline compliance across all centres.",
-    "metrics": [
-      {"value":"340M+", "label":"workplace accidents / year (global)"},
-      {"value":"$28B", "label":"annual cost to Australian businesses"},
-      {"value":"1 in 20", "label":"Australian workers injured / year"}
-    ],
+    "metrics": [],
     "ctas": ["Start Free Trial","Book a Demo"],
     "images": ["/images/hero-educator.png","/hero.png"]
   },
@@ -23,8 +19,8 @@
     ]
   },
   "customer_context": {
-    "headline":"Harmony Early Learning",
-    "body":"Harmony Early Learning operates 50 centres with 2,000 educators. Manual checks and spreadsheets made audits costly and stressful. SafetyKit replaced paper, centralised records, and automated expiry alerts across every room."
+    "headline":"Customer Example",
+    "body":"A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness."
   },
   "problem": {
     "title":"Before SafetyKit",
@@ -34,8 +30,8 @@
   "solution": {
     "title":"After SafetyKit",
     "lead":"From chaotic audits to always‑ready compliance.",
-    "benefits":["Scan kits in 3 seconds and record evidence instantly.","Automated expiry alerts stop expired items in their tracks.","Managers see centre health in a single dashboard.","Pull audit‑ready reports in under 10 seconds."],
-    "comparisons":[{"before":"20–30 minutes per kit check","after":"90% faster checks"},{"before":"Guessing what to replace","after":"Automatic expiry & stock alerts"}],
+    "benefits":["Scan kits quickly and record evidence instantly.","Automated expiry alerts to reduce expired items.","Managers see centre health in a single dashboard.","Pull audit‑ready reports with minimal effort."],
+    "comparisons":[{"before":"Manual and inconsistent kit checks","after":"Automated checks and centralised records"},{"before":"Guessing what to replace","after":"Automatic expiry & stock alerts"}],
     "cta":"Book a demo"
   },
   "transformation": {
@@ -45,19 +41,8 @@
   },
   "impact": {
     "headline":"Workplace Safety & Compliance Statistics",
-    "stats":[
-      {"value":"340 million+","label":"workplace accidents globally / year","source":"International Labour Organization, 2023"},
-      {"value":"$28 billion","label":"annual cost to Australian businesses","source":"Safe Work Australia, 2023"},
-      {"value":"1 in 20","label":"Australian workers injured / year","source":"Safe Work Australia, 2023"},
-      {"value":"Up to 60%","label":"reduction in incident severity with first aid compliance","source":"Red Cross, 2022"},
-      {"value":"60%","label":"of small businesses fail to meet all safety compliance requirements","source":"Safe Work Australia, 2022"},
-      {"value":"1 in 3","label":"workplaces have unmaintained first aid kits","source":"St John Ambulance, 2022"},
-      {"value":"40%","label":"admin time reduction with automated safety tracking","source":"Deloitte, 2023"},
-      {"value":"50% fewer","label":"lost workdays at companies with strong safety programs","source":"National Safety Council, 2023"},
-      {"value":"$2.20","label":"return per $1 invested in injury prevention","source":"Safe Work Australia, 2023"},
-      {"value":"$50,000+","label":"possible non-compliance fines per incident (Australia)","source":"Safe Work Australia, 2023"}
-    ],
-    "support":"Sources listed next to each statistic."
+    "stats":[],
+    "support":""
   },
   "features": [
     {"title":"Kit Scanning","desc":"Scan a kit and log contents in seconds, even offline."},
@@ -68,7 +53,7 @@
     {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
   ],
   "case_studies": [
-    {"name":"Harmony Early Learning","quote":"SafetyKit simplified our kit checks and helped centralise compliance across our centres.","metrics":[],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days."}
+    {"name":"Customer Example","quote":"SafetyKit simplified our kit checks and helped centralise compliance.","metrics":[],"body":"The customer automated manual checks and centralised records. The initial pilot covered multiple sites and improved audit readiness."}
   ],
   "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
   "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},

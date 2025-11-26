@@ -86,7 +86,7 @@ export default function LandingPage() {
               <div className="absolute left-4 top-4 flex flex-col gap-3">
                 <div className="bg-white/95 kpi-badge badge-glow px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm lift-on-hover" role="status" aria-label="Total kits">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><IconKit /></div>
-                  <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">9 in good condition</span></div>
+                  <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">kit condition overview</span></div>
                 </div>
                 <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-yellow-400 shadow-sm lift-on-hover" role="status" aria-label="Maintenance due">
                   <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><IconClock /></div>
@@ -113,12 +113,12 @@ export default function LandingPage() {
         <div className="mt-8">
           <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6">
-              <div className="text-sm text-slate-500">Trusted by</div>
-              <img src="/logos/logo1.svg" alt="Customer 1" className="h-6 opacity-90" />
-              <img src="/logos/logo2.svg" alt="Customer 2" className="h-6 opacity-90" />
-              <img src="/logos/logo3.svg" alt="Customer 3" className="h-6 opacity-90" />
+              <div className="text-sm text-slate-500">Trusted partners</div>
+              <img src="/logos/logo1.svg" alt="Partner 1" className="h-6 opacity-90" />
+              <img src="/logos/logo2.svg" alt="Partner 2" className="h-6 opacity-90" />
+              <img src="/logos/logo3.svg" alt="Partner 3" className="h-6 opacity-90" />
             </div>
-            <div className="text-sm text-slate-500">200+ organizations · 1,000,000+ checks</div>
+            <div className="text-sm text-slate-500">Selected partners and pilot customers</div>
           </div>
         </div>
       </header>
@@ -157,17 +157,17 @@ export default function LandingPage() {
 
       {/* Trust / Social Proof */}
       <TrustLogos />
-      <Testimonial quote="SafetyKit saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" logoSrc="/logos/logo1.svg" metric="Saved 15 hours per month on auditing and maintenance" />
+      <Testimonial quote="SafetyKit helped our team reduce time spent on kit maintenance and audit prep." by="Head of Operations" logoSrc="/logos/logo1.svg" />
 
       {/* Case studies */}
       <div className="max-w-6xl mx-auto px-4">
         <CaseStudyTemplate
           logo="/logos/logo1.svg"
-          title="Harmony Early Learning — Kit Compliance"
-          metrics={[{value:'75%', label:'time saved'},{value:'100%', label:'expiry capture'},{value:'30 days', label:'to standardise'}]}
-          quote={'"SafetyKit cut our kit checks by 75% and removed expired items entirely." — Centre Director'}
+          title="Customer Example — Kit Compliance"
+          metrics={[]}
+          quote={'"SafetyKit simplified kit checks and made audit reporting repeatable." — Centre Director'}
         >
-          <p>Harmony Early Learning automated manual checks, centralised records, and now pulls audit reports in seconds. The team rolled out across 12 centres in 30 days.</p>
+          <p>The customer automated manual checks and centralised records. The initial pilot covered multiple sites and improved audit readiness.</p>
         </CaseStudyTemplate>
       </div>
 

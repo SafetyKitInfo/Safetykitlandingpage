@@ -13,9 +13,9 @@ Zero Expired First‑Aid Kits. Zero Audit Stress.
 Automate kit checks, track expiries, and stay audit‑ready across every room and centre.
 
 ## Micro-metrics
-- 90% faster kit checks
-- 100% expiry capture rate
-- $1,800 saved annually (est.)
+- Faster kit checks
+- Improved expiry capture
+- Reduced admin and waste (est.)
 
 ## CTAs
 - Get Started Free
@@ -47,7 +47,7 @@ Core modules that make kit compliance simple and repeatable.
 
 # Customer Context (micro case intro)
 
-Harmony Early Learning operates 50 centres with 2,000 educators. Manual checks and spreadsheets made audits costly and stressful. SafetyKit replaced paper, centralised records, and automated expiry alerts across every room.
+A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness.
 
 ---
 
@@ -82,7 +82,7 @@ From chaotic audits to always‑ready compliance.
 - Pull audit‑ready reports in under 10 seconds.
 
 ## Comparison lines
-- Before: 20–30 minutes per kit check → After: 90% faster checks.
+- Before: Manual and inconsistent kit checks → After: Automated checks and centralised records.
 - Before: Guessing what to replace → After: Automatic expiry & stock alerts.
 
 ## CTA
@@ -114,9 +114,9 @@ Templates, mini‑checks, and self‑audits keep improvements permanent.
 Measurable impact
 
 ## Stats
-- 4–8 admin hours saved per centre per month
-- $1,000–$3,000 saved annually in expired stock reduction (estimate)
-- 0 audit findings related to kit expiry (pilot result)
+- Reduced admin hours per centre per month (customer dependent)
+- Estimated savings from reduced expired stock (varies by site)
+- Pilot results indicated improved audit readiness
 
 ## Supporting line
 Real time saved for educators and faster audit prep for managers.
@@ -141,9 +141,9 @@ Integrations & API — Sync with rostering, procurement, and asset systems.
 
 # Case Studies / Testimonials (sample entries)
 
-- Harmony Early Learning — “SafetyKit cut our kit checks by 75% and removed expired items entirely.” — Centre Director. Metrics: 75% time saved, 100% expiry capture, 30 days to standardise.
-- Maple Childcare — “Audits used to take days. Now they take minutes.” — Operations Lead. Metrics: 100% documentation capture.
-- Pilot School Group — “We standardized kit checks across 12 sites in one month.” — Regional Manager. Metrics: Standardized in 30 days.
+- Customer Example — “SafetyKit simplified our kit checks and improved audit readiness.” — Centre Director.
+- Maple Childcare — “Audits used to take days. Now they take minutes.” — Operations Lead.
+- Pilot School Group — “We standardised kit checks across multiple sites during the pilot.” — Regional Manager.
 
 ---
 
