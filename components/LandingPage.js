@@ -9,6 +9,7 @@ import CTABand from './CTABand';
 import CaseStudyTemplate from './CaseStudyTemplate';
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
+import { Linkedin, Twitter } from 'lucide-react';
 
 // Utility: small Pill component
 function Pill({ children }) {
@@ -56,8 +57,8 @@ export default function LandingPage() {
             </ul>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#contact" role="button" aria-label="Book a demo" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">Book a demo</a>
-              <a href="#contact" role="button" aria-label="Start free trial" className="inline-block muted-cta px-5 py-3 rounded-lg text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300">Start free trial</a>
+              <a href="#contact" role="button" aria-label="Start free trial" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">Start Free Trial</a>
+              <a href="#contact" role="button" aria-label="Book a demo" className="inline-block border border-slate-200 px-5 py-3 rounded-lg text-sm hover:shadow">Book a demo</a>
               <a href="#features" className="ml-2 text-sm text-slate-500">See features →</a>
             </div>
 
@@ -73,27 +74,12 @@ export default function LandingPage() {
           <div className="order-first md:order-last" aria-hidden>
             <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white">
               <DeviceFrame>
-                <picture>
-                  <source
-                    type="image/webp"
-                    srcSet="/hero-800.webp 800w, /hero-1200.webp 1200w, /hero-1600.webp 1600w"
-                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                  />
-                  <source
-                    type="image/jpeg"
-                    srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
-                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                  />
-                  <img
-                    src="/hero-1600.jpg"
-                    srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
-                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                    alt="SafetyKit dashboard preview"
-                    className="w-full block"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <img
+                  src="/hero.png"
+                  alt="SafetyKit dashboard preview"
+                  className="w-full block"
+                  loading="lazy"
+                />
               </DeviceFrame>
 
               {/* KPI badges overlay */}
@@ -118,6 +104,11 @@ export default function LandingPage() {
           </div>
         </div>
 
+        {/* Key metrics: visible above the fold for instant credibility */}
+        <div className="mt-8">
+          <MetricsRow />
+        </div>
+
         {/* Trusted logos row */}
         <div className="mt-8">
           <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -131,6 +122,8 @@ export default function LandingPage() {
           </div>
         </div>
       </header>
+
+      <StickyCTA />
 
       {/* Features / Product Modules */}
       <FeatureGrid />
@@ -217,12 +210,12 @@ export default function LandingPage() {
           <a href="#contact" className="mx-2 hover:underline">Contact</a>
         </nav>
 
-        <div className="flex items-center justify-center gap-4 mb-2">
+          <div className="flex items-center justify-center gap-4 mb-2">
           <a href="https://www.linkedin.com" aria-label="LinkedIn" className="text-gray-400 hover:text-gray-600">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0zM7 8h4.8v1.92h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V22h-5v-6.5c0-1.55 0-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.44V22H7V8z"/></svg>
+            <Linkedin size={20} />
           </a>
           <a href="https://twitter.com" aria-label="Twitter" className="text-gray-400 hover:text-gray-600">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.5.58-2.29.69.82-.5 1.45-1.3 1.75-2.25-.78.46-1.64.8-2.56.98C18.3 4.5 17.27 4 16.12 4c-1.64 0-2.97 1.34-2.97 3 0 .24.03.47.08.69C9.6 7.55 6.2 5.86 3.87 3.1c-.27.46-.42 1-.42 1.57 0 1.03.53 1.95 1.34 2.48-.5-.02-.97-.15-1.38-.38v.04c0 1.5 1.06 2.76 2.46 3.05-.26.07-.53.11-.81.11-.2 0-.4-.02-.6-.06.41 1.3 1.6 2.25 3.01 2.28C6.9 17.4 5.2 18 3.36 18c-.22 0-.44 0-.66-.03C4.8 19.02 6.7 19.6 8.79 19.6c7.45 0 11.54-6.49 11.54-12.1v-.55c.82-.6 1.5-1.35 2.05-2.2-.75.33-1.55.55-2.39.65.86-.52 1.5-1.34 1.8-2.32z"/></svg>
+            <Twitter size={20} />
           </a>
         </div>
 

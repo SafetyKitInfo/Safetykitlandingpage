@@ -1,6 +1,0 @@
-"use strict";(()=>{var e={};e.id=91,e.ids=[91],e.modules={145:e=>{e.exports=require("next/dist/compiled/next-server/pages-api.runtime.prod.js")},569:(e,t,a)=>{a.r(t),a.d(t,{config:()=>u,default:()=>d,routeModule:()=>c});var r={};a.r(r),a.d(r,{default:()=>handler});var o=a(802),s=a(44),n=a(249);let i=require("@sendgrid/mail");var l=a.n(i);async function handler(e,t){if("POST"!==e.method)return t.status(405).end();let a=e.body||{},r=process.env.SENDGRID_API_KEY;if(r)try{l().setApiKey(r);let e={to:process.env.CONTACT_RECEIVER_EMAIL||"hello@safetykit.com.au",from:process.env.CONTACT_FROM_EMAIL||"no-reply@safetykit.com.au",subject:`Website contact from ${a.name||"visitor"}`,text:`Name: ${a.name||""}
-Email: ${a.email||""}
-Org: ${a.organization||""}
-
-Message:
-${a.message||""}`};return await l().send(e),t.status(200).json({ok:!0})}catch(e){return console.error("SendGrid error:",e),t.status(500).json({ok:!1,error:"email_failed"})}console.log("Contact form submission:",a),t.status(200).json({ok:!0})}let d=(0,n.l)(r,"default"),u=(0,n.l)(r,"config"),c=new o.PagesAPIRouteModule({definition:{kind:s.x.PAGES_API,page:"/api/contact",pathname:"/api/contact",bundlePath:"",filename:""},userland:r})}};var t=require("../../webpack-api-runtime.js");t.C(e);var __webpack_exec__=e=>t(t.s=e),a=t.X(0,[222],()=>__webpack_exec__(569));module.exports=a})();

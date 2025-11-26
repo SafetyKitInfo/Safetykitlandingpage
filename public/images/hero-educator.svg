@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1520" height="820" rx="16" fill="url(#g)" opacity="0.12"/>
+  <g transform="translate(80,80)">
+    <rect width="600" height="420" rx="12" fill="#fff" stroke="#e6eef8"/>
+    <rect x="640" y="0" width="640" height="420" rx="12" fill="#fff" stroke="#e6eef8"/>
+    <text x="20" y="60" font-size="34" fill="#0f172a" font-family="Arial, Helvetica, sans-serif">Hero: Educator + Dashboard</text>
+    <text x="20" y="110" font-size="18" fill="#475569" font-family="Arial, Helvetica, sans-serif">Placeholder illustration for developer preview.</text>
+  </g>
+</svg>

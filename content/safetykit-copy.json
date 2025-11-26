@@ -1,14 +1,14 @@
 {
   "hero": {
-    "headline": "Zero Expired First‑Aid Kits. Zero Audit Stress.",
-    "subhead": "Automate kit checks, track expiries, and stay audit‑ready across every room and centre.",
+    "headline": "Eliminate expired kits and cut audit prep from hours to minutes.",
+    "subhead": "Monitor every kit, prevent expiry incidents, and streamline compliance across all centres.",
     "metrics": [
       {"value":"90% faster", "label":"kit checks"},
-      {"value":"100%", "label":"expiry capture rate"},
-      {"value":"$1,800", "label":"saved annually (est.)"}
+      {"value":"100%", "label":"expiry capture"},
+      {"value":"$1,800", "label":"saved / year per centre (est.)"}
     ],
-    "ctas": ["Get Started Free","Book a Demo"],
-    "images": ["/images/hero-educator.jpg","/images/hero-dashboard.jpg"]
+    "ctas": ["Start Free Trial","Book a Demo"],
+    "images": ["/images/hero-educator.svg","/hero.png"]
   },
   "modules": {
     "title": "We use SafetyKit for…",
@@ -62,7 +62,7 @@
   "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
   "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},
   "pricing_tease":"Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per‑feature tiers.",
-  "bottom_cta": {"headline":"Ready to eliminate expired kits and pass audits with confidence?","bullets":["Eliminate expired items","Reduce admin load","Standardise kit checks","Pass audits confidently","Keep children and staff safe"],"ctas":["Get Started Free","Book a Demo"]},
+  "bottom_cta": {"headline":"Ready to eliminate expired kits and pass audits with confidence?","bullets":["Eliminate expired items","Reduce admin load","Standardise kit checks","Pass audits confidently","Keep children and staff safe"],"ctas":["Start Free Trial","Book a Demo"], "microcopy":"30-day pilot, no credit card required"},
   "footer":"We respect privacy. No spam. Customer Success assists with adoption.",
   "styling_guidelines":["Use alternating text/image blocks.","Keep paragraphs to 2–4 lines on mobile.","Place human quotes every 2–3 sections.","Bold numbers and use them as primary visual anchors.","CTAs at top, mid, bottom.","Use simple verbs: track, scan, alert, verify, report, improve."]
 }
