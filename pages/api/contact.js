@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     try {
       sendgrid.setApiKey(key)
       const msg = {
-        to: process.env.CONTACT_RECEIVER_EMAIL || 'hello@safetykit.com.au',
+        to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetykit@gmail.com',
         from: process.env.CONTACT_FROM_EMAIL || 'no-reply@safetykit.com.au',
         subject: `Website contact from ${body.name || 'visitor'}`,
         text: `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\n\nMessage:\n${body.message || ''}`,
