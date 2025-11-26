@@ -23,7 +23,7 @@ export default function LandingPage() {
       <div className="py-6 bg-white/60 backdrop-blur sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo.svg" alt="SafetyKit Tracker" className="w-8 h-8" />
+            <img src="/logo.png" alt="SafetyKit Tracker" className="w-8 h-8" />
             <div className="text-lg font-semibold">SafetyKit <span className="text-blue-600">Tracker</span></div>
           </div>
           <div className="flex items-center gap-3">
