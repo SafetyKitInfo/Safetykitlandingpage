@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-// Default to FormSubmit so the form works plug-and-play. You can override
-// by setting `NEXT_PUBLIC_FORMSPREE_ENDPOINT` in your environment.
-const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formsubmit.co/info.safetykit%40gmail.com'
+// Default to FormSubmit using the activation token so the form is already
+// activated. You can still override by setting `NEXT_PUBLIC_FORMSPREE_ENDPOINT`.
+// Activation token copied from your FormSubmit email.
+const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formsubmit.co/9a951b8e0817844ac25b7d1ccf0cb563'
 const USE_FORMSPREE = Boolean(FORMSPREE_ENDPOINT)
 
 export default function ContactForm(){
