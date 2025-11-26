@@ -7,7 +7,8 @@ import FeatureGrid from './FeatureGrid';
 import MetricsRow from './MetricsRow';
 import CTABand from './CTABand';
 import CaseStudyTemplate from './CaseStudyTemplate';
-import { IconKit, IconSchedule, IconReport, IconMedical, IconClock, IconCheck } from './icons';
+import StickyCTA from './StickyCTA';
+import { IconKit, IconClock, IconCheck } from './icons';
 
 // Utility: small Pill component
 function Pill({ children }) {

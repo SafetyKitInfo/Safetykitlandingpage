@@ -8,7 +8,7 @@ export default function HeroCopy(){
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Eliminate expired kits and cut audit prep from hours to minutes
-            <span className="block text-blue-600">Keep every centre compliant with automated expiry tracking, kit monitoring, and audit-ready reporting.</span>
+            <span className="block text-blue-600">Monitor every kit across all centres, prevent expiry incidents, and streamline compliance with SafetyKit.</span>
           </h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -28,7 +28,7 @@ export default function HeroCopy(){
               </div>
               <div className="p-3 bg-white rounded-lg shadow-sm text-center">
                 <div className="text-lg font-extrabold text-blue-600">$1,800</div>
-                <div className="text-xs text-slate-600">saved / year (est.)</div>
+                <div className="text-xs text-slate-600">saved / year per centre (est.)</div>
               </div>
             </div>
           </div>
