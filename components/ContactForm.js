@@ -125,40 +125,46 @@ export default function ContactForm(){
             </>
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input name="name" required placeholder="Your name" className="p-3 rounded border" />
-            <input name="email" type="email" required placeholder="Email" className="p-3 rounded border" />
+            <label className="sr-only" htmlFor="contact-name">Your name</label>
+            <input id="contact-name" name="name" required placeholder="Your name" autoComplete="name" className="p-3 rounded border text-base w-full" />
+
+            <label className="sr-only" htmlFor="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" required placeholder="Email" autoComplete="email" className="p-3 rounded border text-base w-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input name="organization" placeholder="Organisation (optional)" className="p-3 rounded border" />
-            <input name="phone" placeholder="Phone (optional)" className="p-3 rounded border" />
+            <label className="sr-only" htmlFor="contact-org">Organisation (optional)</label>
+            <input id="contact-org" name="organization" placeholder="Organisation (optional)" autoComplete="organization" className="p-3 rounded border text-base w-full" />
+
+            <label className="sr-only" htmlFor="contact-phone">Phone (optional)</label>
+            <input id="contact-phone" name="phone" placeholder="Phone (optional)" inputMode="tel" autoComplete="tel" className="p-3 rounded border text-base w-full" />
           </div>
 
           <label className="text-sm text-slate-600">I'm interested in</label>
-          <select name="interest" className="p-3 rounded border w-full md:w-1/2">
+          <select name="interest" className="p-3 rounded border w-full md:w-1/2 text-base">
             <option>Book a demo</option>
             <option>Start a 30-day pilot</option>
             <option>Partnerships</option>
             <option>Other / General enquiry</option>
           </select>
 
-          <textarea name="message" required rows="5" placeholder="Tell us how we can help (brief)" className="p-3 rounded border"></textarea>
+          <textarea name="message" required rows="5" placeholder="Tell us how we can help (brief)" className="p-3 rounded border text-base w-full" />
 
-          <div className="flex gap-4 items-center">
-            <button disabled={isSubmitting} type="submit" className="bg-teal-500 text-white px-5 py-3 rounded-md hover:bg-teal-600 disabled:opacity-50">{isSubmitting ? 'Sending…' : 'Send Message'}</button>
-            <span className="ml-auto text-sm text-slate-600">We typically reply within 1 business day</span>
+          <div className="flex flex-col md:flex-row gap-4 items-center">
+            <button disabled={isSubmitting} type="submit" className="bg-teal-500 text-white px-5 py-3 rounded-md hover:bg-teal-600 disabled:opacity-50 w-full md:w-auto text-center">{isSubmitting ? 'Sending…' : 'Send Message'}</button>
+            <span className="text-sm text-slate-600">We typically reply within 1 business day</span>
           </div>
 
           {successMsg && (
-            <div className="mt-4 p-4 bg-green-50 border rounded">
+            <div role="status" aria-live="polite" className="mt-4 p-4 bg-green-50 border rounded">
               <p className="text-sm text-green-900">{successMsg}</p>
             </div>
           )}
 
           {mailto && (
-            <div className="mt-4 p-4 bg-yellow-50 border rounded">
+            <div role="alert" className="mt-4 p-4 bg-yellow-50 border rounded">
               <p className="text-sm text-yellow-900">We couldn't send your message automatically ({errorMsg}). You can still email us directly:</p>
-              <a className="inline-block mt-2 text-teal-600 underline" href={mailto}>Compose email to info@safetykit@gmail.com</a>
+              <a className="block mt-2 text-teal-600 underline break-words" href={mailto}>Compose email to info@safetykit@gmail.com</a>
             </div>
           )}
         </form>
