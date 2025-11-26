@@ -1,0 +1,38 @@
+name: Optimize Hero Images
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run optimizer
+        run: npm run optimize-hero-sharp
+
+      - name: Commit optimized images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q public/hero; then
+            git add public/hero.jpg public/hero.webp || true
+            git commit -m "chore: optimize hero images [actions]" || echo "no changes to commit"
+            git push origin HEAD:main
+          else
+            echo "No hero changes"
+          fi

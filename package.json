@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "optimize-hero": "node scripts/optimize-hero.js"
+    "optimize-hero": "node scripts/optimize-hero.js",
+    "optimize-hero-sharp": "node scripts/optimize-hero-sharp.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.0"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.0.0",
