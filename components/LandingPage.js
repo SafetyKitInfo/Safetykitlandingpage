@@ -66,47 +66,49 @@ export default function LandingPage() {
           </div>
 
           <div className="order-first md:order-last" aria-hidden>
-            <DeviceFrame>
-              <picture>
-                <source
-                  type="image/webp"
-                  srcSet="/hero-800.webp 800w, /hero-1200.webp 1200w, /hero-1600.webp 1600w"
-                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                />
-                <source
-                  type="image/jpeg"
-                  srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
-                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                />
-                <img
-                  src="/hero-1600.jpg"
-                  srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
-                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
-                  alt="SafetyKit dashboard preview"
-                  className="w-full block"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-            </DeviceFrame>
+            <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white">
+              <DeviceFrame>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/hero-800.webp 800w, /hero-1200.webp 1200w, /hero-1600.webp 1600w"
+                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                  />
+                  <source
+                    type="image/jpeg"
+                    srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
+                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                  />
+                  <img
+                    src="/hero-1600.jpg"
+                    srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
+                    sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                    alt="SafetyKit dashboard preview"
+                    className="w-full block"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </DeviceFrame>
 
               {/* KPI badges overlay */}
-                <div className="absolute left-4 top-4 flex flex-col gap-3">
-                  <div className="bg-white/95 kpi-badge badge-glow px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm lift-on-hover" role="status" aria-label="Total kits">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><IconKit /></div>
-                    <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">9 in good condition</span></div>
-                  </div>
-                  <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-yellow-400 shadow-sm lift-on-hover" role="status" aria-label="Maintenance due">
-                    <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><IconClock /></div>
-                    <div className="text-sm text-slate-700">Maintenance Due<span className="block text-xs text-orange-500">Requires attention</span></div>
-                  </div>
-                  <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-emerald-500 shadow-sm lift-on-hover" role="status" aria-label="Compliance ready">
-                    <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600"><IconCheck /></div>
-                    <div className="text-sm text-slate-700">Compliance Ready<span className="block text-xs text-emerald-600">Excellent · Low risk</span></div>
-                  </div>
+              <div className="absolute left-4 top-4 flex flex-col gap-3">
+                <div className="bg-white/95 kpi-badge badge-glow px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm lift-on-hover" role="status" aria-label="Total kits">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><IconKit /></div>
+                  <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">9 in good condition</span></div>
                 </div>
-                {/* small CTA badge bottom-right */}
-                <a href="#contact" className="absolute right-4 bottom-4 bg-white/95 px-4 py-2 rounded-full text-sm font-medium shadow-sm">Request a demo</a>
+                <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-yellow-400 shadow-sm lift-on-hover" role="status" aria-label="Maintenance due">
+                  <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><IconClock /></div>
+                  <div className="text-sm text-slate-700">Maintenance Due<span className="block text-xs text-orange-500">Requires attention</span></div>
+                </div>
+                <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-emerald-500 shadow-sm lift-on-hover" role="status" aria-label="Compliance ready">
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600"><IconCheck /></div>
+                  <div className="text-sm text-slate-700">Compliance Ready<span className="block text-xs text-emerald-600">Excellent · Low risk</span></div>
+                </div>
+              </div>
+
+              {/* small CTA badge bottom-right */}
+              <a href="#contact" className="absolute right-4 bottom-4 bg-white/95 px-4 py-2 rounded-full text-sm font-medium shadow-sm">Request a demo</a>
             </div>
           </div>
         </div>
