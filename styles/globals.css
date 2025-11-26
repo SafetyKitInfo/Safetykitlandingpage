@@ -44,3 +44,22 @@ body {
   background: rgba(255,255,255,0.7);
   border: 1px solid rgba(2,6,23,0.04);
 }
+
+/* Animations */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseBadge { 0% { transform: translateY(0) scale(1); opacity: 1 } 50% { transform: translateY(-2px) scale(1.02); opacity: .98 } 100% { transform: translateY(0) scale(1); opacity: 1 } }
+
+.fade-up { animation: fadeUp 420ms ease both; }
+.pulse { animation: pulseBadge 2600ms ease-in-out infinite; }
+.focus-visible-ring { box-shadow: 0 0 0 4px rgba(59,130,246,0.12); }
+
+/* Improve keyboard focus visuals */
+:focus {
+  outline: none;
+}
+
+button:focus, a:focus {
+  outline: none;
+}
+
+.sr-only { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
