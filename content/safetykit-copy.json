@@ -3,9 +3,9 @@
     "headline": "Eliminate expired kits and cut audit prep from hours to minutes.",
     "subhead": "Monitor every kit, prevent expiry incidents, and streamline compliance across all centres.",
     "metrics": [
-      {"value":"90% faster", "label":"kit checks"},
-      {"value":"100%", "label":"expiry capture"},
-      {"value":"$1,800", "label":"saved / year per centre (est.)"}
+      {"value":"340M+", "label":"workplace accidents / year (global)"},
+      {"value":"$28B", "label":"annual cost to Australian businesses"},
+      {"value":"1 in 20", "label":"Australian workers injured / year"}
     ],
     "ctas": ["Start Free Trial","Book a Demo"],
     "images": ["/images/hero-educator.png","/hero.png"]
@@ -44,9 +44,20 @@
     "quote":"We don’t think about kit compliance anymore — SafetyKit handles it. — Regional Manager"
   },
   "impact": {
-    "headline":"Measurable impact",
-    "stats":[{"value":"4–8 hrs","label":"saved / centre / month"},{"value":"$1,000–$3,000","label":"saved annually in expired stock"},{"value":"0","label":"audit findings related to kit expiry (pilot)"}],
-    "support":"Real time saved for educators and faster audit prep for managers."
+    "headline":"Workplace Safety & Compliance Statistics",
+    "stats":[
+      {"value":"340 million+","label":"workplace accidents globally / year","source":"International Labour Organization, 2023"},
+      {"value":"$28 billion","label":"annual cost to Australian businesses","source":"Safe Work Australia, 2023"},
+      {"value":"1 in 20","label":"Australian workers injured / year","source":"Safe Work Australia, 2023"},
+      {"value":"Up to 60%","label":"reduction in incident severity with first aid compliance","source":"Red Cross, 2022"},
+      {"value":"60%","label":"of small businesses fail to meet all safety compliance requirements","source":"Safe Work Australia, 2022"},
+      {"value":"1 in 3","label":"workplaces have unmaintained first aid kits","source":"St John Ambulance, 2022"},
+      {"value":"40%","label":"admin time reduction with automated safety tracking","source":"Deloitte, 2023"},
+      {"value":"50% fewer","label":"lost workdays at companies with strong safety programs","source":"National Safety Council, 2023"},
+      {"value":"$2.20","label":"return per $1 invested in injury prevention","source":"Safe Work Australia, 2023"},
+      {"value":"$50,000+","label":"possible non-compliance fines per incident (Australia)","source":"Safe Work Australia, 2023"}
+    ],
+    "support":"Sources listed next to each statistic."
   },
   "features": [
     {"title":"Kit Scanning","desc":"Scan a kit and log contents in seconds, even offline."},
@@ -57,7 +68,7 @@
     {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
   ],
   "case_studies": [
-    {"name":"Harmony Early Learning","quote":"SafetyKit cut our kit checks by 75% and removed expired items entirely.","metrics":[{"value":"75%","label":"time saved"},{"value":"100%","label":"expiry capture"},{"value":"30 days","label":"to standardise"}],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days and reduced kit check time by 75%."}
+    {"name":"Harmony Early Learning","quote":"SafetyKit cut our kit checks by 75% and removed expired items entirely.","metrics":[],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days and reduced kit check time by 75%."}
   ],
   "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
   "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},

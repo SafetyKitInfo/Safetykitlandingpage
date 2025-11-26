@@ -1,8 +1,8 @@
 export default function MetricsRow(){
   const metrics = [
-    {value:'90% faster', label:'kit checks'},
-    {value:'100%', label:'expiry capture'},
-    {value:'4–8 hrs', label:'saved / centre / month'}
+    {value:'340M+', label:'workplace accidents / year (global)'},
+    {value:'$28B', label:'annual cost to Australian businesses'},
+    {value:'1 in 20', label:'Australian workers injured / year'}
   ];
 
   return (
