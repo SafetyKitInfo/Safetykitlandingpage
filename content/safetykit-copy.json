@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "headline": "Zero Expired First‑Aid Kits. Zero Audit Stress.",
+    "subhead": "Automate kit checks, track expiries, and stay audit‑ready across every room and centre.",
+    "metrics": [
+      {"value":"90% faster", "label":"kit checks"},
+      {"value":"100%", "label":"expiry capture rate"},
+      {"value":"$1,800", "label":"saved annually (est.)"}
+    ],
+    "ctas": ["Get Started Free","Book a Demo"],
+    "images": ["/images/hero-educator.jpg","/images/hero-dashboard.jpg"]
+  },
+  "modules": {
+    "title": "We use SafetyKit for…",
+    "subline":"Core modules that make kit compliance simple and repeatable.",
+    "cards": [
+      {"title":"Kit Scanning","desc":"Scan, log, and verify contents in seconds—works offline."},
+      {"title":"Expiry Tracking","desc":"Predictive alerts months before expiry."},
+      {"title":"Inventory Alerts","desc":"Low-stock triggers and suggested reorders."},
+      {"title":"Audit Logs","desc":"Complete evidence trail for every check."},
+      {"title":"Compliance Dashboard","desc":"Centre & room visibility at a glance."},
+      {"title":"AI Safety Assistant","desc":"Quick SOP answers and reminders."}
+    ]
+  },
+  "customer_context": {
+    "headline":"Harmony Early Learning",
+    "body":"Harmony Early Learning operates 50 centres with 2,000 educators. Manual checks and spreadsheets made audits costly and stressful. SafetyKit replaced paper, centralised records, and automated expiry alerts across every room."
+  },
+  "problem": {
+    "title":"Before SafetyKit",
+    "bullets":["Paper and Excel for kit checks.","Expired items missed between rounds.","Hours lost to audit prep and chasing receipts.","No cross-centre visibility for managers."],
+    "quote":"We were always chasing records and praying we’d pass audits. — Centre Director"
+  },
+  "solution": {
+    "title":"After SafetyKit",
+    "lead":"From chaotic audits to always‑ready compliance.",
+    "benefits":["Scan kits in 3 seconds and record evidence instantly.","Automated expiry alerts stop expired items in their tracks.","Managers see centre health in a single dashboard.","Pull audit‑ready reports in under 10 seconds."],
+    "comparisons":[{"before":"20–30 minutes per kit check","after":"90% faster checks"},{"before":"Guessing what to replace","after":"Automatic expiry & stock alerts"}],
+    "cta":"Book a demo"
+  },
+  "transformation": {
+    "headline":"Make compliance a daily habit, not a once‑a‑year scramble",
+    "steps":["Scan — QR or barcode scan per kit.","Track — Items, lot numbers and expiries tracked automatically.","Audit — Instant evidence exports for assessors."],
+    "quote":"We don’t think about kit compliance anymore — SafetyKit handles it. — Regional Manager"
+  },
+  "impact": {
+    "headline":"Measurable impact",
+    "stats":[{"value":"4–8 hrs","label":"saved / centre / month"},{"value":"$1,000–$3,000","label":"saved annually in expired stock"},{"value":"0","label":"audit findings related to kit expiry (pilot)"}],
+    "support":"Real time saved for educators and faster audit prep for managers."
+  },
+  "features": [
+    {"title":"Kit Scanning","desc":"Scan a kit and log contents in seconds, even offline."},
+    {"title":"Expiry Alerts","desc":"Predictive alerts so you replace early, not late."},
+    {"title":"Inventory & Reorder","desc":"Low-stock triggers and suggested orders."},
+    {"title":"Training & SOPs","desc":"Quick micro‑courses and one‑tap SOP access."},
+    {"title":"Audit Logs & Reports","desc":"Filterable evidence for every check."},
+    {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
+  ],
+  "case_studies": [
+    {"name":"Harmony Early Learning","quote":"SafetyKit cut our kit checks by 75% and removed expired items entirely.","metrics":[{"value":"75%","label":"time saved"},{"value":"100%","label":"expiry capture"},{"value":"30 days","label":"to standardise"}],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days and reduced kit check time by 75%."}
+  ],
+  "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
+  "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},
+  "pricing_tease":"Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per‑feature tiers.",
+  "bottom_cta": {"headline":"Ready to eliminate expired kits and pass audits with confidence?","bullets":["Eliminate expired items","Reduce admin load","Standardise kit checks","Pass audits confidently","Keep children and staff safe"],"ctas":["Get Started Free","Book a Demo"]},
+  "footer":"We respect privacy. No spam. Customer Success assists with adoption.",
+  "styling_guidelines":["Use alternating text/image blocks.","Keep paragraphs to 2–4 lines on mobile.","Place human quotes every 2–3 sections.","Bold numbers and use them as primary visual anchors.","CTAs at top, mid, bottom.","Use simple verbs: track, scan, alert, verify, report, improve."]
+}
