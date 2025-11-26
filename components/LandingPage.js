@@ -36,32 +36,61 @@ export default function LandingPage() {
               <span className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded-full">Faster audits. Fewer surprises.</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Manage First Aid Kits with
-              <span className="block text-blue-600">clarity and confidence</span>
+              Manage EHS & medical kits with
+              <span className="block text-blue-600">clarity, compliance and confidence</span>
             </h1>
-            <p className="mt-4 text-lg text-slate-600 max-w-xl">Real-time visibility into kit inventory, expirations, and maintenance—built for teams in safety-critical environments.</p>
+            <p className="mt-4 text-lg text-slate-600 max-w-xl">Real-time inventory, expiry alerts, and audit-ready reporting for EHS and medical teams—reduce risk and simplify compliance.</p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700">Start free</a>
-              <a href="#" className="inline-block bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-lg hover:bg-slate-50">Sign in</a>
+              <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700">Book a demo</a>
+              <a href="#contact" className="inline-block bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-lg hover:bg-slate-50">Start free trial</a>
             </div>
 
             <div className="mt-4 text-sm text-slate-500 flex items-center gap-4">
               <div>Secure by design</div>
               <div className="hidden md:block">·</div>
-              <div>Offline-ready web app</div>
+              <div>Offline-ready mobile app</div>
               <div className="hidden md:block">·</div>
-              <div>30‑day pilot available</div>
+              <div>Enterprise trials available</div>
             </div>
           </div>
 
           <div className="order-first md:order-last">
-            <div className="shadow-xl rounded-xl overflow-hidden">
+            <div className="relative shadow-xl rounded-xl overflow-hidden bg-white">
               <picture>
                 <source srcSet="/hero.png" type="image/png" />
                 <img src="/hero.svg" alt="SafetyKit dashboard preview" className="w-full block" />
               </picture>
+
+              {/* KPI badges overlay */}
+              <div className="absolute left-4 top-4 flex flex-col gap-3">
+                <div className="bg-white/95 backdrop-blur px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">9</div>
+                  <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">9 in good condition</span></div>
+                </div>
+                <div className="bg-white/95 backdrop-blur px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-yellow-400 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">5</div>
+                  <div className="text-sm text-slate-700">Maintenance Due<span className="block text-xs text-orange-500">Requires attention</span></div>
+                </div>
+                <div className="bg-white/95 backdrop-blur px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-emerald-500 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">100%</div>
+                  <div className="text-sm text-slate-700">Compliance Ready<span className="block text-xs text-emerald-600">Excellent · Low risk</span></div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Trusted logos row */}
+        <div className="mt-8">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div className="flex items-center gap-6">
+              <div className="text-sm text-slate-500">Trusted by</div>
+              <img src="/logos/logo1.svg" alt="Customer 1" className="h-6 opacity-80" />
+              <img src="/logos/logo2.svg" alt="Customer 2" className="h-6 opacity-80" />
+              <img src="/logos/logo3.svg" alt="Customer 3" className="h-6 opacity-80" />
+            </div>
+            <div className="text-sm text-slate-500">200+ organizations · 1,000,000+ checks</div>
           </div>
         </div>
       </header>
@@ -69,7 +98,7 @@ export default function LandingPage() {
       {/* Features */}
       <section id="features" className="py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <div className="text-2xl">🩹</div>
               <h3 className="font-semibold mt-3">Smart Kit Management</h3>
@@ -85,6 +114,32 @@ export default function LandingPage() {
               <h3 className="font-semibold mt-3">Audit-Ready Reporting</h3>
               <p className="text-sm text-slate-500 mt-2">Export reports that meet policy requirements—no spreadsheets needed.</p>
             </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <div className="text-2xl">🩺</div>
+              <h3 className="font-semibold mt-3">Medical Kit Management</h3>
+              <p className="text-sm text-slate-500 mt-2">Manage first aid, AED, and trauma kits—track consumables, expirations and certifications.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personas */}
+      <section className="py-8">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="p-4 bg-white rounded-lg shadow-sm">
+            <div className="font-semibold">For EHS Managers</div>
+            <div className="text-sm text-slate-500 mt-2">Streamline inspections, reporting and corrective actions across sites.</div>
+            <a href="#contact" className="mt-3 inline-block text-sm text-blue-600">Book a demo →</a>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm">
+            <div className="font-semibold">For Medical Coordinators</div>
+            <div className="text-sm text-slate-500 mt-2">Ensure kit readiness, track expiries and manage training records.</div>
+            <a href="#contact" className="mt-3 inline-block text-sm text-blue-600">Book a demo →</a>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm">
+            <div className="font-semibold">For Facilities & Ops</div>
+            <div className="text-sm text-slate-500 mt-2">Assign maintenance, reduce downtime and prove compliance fast.</div>
+            <a href="#contact" className="mt-3 inline-block text-sm text-blue-600">Book a demo →</a>
           </div>
         </div>
       </section>

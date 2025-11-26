@@ -11,3 +11,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Device frame helpers for hero screenshot */
+.device-frame {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+}
+
+.kpi-badge {
+  backdrop-filter: blur(6px);
+}
