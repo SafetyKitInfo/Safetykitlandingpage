@@ -57,7 +57,10 @@ export default function LandingPage() {
 
           <div className="order-first md:order-last">
             <div className="shadow-xl rounded-xl overflow-hidden">
-              <img src="/hero.svg" alt="SafetyKit dashboard preview" className="w-full block" />
+              <picture>
+                <source srcSet="/hero.png" type="image/png" />
+                <img src="/hero.svg" alt="SafetyKit dashboard preview" className="w-full block" />
+              </picture>
             </div>
           </div>
         </div>
