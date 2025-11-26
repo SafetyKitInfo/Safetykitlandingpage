@@ -1,12 +1,11 @@
 import ContactForm from './ContactForm';
 import TrustLogos from './TrustLogos';
-import Testimonial from './Testimonial';
 import Industries from './Industries';
 import DeviceFrame from './DeviceFrame';
 import FeatureGrid from './FeatureGrid';
 import MetricsRow from './MetricsRow';
 import CTABand from './CTABand';
-import CaseStudyTemplate from './CaseStudyTemplate';
+// Case studies/testimonials removed per request
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
 import { Linkedin, Twitter } from 'lucide-react';
@@ -156,21 +155,7 @@ export default function LandingPage() {
       {/* Industries */}
       <Industries />
 
-      {/* Trust / Social Proof */}
-      <TrustLogos />
-      <Testimonial quote="SafetyKit helped our team reduce time spent on kit maintenance and audit prep." by="Head of Operations" logoSrc="/logos/logo1.svg" />
-
-      {/* Case studies */}
-      <div className="max-w-6xl mx-auto px-4">
-        <CaseStudyTemplate
-          logo="/logos/logo1.svg"
-          title="Customer Example — Kit Compliance"
-          metrics={[]}
-          quote={'"SafetyKit simplified kit checks and made audit reporting repeatable." — Centre Director'}
-        >
-          <p>The customer automated manual checks and centralised records. The initial pilot covered multiple sites and improved audit readiness.</p>
-        </CaseStudyTemplate>
-      </div>
+      {/* Trust / Social Proof removed — no testimonials or case studies shown */}
 
       {/* Mid-page CTA band */}
       <CTABand />

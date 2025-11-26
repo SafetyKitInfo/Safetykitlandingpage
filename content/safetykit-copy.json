@@ -25,7 +25,7 @@
   "problem": {
     "title":"Before SafetyKit",
     "bullets":["Paper and Excel for kit checks.","Expired items missed between rounds.","Hours lost to audit prep and chasing receipts.","No cross-centre visibility for managers."],
-    "quote":"We were always chasing records and praying we’d pass audits. — Centre Director"
+    "quote":""
   },
   "solution": {
     "title":"After SafetyKit",
@@ -37,7 +37,7 @@
   "transformation": {
     "headline":"Make compliance a daily habit, not a once‑a‑year scramble",
     "steps":["Scan — QR or barcode scan per kit.","Track — Items, lot numbers and expiries tracked automatically.","Audit — Instant evidence exports for assessors."],
-    "quote":"We don’t think about kit compliance anymore — SafetyKit handles it. — Regional Manager"
+    "quote":""
   },
   "impact": {
     "headline":"Workplace Safety & Compliance Statistics",
@@ -52,9 +52,7 @@
     {"title":"Audit Logs & Reports","desc":"Filterable evidence for every check."},
     {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
   ],
-  "case_studies": [
-    {"name":"Customer Example","quote":"SafetyKit simplified our kit checks and helped centralise compliance.","metrics":[],"body":"The customer automated manual checks and centralised records. The initial pilot covered multiple sites and improved audit readiness."}
-  ],
+  "case_studies": [],
   "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
   "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},
   "pricing_tease":"Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per‑feature tiers.",

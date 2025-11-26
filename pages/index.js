@@ -1,6 +1,6 @@
 import LandingPage from '../components/LandingPage'
 import HeroCopy from '../components/HeroCopy'
-import CaseStudyTemplate from '../components/CaseStudyTemplate'
+// Case studies removed from main page
 
 export default function Home(){
   return (
@@ -9,14 +9,7 @@ export default function Home(){
       <div className="max-w-7xl mx-auto px-4">
         <LandingPage />
 
-        <CaseStudyTemplate
-          logo="/logos/logo1.svg"
-          title="Customer Example — Kit Compliance"
-          metrics={[]}
-          quote={'"We simplified kit checks and made audit reporting repeatable." — Regional Manager'}
-        >
-          <p>The customer runs multiple sites and previously relied on manual kit checks and spreadsheets. SafetyKit automated scanning, tracking and reporting so the team now pulls audit-ready reports quickly.</p>
-        </CaseStudyTemplate>
+        {/* Case studies removed */}
       </div>
     </main>
   )
