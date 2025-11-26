@@ -8,7 +8,7 @@
       {"value":"$1,800", "label":"saved / year per centre (est.)"}
     ],
     "ctas": ["Start Free Trial","Book a Demo"],
-    "images": ["/images/hero-educator.svg","/hero.png"]
+    "images": ["/images/hero-educator.png","/hero.png"]
   },
   "modules": {
     "title": "We use SafetyKit for…",
