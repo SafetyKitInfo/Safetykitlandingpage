@@ -10,6 +10,7 @@ import CaseStudyTemplate from './CaseStudyTemplate';
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
 import { Linkedin, Twitter } from 'lucide-react';
+import content from '../content/safetykit-copy.json';
 
 // Utility: small Pill component
 function Pill({ children }) {
@@ -75,7 +76,7 @@ export default function LandingPage() {
             <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white">
               <DeviceFrame>
                 <img
-                  src="/hero.png"
+                  src={(content && content.hero && content.hero.images && content.hero.images[0]) || '/hero.png'}
                   alt="SafetyKit dashboard preview"
                   className="w-full block"
                   loading="lazy"
