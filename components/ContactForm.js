@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || ''
+
 export default function ContactForm(){
   const [mailto, setMailto] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
@@ -10,11 +12,15 @@ export default function ContactForm(){
     const body = Object.fromEntries(fd.entries());
 
     try {
-      const res = await fetch('/api/contact', {
+      // If a Formspree endpoint is provided via `NEXT_PUBLIC_FORMSPREE_ENDPOINT`,
+      // post directly to that endpoint (no backend required). Otherwise fall
+      // back to the internal `/api/contact` route.
+      const url = FORMSPREE_ENDPOINT || '/api/contact'
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
-      });
+      })
       if (res.ok) {
         alert('Thanks — we received your message.');
         e.target.reset();
@@ -39,6 +45,8 @@ export default function ContactForm(){
     const bodyText = `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\nPhone: ${body.phone || ''}\n\nMessage:\n${body.message || ''}`
     const mail = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`
     setMailto(mail)
+    // Do not auto-open the user's mail client. Show a clean mailto fallback
+    // so the visitor can send manually if automatic delivery fails.
   }
 
   return (
@@ -70,8 +78,7 @@ export default function ContactForm(){
 
           <div className="flex gap-4 items-center">
             <button type="submit" className="bg-teal-500 text-white px-5 py-3 rounded-md hover:bg-teal-600">Send Message</button>
-            <a href="mailto:info.safetykit@gmail.com?subject=Book%20a%20demo" className="px-5 py-3 rounded-md border">Or email: info@safetykit@gmail.com</a>
-            <a href="#" className="ml-auto text-sm text-slate-600">We typically reply within 1 business day</a>
+            <span className="ml-auto text-sm text-slate-600">We typically reply within 1 business day</span>
           </div>
 
           {mailto && (
