@@ -68,7 +68,7 @@
     {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
   ],
   "case_studies": [
-    {"name":"Harmony Early Learning","quote":"SafetyKit cut our kit checks by 75% and removed expired items entirely.","metrics":[],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days and reduced kit check time by 75%."}
+    {"name":"Harmony Early Learning","quote":"SafetyKit simplified our kit checks and helped centralise compliance across our centres.","metrics":[],"body":"Harmony automated manual checks and centralised records. The team rolled the solution out across 12 centres in 30 days."}
   ],
   "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
   "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},

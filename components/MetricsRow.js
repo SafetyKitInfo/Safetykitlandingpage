@@ -1,5 +1,7 @@
+import content from '../content/safetykit-copy.json';
+
 export default function MetricsRow(){
-  const metrics = [
+  const metrics = (content && content.hero && content.hero.metrics) || [
     {value:'340M+', label:'workplace accidents / year (global)'},
     {value:'$28B', label:'annual cost to Australian businesses'},
     {value:'1 in 20', label:'Australian workers injured / year'}
