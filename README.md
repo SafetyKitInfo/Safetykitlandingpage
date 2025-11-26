@@ -7,7 +7,7 @@ This repository contains a minimal, modern landing page scaffold for SafetyKit b
 - `pages/` - Next.js pages (home and API stub)
 - `components/` - `Hero`, `Features`, `ContactForm`
 - `styles/` - Tailwind global stylesheet
-- `public/logo.svg` - simple SVG logo placeholder
+- `public/logo.png` - brand logo (replace with your official logo)
 - `vercel.json` - Vercel build config
 
 ## Quick start
@@ -34,7 +34,7 @@ npm start
 
 ## Customize content
 
-- Replace `public/logo.svg` with your official logo.
+- Replace `public/logo.png` with your official logo (PNG or SVG). If you provide an SVG, update references to `/logo.svg` or keep `/logo.png` and upload an SVG as `logo.png`-wrapped SVG if desired.
 - Edit hero text in `components/Hero.js`.
 - Update features in `components/Features.js` (an array at the top).
 - Update contact behaviour in `components/ContactForm.js`. The form submits to `/api/contact` which currently logs submissions to the server console. Replace `pages/api/contact.js` with a real integration (SendGrid, Mailgun, Postmark, or a serverless email provider).

@@ -3,7 +3,7 @@ export default function Hero() {
     <header className="bg-white">
       <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
         <div className="flex items-center gap-4">
-          <img src="/logo.svg" alt="SafetyKit" className="w-16 h-16" />
+          <img src="/logo.png" alt="SafetyKit" className="w-16 h-16" />
           <div>
             <h1 className="text-3xl font-bold text-gray-900">SafetyKit</h1>
             <p className="text-sm text-gray-500">Smart safety tools for everyday peace of mind.</p>
