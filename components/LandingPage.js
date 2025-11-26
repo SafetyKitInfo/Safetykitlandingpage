@@ -26,12 +26,15 @@ export default function LandingPage() {
             <img src="/logo.png" alt="SafetyKit" className="w-8 h-8" />
             <div className="text-lg font-semibold"><span>Safety</span> <span className="text-blue-600">Kit</span></div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
             <a href="#about" className="text-sm text-slate-600 hover:text-slate-900">About</a>
             <a href="#contact" className="text-sm text-slate-600 hover:text-slate-900">Contact</a>
             <a href="#" className="ml-3 px-4 py-2 bg-white border border-slate-200 rounded text-sm hover:shadow">Sign in</a>
             <a href="#contact" className="ml-2 px-4 py-2 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">Get Started</a>
+          </div>
+          <div className="md:hidden">
+            <a href="#contact" className="px-3 py-2 bg-blue-600 text-white rounded text-sm">Get Started</a>
           </div>
         </div>
       </div>
@@ -71,7 +74,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="order-first md:order-last" aria-hidden>
+            <div className="order-first md:order-last" aria-hidden>
             <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white">
               <DeviceFrame>
                 <img
@@ -83,7 +86,7 @@ export default function LandingPage() {
               </DeviceFrame>
 
               {/* KPI badges overlay */}
-              <div className="absolute left-4 top-4 flex flex-col gap-3">
+              <div className="absolute left-4 top-4 flex flex-col gap-3 hidden sm:flex">
                 <div className="bg-white/95 kpi-badge badge-glow px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm lift-on-hover" role="status" aria-label="Total kits">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><IconKit /></div>
                   <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">kit condition overview</span></div>
@@ -98,8 +101,8 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* small CTA badge bottom-right */}
-              <a href="#contact" className="absolute right-4 bottom-4 bg-white/95 px-4 py-2 rounded-full text-sm font-medium shadow-sm">Request a demo</a>
+              {/* small CTA badge bottom-right (hide on very small screens) */}
+              <a href="#contact" className="absolute right-4 bottom-4 bg-white/95 px-4 py-2 rounded-full text-sm font-medium shadow-sm hidden sm:inline-block">Request a demo</a>
             </div>
           </div>
         </div>
@@ -110,13 +113,13 @@ export default function LandingPage() {
         </div>
 
         {/* Trusted logos row */}
-        <div className="mt-8">
+            <div className="mt-8">
           <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6">
-              <div className="text-sm text-slate-500">Trusted partners</div>
-              <img src="/logos/logo1.svg" alt="Partner 1" className="h-6 opacity-90" />
-              <img src="/logos/logo2.svg" alt="Partner 2" className="h-6 opacity-90" />
-              <img src="/logos/logo3.svg" alt="Partner 3" className="h-6 opacity-90" />
+            <div className="flex items-center gap-4 overflow-x-auto py-2">
+              <div className="text-sm text-slate-500 flex-shrink-0">Trusted partners</div>
+              <img src="/logos/logo1.svg" alt="Partner 1" className="h-6 opacity-90 flex-shrink-0" />
+              <img src="/logos/logo2.svg" alt="Partner 2" className="h-6 opacity-90 flex-shrink-0" />
+              <img src="/logos/logo3.svg" alt="Partner 3" className="h-6 opacity-90 flex-shrink-0" />
             </div>
             <div className="text-sm text-slate-500">Selected partners and pilot customers</div>
           </div>
