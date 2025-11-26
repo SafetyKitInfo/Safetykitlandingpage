@@ -16,11 +16,22 @@ export default function HeroCopy(){
             <a href="#contact" className="inline-block ml-2 px-5 py-3 rounded-lg text-sm border border-slate-200">Book a demo</a>
           </div>
 
-          <ul className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-md text-sm text-slate-600">
-            <li className="flex items-start gap-3"><strong className="text-blue-600">90% faster</strong> first-aid kit checks</li>
-            <li className="flex items-start gap-3"><strong className="text-blue-600">100%</strong> expiry capture rate across centres</li>
-            <li className="flex items-start gap-3"><strong className="text-blue-600">$1,800</strong> saved annually in wasted stock + admin hours</li>
-          </ul>
+          <div className="mt-6 flex items-center gap-3 max-w-md">
+            <div className="flex-1 grid grid-cols-3 gap-3">
+              <div className="p-3 bg-white rounded-lg shadow-sm text-center">
+                <div className="text-lg font-extrabold text-blue-600">90% faster</div>
+                <div className="text-xs text-slate-600">kit checks</div>
+              </div>
+              <div className="p-3 bg-white rounded-lg shadow-sm text-center">
+                <div className="text-lg font-extrabold text-blue-600">100%</div>
+                <div className="text-xs text-slate-600">expiry capture</div>
+              </div>
+              <div className="p-3 bg-white rounded-lg shadow-sm text-center">
+                <div className="text-lg font-extrabold text-blue-600">$1,800</div>
+                <div className="text-xs text-slate-600">saved / year (est.)</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="order-first md:order-last" aria-hidden>

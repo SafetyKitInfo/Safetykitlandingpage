@@ -1,11 +1,11 @@
 export default function FeatureGrid(){
   const features = [
-    {title:'Kit Scanning', desc:'Scan, log and verify contents in seconds — works offline.'},
-    {title:'Expiry Tracking', desc:'Predictive alerts months before items expire.'},
-    {title:'Inventory Alerts', desc:'Low-stock triggers and suggested reorders.'},
-    {title:'Audit Logs', desc:'Complete evidence trail for every check.'},
-    {title:'Compliance Dashboard', desc:'Centre & room visibility at a glance.'},
-    {title:'AI Safety Assistant', desc:'Quick SOP answers and reminders.'}
+    {title:'Faster checks', desc:'Mobile scanning that completes kit checks in seconds — reduces staff time on manual audits.'},
+    {title:'Prevent expiries', desc:'Predictive expiry alerts that remove expired items before they cause incidents.'},
+    {title:'Reduce waste', desc:'Automated inventory alerts and reorder suggestions to cut wasted stock and cost.'},
+    {title:'Pass audits', desc:'Audit-ready logs and exportable evidence to shorten audit prep and responses.'},
+    {title:'Operational visibility', desc:'Real-time dashboard for centres and rooms to spot issues earlier.'},
+    {title:'Less training time', desc:'AI-assisted SOP guidance and clear checklists to onboard staff faster.'}
   ];
 
   return (
