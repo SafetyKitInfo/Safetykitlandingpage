@@ -68,9 +68,25 @@ export default function LandingPage() {
           <div className="order-first md:order-last" aria-hidden>
             <DeviceFrame>
               <picture>
-                <source srcSet="/hero.webp" type="image/webp" />
-                <source srcSet="/hero.jpg" type="image/jpeg" />
-                <img src="/hero.png" alt="SafetyKit dashboard preview" className="w-full block" loading="lazy" decoding="async" />
+                <source
+                  type="image/webp"
+                  srcSet="/hero-800.webp 800w, /hero-1200.webp 1200w, /hero-1600.webp 1600w"
+                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                />
+                <source
+                  type="image/jpeg"
+                  srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
+                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                />
+                <img
+                  src="/hero-1600.jpg"
+                  srcSet="/hero-800.jpg 800w, /hero-1200.jpg 1200w, /hero-1600.jpg 1600w"
+                  sizes="(max-width: 640px) 800px, (max-width: 1200px) 1200px, 1600px"
+                  alt="SafetyKit dashboard preview"
+                  className="w-full block"
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
             </DeviceFrame>
 

@@ -30,7 +30,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git status --porcelain | grep -q public/hero; then
-            git add public/hero.jpg public/hero.webp || true
+            git add public/hero*.jpg public/hero*.webp public/hero.jpg public/hero.webp || true
             git commit -m "chore: optimize hero images [actions]" || echo "no changes to commit"
             git push origin HEAD:main
           else
