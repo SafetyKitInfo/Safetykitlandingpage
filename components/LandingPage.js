@@ -23,8 +23,8 @@ export default function LandingPage() {
       <div className="py-6 bg-white/60 backdrop-blur sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="SafetyKit Tracker" className="w-8 h-8" />
-            <div className="text-lg font-semibold">SafetyKit <span className="text-blue-600">Tracker</span></div>
+            <img src="/logo.png" alt="SafetyKit" className="w-8 h-8" />
+            <div className="text-lg font-semibold"><span>Safety</span> <span className="text-blue-600">Kit</span></div>
           </div>
           <div className="flex items-center gap-3">
             <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
@@ -157,7 +157,7 @@ export default function LandingPage() {
 
       {/* Trust / Social Proof */}
       <TrustLogos />
-      <Testimonial quote="SafetyKit Tracker saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" logoSrc="/logos/logo1.svg" metric="Saved 15 hours per month on auditing and maintenance" />
+      <Testimonial quote="SafetyKit saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" logoSrc="/logos/logo1.svg" metric="Saved 15 hours per month on auditing and maintenance" />
 
       {/* Case studies */}
       <div className="max-w-6xl mx-auto px-4">
