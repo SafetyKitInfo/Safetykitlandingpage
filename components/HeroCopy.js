@@ -19,7 +19,7 @@ export default function HeroCopy(){
           <ul className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-md text-sm text-slate-600">
             <li className="flex items-start gap-3"><strong className="text-blue-600">90% faster</strong> first-aid kit checks</li>
             <li className="flex items-start gap-3"><strong className="text-blue-600">100%</strong> expiry capture rate across centres</li>
-            <li className="flex items-start gap-3"><strong className="text-blue-600">$X</strong> saved annually in wasted stock + admin hours</li>
+            <li className="flex items-start gap-3"><strong className="text-blue-600">$1,800</strong> saved annually in wasted stock + admin hours</li>
           </ul>
         </div>
 
