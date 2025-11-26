@@ -20,6 +20,21 @@ export default function ContactForm(){
     // If using FormSubmit/Formspree, send the form as FormData from the browser
     if (USE_FORMSPREE) {
       const fd = new FormData(form)
+      // Also send a JSON copy to our internal API so submissions are persisted
+      // locally (data/contacts.jsonl). This guarantees you can inspect messages
+      // even if FormSubmit doesn't forward or verification wasn't clicked.
+      try {
+        const jsonBody = Object.fromEntries(fd.entries())
+        // fire-and-wait: record locally first
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(jsonBody)
+        })
+      } catch (e) {
+        // ignore logging errors — we still try FormSubmit below
+        console.warn('Local logging failed', e)
+      }
       try {
         const res = await fetch(FORMSPREE_ENDPOINT, {
           method: 'POST',
