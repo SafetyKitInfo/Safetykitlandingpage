@@ -1,3 +1,5 @@
+import content from '../content/safetykit-copy.json';
+
 export default function HeroCopy(){
   return (
     <header className="py-16">
@@ -36,7 +38,12 @@ export default function HeroCopy(){
 
         <div className="order-first md:order-last" aria-hidden>
           <div className="rounded-xl overflow-hidden bg-white shadow-lg p-6">
-            <div className="w-full h-64 bg-slate-100 flex items-center justify-center text-slate-400">Hero visual: educator scanning a kit</div>
+            <img
+              src={(content && content.hero && content.hero.images && content.hero.images[0]) || '/hero.png'}
+              alt="Hero visual: educator scanning a kit"
+              className="w-full h-64 object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
