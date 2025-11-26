@@ -3,6 +3,10 @@ import TrustLogos from './TrustLogos';
 import Testimonial from './Testimonial';
 import Industries from './Industries';
 import DeviceFrame from './DeviceFrame';
+import FeatureGrid from './FeatureGrid';
+import MetricsRow from './MetricsRow';
+import CTABand from './CTABand';
+import CaseStudyTemplate from './CaseStudyTemplate';
 import { IconKit, IconSchedule, IconReport, IconMedical, IconClock, IconCheck } from './icons';
 
 // Utility: small Pill component
@@ -127,33 +131,11 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Features */}
-      <section id="features" className="py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-2xl">🩹</div>
-              <h3 className="font-semibold mt-3">Smart Kit Management</h3>
-              <p className="text-sm text-slate-500 mt-2">Track inventory and expirations across locations with one glance. Instant flags for low stock.</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-2xl">🗓️</div>
-              <h3 className="font-semibold mt-3">Maintenance Scheduling</h3>
-              <p className="text-sm text-slate-500 mt-2">Automated schedules with reminders and a full logbook for compliance.</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-2xl">📊</div>
-              <h3 className="font-semibold mt-3">Audit-Ready Reporting</h3>
-              <p className="text-sm text-slate-500 mt-2">Export reports that meet policy requirements—no spreadsheets needed.</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-2xl">🩺</div>
-              <h3 className="font-semibold mt-3">Medical Kit Management</h3>
-              <p className="text-sm text-slate-500 mt-2">Manage first aid, AED, and trauma kits—track consumables, expirations and certifications.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Features / Product Modules */}
+      <FeatureGrid />
+
+      {/* Key Metrics */}
+      <MetricsRow />
 
       {/* Personas */}
       <section className="py-8">
@@ -183,19 +165,20 @@ export default function LandingPage() {
       <TrustLogos />
       <Testimonial quote="SafetyKit Tracker saved our team hours in audits and maintenance." by="Head of Operations, Early Learning Centre" logoSrc="/logos/logo1.svg" metric="Saved 15 hours per month on auditing and maintenance" />
 
-      {/* Mid-page CTA band */}
-      <div className="py-8">
-        <div className="max-w-6xl mx-auto px-4 bg-blue-600 text-white rounded-lg p-6 flex flex-col md:flex-row items-center justify-between">
-          <div>
-            <div className="font-bold text-lg">Ready to get started?</div>
-            <div className="text-sm opacity-90">Join organizations that trust SafetyKit Tracker for safety management.</div>
-          </div>
-          <div className="mt-4 md:mt-0">
-            <a href="#contact" className="bg-white text-blue-600 px-5 py-2 rounded font-semibold mr-3">Create account</a>
-            <a href="#" className="border border-white text-white px-4 py-2 rounded">Sign in</a>
-          </div>
-        </div>
+      {/* Case studies */}
+      <div className="max-w-6xl mx-auto px-4">
+        <CaseStudyTemplate
+          logo="/logos/logo1.svg"
+          title="Harmony Early Learning — Kit Compliance"
+          metrics={[{value:'75%', label:'time saved'},{value:'100%', label:'expiry capture'},{value:'30 days', label:'to standardise'}]}
+          quote={'"SafetyKit cut our kit checks by 75% and removed expired items entirely." — Centre Director'}
+        >
+          <p>Harmony Early Learning automated manual checks, centralised records, and now pulls audit reports in seconds. The team rolled out across 12 centres in 30 days.</p>
+        </CaseStudyTemplate>
       </div>
+
+      {/* Mid-page CTA band */}
+      <CTABand />
 
       {/* How It Works */}
       <section className="py-12 bg-white">
