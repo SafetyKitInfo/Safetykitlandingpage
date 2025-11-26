@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
-const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || ''
+// Default to FormSubmit so the form works plug-and-play. You can override
+// by setting `NEXT_PUBLIC_FORMSPREE_ENDPOINT` in your environment.
+const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formsubmit.co/info.safetykit%40gmail.com'
+const USE_FORMSPREE = Boolean(FORMSPREE_ENDPOINT)
 
 export default function ContactForm(){
   const [mailto, setMailto] = useState('')
@@ -55,7 +58,19 @@ export default function ContactForm(){
         <h3 className="text-2xl font-bold">Contact Us</h3>
         <p className="text-gray-700 mt-2">Interested in a demo, pilot or quick walkthrough? Tell us a little about your needs and we'll respond within one business day.</p>
 
-        <form onSubmit={handleSubmit} className="mt-6 grid gap-4">
+        <form
+          action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
+          method={USE_FORMSPREE ? 'POST' : undefined}
+          onSubmit={USE_FORMSPREE ? undefined : handleSubmit}
+          className="mt-6 grid gap-4"
+        >
+          {USE_FORMSPREE && (
+            // FormSubmit helpers: disable captcha and set a friendly subject
+            <>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="New SafetyKit website contact" />
+            </>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input name="name" required placeholder="Your name" className="p-3 rounded border" />
             <input name="email" type="email" required placeholder="Email" className="p-3 rounded border" />
