@@ -1,4 +1,9 @@
+import React, { useState } from 'react'
+
 export default function ContactForm(){
+  const [mailto, setMailto] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
+
   async function handleSubmit(e){
     e.preventDefault();
     const fd = new FormData(e.target);
@@ -13,13 +18,27 @@ export default function ContactForm(){
       if (res.ok) {
         alert('Thanks — we received your message.');
         e.target.reset();
+        setMailto('')
+        setErrorMsg('')
       } else {
-        alert('Sorry, something went wrong.');
+        const json = await res.json().catch(() => ({}))
+        const msg = json?.error || 'Sorry, something went wrong.'
+        handleFailure(body, msg)
       }
     } catch (err) {
       console.error(err);
-      alert('Error sending message.');
+      handleFailure(body, err?.message || 'Error sending message.')
     }
+  }
+
+  function handleFailure(body, reason){
+    setErrorMsg(String(reason))
+    // Build a prefilled mailto as a fallback so users can email directly
+    const to = process?.env?.NEXT_PUBLIC_CONTACT_EMAIL || 'info.safetykit@gmail.com'
+    const subject = body.interest || 'Website contact'
+    const bodyText = `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\nPhone: ${body.phone || ''}\n\nMessage:\n${body.message || ''}`
+    const mail = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`
+    setMailto(mail)
   }
 
   return (
@@ -54,6 +73,13 @@ export default function ContactForm(){
             <a href="mailto:info.safetykit@gmail.com?subject=Book%20a%20demo" className="px-5 py-3 rounded-md border">Or email: info@safetykit@gmail.com</a>
             <a href="#" className="ml-auto text-sm text-slate-600">We typically reply within 1 business day</a>
           </div>
+
+          {mailto && (
+            <div className="mt-4 p-4 bg-yellow-50 border rounded">
+              <p className="text-sm text-yellow-900">We couldn't send your message automatically ({errorMsg}). You can still email us directly:</p>
+              <a className="inline-block mt-2 text-teal-600 underline" href={mailto}>Compose email to info@safetykit@gmail.com</a>
+            </div>
+          )}
         </form>
       </div>
     </section>
