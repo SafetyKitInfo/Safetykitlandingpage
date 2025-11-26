@@ -7,7 +7,7 @@ export default function HeroCopy(){
             <span className="bg-gradient-to-r from-emerald-100 to-blue-50 text-emerald-700 px-3 py-1 text-sm rounded-full">Audit-ready. Clinically focused.</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Zero Expired First-Aid Kits. Zero Audit Stress.
+            Eliminate expired kits and cut audit prep from hours to minutes
             <span className="block text-blue-600">Keep every centre compliant with automated expiry tracking, kit monitoring, and audit-ready reporting.</span>
           </h1>
 
