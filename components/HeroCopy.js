@@ -8,9 +8,9 @@ export default function HeroCopy(){
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-emerald-100 to-blue-50 text-emerald-700 px-3 py-1 text-sm rounded-full">Audit-ready. Clinically focused.</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Eliminate expired kits and cut audit prep from hours to minutes
-            <span className="block text-blue-600">Monitor every kit across all centres, prevent expiry incidents, and streamline compliance with SafetyKit.</span>
+          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
+            Eliminate expired kits. Simplify audits.
+            <span className="block text-blue-600">Automated expiry tracking and audit-ready reports.</span>
           </h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -18,8 +18,8 @@ export default function HeroCopy(){
             <a href="#contact" className="inline-block ml-2 px-5 py-3 rounded-lg text-sm border border-slate-200">Book a demo</a>
           </div>
 
-          <div className="mt-6 flex items-center gap-3 max-w-md">
-            <div className="flex-1 grid grid-cols-3 gap-3">
+          <div className="mt-6">
+            <div className="hidden sm:grid grid-cols-3 gap-3 max-w-md">
               <div className="p-3 bg-white rounded-lg shadow-sm text-center">
                 <div className="text-lg font-extrabold text-blue-600">Faster checks</div>
                 <div className="text-xs text-slate-600">reduce time spent on kit rounds</div>
@@ -33,6 +33,8 @@ export default function HeroCopy(){
                 <div className="text-xs text-slate-600">less time on audit prep and record keeping</div>
               </div>
             </div>
+
+            <div className="sm:hidden text-sm text-slate-600">Faster checks · Expiry alerts · Less admin</div>
           </div>
         </div>
 
