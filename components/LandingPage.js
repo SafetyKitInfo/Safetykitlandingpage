@@ -46,11 +46,11 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-emerald-100 to-blue-50 text-emerald-700 px-3 py-1 text-sm rounded-full">Audit-ready. Clinically focused.</span>
             </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                Eliminate expired kits and cut audit prep from hours to minutes
-                <span className="block text-gradient text-blue-600">Keep every centre compliant with automated expiry tracking, kit monitoring, and audit-ready reporting.</span>
-            </h1>
-            <p className="mt-4 text-lg text-slate-600 max-w-xl">Get clear, real-time visibility across kits, expiries and maintenance—built for EHS, clinical and facilities teams. Reduce audit prep from hours to minutes.</p>
+              <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
+                Eliminate expired kits. Simplify audits.
+                <span className="block text-blue-600">Automated expiry tracking and audit-ready reports for every centre.</span>
+              </h1>
+              <p className="mt-3 text-base text-slate-600 max-w-xl">Gain clear visibility across kits and expiries with mobile checks and automatic alerts.</p>
 
             <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-md text-sm text-slate-600">
               <li className="flex items-start gap-3"><span className="mt-1 text-blue-600">✔</span> Expiry & low-stock alerts</li>
