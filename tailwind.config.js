@@ -10,6 +10,13 @@ module.exports = {
     './src/**/*.{ts,tsx,js,jsx}'
   ],
   darkMode: "class",
+  safelist: [
+    // preserve arbitrary property classes and common pseudo/variant prefixes used
+    // by the aurora component (helps during dev when classes may appear dynamic)
+    /^\[.*\]$/,
+    /^after:.*$/,
+    /^dark:.*$/,
+  ],
   theme: {
     extend: {
       animation: {
