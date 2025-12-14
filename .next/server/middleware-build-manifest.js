@@ -1,20 +1,26 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
     "/": [
-      "static/chunks/cbc479571bcdd928.js",
-      "static/chunks/f074cdbbcec5ccc4.js",
-      "static/chunks/turbopack-dca6de642a72c80a.js"
+      "static/chunks/d1195f3d9571f0b1.js",
+      "static/chunks/500ef430177ca0a3.js",
+      "static/chunks/turbopack-5c57c824989d8ac1.js"
     ],
     "/_app": [
-      "static/chunks/f947cd8da1440284.js",
-      "static/chunks/f074cdbbcec5ccc4.js",
-      "static/chunks/a383dbfa24ccf2e1.css",
-      "static/chunks/turbopack-2db82b62b6d7ff45.js"
+      "static/chunks/166dcf8683f06a3a.js",
+      "static/chunks/500ef430177ca0a3.js",
+      "static/chunks/2fa9210bb33020e4.css",
+      "static/chunks/turbopack-ee95103080cbe3c0.js"
     ],
     "/_error": [
-      "static/chunks/5c948ca1671dc2fc.js",
-      "static/chunks/f074cdbbcec5ccc4.js",
-      "static/chunks/turbopack-58ab578cd7f094fe.js"
+      "static/chunks/c49bf2a23d2e0718.js",
+      "static/chunks/500ef430177ca0a3.js",
+      "static/chunks/turbopack-a48b94c20b7918c1.js"
+    ],
+    "/aurora-demo": [
+      "static/chunks/9d08f891ceb0c9b2.js",
+      "static/chunks/500ef430177ca0a3.js",
+      "static/chunks/4de6fefbfdc96085.js",
+      "static/chunks/turbopack-1f8e202e9f1d02ec.js"
     ]
   },
   "devFiles": [],

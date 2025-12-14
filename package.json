@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^8.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "jimp": "^1.6.0",
     "lucide-react": "^0.245.0",
@@ -28,6 +30,8 @@
     "nodemailer": "^6.9.4",
     "puppeteer": "^24.33.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

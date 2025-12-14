@@ -1,23 +1,32 @@
 "use client";
-
-import { motion } from "framer-motion";
 import React from "react";
-import { AuroraBackground } from "./aurora-background";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import Image from "next/image";
 
-export function AuroraBackgroundDemo() {
+export function HeroScrollDemo() {
   return (
-    <AuroraBackground>
-      <motion.div className="relative flex flex-col gap-4 items-center justify-center px-4">
-        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Background lights are cool you know.
-        </div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          And this, is chemical burn.
-        </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-          Debug now
-        </button>
-      </motion.div>
-    </AuroraBackground>
+    <div className="flex flex-col overflow-hidden pb-[500px] pt-[1000px]">
+      <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-black dark:text-white">
+              Unleash the power of <br />
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                Scroll Animations
+              </span>
+            </h1>
+          </>
+        }
+      >
+        <Image
+          src="hero.png"
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          draggable={false}
+        />
+      </ContainerScroll>
+    </div>
   );
 }
