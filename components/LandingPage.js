@@ -8,6 +8,7 @@ import CTABand from './CTABand';
 // Case studies/testimonials removed per request
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
+import { Process, Work, Achievements } from './ui/cards-demo';
 import { Linkedin, Twitter } from 'lucide-react';
 import content from '../content/safetykit-copy.json';
 
@@ -129,7 +130,7 @@ export default function LandingPage() {
       <StickyCTA />
 
       {/* Features / Product Modules */}
-      <FeatureGrid />
+      <Process />
 
       {/* Key Metrics */}
       <MetricsRow />
