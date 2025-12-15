@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import { ContactCard } from './ui/contact-card'
+import { Input } from './ui/input'
+import { Button } from './ui/button'
+import { Label } from './ui/label'
+import { Textarea } from './ui/textarea'
+import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react'
 
 // Default to FormSubmit using the activation token so the form is already
 // activated. You can still override by setting `NEXT_PUBLIC_FORMSPREE_ENDPOINT`.
@@ -107,67 +113,88 @@ export default function ContactForm(){
 
   return (
     <section id="contact" className="py-16 bg-teal-50">
-      <div className="max-w-4xl mx-auto px-6">
-        <h3 className="text-2xl font-bold">Contact Us</h3>
-        <p className="text-gray-700 mt-2">Interested in a demo, pilot or quick walkthrough? Tell us a little about your needs and we'll respond within one business day.</p>
-
-        <form
-          action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
-          method={USE_FORMSPREE ? 'POST' : undefined}
-          onSubmit={USE_FORMSPREE ? undefined : handleSubmit}
-          className="mt-6 grid gap-4"
+      <div className="max-w-6xl mx-auto px-6">
+        <ContactCard
+          title="Contact Us / Book a Demo"
+          description="Interested in a demo, pilot or quick walkthrough? Tell us a little about your needs and we'll respond within one business day."
+          contactInfo={[
+            {
+              icon: MailIcon,
+              label: 'Email',
+              value: 'info@safetykit@gmail.com',
+            },
+            {
+              icon: PhoneIcon,
+              label: 'Phone',
+              value: '+1 (555) 123-4567',
+            },
+            {
+              icon: MapPinIcon,
+              label: 'Address',
+              value: 'SafetyKit HQ, Healthcare City',
+            }
+          ]}
         >
-          {USE_FORMSPREE && (
-            // FormSubmit helpers: disable captcha and set a friendly subject
-            <>
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="New SafetyKit website contact" />
-            </>
-          )}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label className="sr-only" htmlFor="contact-name">Your name</label>
-            <input id="contact-name" name="name" required placeholder="Your name" autoComplete="name" className="p-3 rounded border text-base w-full" />
-
-            <label className="sr-only" htmlFor="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" required placeholder="Email" autoComplete="email" className="p-3 rounded border text-base w-full" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label className="sr-only" htmlFor="contact-org">Organisation (optional)</label>
-            <input id="contact-org" name="organization" placeholder="Organisation (optional)" autoComplete="organization" className="p-3 rounded border text-base w-full" />
-
-            <label className="sr-only" htmlFor="contact-phone">Phone (optional)</label>
-            <input id="contact-phone" name="phone" placeholder="Phone (optional)" inputMode="tel" autoComplete="tel" className="p-3 rounded border text-base w-full" />
-          </div>
-
-          <label className="text-sm text-slate-600">I'm interested in</label>
-          <select name="interest" className="p-3 rounded border w-full md:w-1/2 text-base">
-            <option>Book a demo</option>
-            <option>Start a 30-day pilot</option>
-            <option>Partnerships</option>
-            <option>Other / General enquiry</option>
-          </select>
-
-          <textarea name="message" required rows="5" placeholder="Tell us how we can help (brief)" className="p-3 rounded border text-base w-full" />
-
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <button disabled={isSubmitting} type="submit" className="bg-teal-500 text-white px-5 py-3 rounded-md hover:bg-teal-600 disabled:opacity-50 w-full md:w-auto text-center">{isSubmitting ? 'Sending…' : 'Send Message'}</button>
+          <form
+            action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
+            method={USE_FORMSPREE ? 'POST' : undefined}
+            onSubmit={USE_FORMSPREE ? undefined : handleSubmit}
+            className="w-full space-y-4"
+          >
+            {USE_FORMSPREE && (
+              <>
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="New SafetyKit website contact" />
+              </>
+            )}
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="contact-name">Your name</Label>
+              <Input id="contact-name" name="name" required placeholder="Your name" autoComplete="name" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="contact-email">Email</Label>
+              <Input id="contact-email" name="email" type="email" required placeholder="Email" autoComplete="email" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="contact-org">Organisation (optional)</Label>
+              <Input id="contact-org" name="organization" placeholder="Organisation (optional)" autoComplete="organization" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="contact-phone">Phone (optional)</Label>
+              <Input id="contact-phone" name="phone" placeholder="Phone (optional)" inputMode="tel" autoComplete="tel" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label>I'm interested in</Label>
+              <select name="interest" className="p-3 rounded border w-full text-base">
+                <option>Book a demo</option>
+                <option>Start a 30-day pilot</option>
+                <option>Partnerships</option>
+                <option>Other / General enquiry</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="contact-message">Tell us how we can help (brief)</Label>
+              <Textarea id="contact-message" name="message" required rows="5" placeholder="Tell us how we can help (brief)" />
+            </div>
+            <Button disabled={isSubmitting} type="submit" className="w-full">
+              {isSubmitting ? 'Sending…' : 'Send Message'}
+            </Button>
             <span className="text-sm text-slate-600">We typically reply within 1 business day</span>
-          </div>
 
-          {successMsg && (
-            <div role="status" aria-live="polite" className="mt-4 p-4 bg-green-50 border rounded">
-              <p className="text-sm text-green-900">{successMsg}</p>
-            </div>
-          )}
+            {successMsg && (
+              <div role="status" aria-live="polite" className="mt-4 p-4 bg-green-50 border rounded">
+                <p className="text-sm text-green-900">{successMsg}</p>
+              </div>
+            )}
 
-          {mailto && (
-            <div role="alert" className="mt-4 p-4 bg-yellow-50 border rounded">
-              <p className="text-sm text-yellow-900">We couldn't send your message automatically ({errorMsg}). You can still email us directly:</p>
-              <a className="block mt-2 text-teal-600 underline break-words" href={mailto}>Compose email to info@safetykit@gmail.com</a>
-            </div>
-          )}
-        </form>
+            {mailto && (
+              <div role="alert" className="mt-4 p-4 bg-yellow-50 border rounded">
+                <p className="text-sm text-yellow-900">We couldn't send your message automatically ({errorMsg}). You can still email us directly:</p>
+                <a className="block mt-2 text-teal-600 underline break-words" href={mailto}>Compose email to info@safetykit@gmail.com</a>
+              </div>
+            )}
+          </form>
+        </ContactCard>
       </div>
     </section>
   )
