@@ -93,19 +93,6 @@ export default function LandingPage() {
         <div className="mt-8">
           <MetricsRow />
         </div>
-
-        {/* Trusted logos row */}
-            <div className="mt-8">
-          <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4 overflow-x-auto py-2">
-              <div className="text-sm text-slate-500 flex-shrink-0">Trusted partners</div>
-              <img src="/logos/logo1.svg" alt="Partner 1" className="h-6 opacity-90 flex-shrink-0" />
-              <img src="/logos/logo2.svg" alt="Partner 2" className="h-6 opacity-90 flex-shrink-0" />
-              <img src="/logos/logo3.svg" alt="Partner 3" className="h-6 opacity-90 flex-shrink-0" />
-            </div>
-            <div className="text-sm text-slate-500">Selected partners and pilot customers</div>
-          </div>
-        </div>
       </header>
 
       <StickyCTA />
