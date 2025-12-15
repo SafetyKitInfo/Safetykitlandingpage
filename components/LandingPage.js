@@ -9,6 +9,7 @@ import CTABand from './CTABand';
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
 import { Process, Work, Achievements } from './ui/cards-demo';
+import DonutChartDemo from './ui/donut-demo';
 import { Linkedin, Twitter } from 'lucide-react';
 import content from '../content/safetykit-copy.json';
 
@@ -166,20 +167,8 @@ export default function LandingPage() {
 
       {/* How It Works */}
       <section className="py-12 bg-white">
-        <h2 className="text-2xl font-bold text-center mb-6">How it works</h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center px-4">
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">1</div>
-            <div className="font-semibold mt-2">Scan QR</div>
-          </div>
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">2</div>
-            <div className="font-semibold mt-2">Track</div>
-          </div>
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">3</div>
-            <div className="font-semibold mt-2">Stay Compliant</div>
-          </div>
+        <div className="max-w-4xl mx-auto px-4">
+          <DonutChartDemo />
         </div>
       </section>
 
