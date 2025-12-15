@@ -104,7 +104,7 @@ const Process = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-8 xl:gap-12">
-        <div className="md:col-span-1 flex justify-center">
+        <div className="md:col-span-1 flex justify-center self-start md:sticky md:top-0 md:py-12">
           <DonutChartDemo />
         </div>
         <div className="md:col-span-2">
