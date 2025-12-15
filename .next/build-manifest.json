@@ -2,32 +2,36 @@
   "pages": {
     "/": [
       "static/chunks/d1195f3d9571f0b1.js",
-      "static/chunks/500ef430177ca0a3.js",
-      "static/chunks/turbopack-5c57c824989d8ac1.js"
+      "static/chunks/c01b14385eca0ea4.js",
+      "static/chunks/a407c92e68a96beb.js",
+      "static/chunks/turbopack-8789d3989d856976.js"
     ],
     "/_app": [
       "static/chunks/166dcf8683f06a3a.js",
-      "static/chunks/500ef430177ca0a3.js",
-      "static/chunks/2fa9210bb33020e4.css",
-      "static/chunks/turbopack-ee95103080cbe3c0.js"
+      "static/chunks/c01b14385eca0ea4.js",
+      "static/chunks/a407c92e68a96beb.js",
+      "static/chunks/d5536cc697cbf853.css",
+      "static/chunks/turbopack-e91c98170d6b68e0.js"
     ],
     "/_error": [
-      "static/chunks/c49bf2a23d2e0718.js",
-      "static/chunks/500ef430177ca0a3.js",
-      "static/chunks/turbopack-a48b94c20b7918c1.js"
+      "static/chunks/496f3be93b2cd3a8.js",
+      "static/chunks/c01b14385eca0ea4.js",
+      "static/chunks/a407c92e68a96beb.js",
+      "static/chunks/turbopack-6687fcc222124875.js"
     ],
     "/aurora-demo": [
-      "static/chunks/9d08f891ceb0c9b2.js",
-      "static/chunks/500ef430177ca0a3.js",
-      "static/chunks/4de6fefbfdc96085.js",
-      "static/chunks/turbopack-1f8e202e9f1d02ec.js"
+      "static/chunks/757043175d171696.js",
+      "static/chunks/a407c92e68a96beb.js",
+      "static/chunks/04f1ea7f36a620cd.js",
+      "static/chunks/c01b14385eca0ea4.js",
+      "static/chunks/turbopack-7503795cdcce6924.js"
     ]
   },
   "devFiles": [],
   "polyfillFiles": [],
   "lowPriorityFiles": [
-    "static/WNS1z2jD0k2_4WtcmF7JH/_ssgManifest.js",
-    "static/WNS1z2jD0k2_4WtcmF7JH/_buildManifest.js"
+    "static/KHvzobqyNUPnlYaX5ra0_/_ssgManifest.js",
+    "static/KHvzobqyNUPnlYaX5ra0_/_buildManifest.js"
   ],
   "rootMainFiles": []
 }
