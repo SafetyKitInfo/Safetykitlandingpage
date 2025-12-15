@@ -31,15 +31,15 @@ export default function DonutChartDemo() {
     activeSegment ? (activeSegment.value / totalFinancialValue) * 100 : 100;
 
   return (
-    <Card className="p-6 md:p-8 w-full max-w-sm mx-auto flex flex-col items-center justify-center space-y-6 bg-background text-foreground shadow-lg rounded-xl">
-      <h2 className="text-xl font-semibold text-center tracking-tight text-foreground">
+    <Card className="p-4 md:p-6 w-full max-w-sm mx-auto flex flex-col items-center justify-center space-y-4 bg-background text-foreground shadow-lg rounded-xl">
+      <h2 className="text-lg font-semibold text-center tracking-tight text-foreground">
         Common Compliance Issues
       </h2>
       <div className="relative flex items-center justify-center">
         <DonutChart
           data={financialData}
           size={180}
-          strokeWidth={30}
+          strokeWidth={20}
           animationDuration={1.2}
           animationDelayPerSegment={0.05}
           highlightOnHover={true}
@@ -79,7 +79,7 @@ export default function DonutChartDemo() {
         </DonutChart>
       </div>
 
-      <div className="flex flex-col space-y-2 w-full pt-4 border-t border-border">
+      <div className="flex flex-col space-y-2 w-full pt-2 border-t border-border">
         {financialData.map((segment, index) => (
           <motion.div
             key={segment.label}
