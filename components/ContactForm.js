@@ -122,17 +122,6 @@ export default function ContactForm(){
               icon: MailIcon,
               label: 'Email',
               value: 'info@safetykit@gmail.com',
-            },
-            {
-              icon: PhoneIcon,
-              label: 'Phone',
-              value: '+1 (555) 123-4567',
-            },
-            {
-              icon: MapPinIcon,
-              label: 'Address',
-              value: 'SafetyKit HQ, Healthcare City',
-              className: 'md:col-span-2 lg:col-span-3',
             }
           ]}
         >
