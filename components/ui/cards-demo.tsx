@@ -3,33 +3,39 @@ import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
 const PROCESS_PHASES = [
   {
     id: "process-1",
-    title: "Research and Analysis",
+    title: "Faster Checks",
     description:
-      "With your vision in mind, we enter the Research and Analysis phase. Here, we examine your competitors, industry trends, and user preferences. This informed approach ensures your website stands out and provides an excellent user experience.",
+      "Mobile scanning that completes kit checks in seconds — reduces staff time on manual audits. SafetyKit's intuitive app allows quick, offline kit inspections with real-time sync.",
   },
   {
     id: "process-2",
-    title: "Wireframing and Prototyping",
+    title: "Prevent Expiries",
     description:
-      "We move on to Wireframing and Prototyping, where we create skeletal representations of your website's pages. These visual indigoprints allow us to test and refine the user experience before diving into design.",
+      "Predictive expiry alerts that remove expired items before they cause incidents. Automated notifications ensure compliance and safety across all locations.",
   },
   {
     id: "process-3",
-    title: "Design Creation",
+    title: "Reduce Waste",
     description:
-      "Now, it's time for the Design Creation phase. Our talented designers bring your vision to life. We focus on aesthetics, ensuring your website not only looks stunning but also aligns perfectly with your brand identity.",
+      "Automated inventory alerts and reorder suggestions to cut wasted stock and cost. Optimize your supplies with data-driven insights and just-in-time ordering.",
   },
   {
     id: "process-4",
-    title: "Development and Testing",
+    title: "Pass Audits",
     description:
-      "In the Development and Testing phase, our skilled developers turn designs into a fully functional website. Rigorous testing ensures everything works seamlessly, providing an exceptional user experience.",
+      "Audit-ready logs and exportable evidence to shorten audit prep and responses. Generate comprehensive reports instantly for regulatory compliance.",
   },
   {
     id: "process-5",
-    title: "Launch and Support",
+    title: "Operational Visibility",
     description:
-      "Our commitment continues beyond launch. We offer post-launch support to address questions, provide assistance, and ensure your website remains updated and optimized. The Website Design Process isn't just about creating a website; it's about crafting a digital experience that resonates, engages, and converts.",
+      "Real-time dashboard for centres and rooms to spot issues earlier. Monitor kit status, expiries, and compliance metrics from anywhere.",
+  },
+  {
+    id: "process-6",
+    title: "Less Training Time",
+    description:
+      "AI-assisted SOP guidance and clear checklists to onboard staff faster. Streamlined training modules ensure quick adoption and consistent procedures.",
   },
 ]
 
@@ -88,19 +94,16 @@ const Process = () => {
     <div className="container min-h-svh place-content-center bg-stone-50 px-6 text-stone-900 xl:px-12">
       <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12">
         <div className="left-0 top-0 md:sticky md:h-svh md:py-12">
-          <h5 className=" text-xs uppercase tracking-wide">our process</h5>
+          <h5 className=" text-xs uppercase tracking-wide">safetykit features</h5>
           <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight">
-            Planning your{" "}
-            <span className="text-indigo-500">project development</span> journey
+            How SafetyKit Streamlines{" "}
+            <span className="text-indigo-500">Kit Compliance</span>
           </h2>
           <p className="max-w-prose text-sm">
-            Our journey begins with a deep dive into your vision. In the
-            Discovery phase, we engage in meaningful conversations to grasp your
-            brand identity, goals, and the essence you want to convey. This
-            phase sets the stage for all that follows.
+            SafetyKit makes kit compliance simple and repeatable with core modules designed for healthcare and safety environments. From mobile checks to audit-ready reports, ensure safety and efficiency.
           </p>
         </div>
-        <ContainerScroll className="min-h-[400vh] space-y-8 py-12">
+        <ContainerScroll className="min-h-[200vh] space-y-8 py-12">
           {PROCESS_PHASES.map((phase, index) => (
             <CardSticky
               key={phase.id}
