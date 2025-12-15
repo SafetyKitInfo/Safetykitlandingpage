@@ -8,6 +8,8 @@ import CTABand from './CTABand';
 // Case studies/testimonials removed per request
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
+import { Process, Work, Achievements } from './ui/cards-demo';
+import DonutChartDemo from './ui/donut-demo';
 import { Linkedin, Twitter } from 'lucide-react';
 import content from '../content/safetykit-copy.json';
 
@@ -19,26 +21,6 @@ function Pill({ children }) {
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white text-slate-900">
-      {/* Top nav */}
-      <div className="py-6 bg-white/60 backdrop-blur sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="SafetyKit" className="w-8 h-8" />
-            <div className="text-lg font-semibold"><span>Safety</span> <span className="text-blue-600">Kit</span></div>
-          </div>
-          <div className="hidden md:flex items-center gap-3">
-            <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
-            <a href="#about" className="text-sm text-slate-600 hover:text-slate-900">About</a>
-            <a href="#contact" className="text-sm text-slate-600 hover:text-slate-900">Contact</a>
-            <a href="#" className="ml-3 px-4 py-2 bg-white border border-slate-200 rounded text-sm hover:shadow">Sign in</a>
-            <a href="#contact" className="ml-2 px-4 py-2 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">Get Started</a>
-          </div>
-          <div className="md:hidden">
-            <a href="#contact" className="px-3 py-2 bg-blue-600 text-white rounded text-sm">Get Started</a>
-          </div>
-        </div>
-      </div>
-
       {/* Hero */}
       <header className="py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -111,25 +93,12 @@ export default function LandingPage() {
         <div className="mt-8">
           <MetricsRow />
         </div>
-
-        {/* Trusted logos row */}
-            <div className="mt-8">
-          <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4 overflow-x-auto py-2">
-              <div className="text-sm text-slate-500 flex-shrink-0">Trusted partners</div>
-              <img src="/logos/logo1.svg" alt="Partner 1" className="h-6 opacity-90 flex-shrink-0" />
-              <img src="/logos/logo2.svg" alt="Partner 2" className="h-6 opacity-90 flex-shrink-0" />
-              <img src="/logos/logo3.svg" alt="Partner 3" className="h-6 opacity-90 flex-shrink-0" />
-            </div>
-            <div className="text-sm text-slate-500">Selected partners and pilot customers</div>
-          </div>
-        </div>
       </header>
 
       <StickyCTA />
 
       {/* Features / Product Modules */}
-      <FeatureGrid />
+      <Process />
 
       {/* Key Metrics */}
       <MetricsRow />
@@ -162,25 +131,6 @@ export default function LandingPage() {
 
       {/* Mid-page CTA band */}
       <CTABand />
-
-      {/* How It Works */}
-      <section className="py-12 bg-white">
-        <h2 className="text-2xl font-bold text-center mb-6">How it works</h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center px-4">
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">1</div>
-            <div className="font-semibold mt-2">Scan QR</div>
-          </div>
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">2</div>
-            <div className="font-semibold mt-2">Track</div>
-          </div>
-          <div className="p-6">
-            <div className="text-3xl text-blue-600 font-bold">3</div>
-            <div className="font-semibold mt-2">Stay Compliant</div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact / Book Demo */}
       <section id="contact" className="py-12 bg-blue-50">
