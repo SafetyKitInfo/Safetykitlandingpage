@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export function HeroScrollDemo() {
   return (
-    <div className="flex flex-col overflow-hidden pb-[500px] pt-[1000px]">
+    <div className="flex flex-col overflow-hidden pb-[500px] pt-0">
+      <h1 className="text-4xl font-semibold text-black dark:text-white text-center mb-8">
+        Unleash the power of SafetyKit
+      </h1>
       <ContainerScroll
         titleComponent={
           <>
