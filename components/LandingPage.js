@@ -128,13 +128,13 @@ export default function LandingPage() {
         </div>
       </header>
 
+      <StickyCTA />
+
       {/* Features / Product Modules */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div><Process /></div>
-          <div className="bg-white p-8 rounded-lg"><DonutChartDemo /></div>
-        </div>
-      </section>
+      <Process />
+
+      {/* Key Metrics */}
+      <MetricsRow />
 
       {/* Personas */}
       <section className="py-8">

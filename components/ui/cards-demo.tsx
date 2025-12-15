@@ -1,4 +1,5 @@
 import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
+import DonutChartDemo from "./donut-demo"
 
 const PROCESS_PHASES = [
   {
@@ -92,37 +93,42 @@ const ACHIEVEMENTS = [
 const Process = () => {
   return (
     <div className="container min-h-svh place-content-center bg-stone-50 px-6 text-stone-900 xl:px-12">
-      <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12">
-        <div className="left-0 top-0 md:sticky md:h-svh md:py-12">
-          <h5 className=" text-xs uppercase tracking-wide">safetykit features</h5>
-          <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight">
-            How SafetyKit Streamlines{" "}
-            <span className="text-indigo-500">Kit Compliance</span>
-          </h2>
-          <p className="max-w-prose text-sm">
-            SafetyKit makes kit compliance simple and repeatable with core modules designed for healthcare and safety environments. From mobile checks to audit-ready reports, ensure safety and efficiency.
-          </p>
+      <div className="text-center mb-8">
+        <h5 className=" text-xs uppercase tracking-wide">safetykit features</h5>
+        <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight">
+          How SafetyKit Streamlines{" "}
+          <span className="text-indigo-500">Kit Compliance</span>
+        </h2>
+        <p className="max-w-prose text-sm mx-auto">
+          SafetyKit makes kit compliance simple and repeatable with core modules designed for healthcare and safety environments. From mobile checks to audit-ready reports, ensure safety and efficiency.
+        </p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-8 xl:gap-12">
+        <div className="md:col-span-1 flex justify-center">
+          <DonutChartDemo />
         </div>
-        <ContainerScroll className="min-h-[200vh] space-y-8 py-12">
-          {PROCESS_PHASES.map((phase, index) => (
-            <CardSticky
-              key={phase.id}
-              index={index + 2}
-              className="rounded-2xl border p-8 shadow-md backdrop-blur-md"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="my-6 text-2xl font-bold tracking-tighter">
-                  {phase.title}
-                </h2>
-                <h3 className="text-2xl font-bold text-indigo-500">
-                  {String(index + 1).padStart(2, "0")}
-                </h3>
-              </div>
+        <div className="md:col-span-2">
+          <ContainerScroll className="min-h-[200vh] space-y-8 py-12">
+            {PROCESS_PHASES.map((phase, index) => (
+              <CardSticky
+                key={phase.id}
+                index={index + 2}
+                className="rounded-2xl border p-8 shadow-md backdrop-blur-md"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h2 className="my-6 text-2xl font-bold tracking-tighter">
+                    {phase.title}
+                  </h2>
+                  <h3 className="text-2xl font-bold text-indigo-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </h3>
+                </div>
 
-              <p className="text-foreground">{phase.description}</p>
-            </CardSticky>
-          ))}
-        </ContainerScroll>
+                <p className="text-foreground">{phase.description}</p>
+              </CardSticky>
+            ))}
+          </ContainerScroll>
+        </div>
       </div>
     </div>
   )

@@ -31,14 +31,14 @@ export default function DonutChartDemo() {
     activeSegment ? (activeSegment.value / totalFinancialValue) * 100 : 100;
 
   return (
-    <Card className="p-6 md:p-8 w-full max-w-md mx-auto flex flex-col items-center justify-center space-y-6 bg-background text-foreground shadow-lg rounded-xl">
+    <Card className="p-6 md:p-8 w-full max-w-sm mx-auto flex flex-col items-center justify-center space-y-6 bg-background text-foreground shadow-lg rounded-xl">
       <h2 className="text-xl font-semibold text-center tracking-tight text-foreground">
         Common Compliance Issues
       </h2>
       <div className="relative flex items-center justify-center">
         <DonutChart
           data={financialData}
-          size={250}
+          size={180}
           strokeWidth={30}
           animationDuration={1.2}
           animationDelayPerSegment={0.05}
@@ -53,7 +53,7 @@ export default function DonutChartDemo() {
                 transition={{ duration: 0.2, ease: "circOut" }}
                 className="flex flex-col items-center justify-center text-center"
               >
-                <p className="text-muted-foreground text-sm font-medium truncate max-w-[150px]">
+                <p className="text-muted-foreground text-sm font-medium truncate max-w-[120px]">
                   {displayLabel}
                 </p>
                 <p className="text-4xl font-bold text-foreground">
