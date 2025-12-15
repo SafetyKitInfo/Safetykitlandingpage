@@ -122,6 +122,7 @@ export default function ContactForm(){
               icon: MailIcon,
               label: 'Email',
               value: 'info@safetykit@gmail.com',
+              className: 'justify-start',
             }
           ]}
         >
