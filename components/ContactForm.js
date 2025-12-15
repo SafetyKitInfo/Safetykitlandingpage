@@ -132,6 +132,7 @@ export default function ContactForm(){
               icon: MapPinIcon,
               label: 'Address',
               value: 'SafetyKit HQ, Healthcare City',
+              className: 'md:col-span-2 lg:col-span-3',
             }
           ]}
         >
