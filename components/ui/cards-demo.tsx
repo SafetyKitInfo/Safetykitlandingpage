@@ -3,39 +3,39 @@ import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
 const PROCESS_PHASES = [
   {
     id: "process-1",
-    title: "Faster Checks",
+    title: "Compliance that runs itself",
     description:
-      "Mobile scanning that completes kit checks in seconds — reduces staff time on manual audits. SafetyKit's intuitive app allows quick, offline kit inspections with real-time sync.",
+      "SafetyKit continuously monitors inspections, expiries, and risk rules in the background, ensuring nothing is missed and compliance is maintained without manual follow-up.",
   },
   {
     id: "process-2",
-    title: "Prevent Expiries",
+    title: "Remove expiry risk before it becomes a problem",
     description:
-      "Predictive expiry alerts that remove expired items before they cause incidents. Automated notifications ensure compliance and safety across all locations.",
+      "Predictive alerts surface items approaching expiry early, giving teams time to act and preventing unsafe or non-compliant equipment from ever being used.",
   },
   {
     id: "process-3",
-    title: "Reduce Waste",
+    title: "Lower operational cost through smarter inventory control",
     description:
-      "Automated inventory alerts and reorder suggestions to cut wasted stock and cost. Optimize your supplies with data-driven insights and just-in-time ordering.",
+      "Usage patterns and automated alerts reduce over-ordering, prevent stockpiling, and cut unnecessary replacement costs across sites.",
   },
   {
     id: "process-4",
-    title: "Pass Audits",
+    title: "Always audit-ready",
     description:
-      "Audit-ready logs and exportable evidence to shorten audit prep and responses. Generate comprehensive reports instantly for regulatory compliance.",
+      "Every inspection, action, and update is automatically logged, time-stamped, and exportable, dramatically reducing audit preparation time and stress.",
   },
   {
     id: "process-5",
-    title: "Operational Visibility",
+    title: "Clear visibility across every centre",
     description:
-      "Real-time dashboard for centres and rooms to spot issues earlier. Monitor kit status, expiries, and compliance metrics from anywhere.",
+      "A single real-time view shows compliance status by centre, room, or asset, helping leaders identify risk trends and intervene early.",
   },
   {
     id: "process-6",
-    title: "Less Training Time",
+    title: "Faster onboarding, consistent execution",
     description:
-      "AI-assisted SOP guidance and clear checklists to onboard staff faster. Streamlined training modules ensure quick adoption and consistent procedures.",
+      "Guided workflows and clear SOPs reduce training time, support casual and rotating staff, and ensure procedures are followed the same way everywhere.",
   },
 ]
 
