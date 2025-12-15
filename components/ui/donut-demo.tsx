@@ -9,11 +9,9 @@ import { Circle } from "lucide-react"; // For legend icons
 import { cn } from "@/lib/utils"; // <-- FIX: Added the missing import
 
 const financialData = [
-  { value: 184, color: "hsl(214.7 95% 40%)", label: "Financial Objections" },
-  { value: 50, color: "hsl(142.1 76.2% 36.3%)", label: "Product Features" },
-  { value: 30, color: "hsl(47.9 95.8% 53.1%)", label: "Timing Issues" },
-  { value: 20, color: "hsl(0 0% 63.9%)", label: "Competitor Offers" },
-  { value: 10, color: "hsl(262.1 83.3% 57.8%)", label: "Other Reasons" },
+  { value: 39, color: "hsl(214.7 95% 40%)", label: "Missing or expired first-aid items" },
+  { value: 27, color: "hsl(142.1 76.2% 36.3%)", label: "Delays due to limited access / unclear kit location" },
+  { value: 34, color: "hsl(47.9 95.8% 53.1%)", label: "Poor recordkeeping" },
 ];
 
 const totalFinancialValue = financialData.reduce((sum, d) => sum + d.value, 0);
@@ -28,14 +26,14 @@ export default function DonutChartDemo() {
   
   // Determine total value (either hovered or overall)
   const displayValue = activeSegment?.value ?? totalFinancialValue;
-  const displayLabel = activeSegment?.label ?? "Total Objections";
+  const displayLabel = activeSegment?.label ?? "Total Issues";
   const displayPercentage =
     activeSegment ? (activeSegment.value / totalFinancialValue) * 100 : 100;
 
   return (
     <Card className="p-6 md:p-8 w-full max-w-md mx-auto flex flex-col items-center justify-center space-y-6 bg-background text-foreground shadow-lg rounded-xl">
       <h2 className="text-xl font-semibold text-center tracking-tight text-foreground">
-        Objection Breakdown
+        Common Compliance Issues
       </h2>
       <div className="relative flex items-center justify-center">
         <DonutChart
