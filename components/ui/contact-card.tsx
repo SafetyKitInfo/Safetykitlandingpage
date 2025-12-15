@@ -31,16 +31,16 @@ export function ContactCard({
 	return (
 		<div
 			className={cn(
-				'bg-card border relative grid h-full w-full shadow md:grid-cols-2 lg:grid-cols-5',
+				'bg-card border relative grid w-full shadow md:grid-cols-2 lg:grid-cols-4',
 				className,
 			)}
 			{...props}
 		>
-			<PlusIcon className="absolute -top-3 -left-3 h-6 w-6" />
-			<PlusIcon className="absolute -top-3 -right-3 h-6 w-6" />
-			<PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6" />
-			<PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6" />
-			<div className="flex flex-col justify-between lg:col-span-3">
+			<PlusIcon className="absolute -top-3 -left-3 h-6 w-6 text-blue-600" />
+			<PlusIcon className="absolute -top-3 -right-3 h-6 w-6 text-blue-600" />
+			<PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6 text-blue-600" />
+			<PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6 text-blue-600" />
+			<div className="flex flex-col justify-between lg:col-span-2">
 				<div className="relative h-full space-y-4 px-4 py-8 md:p-8">
 					<h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
 						{title}
@@ -57,7 +57,7 @@ export function ContactCard({
 			</div>
 			<div
 				className={cn(
-					'bg-muted/40 flex h-full w-full items-center border-t p-5 md:col-span-1 lg:col-span-2 md:border-t-0 md:border-l',
+					'bg-muted/40 flex w-full items-center border-t p-5 md:col-span-1 lg:col-span-2 md:border-t-0 md:border-l',
 					formSectionClassName,
 				)}
 			>
