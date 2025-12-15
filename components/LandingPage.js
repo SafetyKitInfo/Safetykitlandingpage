@@ -128,13 +128,13 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <StickyCTA />
-
       {/* Features / Product Modules */}
-      <Process />
-
-      {/* Key Metrics */}
-      <MetricsRow />
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div><Process /></div>
+          <div className="bg-white p-8 rounded-lg"><DonutChartDemo /></div>
+        </div>
+      </section>
 
       {/* Personas */}
       <section className="py-8">
@@ -164,13 +164,6 @@ export default function LandingPage() {
 
       {/* Mid-page CTA band */}
       <CTABand />
-
-      {/* How It Works */}
-      <section className="py-12 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <DonutChartDemo />
-        </div>
-      </section>
 
       {/* Contact / Book Demo */}
       <section id="contact" className="py-12 bg-blue-50">
