@@ -21,26 +21,6 @@ function Pill({ children }) {
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white text-slate-900">
-      {/* Top nav */}
-      <div className="py-6 bg-white/60 backdrop-blur sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="SafetyKit" className="w-8 h-8" />
-            <div className="text-lg font-semibold"><span>Safety</span> <span className="text-blue-600">Kit</span></div>
-          </div>
-          <div className="hidden md:flex items-center gap-3">
-            <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
-            <a href="#about" className="text-sm text-slate-600 hover:text-slate-900">About</a>
-            <a href="#contact" className="text-sm text-slate-600 hover:text-slate-900">Contact</a>
-            <a href="#" className="ml-3 px-4 py-2 bg-white border border-slate-200 rounded text-sm hover:shadow">Sign in</a>
-            <a href="#contact" className="ml-2 px-4 py-2 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">Get Started</a>
-          </div>
-          <div className="md:hidden">
-            <a href="#contact" className="px-3 py-2 bg-blue-600 text-white rounded text-sm">Get Started</a>
-          </div>
-        </div>
-      </div>
-
       {/* Hero */}
       <header className="py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
