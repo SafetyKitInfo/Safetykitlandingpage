@@ -8,6 +8,7 @@ import CTABand from './CTABand';
 // Case studies/testimonials removed per request
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
+import { FeaturesSectionWithHoverEffects } from './ui/feature-section-with-hover-effects';
 import { Process, Work, Achievements } from './ui/cards-demo';
 import DonutChartDemo from './ui/donut-demo';
 import { Linkedin, Twitter } from 'lucide-react';
@@ -94,6 +95,9 @@ export default function LandingPage() {
           <MetricsRow />
         </div>
       </header>
+
+      {/* Features Section */}
+      <FeaturesSectionWithHoverEffects />
 
       <StickyCTA />
 
