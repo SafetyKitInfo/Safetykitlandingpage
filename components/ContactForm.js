@@ -51,7 +51,7 @@ export default function ContactForm(){
         })
 
         if (res.ok) {
-          setSuccessMsg('✓ Got it! We received your message. We'll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
+          setSuccessMsg('✓ Got it! We received your message. We\'ll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
           form.reset()
           setMailto('')
           setErrorMsg('')
@@ -82,7 +82,7 @@ export default function ContactForm(){
         body: JSON.stringify(body)
       })
       if (res.ok) {
-        setSuccessMsg('✓ Got it! We received your message. We'll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
+        setSuccessMsg('✓ Got it! We received your message. We\'ll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
         form.reset()
         setMailto('')
         setErrorMsg('')
