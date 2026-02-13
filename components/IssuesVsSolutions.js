@@ -40,41 +40,33 @@ export default function IssuesVsSolutions() {
   return (
     <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Why Kit Compliance Fails Today
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            And how SafetyKit fixes each one
-          </p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Kit Compliance Fails Today</h2>
+          <p className="text-lg text-slate-600">And how SafetyKit fixes each one</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {comparisons.map((comp, idx) => (
-            <div key={idx} className="bg-white rounded-lg border border-slate-200 overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                {/* Left side: Problem */}
-                <div className="p-6 border-r border-slate-200 bg-red-50/50">
-                  <div className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-1">The Problem</div>
-                  <p className="text-slate-900 font-medium">{comp.issue}</p>
-                </div>
-                
-                {/* Right side: Solution */}
-                <div className="p-6">
-                  <div className="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-1">SafetyKit Solution</div>
-                  <p className="text-slate-900 font-medium mb-2">{comp.solution}</p>
-                  <p className="text-sm text-emerald-700">→ {comp.impact}</p>
-                </div>
+            <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+              {/* Left: Problem */}
+              <div className="p-5 bg-red-50/60">
+                <div className="text-xs font-bold text-red-700 uppercase tracking-wide mb-1">Problem</div>
+                <p className="text-slate-900 font-medium text-sm leading-snug">{comp.issue}</p>
+              </div>
+              
+              {/* Right: Solution */}
+              <div className="p-5">
+                <div className="text-xs font-bold text-emerald-700 uppercase tracking-wide mb-1">Solution</div>
+                <p className="text-slate-900 font-medium text-sm leading-snug mb-2">{comp.solution}</p>
+                <p className="text-xs text-emerald-700 font-medium">→ {comp.impact}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom context */}
         <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-200">
-          <p className="text-center text-slate-700">
-            <strong>Result:</strong> Centres using SafetyKit see <strong>80% reduction in expired-kit incidents</strong> within the first 90 days, 
-            plus <strong>8–12 hours reclaimed per month</strong> from manual checking.
+          <p className="text-sm text-slate-700 text-center leading-relaxed">
+            <strong>Result:</strong> Centres see <strong>80% fewer expired-kit incidents</strong> within 90 days, plus <strong>8–12 hours reclaimed per month</strong>.
           </p>
         </div>
       </div>

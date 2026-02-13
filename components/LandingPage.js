@@ -34,73 +34,67 @@ export default function LandingPage() {
       </div>
 
       {/* Hero */}
-      <header className="py-16">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <header className="py-20">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 mb-4">
-              <span className="bg-gradient-to-r from-emerald-100 to-blue-50 text-emerald-700 px-3 py-1 text-sm rounded-full">For ECEC & Healthcare Centres</span>
-            </div>
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
-                Cut expired-kit incidents by 80% in 90 days.
-              </h1>
-              <p className="mt-4 text-lg text-slate-700 max-w-xl font-medium">Standardise kit checks across every room and centre. No more compliance surprises.</p>
-              
-              <p className="mt-3 text-base text-slate-600 max-w-xl">Automated expiry alerts, mobile scanning, and audit-ready reports built specifically for early childhood and healthcare compliance teams that can't afford failures.</p>
-
-            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md text-sm text-slate-700">
-              <li className="flex items-start gap-3"><span className="mt-1 text-emerald-600 font-bold">✓</span><span><strong>80% fewer</strong> expired incidents</span></li>
-              <li className="flex items-start gap-3"><span className="mt-1 text-emerald-600 font-bold">✓</span><span><strong>3-second</strong> kit checks</span></li>
-              <li className="flex items-start gap-3"><span className="mt-1 text-emerald-600 font-bold">✓</span><span><strong>Offline</strong> mobile app</span></li>
-              <li className="flex items-start gap-3"><span className="mt-1 text-emerald-600 font-bold">✓</span><span><strong>Audit-ready</strong> reports</span></li>
-            </ul>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#contact" role="button" aria-label="Start 30-day pilot" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">Start 30-day Pilot</a>
-              <a href="#contact" role="button" aria-label="Book a demo" className="inline-block border border-slate-300 px-6 py-3 rounded-lg font-semibold text-slate-700 hover:bg-slate-50">Book a Demo</a>
+            {/* Credibility tag - eyebrow position */}
+            <div className="mb-6">
+              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">For ECEC & Healthcare Centres</span>
             </div>
 
-            <div className="mt-3 text-xs text-slate-500">
-              <p>✓ No credit card required · ✓ Cancel anytime · ✓ Set up in under 10 minutes</p>
+            {/* Primary headline - clear, single message */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 mb-4">
+              Cut expired-kit incidents by 80% in 90 days.
+            </h1>
+
+            {/* Subheading - supporting context */}
+            <p className="text-lg text-slate-700 max-w-lg leading-relaxed mb-6">
+              Standardise kit checks across every room and centre with automated expiry alerts, mobile scanning, and audit-ready reports.
+            </p>
+
+            {/* Hero benefits - 3 core only, clean layout */}
+            <div className="space-y-3 mb-8">
+              <div className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
+                <div><span className="font-semibold text-slate-900">80% fewer</span> expired incidents</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
+                <div>Complete kit checks in <span className="font-semibold text-slate-900">3 seconds</span></div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
+                <div><span className="font-semibold text-slate-900">Works offline</span> anywhere, anytime</div>
+              </div>
             </div>
 
-            <div className="mt-6 text-sm text-slate-600 flex items-center gap-3 flex-wrap">
-              <div>🔒 Secure by design</div>
-              <div>·</div>
-              <div>📱 Offline mobile app</div>
-              <div>·</div>
-              <div>✓ SOC 2 ready</div>
+            {/* Primary CTAs - two buttons only, clearly grouped */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <a href="#contact" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 text-center">Start 30-day Pilot</a>
+              <a href="#contact" className="inline-block border-2 border-slate-300 text-slate-900 px-7 py-2 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-50 text-center">Book a 15-min Demo</a>
             </div>
+
+            {/* Reassurance text - separate from CTAs */}
+            <p className="text-xs text-slate-500">
+              No credit card required · Cancel anytime · Usually set up in under 10 minutes
+            </p>
           </div>
 
-            <div className="order-first md:order-last" aria-hidden>
-            <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white">
+            <div className="order-first md:order-last">
+            <div className="relative hero-card device-frame shadow-xl rounded-xl overflow-hidden bg-white border border-slate-200">
               <DeviceFrame>
                 <img
                   src={(content && content.hero && content.hero.images && content.hero.images[0]) || '/hero.png'}
-                  alt="SafetyKit dashboard preview"
+                  alt="SafetyKit dashboard showing kit compliance status"
                   className="w-full block"
                   loading="lazy"
                 />
               </DeviceFrame>
 
-              {/* KPI badges overlay */}
-              <div className="absolute left-4 top-4 flex flex-col gap-3 hidden sm:flex">
-                <div className="bg-white/95 kpi-badge badge-glow px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-blue-500 shadow-sm lift-on-hover" role="status" aria-label="Total kits">
-                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><IconKit /></div>
-                  <div className="text-sm text-slate-700">Total Kits<span className="block text-xs text-green-600">kit condition overview</span></div>
-                </div>
-                <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-yellow-400 shadow-sm lift-on-hover" role="status" aria-label="Maintenance due">
-                  <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600"><IconClock /></div>
-                  <div className="text-sm text-slate-700">Maintenance Due<span className="block text-xs text-orange-500">Requires attention</span></div>
-                </div>
-                <div className="bg-white/95 kpi-badge px-3 py-2 rounded-lg flex items-center gap-3 border-l-4 border-emerald-500 shadow-sm lift-on-hover" role="status" aria-label="Compliance ready">
-                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600"><IconCheck /></div>
-                  <div className="text-sm text-slate-700">Compliance Ready<span className="block text-xs text-emerald-600">Excellent · Low risk</span></div>
-                </div>
+              {/* Status indicator badges */}
+              <div className="absolute left-4 top-4 flex gap-2 hidden sm:flex">
+                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 text-xs font-semibold rounded-full">Compliance Ready · Low risk</span>
               </div>
-
-              {/* small CTA badge bottom-right (hide on very small screens) */}
-              <a href="#contact" className="absolute right-4 bottom-4 bg-white/95 px-4 py-2 rounded-full text-sm font-medium shadow-sm hidden sm:inline-block">Start 30-day Pilot</a>
             </div>
           </div>
         </div>
@@ -119,88 +113,61 @@ export default function LandingPage() {
       {/* How SafetyKit Works - 3-Step Flow */}
       <HowItWorks />
 
+      {/* Key Metrics - moved higher for early social proof */}
+      <MetricsRow />
+
       {/* Common Issues vs Solutions */}
       <IssuesVsSolutions />
 
-      {/* Key Metrics */}
-      <MetricsRow />
-
       {/* Personas with Specific Outcomes */}
-      <section className="py-12 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Teams Choose SafetyKit</h2>
-            <p className="text-lg text-slate-600">Tailored outcomes for every role</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Teams Choose SafetyKit</h2>
+            <p className="text-lg text-slate-600">Tailored for every role</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* EHS Managers */}
-            <div className="p-6 bg-blue-50 rounded-lg border border-blue-200">
-              <div className="text-2xl font-bold text-blue-700 mb-2">For EHS Managers</div>
-              <div className="text-sm text-slate-700 mb-4">See kit readiness across every site in one dashboard.</div>
+            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-sm font-bold text-blue-700 uppercase tracking-wide mb-2">For EHS Managers</div>
+              <p className="text-slate-700 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
               
-              <div className="space-y-3 mb-6 text-sm">
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>Single dashboard</strong> for all centres and sites</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>Export <strong>audit-ready reports</strong> with 2 clicks</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>80% faster</strong> audit prep time</span>
-                </div>
-              </div>
+              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Single dashboard</strong> for all centres</span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>2-click reports</strong> for auditors</span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>80% faster</strong> audit prep</span></li>
+              </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-blue-600 hover:underline">Book a demo →</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-blue-600 hover:underline">Book a demo</a>
             </div>
 
             {/* Clinical / Medical Coordinators */}
-            <div className="p-6 bg-emerald-50 rounded-lg border border-emerald-200">
-              <div className="text-2xl font-bold text-emerald-700 mb-2">For Clinical Coordinators</div>
-              <div className="text-sm text-slate-700 mb-4">Know which kits need attention before each shift.</div>
+            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-sm font-bold text-emerald-700 uppercase tracking-wide mb-2">For Clinical Coordinators</div>
+              <p className="text-slate-700 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
               
-              <div className="space-y-3 mb-6 text-sm">
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>Track <strong>medication & first-aid expiry</strong> by room</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>Real-time alerts</strong> before incidents occur</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>Verify kit readiness</strong> in 90 seconds</span>
-                </div>
-              </div>
+              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span>Track <strong>expiry by room</strong></span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Real-time alerts</strong> before issues</span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>90-second</strong> kit checks</span></li>
+              </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-emerald-600 hover:underline">Book a demo →</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-emerald-600 hover:underline">Book a demo</a>
             </div>
 
             {/* Centre / Facilities Managers */}
-            <div className="p-6 bg-amber-50 rounded-lg border border-amber-200">
-              <div className="text-2xl font-bold text-amber-700 mb-2">For Centre Managers</div>
-              <div className="text-sm text-slate-700 mb-4">Standardise checks across casual, part-time, and full-time staff.</div>
+            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-sm font-bold text-amber-700 uppercase tracking-wide mb-2">For Centre Managers</div>
+              <p className="text-slate-700 font-medium text-sm mb-4">Standardise checks across all staff.</p>
               
-              <div className="space-y-3 mb-6 text-sm">
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>Assign maintenance <strong>tasks & track completion</strong></span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>Reduce onboarding time</strong> for new staff</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span><strong>Save 8–12 hours/month</strong> on manual checks</span>
-                </div>
-              </div>
+              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span">Assign <strong>maintenance tasks</strong></span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Faster onboarding</strong> for staff</span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span"><strong>8–12 hrs saved</strong> per month</span></li>
+              </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline">Book a demo →</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline">Book a demo</a>
             </div>
           </div>
         </div>
@@ -228,9 +195,6 @@ export default function LandingPage() {
 
       {/* How to Get Started Section */}
       <HowToGetStarted />
-
-      {/* Mid-page CTA band */}
-      <CTABand />
 
       {/* Contact / Book Demo */}
       <section id="contact" className="py-12 bg-blue-50">

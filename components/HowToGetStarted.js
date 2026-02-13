@@ -26,36 +26,36 @@ export default function HowToGetStarted() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 to-slate-50">
+    <section className="py-20 bg-gradient-to-b from-blue-50 to-slate-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Start Your SafetyKit Journey in 3 Steps
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+            Start Your SafetyKit Journey
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A straightforward path from first conversation to full compliance visibility—in 30 days, risk-free.
+          <p className="text-lg text-slate-600">
+            Three simple steps from first conversation to full compliance visibility
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 mb-12">
           {steps.map((step, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               {/* Step number */}
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 text-white font-bold text-xl">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white font-bold text-lg">
                   {step.number}
                 </div>
               </div>
 
               {/* Step content */}
-              <div className="flex-1 bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-700 mb-4">{step.description}</p>
+              <div className="flex-1 bg-white rounded-lg p-5 shadow-sm border border-slate-200">
+                <h3 className="font-bold text-slate-900 mb-2">{step.title}</h3>
+                <p className="text-sm text-slate-700 mb-3">{step.description}</p>
                 
-                {/* Details list */}
-                <ul className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {/* Details - compact list */}
+                <ul className="space-y-1">
                   {step.details.map((detail, didx) => (
-                    <li key={didx} className="flex items-start gap-2 text-sm text-slate-600">
+                    <li key={didx} className="flex items-start gap-2 text-xs text-slate-600">
                       <span className="text-emerald-600 font-bold mt-0.5">•</span>
                       <span>{detail}</span>
                     </li>
@@ -67,18 +67,13 @@ export default function HowToGetStarted() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 text-center">
-          <p className="text-slate-600 mb-4 text-lg">Ready to begin?</p>
-          <div className="flex flex-col md:flex-row gap-3 justify-center items-center">
-            <a href="#contact" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">
-              Schedule Your 15-Minute Call
-            </a>
-            <span className="text-slate-400">or</span>
-            <a href="#contact" className="inline-block border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50">
-              Email us
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-3">
+            <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700">
+              Book Your 15-Min Call
             </a>
           </div>
-          <p className="text-xs text-slate-500 mt-3">We typically respond within 2 hours during business hours.</p>
+          <p className="text-xs text-slate-500">Respond within 2 hours during business hours</p>
         </div>
       </div>
     </section>

@@ -38,56 +38,46 @@ export default function ECECSpecific() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
             Built for Early Childhood. Built for You.
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Real-world ECEC scenarios—from room checks to regulatory audits to excursions—SafetyKit handles them all.
-          </p>
+          <p className="text-lg text-slate-600">Real-world ECEC scenarios—SafetyKit handles them all</p>
         </div>
 
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {ececPoints.map((point, idx) => (
-            <div key={idx} className="border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-50/50 rounded-r-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-2">{point.scenario}</h3>
-              <p className="text-slate-700 mb-3">{point.details}</p>
-              <div className="text-sm text-emerald-700 font-medium italic">{point.example}</div>
+            <div key={idx} className="border-l-4 border-emerald-500 pl-5 py-4 bg-emerald-50/40 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 mb-2">{point.scenario}</h3>
+              <p className="text-sm text-slate-700 mb-2 leading-snug">{point.details}</p>
+              <p className="text-xs text-emerald-700 italic">→ {point.example}</p>
             </div>
           ))}
         </div>
 
-        {/* ECEC outcomes summary */}
-        <div className="mt-12 p-8 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-lg border-2 border-emerald-200">
-          <h3 className="text-xl font-bold text-slate-900 mb-4">What Early Childhood Centres See in the First 30 Days</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Outcomes summary - compact */}
+        <div className="p-6 bg-emerald-50 rounded-lg border border-emerald-200 mb-8">
+          <h3 className="font-bold text-slate-900 mb-4 text-center">What ECEC Centres See in 30 Days</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-3xl font-bold text-emerald-700 mb-1">Zero</div>
-              <p className="text-slate-700">Expired kit surprises during audits or routine checks</p>
+              <div className="text-4xl font-bold text-emerald-700">0</div>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Expired kit surprises</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-emerald-700 mb-1">10–12 hrs</div>
-              <p className="text-slate-700">Reclaimed per centre per month from manual checking</p>
+              <div className="text-4xl font-bold text-emerald-700">10h</div>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Reclaimed per month</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-emerald-700 mb-1">100%</div>
-              <p className="text-slate-700">Staff following the same kit check process (no inconsistency)</p>
+              <div className="text-4xl font-bold text-emerald-700">100%</div>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Consistent processes</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-emerald-700 mb-1">1 click</div>
-              <p className="text-slate-700">To pull a compliance report for auditors or regulators</p>
+              <div className="text-4xl font-bold text-emerald-700">1</div>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Click for compliance</p>
             </div>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-10">
-          <p className="text-slate-600 mb-4">Ready to see how SafetyKit transforms kit compliance in your centre?</p>
-          <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700">
-            Start Your 30-Day Pilot Today
-          </a>
         </div>
       </div>
     </section>
