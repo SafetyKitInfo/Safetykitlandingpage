@@ -188,7 +188,7 @@ export default function LandingPage() {
               <div className="space-y-3 mb-6 text-sm">
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-600 font-bold">✓</span>
-                  <span">Assign maintenance <strong>tasks & track completion</strong></span>
+                  <span>Assign maintenance <strong>tasks & track completion</strong></span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-emerald-600 font-bold">✓</span>
