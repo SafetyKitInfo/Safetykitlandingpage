@@ -162,9 +162,9 @@ export default function LandingPage() {
               <p className="text-slate-700 font-medium text-sm mb-4">Standardise checks across all staff.</p>
               
               <ul className="space-y-2 mb-5 text-xs text-slate-700">
-                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span">Assign <strong>maintenance tasks</strong></span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span>Assign <strong>maintenance tasks</strong></span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Faster onboarding</strong> for staff</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span"><strong>8–12 hrs saved</strong> per month</span></li>
+                <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>8–12 hrs saved</strong> per month</span></li>
               </ul>
               
               <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline">Book a demo</a>
