@@ -13,10 +13,27 @@ const FORMSPREE_ENDPOINT = process?.env?.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'http
 const USE_FORMSPREE = Boolean(FORMSPREE_ENDPOINT)
 
 export default function ContactForm(){
+  const [selectedIntent, setSelectedIntent] = useState('book-demo')
   const [mailto, setMailto] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
   const [successMsg, setSuccessMsg] = useState('')
+  const [submittedName, setSubmittedName] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const intentOptions = [
+    { value: 'book-demo', label: 'Book a 15–30 min demo', help: 'See SafetyKit in action with a live walkthrough' },
+    { value: 'start-pilot', label: 'Start a 30-day pilot', help: 'Full setup, QR tagging, and onboarding included' },
+    { value: 'general', label: 'General enquiry', help: 'Ask us anything' },
+    { value: 'partnerships', label: 'Partnerships & integrations', help: 'Integrate with your existing systems' }
+  ]
+
+  const getCTALabel = () => {
+    switch(selectedIntent) {
+      case 'start-pilot': return 'Start My 30-Day Pilot'
+      case 'partnerships': return 'Discuss Partnership'
+      default: return 'Book My Demo'
+    }
+  }
 
   async function handleSubmit(e){
     e.preventDefault();
@@ -51,7 +68,9 @@ export default function ContactForm(){
         })
 
         if (res.ok) {
-          setSuccessMsg('✓ Got it! We received your message. We\'ll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
+          const nameValue = form.querySelector('[name="name"]')?.value || 'there'
+          setSubmittedName(nameValue)
+          setSuccessMsg(`Thanks, ${nameValue}! We'll send times and details within 1 business day.`)
           form.reset()
           setMailto('')
           setErrorMsg('')
@@ -82,7 +101,9 @@ export default function ContactForm(){
         body: JSON.stringify(body)
       })
       if (res.ok) {
-        setSuccessMsg('✓ Got it! We received your message. We\'ll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
+        const nameValue = body.name || 'there'
+        setSubmittedName(nameValue)
+        setSuccessMsg(`Thanks, ${nameValue}! We'll send times and details within 1 business day.`)
         form.reset()
         setMailto('')
         setErrorMsg('')
@@ -112,82 +133,153 @@ export default function ContactForm(){
   }
 
   return (
-    <section id="contact" className="py-16 bg-teal-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <ContactCard
-          title="Let's Get You Started"
-          description="Tell us about your centre(s) and compliance needs. We'll respond within 1 business day with a personalised plan and suggested times for a demo or pilot setup."
-          contactInfo={[
-            {
-              icon: MailIcon,
-              label: 'Email',
-              value: 'info.safetykit@gmail.com',
-              className: 'justify-start',
-            }
-          ]}
-        >
+    <section id="contact" className="py-20 bg-gradient-to-b from-white to-slate-50">
+      <div className="max-w-4xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Book Your 15-Minute SafetyKit Demo</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">Get a personalized plan for your centres—no sales pitch, just compliance help.</p>
+        </div>
+
+        {/* Social proof block */}
+        <div className="mb-12 p-6 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+            <div>
+              <div className="font-bold text-blue-700 mb-1">50+</div>
+              <div className="text-slate-600">Centres & Healthcare Orgs</div>
+            </div>
+            <div>
+              <div className="font-bold text-emerald-700 mb-1">80%</div>
+              <div className="text-slate-600">Fewer Expired Incidents</div>
+            </div>
+            <div>
+              <div className="font-bold text-purple-700 mb-1">90 Days</div>
+              <div className="text-slate-600">To See Results</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Form card */}
+        <div className="bg-white rounded-lg border border-slate-200 shadow-lg p-8">
+          {/* Step indicator */}
+          <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-6">Step 1 of 1: Share your details</div>
+
           <form
             action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
             method={USE_FORMSPREE ? 'POST' : undefined}
             onSubmit={USE_FORMSPREE ? undefined : handleSubmit}
-            className="w-full space-y-4"
+            className="space-y-6"
           >
             {USE_FORMSPREE && (
               <>
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New SafetyKit website contact" />
+                <input type="hidden" name="_subject" value="New SafetyKit demo request" />
               </>
             )}
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-name">Your name</Label>
-              <Input id="contact-name" name="name" required placeholder="Your name" autoComplete="name" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-email">Email</Label>
-              <Input id="contact-email" name="email" type="email" required placeholder="Email" autoComplete="email" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-org">Organisation (optional)</Label>
-              <Input id="contact-org" name="organization" placeholder="Organisation (optional)" autoComplete="organization" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-phone">Phone (optional)</Label>
-              <Input id="contact-phone" name="phone" placeholder="Phone (optional)" inputMode="tel" autoComplete="tel" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label>I'm interested in</Label>
-              <select name="interest" className="p-3 rounded border w-full text-base">
-                <option value="Book a demo (15-30 min via Zoom)">Book a demo (15–30 minutes via Zoom)</option>
-                <option value="Start a 30-day pilot (full centre setup + onboarding)">Start a 30-day pilot (full centre setup + onboarding)</option>
-                <option value="General enquiry">General enquiry</option>
-                <option value="Partnerships or integrations">Partnerships or integrations</option>
-              </select>
-              <p className="text-xs text-slate-500 mt-1">A guided 15-min call helps us understand your needs and regulatory context.</p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-message">Tell us about your centres & kit challenges (brief)</Label>
-              <Textarea id="contact-message" name="message" required rows="5" placeholder="E.g., 'We're a 5-centre network in QLD struggling with manual audits and expired first-aid items. Interested in a pilot in one centre.'" />
-              <p className="text-xs text-slate-500 mt-1">This helps us tailor the right demo or pilot approach.</p>
-            </div>
-            <Button disabled={isSubmitting} type="submit" className="w-full">
-              {isSubmitting ? 'Sending…' : 'Send Message'}
-            </Button>
-            <span className="text-xs text-slate-600">We typically reply within 1 business day. Your pilot includes full onboarding support.</span>
 
+            {/* Name and Email - side by side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex flex-col">
+                <Label htmlFor="contact-name" className="mb-2 font-medium">Your name</Label>
+                <Input id="contact-name" name="name" required placeholder="e.g., Sarah" autoComplete="name" />
+              </div>
+              <div className="flex flex-col">
+                <Label htmlFor="contact-email" className="mb-2 font-medium">Work email</Label>
+                <Input id="contact-email" name="email" type="email" required placeholder="e.g., sarah@centre.com.au" autoComplete="email" />
+              </div>
+            </div>
+
+            {/* Organisation and Phone - side by side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex flex-col">
+                <Label htmlFor="contact-org" className="mb-2 font-medium">Centre/Organisation</Label>
+                <Input id="contact-org" name="organization" placeholder="e.g., Sunnydale Early Learning" autoComplete="organization" />
+              </div>
+              <div className="flex flex-col">
+                <Label htmlFor="contact-phone" className="mb-2 font-medium text-slate-500">Phone <span className="text-slate-400">(optional)</span></Label>
+                <Input id="contact-phone" name="phone" placeholder="(optional)" inputMode="tel" autoComplete="tel" />
+              </div>
+            </div>
+
+            {/* Intent - Pill buttons instead of dropdown */}
+            <div className="flex flex-col">
+              <Label className="mb-3 font-medium">What would you like to do?</Label>
+              <div className="space-y-2">
+                {intentOptions.map(option => (
+                  <label key={option.value} className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors" style={{backgroundColor: selectedIntent === option.value ? '#f0f4ff' : 'transparent', borderColor: selectedIntent === option.value ? '#3b82f6' : '#e2e8f0'}}>
+                    <input 
+                      type="radio" 
+                      name="interest" 
+                      value={option.value}
+                      checked={selectedIntent === option.value}
+                      onChange={(e) => {
+                        setSelectedIntent(e.target.value)
+                      }}
+                      className="mt-1"
+                    />
+                    <div className="flex-1">
+                      <div className="font-medium text-slate-900">{option.label}</div>
+                      <div className="text-xs text-slate-500 mt-0.5">{option.help}</div>
+                    </div>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Message textarea */}
+            <div className="flex flex-col">
+              <Label htmlFor="contact-message" className="mb-2 font-medium">Tell us about your centres & kit challenges</Label>
+              <Textarea 
+                id="contact-message" 
+                name="message" 
+                required 
+                rows="4" 
+                placeholder="E.g., 'We're a 3-centre network in QLD struggling with manual audits and expired first-aid items. Looking to pilot in 1 centre.'" 
+                className="resize-none"
+              />
+              <p className="text-xs text-slate-500 mt-2">Briefly describe your centres (no. of rooms/locations) and current kit challenges.</p>
+            </div>
+
+            {/* CTA Button */}
+            <Button 
+              disabled={isSubmitting} 
+              type="submit" 
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold text-base"
+            >
+              {isSubmitting ? 'Sending…' : getCTALabel()}
+            </Button>
+
+            {/* Reassurance text */}
+            <p className="text-xs text-slate-500 text-center">
+              We'll reply within 1 business day with times and a tailored plan.
+            </p>
+
+            {/* Success message */}
             {successMsg && (
-              <div role="status" aria-live="polite" className="mt-4 p-4 bg-green-50 border rounded">
-                <p className="text-sm text-green-900">{successMsg}</p>
+              <div role="status" aria-live="polite" className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-sm text-green-900 font-medium mb-1">✓ {successMsg}</p>
+                <p className="text-xs text-green-800">Check your inbox for our reply. If you don't see it, check your spam folder.</p>
               </div>
             )}
 
+            {/* Error/mailto fallback */}
             {mailto && (
-              <div role="alert" className="mt-4 p-4 bg-yellow-50 border rounded">
-                <p className="text-sm text-yellow-900">We couldn't send your message automatically ({errorMsg}). You can still email us directly:</p>
-                <a className="block mt-2 text-teal-600 underline break-words" href={mailto}>Compose email to info@safetykit@gmail.com</a>
+              <div role="alert" className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                <p className="text-sm text-yellow-900 font-medium mb-2">We couldn't send automatically. Please email us instead:</p>
+                <a className="text-blue-600 hover:underline text-sm break-words font-medium" href={mailto}>
+                  Send via email
+                </a>
               </div>
             )}
           </form>
-        </ContactCard>
+
+          {/* Email fallback below form */}
+          <div className="mt-6 pt-6 border-t border-slate-200 text-center">
+            <p className="text-xs text-slate-500">
+              Prefer email? <a href="mailto:info.safetykit@gmail.com" className="text-blue-600 hover:underline font-medium">info.safetykit@gmail.com</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
