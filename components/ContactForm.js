@@ -51,7 +51,7 @@ export default function ContactForm(){
         })
 
         if (res.ok) {
-          setSuccessMsg('Thanks — we received your message. We will reply within one business day.')
+          setSuccessMsg('✓ Got it! We received your message. We'll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
           form.reset()
           setMailto('')
           setErrorMsg('')
@@ -82,7 +82,7 @@ export default function ContactForm(){
         body: JSON.stringify(body)
       })
       if (res.ok) {
-        setSuccessMsg('Thanks — we received your message. We will reply within one business day.')
+        setSuccessMsg('✓ Got it! We received your message. We'll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon.')
         form.reset()
         setMailto('')
         setErrorMsg('')
@@ -115,8 +115,8 @@ export default function ContactForm(){
     <section id="contact" className="py-16 bg-teal-50">
       <div className="max-w-6xl mx-auto px-6">
         <ContactCard
-          title="Contact Us / Book a Demo"
-          description="Interested in a demo, pilot or quick walkthrough? Tell us a little about your needs and we'll respond within one business day."
+          title="Let's Get You Started"
+          description="Tell us about your centre(s) and compliance needs. We'll respond within 1 business day with a personalised plan and suggested times for a demo or pilot setup."
           contactInfo={[
             {
               icon: MailIcon,
@@ -157,20 +157,22 @@ export default function ContactForm(){
             <div className="flex flex-col gap-2">
               <Label>I'm interested in</Label>
               <select name="interest" className="p-3 rounded border w-full text-base">
-                <option>Book a demo</option>
-                <option>Start a 30-day pilot</option>
-                <option>Partnerships</option>
-                <option>Other / General enquiry</option>
+                <option value="Book a demo (15-30 min via Zoom)">Book a demo (15–30 minutes via Zoom)</option>
+                <option value="Start a 30-day pilot (full centre setup + onboarding)">Start a 30-day pilot (full centre setup + onboarding)</option>
+                <option value="General enquiry">General enquiry</option>
+                <option value="Partnerships or integrations">Partnerships or integrations</option>
               </select>
+              <p className="text-xs text-slate-500 mt-1">A guided 15-min call helps us understand your needs and regulatory context.</p>
             </div>
             <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-message">Tell us how we can help (brief)</Label>
-              <Textarea id="contact-message" name="message" required rows="5" placeholder="Tell us how we can help (brief)" />
+              <Label htmlFor="contact-message">Tell us about your centres & kit challenges (brief)</Label>
+              <Textarea id="contact-message" name="message" required rows="5" placeholder="E.g., 'We're a 5-centre network in QLD struggling with manual audits and expired first-aid items. Interested in a pilot in one centre.'" />
+              <p className="text-xs text-slate-500 mt-1">This helps us tailor the right demo or pilot approach.</p>
             </div>
             <Button disabled={isSubmitting} type="submit" className="w-full">
               {isSubmitting ? 'Sending…' : 'Send Message'}
             </Button>
-            <span className="text-sm text-slate-600">We typically reply within 1 business day</span>
+            <span className="text-xs text-slate-600">We typically reply within 1 business day. Your pilot includes full onboarding support.</span>
 
             {successMsg && (
               <div role="status" aria-live="polite" className="mt-4 p-4 bg-green-50 border rounded">
