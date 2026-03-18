@@ -133,35 +133,16 @@ export default function ContactForm(){
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-white to-slate-50">
-      <div className="max-w-4xl mx-auto px-4">
+    <section id="contact" className="py-20 bg-slate-50">
+      <div className="max-w-3xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Book Your 15-Minute SafetyKit Demo</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">Get a tailored compliance plan for your centres in under 24 hours.</p>
-        </div>
-
-        {/* Trust signals */}
-        <div className="mb-10 grid grid-cols-3 gap-3 text-center">
-          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
-            <div className="text-xl font-extrabold text-blue-600">50+</div>
-            <div className="text-xs text-slate-500 mt-0.5">Centres &amp; Orgs</div>
-          </div>
-          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
-            <div className="text-xl font-extrabold text-emerald-600">80%</div>
-            <div className="text-xs text-slate-500 mt-0.5">Fewer Expired Incidents</div>
-          </div>
-          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
-            <div className="text-xl font-extrabold text-purple-600">1 Day</div>
-            <div className="text-xs text-slate-500 mt-0.5">Reply within 1 business day</div>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Book a demo</h2>
+          <p className="text-lg text-slate-600 max-w-xl mx-auto">Share your details and we'll get back to you within 1 business day.</p>
         </div>
 
         {/* Form card */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-lg p-8">
-          {/* Step indicator */}
-          <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-6">Step 1 of 1: Share your details</div>
-
+        <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-8">
           <form
             action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
             method={USE_FORMSPREE ? 'POST' : undefined}
@@ -201,7 +182,7 @@ export default function ContactForm(){
 
             {/* Intent - Pill buttons instead of dropdown */}
             <div className="flex flex-col">
-              <Label className="mb-3 font-medium">What would you like to do?</Label>
+              <Label className="mb-3 font-medium">I'd like to…</Label>
               <div className="space-y-2">
                 {intentOptions.map(option => (
                   <label key={option.value} className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors" style={{backgroundColor: selectedIntent === option.value ? '#f0f4ff' : 'transparent', borderColor: selectedIntent === option.value ? '#3b82f6' : '#e2e8f0'}}>

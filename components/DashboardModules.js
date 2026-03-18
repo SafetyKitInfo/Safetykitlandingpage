@@ -1,28 +1,28 @@
 /**
  * Inside the SafetyKit Dashboard
- * Maps real app module names to their purpose so visitors know what to expect
+ * Concrete, plain-language descriptions of each module
  */
 
 export default function DashboardModules() {
   const modules = [
     {
       name: "WHS Compliance Dashboard",
-      description: "A real-time overview of readiness across every centre and room. Track kit status, first aider certifications, and outstanding maintenance items in one place.",
+      description: "Live status of every kit, first aider certifications, and outstanding actions across all centres.",
       tag: "Readiness"
     },
     {
-      name: "Proactive Engine: Next 3 Actions",
-      description: "Surfaces the highest-priority tasks based on data recorded in SafetyKit — expiry alerts, overdue checks, and certification gaps. Recommendations only, not legal advice.",
+      name: "Proactive Engine",
+      description: "Ranks upcoming expiry, overdue checks, and certification gaps so teams know exactly what to do next.",
       tag: "Guidance"
     },
     {
-      name: "ROI & Time Savings Dashboard",
-      description: "Track your own time saved on checks, cost avoided through prevented expiries, and kit uptime. Outcomes are measured against data entered into SafetyKit.",
+      name: "ROI & Time Savings",
+      description: "Tracks time spent on checks and cost avoided from prevented expiries, measured against data you record.",
       tag: "Savings"
     },
     {
       name: "Risk Trend Monitoring",
-      description: "Monitor incident trends, expiry breaches, audit readiness, and critical issues over time — an internal readiness indicator, not a legal compliance determination.",
+      description: "Visualises expiry breaches, incidents, and audit readiness over time so issues are caught early.",
       tag: "Risk"
     }
   ];
@@ -35,14 +35,14 @@ export default function DashboardModules() {
   };
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="dashboard" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetyKit Dashboard</h2>
-          <p className="text-lg text-slate-600">Real modules you will use from day one — no surprises when you log in</p>
+          <p className="text-lg text-slate-600">Four core modules you will use from day one</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {modules.map((mod, idx) => (
             <div key={idx} className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start justify-between mb-3">
@@ -53,10 +53,6 @@ export default function DashboardModules() {
             </div>
           ))}
         </div>
-
-        <p className="text-xs text-slate-400 text-center mt-8">
-          SafetyKit is a guidance and record-keeping tool. Readiness scores and dashboards are internal indicators based on data recorded in SafetyKit — not a legal compliance certification or substitute for your WHS obligations.
-        </p>
       </div>
     </section>
   );

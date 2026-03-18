@@ -59,10 +59,7 @@ export default function HowItWorks() {
                 </ul>
               </div>
 
-              {/* Arrow visual on desktop only */}
-              {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute mt-8 ml-24 text-2xl text-slate-300">→</div>
-              )}
+              {/* No decorative arrows — numbered headings provide flow */}
             </div>
           ))}
         </div>
