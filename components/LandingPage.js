@@ -39,50 +39,39 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             {/* Credibility tag - eyebrow position */}
-            <div className="mb-6">
-              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">For ECEC & Healthcare Centres</span>
+            <div className="mb-4">
+              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">For ECEC &amp; Healthcare Centres</span>
             </div>
 
-            {/* Primary headline - clear, single message */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 mb-4">
-              Typically cut expired-kit incidents by up to 80% in 90 days.
+            {/* Primary headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 mb-3">
+              Eliminate expired kits across every centre
             </h1>
 
-            {/* Subheading - supporting context */}
-            <p className="text-lg text-slate-700 max-w-lg leading-relaxed mb-4">
-              Standardise kit checks across every room and centre with automated expiry alerts, mobile scanning, and audit-ready reports.
+            {/* Stat sub-headline */}
+            <p className="text-xl font-semibold text-blue-700 mb-3">
+              Typically cut expired-kit incidents by up to 80% in 90 days.
             </p>
 
-            {/* Guidance disclaimer - mirrors app language */}
-            <p className="text-xs text-slate-500 mb-6 leading-relaxed">
-              SafetyKit is a guidance and record-keeping tool for tracking kit checks, inventory, and training — not a legal authority or replacement for your WHS obligations.
+            {/* Single supporting line */}
+            <p className="text-base text-slate-600 max-w-lg leading-relaxed mb-6">
+              Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare.
             </p>
 
-            {/* Hero benefits - 3 core only, clean layout */}
-            <div className="space-y-3 mb-8">
-              <div className="flex items-start gap-3">
-                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
-                <div><span className="font-semibold text-slate-900">Up to 80% fewer</span> expired incidents</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
-                <div>Complete kit checks in <span className="font-semibold text-slate-900">3 seconds</span></div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
-                <div><span className="font-semibold text-slate-900">Works offline</span> anywhere, anytime</div>
-              </div>
-            </div>
-
-            {/* Primary CTAs - two buttons only, clearly grouped */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            {/* Primary CTAs - filled primary, outline secondary */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <a href="#contact" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 text-center">Start 30-day Pilot</a>
-              <a href="#contact" className="inline-block border-2 border-slate-300 text-slate-900 px-7 py-2 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-50 text-center">Book a 15-min Demo</a>
+              <a href="#contact" className="inline-block border-2 border-blue-600 text-blue-600 px-7 py-3 rounded-lg font-semibold hover:bg-blue-50 text-center">Book a 15-min Demo</a>
             </div>
 
-            {/* Reassurance text - separate from CTAs */}
-            <p className="text-xs text-slate-500">
+            {/* Reassurance text */}
+            <p className="text-xs text-slate-500 mb-6">
               No credit card required · Cancel anytime · Usually set up in under 10 minutes
+            </p>
+
+            {/* Guidance disclaimer - lighter, muted */}
+            <p className="text-xs text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+              SafetyKit is a guidance and record-keeping tool — not a legal authority or replacement for your WHS obligations.
             </p>
           </div>
 
@@ -104,12 +93,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-
-        {/* Key metrics: visible above the fold for instant credibility */}
-        <div className="mt-8">
-          <MetricsRow />
-        </div>
       </header>
+
+      {/* Outcomes band - 4 key metrics immediately below hero */}
+      <MetricsRow />
 
       <StickyCTA />
 
@@ -118,9 +105,6 @@ export default function LandingPage() {
 
       {/* How SafetyKit Works - 3-Step Flow */}
       <HowItWorks />
-
-      {/* Key Metrics - moved higher for early social proof */}
-      <MetricsRow />
 
       {/* Common Issues vs Solutions */}
       <IssuesVsSolutions />
@@ -135,45 +119,45 @@ export default function LandingPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* EHS Managers */}
-            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-sm font-bold text-blue-700 uppercase tracking-wide mb-2">For EHS Managers</div>
               <p className="text-slate-700 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
               
-              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+              <ul className="space-y-2 mb-5 text-xs text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Single dashboard</strong> for all centres</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>2-click reports</strong> for auditors</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>80% faster</strong> audit prep</span></li>
               </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-blue-600 hover:underline">Book a demo</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-blue-600 hover:underline mt-auto">Book a demo →</a>
             </div>
 
             {/* Clinical / Medical Coordinators */}
-            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-sm font-bold text-emerald-700 uppercase tracking-wide mb-2">For Clinical Coordinators</div>
               <p className="text-slate-700 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
               
-              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+              <ul className="space-y-2 mb-5 text-xs text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span>Track <strong>expiry by room</strong></span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Real-time alerts</strong> before issues</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>90-second</strong> kit checks</span></li>
               </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-emerald-600 hover:underline">Book a demo</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-emerald-600 hover:underline mt-auto">Book a demo →</a>
             </div>
 
             {/* Centre / Facilities Managers */}
-            <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-sm font-bold text-amber-700 uppercase tracking-wide mb-2">For Centre Managers</div>
               <p className="text-slate-700 font-medium text-sm mb-4">Standardise checks across all staff.</p>
               
-              <ul className="space-y-2 mb-5 text-xs text-slate-700">
+              <ul className="space-y-2 mb-5 text-xs text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span>Assign <strong>maintenance tasks</strong></span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>Faster onboarding</strong> for staff</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span><span><strong>8–12 hrs saved</strong> per month</span></li>
               </ul>
               
-              <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline">Book a demo</a>
+              <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline mt-auto">Book a demo →</a>
             </div>
           </div>
         </div>
@@ -206,13 +190,7 @@ export default function LandingPage() {
       <HowToGetStarted />
 
       {/* Contact / Book Demo */}
-      <section id="contact" className="py-12 bg-blue-50">
-        <h2 className="text-2xl font-bold text-center mb-4">Contact Us / Book a Demo</h2>
-        <div className="max-w-lg mx-auto">
-          <ContactForm />
-        </div>
-        <div className="text-center text-xs text-gray-400 mt-2">We respect your privacy. No spam.</div>
-      </section>
+      <ContactForm />
 
       <footer className="py-6 text-center text-gray-500 text-sm">
         <nav className="mb-2">

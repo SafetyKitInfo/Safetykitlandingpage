@@ -68,7 +68,7 @@ export default function IssuesVsSolutions() {
           <p className="text-sm text-slate-700 text-center leading-relaxed">
             <strong>Result:</strong> Centres typically see <strong>up to 80% fewer expired-kit incidents</strong> within 90 days, plus <strong>8–12 hours reclaimed per month</strong>, based on SafetyKit's internal ROI dashboard.
           </p>
-          <p className="text-xs text-slate-500 text-center mt-2">Indicators are based on data entered into SafetyKit and are not a legal compliance certification.</p>
+          <p className="text-xs text-slate-400 text-center mt-2">Indicators based on data entered into SafetyKit — not a legal compliance certification.</p>
         </div>
       </div>
     </section>

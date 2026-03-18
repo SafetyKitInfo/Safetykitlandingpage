@@ -136,26 +136,24 @@ export default function ContactForm(){
     <section id="contact" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-4xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Book Your 15-Minute SafetyKit Demo</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">Get a personalized plan for your centres—no sales pitch, just compliance help.</p>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">Get a tailored compliance plan for your centres in under 24 hours.</p>
         </div>
 
-        {/* Social proof block */}
-        <div className="mb-12 p-6 bg-blue-50 rounded-lg border border-blue-200">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
-            <div>
-              <div className="font-bold text-blue-700 mb-1">50+</div>
-              <div className="text-slate-600">Centres & Healthcare Orgs</div>
-            </div>
-            <div>
-              <div className="font-bold text-emerald-700 mb-1">80%</div>
-              <div className="text-slate-600">Fewer Expired Incidents</div>
-            </div>
-            <div>
-              <div className="font-bold text-purple-700 mb-1">90 Days</div>
-              <div className="text-slate-600">To See Results</div>
-            </div>
+        {/* Trust signals */}
+        <div className="mb-10 grid grid-cols-3 gap-3 text-center">
+          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
+            <div className="text-xl font-extrabold text-blue-600">50+</div>
+            <div className="text-xs text-slate-500 mt-0.5">Centres &amp; Orgs</div>
+          </div>
+          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
+            <div className="text-xl font-extrabold text-emerald-600">80%</div>
+            <div className="text-xs text-slate-500 mt-0.5">Fewer Expired Incidents</div>
+          </div>
+          <div className="p-3 bg-white rounded-lg border border-slate-200 shadow-sm">
+            <div className="text-xl font-extrabold text-purple-600">1 Day</div>
+            <div className="text-xs text-slate-500 mt-0.5">Reply within 1 business day</div>
           </div>
         </div>
 

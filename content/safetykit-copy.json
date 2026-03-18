@@ -2,61 +2,177 @@
   "hero": {
     "headline": "Eliminate expired kits and cut audit prep from hours to minutes.",
     "subhead": "Monitor every kit, prevent expiry incidents, and streamline compliance across all centres.",
-    "metrics": [],
-    "ctas": ["Start Free Trial","Book a Demo"],
-    "images": ["/images/t.png","/images/hero.png","/images/hero-educator.png"]
+    "metrics": [
+      {
+        "value": "50+",
+        "label": "Centres & Healthcare Orgs"
+      },
+      {
+        "value": "Up to 80%",
+        "label": "Fewer Expired Incidents"
+      },
+      {
+        "value": "8\u201312h",
+        "label": "Saved Per Month"
+      },
+      {
+        "value": "1 Day",
+        "label": "Setup & Training"
+      }
+    ],
+    "ctas": [
+      "Start Free Trial",
+      "Book a Demo"
+    ],
+    "images": [
+      "/images/t.png",
+      "/images/hero.png",
+      "/images/hero-educator.png"
+    ]
   },
   "modules": {
-    "title": "We use SafetyKit for…",
-    "subline":"Core modules that make kit compliance simple and repeatable.",
+    "title": "We use SafetyKit for\u2026",
+    "subline": "Core modules that make kit compliance simple and repeatable.",
     "cards": [
-      {"title":"Kit Scanning","desc":"Scan, log, and verify contents in seconds—works offline."},
-      {"title":"Expiry Tracking","desc":"Predictive alerts months before expiry."},
-      {"title":"Inventory Alerts","desc":"Low-stock triggers and suggested reorders."},
-      {"title":"Audit Logs","desc":"Complete evidence trail for every check."},
-      {"title":"Compliance Dashboard","desc":"Centre & room visibility at a glance."},
-      {"title":"AI Safety Assistant","desc":"Quick SOP answers and reminders."}
+      {
+        "title": "Kit Scanning",
+        "desc": "Scan, log, and verify contents in seconds\u2014works offline."
+      },
+      {
+        "title": "Expiry Tracking",
+        "desc": "Predictive alerts months before expiry."
+      },
+      {
+        "title": "Inventory Alerts",
+        "desc": "Low-stock triggers and suggested reorders."
+      },
+      {
+        "title": "Audit Logs",
+        "desc": "Complete evidence trail for every check."
+      },
+      {
+        "title": "Compliance Dashboard",
+        "desc": "Centre & room visibility at a glance."
+      },
+      {
+        "title": "AI Safety Assistant",
+        "desc": "Quick SOP answers and reminders."
+      }
     ]
   },
   "customer_context": {
-    "headline":"Customer Example",
-    "body":"A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness."
+    "headline": "Customer Example",
+    "body": "A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness."
   },
   "problem": {
-    "title":"Before SafetyKit",
-    "bullets":["Paper and Excel for kit checks.","Expired items missed between rounds.","Hours lost to audit prep and chasing receipts.","No cross-centre visibility for managers."],
-    "quote":""
+    "title": "Before SafetyKit",
+    "bullets": [
+      "Paper and Excel for kit checks.",
+      "Expired items missed between rounds.",
+      "Hours lost to audit prep and chasing receipts.",
+      "No cross-centre visibility for managers."
+    ],
+    "quote": ""
   },
   "solution": {
-    "title":"After SafetyKit",
-    "lead":"From chaotic audits to always‑ready compliance.",
-    "benefits":["Scan kits quickly and record evidence instantly.","Automated expiry alerts to reduce expired items.","Managers see centre health in a single dashboard.","Pull audit‑ready reports with minimal effort."],
-    "comparisons":[{"before":"Manual and inconsistent kit checks","after":"Automated checks and centralised records"},{"before":"Guessing what to replace","after":"Automatic expiry & stock alerts"}],
-    "cta":"Book a demo"
+    "title": "After SafetyKit",
+    "lead": "From chaotic audits to always\u2011ready compliance.",
+    "benefits": [
+      "Scan kits quickly and record evidence instantly.",
+      "Automated expiry alerts to reduce expired items.",
+      "Managers see centre health in a single dashboard.",
+      "Pull audit\u2011ready reports with minimal effort."
+    ],
+    "comparisons": [
+      {
+        "before": "Manual and inconsistent kit checks",
+        "after": "Automated checks and centralised records"
+      },
+      {
+        "before": "Guessing what to replace",
+        "after": "Automatic expiry & stock alerts"
+      }
+    ],
+    "cta": "Book a demo"
   },
   "transformation": {
-    "headline":"Make compliance a daily habit, not a once‑a‑year scramble",
-    "steps":["Scan — QR or barcode scan per kit.","Track — Items, lot numbers and expiries tracked automatically.","Audit — Instant evidence exports for assessors."],
-    "quote":""
+    "headline": "Make compliance a daily habit, not a once\u2011a\u2011year scramble",
+    "steps": [
+      "Scan \u2014 QR or barcode scan per kit.",
+      "Track \u2014 Items, lot numbers and expiries tracked automatically.",
+      "Audit \u2014 Instant evidence exports for assessors."
+    ],
+    "quote": ""
   },
   "impact": {
-    "headline":"Workplace Safety & Compliance Statistics",
-    "stats":[],
-    "support":""
+    "headline": "Workplace Safety & Compliance Statistics",
+    "stats": [],
+    "support": ""
   },
   "features": [
-    {"title":"Kit Scanning","desc":"Scan a kit and log contents in seconds, even offline."},
-    {"title":"Expiry Alerts","desc":"Predictive alerts so you replace early, not late."},
-    {"title":"Inventory & Reorder","desc":"Low-stock triggers and suggested orders."},
-    {"title":"Training & SOPs","desc":"Quick micro‑courses and one‑tap SOP access."},
-    {"title":"Audit Logs & Reports","desc":"Filterable evidence for every check."},
-    {"title":"Integrations & API","desc":"Sync with rostering, procurement, and asset systems."}
+    {
+      "title": "Kit Scanning",
+      "desc": "Scan a kit and log contents in seconds, even offline."
+    },
+    {
+      "title": "Expiry Alerts",
+      "desc": "Predictive alerts so you replace early, not late."
+    },
+    {
+      "title": "Inventory & Reorder",
+      "desc": "Low-stock triggers and suggested orders."
+    },
+    {
+      "title": "Training & SOPs",
+      "desc": "Quick micro\u2011courses and one\u2011tap SOP access."
+    },
+    {
+      "title": "Audit Logs & Reports",
+      "desc": "Filterable evidence for every check."
+    },
+    {
+      "title": "Integrations & API",
+      "desc": "Sync with rostering, procurement, and asset systems."
+    }
   ],
   "case_studies": [],
-  "how_it_works": ["Tag & scan — Put a QR on each kit, scan with the app.","Automate checks — Schedules, reminders, auto‑alerts.","Report & prove — Export reports for audits or regulators."],
-  "sustainment": {"headline":"Compliance that lasts","bullets":["Simple workflows educators follow without training fatigue.","Alerts and checklists that build routine.","Managers get oversight without micromanaging."],"quote":"It’s no longer up to memory. Every kit follows the same standard. — Lead Educator"},
-  "pricing_tease":"Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per‑feature tiers.",
-  "bottom_cta": {"headline":"Ready to eliminate expired kits and pass audits with confidence?","bullets":["Eliminate expired items","Reduce admin load","Standardise kit checks","Pass audits confidently","Keep children and staff safe"],"ctas":["Start Free Trial","Book a Demo"], "microcopy":"30-day pilot, no credit card required"},
-  "footer":"We respect privacy. No spam. Customer Success assists with adoption.",
-  "styling_guidelines":["Use alternating text/image blocks.","Keep paragraphs to 2–4 lines on mobile.","Place human quotes every 2–3 sections.","Bold numbers and use them as primary visual anchors.","CTAs at top, mid, bottom.","Use simple verbs: track, scan, alert, verify, report, improve."]
+  "how_it_works": [
+    "Tag & scan \u2014 Put a QR on each kit, scan with the app.",
+    "Automate checks \u2014 Schedules, reminders, auto\u2011alerts.",
+    "Report & prove \u2014 Export reports for audits or regulators."
+  ],
+  "sustainment": {
+    "headline": "Compliance that lasts",
+    "bullets": [
+      "Simple workflows educators follow without training fatigue.",
+      "Alerts and checklists that build routine.",
+      "Managers get oversight without micromanaging."
+    ],
+    "quote": "It\u2019s no longer up to memory. Every kit follows the same standard. \u2014 Lead Educator"
+  },
+  "pricing_tease": "Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per\u2011feature tiers.",
+  "bottom_cta": {
+    "headline": "Ready to eliminate expired kits and pass audits with confidence?",
+    "bullets": [
+      "Eliminate expired items",
+      "Reduce admin load",
+      "Standardise kit checks",
+      "Pass audits confidently",
+      "Keep children and staff safe"
+    ],
+    "ctas": [
+      "Start Free Trial",
+      "Book a Demo"
+    ],
+    "microcopy": "30-day pilot, no credit card required"
+  },
+  "footer": "We respect privacy. No spam. Customer Success assists with adoption.",
+  "styling_guidelines": [
+    "Use alternating text/image blocks.",
+    "Keep paragraphs to 2\u20134 lines on mobile.",
+    "Place human quotes every 2\u20133 sections.",
+    "Bold numbers and use them as primary visual anchors.",
+    "CTAs at top, mid, bottom.",
+    "Use simple verbs: track, scan, alert, verify, report, improve."
+  ]
 }
