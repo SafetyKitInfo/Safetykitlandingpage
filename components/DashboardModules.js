@@ -54,8 +54,8 @@ export default function DashboardModules() {
           ))}
         </div>
 
-        <p className="text-xs text-slate-500 text-center mt-8">
-          SafetyKit is a guidance and record-keeping tool. Readiness scores and dashboards are internal indicators based on data recorded in SafetyKit — not a legal compliance determination or substitute for your WHS obligations.
+        <p className="text-xs text-slate-400 text-center mt-8">
+          SafetyKit is a guidance and record-keeping tool. Readiness scores and dashboards are internal indicators based on data recorded in SafetyKit — not a legal compliance certification or substitute for your WHS obligations.
         </p>
       </div>
     </section>
