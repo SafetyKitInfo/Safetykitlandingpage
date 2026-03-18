@@ -10,6 +10,7 @@ export default function TrustAndCompliance() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for Compliance. Built for Trust.</h2>
           <p className="text-lg text-slate-600">Designed from the ground up for ECEC and healthcare sectors where safety is non-negotiable.</p>
+          <p className="text-sm text-slate-500 mt-3">SafetyKit provides evidence and guidance for tracking kit checks, inventory, and training — it does not replace your regulator or WHS professional.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -32,7 +33,7 @@ export default function TrustAndCompliance() {
               <li>• Queensland ECEC standards</li>
               <li>• NQF-aligned</li>
               <li>• First Aid Kit standards (AS/NZS 4003)</li>
-              <li>• Healthcare accreditation ready</li>
+              <li>• Designed to support healthcare accreditation evidence</li>
               <li>• GDPR & Privacy Act compliant</li>
             </ul>
           </div>
@@ -63,18 +64,19 @@ export default function TrustAndCompliance() {
               <div className="text-xs text-slate-600 leading-snug">Centres & Orgs</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-lg text-center">
-              <div className="text-3xl font-bold text-emerald-600 mb-1">80%</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-1">Up to 80%</div>
               <div className="text-xs text-slate-600 leading-snug">Fewer Expiry Incidents</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-lg text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-1">10h</div>
-              <div className="text-xs text-slate-600 leading-snug">Saved Per Month</div>
+              <div className="text-3xl font-bold text-purple-600 mb-1">~10h</div>
+              <div className="text-xs text-slate-600 leading-snug">Typically Saved Per Month</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-lg text-center">
               <div className="text-3xl font-bold text-orange-600 mb-1">1d</div>
               <div className="text-xs text-slate-600 leading-snug">Setup & Training</div>
             </div>
           </div>
+          <p className="text-xs text-slate-500 text-center mt-4">Indicators are based on data entered into SafetyKit and are not a legal compliance certification.</p>
         </div>
       </div>
     </section>
