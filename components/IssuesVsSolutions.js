@@ -8,7 +8,7 @@ export default function IssuesVsSolutions() {
     {
       issue: "Missing or expired first-aid items (39%)",
       solution: "Automated expiry alerts & visual kit status by room",
-      impact: "Zero surprise failures during audits"
+      impact: "Dramatically reduce surprise issues during audits"
     },
     {
       issue: "Delays due to unclear kit locations (27%)",
@@ -18,7 +18,7 @@ export default function IssuesVsSolutions() {
     {
       issue: "Poor recordkeeping & audit chaos (34%)",
       solution: "Timestamped logs for every check, accessible in one dashboard",
-      impact: "Auditors impressed, compliance verified in minutes"
+      impact: "Auditors can verify your kit checks and maintenance in minutes using timestamped logs"
     },
     {
       issue: "Manual checks = staff time wasted (avg. 3–5 hrs/week)",
@@ -66,8 +66,9 @@ export default function IssuesVsSolutions() {
 
         <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-200">
           <p className="text-sm text-slate-700 text-center leading-relaxed">
-            <strong>Result:</strong> Centres see <strong>80% fewer expired-kit incidents</strong> within 90 days, plus <strong>8–12 hours reclaimed per month</strong>.
+            <strong>Result:</strong> Centres typically see <strong>up to 80% fewer expired-kit incidents</strong> within 90 days, plus <strong>8–12 hours reclaimed per month</strong>, based on SafetyKit's internal ROI dashboard.
           </p>
+          <p className="text-xs text-slate-500 text-center mt-2">Indicators are based on data entered into SafetyKit and are not a legal compliance certification.</p>
         </div>
       </div>
     </section>

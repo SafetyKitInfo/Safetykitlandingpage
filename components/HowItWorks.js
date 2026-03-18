@@ -19,9 +19,9 @@ export default function HowItWorks() {
     },
     {
       number: "3",
-      title: "Prove Compliance in Seconds",
-      description: "Audit-ready reports exported on demand. Full historical record for regulators.",
-      benefits: ["Timestamp-verified check logs", "Compliance-ready reports", "Training & certification audit trail"]
+      title: "Provide Audit-Ready Evidence in Seconds",
+      description: "Export timestamped check logs and evidence records on demand. A full historical record to support regulators and auditors.",
+      benefits: ["Timestamp-verified check logs", "Audit evidence reports", "Training & certification record trail"]
     }
   ];
 

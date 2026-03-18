@@ -22,8 +22,8 @@ export default function ECECSpecific() {
     },
     {
       scenario: "Regulatory Audits & NQF Compliance",
-      details: "When auditors ask 'Can you show me proof of regular kit checks?', you export a timestamped report for any date range in 2 clicks. Compliance = verified.",
-      example: "→ Annual NQS audit happens next month. You have 6 months of complete check records, expiry alerts, and maintenance logs ready to share."
+      details: "When auditors ask 'Can you show me proof of regular kit checks?', you export a timestamped report for any date range in 2 clicks. Make it easy to show auditors your kit checks and evidence against NQF-aligned standards.",
+      example: "→ Annual NQS audit happens next month. You have 6 months of complete check records, expiry alerts, and maintenance logs ready to share. Checks and kit status = verified."
     },
     {
       scenario: "Vaccine & Medical Records Integration",
@@ -62,12 +62,12 @@ export default function ECECSpecific() {
           <h3 className="font-bold text-slate-900 mb-4 text-center">What ECEC Centres See in 30 Days</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-4xl font-bold text-emerald-700">0</div>
-              <p className="text-xs text-slate-700 mt-1 leading-snug">Expired kit surprises</p>
+              <div className="text-4xl font-bold text-emerald-700">Up to 80%</div>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Fewer expired kit incidents</p>
             </div>
             <div>
               <div className="text-4xl font-bold text-emerald-700">10h</div>
-              <p className="text-xs text-slate-700 mt-1 leading-snug">Reclaimed per month</p>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Typically reclaimed per month</p>
             </div>
             <div>
               <div className="text-4xl font-bold text-emerald-700">100%</div>
@@ -75,9 +75,10 @@ export default function ECECSpecific() {
             </div>
             <div>
               <div className="text-4xl font-bold text-emerald-700">1</div>
-              <p className="text-xs text-slate-700 mt-1 leading-snug">Click for compliance</p>
+              <p className="text-xs text-slate-700 mt-1 leading-snug">Click for audit evidence</p>
             </div>
           </div>
+          <p className="text-xs text-slate-500 text-center mt-4">Outcomes are tracked via SafetyKit's internal ROI & Time Savings dashboard and are not a legal compliance certification.</p>
         </div>
       </div>
     </section>

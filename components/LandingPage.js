@@ -10,6 +10,7 @@ import IssuesVsSolutions from './IssuesVsSolutions';
 import TrustAndCompliance from './TrustAndCompliance';
 import HowToGetStarted from './HowToGetStarted';
 import ECECSpecific from './ECECSpecific';
+import DashboardModules from './DashboardModules';
 // Case studies/testimonials removed per request
 import StickyCTA from './StickyCTA';
 import { IconKit, IconClock, IconCheck } from './icons';
@@ -44,19 +45,24 @@ export default function LandingPage() {
 
             {/* Primary headline - clear, single message */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 mb-4">
-              Cut expired-kit incidents by 80% in 90 days.
+              Typically cut expired-kit incidents by up to 80% in 90 days.
             </h1>
 
             {/* Subheading - supporting context */}
-            <p className="text-lg text-slate-700 max-w-lg leading-relaxed mb-6">
+            <p className="text-lg text-slate-700 max-w-lg leading-relaxed mb-4">
               Standardise kit checks across every room and centre with automated expiry alerts, mobile scanning, and audit-ready reports.
+            </p>
+
+            {/* Guidance disclaimer - mirrors app language */}
+            <p className="text-xs text-slate-500 mb-6 leading-relaxed">
+              SafetyKit is a guidance and record-keeping tool for tracking kit checks, inventory, and training — not a legal authority or replacement for your WHS obligations.
             </p>
 
             {/* Hero benefits - 3 core only, clean layout */}
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
-                <div><span className="font-semibold text-slate-900">80% fewer</span> expired incidents</div>
+                <div><span className="font-semibold text-slate-900">Up to 80% fewer</span> expired incidents</div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold text-lg mt-1">✓</span>
@@ -93,7 +99,7 @@ export default function LandingPage() {
 
               {/* Status indicator badges */}
               <div className="absolute left-4 top-4 flex gap-2 hidden sm:flex">
-                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 text-xs font-semibold rounded-full">Compliance Ready · Low risk</span>
+                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 text-xs font-semibold rounded-full">Compliance support · Lower risk</span>
               </div>
             </div>
           </div>
@@ -175,6 +181,9 @@ export default function LandingPage() {
 
       {/* Trust & Compliance Section */}
       <TrustAndCompliance />
+
+      {/* Inside the SafetyKit Dashboard - real module names */}
+      <DashboardModules />
 
       {/* ECEC-Specific Deep Dive */}
       <ECECSpecific />
