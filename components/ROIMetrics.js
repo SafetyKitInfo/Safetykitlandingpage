@@ -27,10 +27,10 @@ export default function ROIMetrics() {
   ];
 
   return (
-    <section className="py-20 bg-emerald-50">
+    <section className="py-20 bg-sk-surfaceMuted">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             ROI &amp; Time Savings
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -45,13 +45,13 @@ export default function ROIMetrics() {
           {metrics.map((m, i) => (
             <div
               key={i}
-              className="relative bg-white rounded-xl border border-emerald-100 shadow-sm overflow-hidden"
+              className="relative bg-white rounded-xl border border-sk-border shadow-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-emerald-500" />
+              <div className="h-1 w-full bg-sk-primary" />
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-3xl font-extrabold text-slate-900">{m.value}</div>
-                  <span className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold text-sk-success bg-sk-successLight px-2 py-0.5 rounded-full">
                     {m.tag}
                   </span>
                 </div>

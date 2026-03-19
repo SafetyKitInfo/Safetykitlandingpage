@@ -24,7 +24,7 @@ export default function HowToGetStarted() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Getting Started
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -39,7 +39,7 @@ export default function HowToGetStarted() {
           {steps.map((step, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 text-white font-bold text-base">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-sk-primary text-white font-bold text-base">
                   {step.number}
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function HowToGetStarted() {
                 <ul className="space-y-1">
                   {step.details.map((detail, didx) => (
                     <li key={didx} className="flex items-start gap-2 text-xs text-slate-500">
-                      <span className="text-emerald-500 mt-0.5">•</span>
+                      <span className="text-sk-success mt-0.5">•</span>
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -62,7 +62,7 @@ export default function HowToGetStarted() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-3">
-            <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">
+            <a href="#contact" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">
               Book a demo
             </a>
             <a href="#contact" className="inline-block border border-slate-300 text-slate-700 px-7 py-3 rounded-lg font-medium hover:bg-slate-50">

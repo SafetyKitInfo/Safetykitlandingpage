@@ -34,7 +34,7 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-3">
             <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
-            <a href="#contact" className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">Book demo</a>
+            <a href="#contact" className="inline-block bg-sk-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book demo</a>
           </div>
         </div>
       </nav>
@@ -44,7 +44,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="mb-4">
-              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">For ECEC &amp; Healthcare Organisations</span>
+              <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For ECEC &amp; Healthcare Organisations</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
@@ -55,12 +55,12 @@ export default function LandingPage() {
               Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
             </p>
 
-            <p className="text-sm font-medium text-emerald-700 mb-6">
+            <p className="text-sm font-medium text-sk-primary mb-6">
               Centres typically see up to 80% fewer expired-kit incidents within 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-3">
-              <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none text-center">Book a demo</a>
+              <a href="#contact" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center">Book a demo</a>
               <a href="#contact" className="inline-block text-slate-600 px-7 py-3 rounded-lg font-medium hover:text-slate-900 text-center underline-offset-4 hover:underline">Start 30-day pilot</a>
             </div>
 
@@ -136,13 +136,13 @@ export default function LandingPage() {
                 <div className="bg-white rounded-xl border border-slate-200 p-4">
                   <div className="flex items-center justify-between mb-3">
                     <p className="text-xs font-semibold text-slate-700">Next 3 Actions</p>
-                    <span className="text-xs bg-emerald-100 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
+                    <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
                   </div>
                   <ul className="space-y-2">
                     {["Run 10-min mini-audit","Complete first inspection","Invite additional first aider"].map((action, i) => (
                       <li key={i} className="flex items-center justify-between text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
                         <span className="flex items-center gap-2">
-                          <span className="text-emerald-500 font-bold">►</span>
+                          <span className="text-sk-success font-bold">►</span>
                           {action}
                         </span>
                         <span className="text-slate-400 font-bold">→</span>
@@ -172,13 +172,13 @@ export default function LandingPage() {
       </div>
 
       {/* Platform at a glance */}
-      <div className="bg-emerald-50 border-y border-emerald-100 py-4">
+      <div className="bg-sk-surfaceMuted border-y border-sk-border py-4">
         <div className="max-w-4xl mx-auto px-4 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
-          <span className="flex items-center gap-2"><Monitor size={15} className="text-emerald-500" aria-hidden /> Mobile-first</span>
+          <span className="flex items-center gap-2"><Monitor size={15} className="text-sk-success" aria-hidden /> Mobile-first</span>
           <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Wifi size={15} className="text-emerald-500" aria-hidden /> Works offline</span>
+          <span className="flex items-center gap-2"><Wifi size={15} className="text-sk-success" aria-hidden /> Works offline</span>
           <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Globe size={15} className="text-emerald-500" aria-hidden /> Built for AU/NZ compliance</span>
+          <span className="flex items-center gap-2"><Globe size={15} className="text-sk-success" aria-hidden /> Built for AU/NZ compliance</span>
         </div>
       </div>
 
@@ -214,7 +214,7 @@ export default function LandingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">Roles</span>
+            <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">Roles</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for every role</h2>
             <p className="text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
           </div>
@@ -222,23 +222,23 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* EHS Managers */}
             <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">EHS Managers</div>
+              <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide mb-2">EHS Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
               </ul>
             </div>
 
             {/* Clinical / Medical Coordinators */}
             <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">Clinical Coordinators</div>
+              <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide mb-2">Clinical Coordinators</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
               </ul>
             </div>
 
@@ -247,15 +247,15 @@ export default function LandingPage() {
               <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">Centre Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
-                <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
+                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
               </ul>
             </div>
           </div>
 
           <div className="text-center mt-10">
-            <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">Book a demo</a>
+            <a href="#contact" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book a demo</a>
           </div>
         </div>
       </section>
@@ -292,20 +292,20 @@ export default function LandingPage() {
       <ContactForm />
 
       {/* Final CTA band */}
-      <section className="py-20 bg-emerald-700 text-white">
+      <section className="py-20 bg-sk-primary text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
-          <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-emerald-100 mb-10">
+          <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-teal-100 mb-10">
             {["Go paperless","Boost compliance","Reduce expired incidents","Save 8–12h per month"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-emerald-300">✓</span>{b}</span>
+              <span key={i} className="flex items-center gap-2"><span className="text-teal-300">✓</span>{b}</span>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#contact" className="inline-block bg-white text-emerald-700 px-7 py-3 rounded-lg font-semibold hover:bg-emerald-50 focus-visible:ring-2 focus-visible:ring-emerald-200 focus-visible:outline-none">Book a demo</a>
-            <a href="#contact" className="inline-block border border-emerald-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-emerald-800 text-center">Start 30-day pilot</a>
+            <a href="#contact" className="inline-block bg-white text-sk-primary px-7 py-3 rounded-lg font-semibold hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book a demo</a>
+            <a href="#contact" className="inline-block border border-teal-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-sk-primaryHover text-center">Start 30-day pilot</a>
           </div>
-          <p className="text-xs text-emerald-200 mt-4">No credit card required · Set up in under 1 day</p>
+          <p className="text-xs text-teal-200 mt-4">No credit card required · Set up in under 1 day</p>
         </div>
       </section>
 

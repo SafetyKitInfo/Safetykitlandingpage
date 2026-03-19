@@ -5,7 +5,7 @@ export default function TrustAndCompliance() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left: overview + bullets */}
           <div>
-            <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+            <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
               Trust &amp; Security
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Built for compliance. Built for trust.</h2>
@@ -13,10 +13,10 @@ export default function TrustAndCompliance() {
               Designed specifically for ECEC and healthcare sectors where safety is non-negotiable. SafetyKit provides structured evidence and guidance — not a replacement for your WHS obligations.
             </p>
             <ul className="space-y-3 text-sm text-slate-700">
-              <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">•</span><span><strong>Security</strong> — End-to-end encryption, role-based access, and AU/NZ hosted servers</span></li>
-              <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">•</span><span><strong>Regulatory alignment</strong> — NQF-aligned, AS/NZS 4003 first-aid kit standards, GDPR &amp; Privacy Act compliant</span></li>
-              <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">•</span><span><strong>Data location</strong> — All data stored on AU/NZ compliant servers</span></li>
-              <li className="flex items-start gap-2"><span className="text-emerald-500 mt-0.5">•</span><span><strong>Audit trail</strong> — Every action timestamped and logged for full traceability</span></li>
+              <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Security</strong> — End-to-end encryption, role-based access, and AU/NZ hosted servers</span></li>
+              <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Regulatory alignment</strong> — NQF-aligned, AS/NZS 4003 first-aid kit standards, GDPR &amp; Privacy Act compliant</span></li>
+              <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Data location</strong> — All data stored on AU/NZ compliant servers</span></li>
+              <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Audit trail</strong> — Every action timestamped and logged for full traceability</span></li>
             </ul>
 
             {/* Disclaimer box */}
@@ -33,32 +33,32 @@ export default function TrustAndCompliance() {
             <div className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-sm font-bold text-slate-900 mb-3">Security by Design</h3>
               <ul className="space-y-1.5 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> End-to-end encryption</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> AU/NZ compliant servers</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Role-based access controls</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> SOC 2 Type II ready</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> End-to-end encryption</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> AU/NZ compliant servers</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> Role-based access controls</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> SOC 2 Type II ready</li>
               </ul>
             </div>
 
             <div className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-sm font-bold text-slate-900 mb-3">Regulatory Alignment</h3>
               <ul className="space-y-1.5 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Queensland ECEC standards &amp; NQF-aligned</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> First-aid kit standards (AS/NZS 4003)</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Healthcare accreditation evidence support</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> GDPR &amp; Privacy Act compliant</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> Queensland ECEC standards &amp; NQF-aligned</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> First-aid kit standards (AS/NZS 4003)</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> Healthcare accreditation evidence support</li>
+                <li className="flex items-center gap-2"><span className="text-sk-success" aria-hidden>•</span> GDPR &amp; Privacy Act compliant</li>
               </ul>
             </div>
 
-            <div className="p-5 bg-emerald-700 rounded-xl border border-emerald-800 shadow-md text-white">
+            <div className="p-5 bg-sk-primary rounded-xl border border-sk-primaryHover shadow-md text-white">
               <h3 className="text-sm font-bold mb-3">Risk-Free Pilot</h3>
-              <ul className="space-y-1.5 text-sm text-emerald-100">
-                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> 30-day pilot for 1–2 centres</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Full setup support included</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Zero obligation to continue</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Free migration if you proceed</li>
+              <ul className="space-y-1.5 text-sm text-teal-100">
+                <li className="flex items-center gap-2"><span className="text-teal-300" aria-hidden>•</span> 30-day pilot for 1–2 centres</li>
+                <li className="flex items-center gap-2"><span className="text-teal-300" aria-hidden>•</span> Full setup support included</li>
+                <li className="flex items-center gap-2"><span className="text-teal-300" aria-hidden>•</span> Zero obligation to continue</li>
+                <li className="flex items-center gap-2"><span className="text-teal-300" aria-hidden>•</span> Free migration if you proceed</li>
               </ul>
-              <a href="#contact" className="mt-5 inline-block bg-white text-emerald-700 font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-emerald-50">
+              <a href="#contact" className="mt-5 inline-block bg-white text-sk-primary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-sk-surfaceMuted">
                 Start your free pilot
               </a>
             </div>

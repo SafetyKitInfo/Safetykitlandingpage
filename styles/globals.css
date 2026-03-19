@@ -31,7 +31,7 @@ body {
 }
 
 .badge-glow {
-  box-shadow: 0 6px 18px rgba(59,130,246,0.12);
+  box-shadow: 0 6px 18px rgba(15,118,110,0.12);
 }
 
 .lift-on-hover:hover {
@@ -51,7 +51,7 @@ body {
 
 .fade-up { animation: fadeUp 420ms ease both; }
 .pulse { animation: pulseBadge 2600ms ease-in-out infinite; }
-.focus-visible-ring { box-shadow: 0 0 0 4px rgba(59,130,246,0.12); }
+.focus-visible-ring { box-shadow: 0 0 0 4px rgba(15,118,110,0.12); }
 
 /* Improve keyboard focus visuals */
 :focus {
@@ -59,7 +59,7 @@ body {
 }
 
 button:focus-visible, a:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--sk-primary);
   outline-offset: 2px;
 }
 

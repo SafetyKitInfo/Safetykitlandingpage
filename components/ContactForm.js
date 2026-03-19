@@ -185,7 +185,7 @@ export default function ContactForm(){
               <Label className="mb-3 font-medium">I'd like to…</Label>
               <div className="space-y-2">
                 {intentOptions.map(option => (
-                  <label key={option.value} className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors" style={{backgroundColor: selectedIntent === option.value ? '#f0f4ff' : 'transparent', borderColor: selectedIntent === option.value ? '#3b82f6' : '#e2e8f0'}}>
+                  <label key={option.value} className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors" style={{backgroundColor: selectedIntent === option.value ? '#CCFBF1' : 'transparent', borderColor: selectedIntent === option.value ? '#0F766E' : '#e2e8f0'}}>
                     <input 
                       type="radio" 
                       name="interest" 
@@ -223,7 +223,7 @@ export default function ContactForm(){
             <Button 
               disabled={isSubmitting} 
               type="submit" 
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold text-base"
+              className="w-full bg-sk-primary hover:bg-sk-primaryHover text-white py-3 font-semibold text-base"
             >
               {isSubmitting ? 'Sending…' : getCTALabel()}
             </Button>
@@ -245,7 +245,7 @@ export default function ContactForm(){
             {mailto && (
               <div role="alert" className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                 <p className="text-sm text-yellow-900 font-medium mb-2">We couldn't send automatically. Please email us instead:</p>
-                <a className="text-blue-600 hover:underline text-sm break-words font-medium" href={mailto}>
+                <a className="text-sk-primary hover:underline text-sm break-words font-medium" href={mailto}>
                   Send via email
                 </a>
               </div>
@@ -255,7 +255,7 @@ export default function ContactForm(){
           {/* Email fallback below form */}
           <div className="mt-6 pt-6 border-t border-slate-200 text-center">
             <p className="text-xs text-slate-500">
-              Prefer email? <a href="mailto:info.safetykit@gmail.com" className="text-blue-600 hover:underline font-medium">info.safetykit@gmail.com</a>
+              Prefer email? <a href="mailto:info.safetykit@gmail.com" className="text-sk-primary hover:underline font-medium">info.safetykit@gmail.com</a>
             </p>
           </div>
         </div>

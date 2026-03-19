@@ -31,8 +31,8 @@ export default function DashboardModules() {
   ];
 
   const tagColors = {
-    Readiness: "bg-emerald-100 text-emerald-700",
-    Guidance: "bg-emerald-100 text-emerald-700",
+    Readiness: "bg-sk-primaryLight text-sk-primary",
+    Guidance: "bg-sk-primaryLight text-sk-primary",
     Savings: "bg-purple-100 text-purple-700",
     Risk: "bg-amber-100 text-amber-700"
   };
@@ -41,7 +41,7 @@ export default function DashboardModules() {
     <section id="dashboard" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Platform
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetyKit Dashboard</h2>
@@ -52,7 +52,7 @@ export default function DashboardModules() {
           {modules.map((mod, idx) => (
             <div key={idx} className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-sk-surfaceMuted flex items-center justify-center text-2xl">
                   {mod.icon}
                 </div>
                 <div className="flex-1">
@@ -65,7 +65,7 @@ export default function DashboardModules() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed mb-3">{mod.description}</p>
-              <p className="text-xs font-semibold text-emerald-700 border-t border-slate-100 pt-3">
+              <p className="text-xs font-semibold text-sk-primary border-t border-slate-100 pt-3">
                 ✓ {mod.benefit}
               </p>
             </div>
