@@ -27,7 +27,7 @@ export default function HowItWorks() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             How It Works
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">How SafetyKit Works</h2>
@@ -38,11 +38,11 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div key={idx} className="flex flex-col">
               <div className="mb-4 flex items-center gap-3">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 font-bold text-4xl">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sk-primaryLight text-sk-primary font-bold text-4xl">
                   {step.number}
                 </div>
                 {step.chip && (
-                  <span className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full">
                     {step.chip}
                   </span>
                 )}
@@ -54,7 +54,7 @@ export default function HowItWorks() {
                 <ul className="space-y-2">
                   {step.benefits.slice(0, 3).map((benefit, bidx) => (
                     <li key={bidx} className="flex items-start gap-2 text-xs text-slate-700">
-                      <span className="text-emerald-600 font-bold mt-0.5">•</span>
+                      <span className="text-sk-success font-bold mt-0.5">•</span>
                       <span>{benefit}</span>
                     </li>
                   ))}

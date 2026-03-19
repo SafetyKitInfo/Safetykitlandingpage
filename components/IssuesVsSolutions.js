@@ -36,7 +36,7 @@ export default function IssuesVsSolutions() {
     <section className="py-16 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Common Challenges
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Kit Compliance Fails Today</h2>
@@ -59,10 +59,10 @@ export default function IssuesVsSolutions() {
               </div>
 
               {/* Solution card */}
-              <div className="bg-white rounded-xl border-l-4 border-emerald-500 border border-slate-200 p-5 shadow-sm">
+              <div className="bg-white rounded-xl border-l-4 border-sk-success border border-slate-200 p-5 shadow-sm">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-base" aria-hidden>✅</span>
-                  <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase tracking-wide">
+                  <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full uppercase tracking-wide">
                     How SafetyKit helps
                   </span>
                 </div>

@@ -9,23 +9,23 @@ export default function Hero() {
 
         {/* Left column: headline, subhead, outcomes, CTAs */}
         <div className="order-2 md:order-1">
-          <div className="mb-4 text-sm font-medium text-emerald-700 uppercase tracking-wide">Built for compliance. Built for trust.</div>
+          <div className="mb-4 text-sm font-medium text-sk-primary uppercase tracking-wide">Built for compliance. Built for trust.</div>
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">Reliable kit compliance your teams will actually use</h1>
           <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">Reduce expired items, simplify audits, and prove compliance — without extra administrative work.</p>
 
           {/* Outcomes pill/card */}
           <div className="mt-6 inline-flex items-center rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm">
             <div className="flex gap-4 text-sm text-slate-700">
-              <div className="flex items-center gap-2"><IconCheck className="text-emerald-600" /> <span className="font-medium">80% fewer expired incidents</span></div>
-              <div className="flex items-center gap-2"><IconCheck className="text-emerald-600" /> <span className="font-medium">~10h saved / month</span></div>
-              <div className="flex items-center gap-2"><IconCheck className="text-emerald-600" /> <span className="font-medium">1‑day setup & training</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">80% fewer expired incidents</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">~10h saved / month</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">1‑day setup & training</span></div>
             </div>
           </div>
 
           {/* CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3">
-            <a href="#get-started" className="inline-block bg-emerald-600 text-white px-5 py-2.5 rounded-lg shadow-sm text-sm font-medium hover:bg-emerald-700">Start 30-day Pilot</a>
-            <a href="#contact" className="inline-block border border-emerald-600 text-emerald-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-emerald-50">Book a 15‑min Demo</a>
+            <a href="#get-started" className="inline-block bg-sk-primary text-white px-5 py-2.5 rounded-lg shadow-sm text-sm font-medium hover:bg-sk-primaryHover">Start 30-day Pilot</a>
+            <a href="#contact" className="inline-block border border-sk-primary text-sk-primary px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-sk-surfaceMuted">Book a 15‑min Demo</a>
           </div>
           <p className="text-xs text-slate-500 mt-3">No credit card. Cancel anytime.</p>
         </div>

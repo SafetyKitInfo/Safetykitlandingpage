@@ -19,25 +19,23 @@ module.exports = {
   ],
   theme: {
   	extend: {
-  		animation: {
-  			aurora: 'aurora 60s linear infinite'
-  		},
-  		keyframes: {
-  			aurora: {
-  				from: {
-  					backgroundPosition: '50% 50%, 50% 50%'
-  				},
-  				to: {
-  					backgroundPosition: '350% 50%, 350% 50%'
-  				}
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
   		colors: {
+  			sk: {
+  				primary: '#0f766e',
+  				primaryHover: '#115e59',
+  				primaryLight: '#ccfbf1',
+  				accent: '#f97316',
+  				success: '#22c55e',
+  				successLight: '#dcfce7',
+  				successText: '#15803d',
+  				warning: '#eab308',
+  				danger: '#ef4444',
+  				text: '#0f172a',
+  				muted: '#64748b',
+  				surface: '#ffffff',
+  				surfaceMuted: '#f8fafc',
+  				border: '#e2e8f0',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -78,6 +76,24 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+  		},
+  		animation: {
+  			aurora: 'aurora 60s linear infinite'
+  		},
+  		keyframes: {
+  			aurora: {
+  				from: {
+  					backgroundPosition: '50% 50%, 50% 50%'
+  				},
+  				to: {
+  					backgroundPosition: '350% 50%, 350% 50%'
+  				}
+  			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
   		}
   	}
   },

@@ -21,10 +21,10 @@ export default function ProactiveEngine() {
   ];
 
   return (
-    <section className="py-20 bg-emerald-50">
+    <section className="py-20 bg-sk-surfaceMuted">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Proactive Engine
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -39,11 +39,11 @@ export default function ProactiveEngine() {
           {actions.map((action, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-emerald-100 shadow-sm p-6 flex flex-col"
+              className="bg-white rounded-xl border border-sk-border shadow-sm p-6 flex flex-col"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-extrabold text-emerald-600">{action.number}</span>
-                <span className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                <span className="text-2xl font-extrabold text-sk-primary">{action.number}</span>
+                <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full">
                   {action.pill}
                 </span>
               </div>
@@ -52,7 +52,7 @@ export default function ProactiveEngine() {
               <div className="mt-5">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-sk-primary hover:text-sk-primaryHover"
                 >
                   Get started <span aria-hidden>→</span>
                 </a>

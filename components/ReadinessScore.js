@@ -39,9 +39,9 @@ export default function ReadinessScore() {
 
   const colorMap = {
     emerald: {
-      bar: "bg-emerald-500",
-      badge: "bg-emerald-100 text-emerald-700",
-      track: "bg-emerald-100",
+      bar: "bg-sk-success",
+      badge: "bg-sk-successLight text-sk-successText",
+      track: "bg-sk-successLight",
     },
     amber: {
       bar: "bg-amber-400",
@@ -49,25 +49,25 @@ export default function ReadinessScore() {
       track: "bg-amber-100",
     },
     red: {
-      bar: "bg-red-500",
+      bar: "bg-sk-danger",
       badge: "bg-red-100 text-red-700",
       track: "bg-red-100",
     },
   };
 
   const legend = [
-    { label: "Excellent", range: "95+", dot: "bg-emerald-500" },
-    { label: "Good", range: "80+", dot: "bg-emerald-400" },
+    { label: "Excellent", range: "95+", dot: "bg-sk-success" },
+    { label: "Good", range: "80+", dot: "bg-sk-success" },
     { label: "Satisfactory", range: "75+", dot: "bg-amber-400" },
     { label: "Poor", range: "55+", dot: "bg-orange-400" },
-    { label: "Critical", range: "<55", dot: "bg-red-500" },
+    { label: "Critical", range: "<55", dot: "bg-sk-danger" },
   ];
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             WHS Compliance
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">

@@ -10,7 +10,7 @@ export default function RiskTrend() {
     {
       title: "Expiry Breaches",
       status: "Improving",
-      statusColor: "bg-emerald-100 text-emerald-700",
+      statusColor: "bg-sk-successLight text-sk-successText",
       detail: "↓ Down 60% since onboarding",
       icon: "✅",
     },
@@ -24,7 +24,7 @@ export default function RiskTrend() {
     {
       title: "Critical Issues",
       status: "Improving",
-      statusColor: "bg-emerald-100 text-emerald-700",
+      statusColor: "bg-sk-successLight text-sk-successText",
       detail: "✓ 0 critical items this week",
       icon: "🛡️",
     },
@@ -34,7 +34,7 @@ export default function RiskTrend() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+          <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Risk Trend Monitoring
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">

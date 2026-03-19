@@ -4,10 +4,10 @@ export default function MetricsRow() {
   const metrics = (content && content.hero && content.hero.metrics) || [];
 
   const trends = [
-    { tag: "↑ Positive", color: "text-emerald-700 bg-emerald-50" },
-    { tag: "↑ Improving", color: "text-emerald-700 bg-emerald-50" },
-    { tag: "↑ Positive", color: "text-emerald-700 bg-emerald-50" },
-    { tag: "✓ Verified", color: "text-emerald-700 bg-emerald-50" },
+    { tag: "↑ Positive", color: "text-sk-success bg-sk-successLight" },
+    { tag: "↑ Improving", color: "text-sk-success bg-sk-successLight" },
+    { tag: "↑ Positive", color: "text-sk-success bg-sk-successLight" },
+    { tag: "✓ Verified", color: "text-sk-success bg-sk-successLight" },
   ];
 
   return (
@@ -16,7 +16,7 @@ export default function MetricsRow() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {metrics.map((m, i) => (
             <div key={i} className="relative bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-              <div className="h-1 w-full bg-emerald-500" />
+              <div className="h-1 w-full bg-sk-primary" />
               <div className="p-5 text-center">
                 <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">{m.value}</div>
                 <div className="text-xs text-slate-500 uppercase tracking-wide leading-snug mb-3">{m.label}</div>
