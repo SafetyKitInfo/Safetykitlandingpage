@@ -1,7 +1,3 @@
-/**
- * How to Get Started - Simple 3-step onboarding path
- */
-
 export default function HowToGetStarted() {
   const steps = [
     {
@@ -28,6 +24,9 @@ export default function HowToGetStarted() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
+          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+            Getting Started
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
             Get started in three steps
           </h2>
@@ -40,12 +39,12 @@ export default function HowToGetStarted() {
           {steps.map((step, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-base">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 text-white font-bold text-base">
                   {step.number}
                 </div>
               </div>
 
-              <div className="flex-1 bg-white rounded-lg p-5 shadow-sm border border-slate-200">
+              <div className="flex-1 bg-white rounded-xl p-5 shadow-sm border border-slate-200">
                 <h3 className="font-bold text-slate-900 mb-1.5">{step.title}</h3>
                 <p className="text-sm text-slate-600 mb-3">{step.description}</p>
                 <ul className="space-y-1">
@@ -63,7 +62,7 @@ export default function HowToGetStarted() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-3">
-            <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">
+            <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">
               Book a demo
             </a>
             <a href="#contact" className="inline-block border border-slate-300 text-slate-700 px-7 py-3 rounded-lg font-medium hover:bg-slate-50">
