@@ -58,8 +58,9 @@ body {
   outline: none;
 }
 
-button:focus, a:focus {
-  outline: none;
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
 .sr-only { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }

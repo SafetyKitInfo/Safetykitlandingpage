@@ -1,7 +1,5 @@
 /**
- * ECEC-Specific Section - Deep-dive for early childhood centres
- * Highlights language and scenarios specific to childcare
- * Trimmed to 4 strongest scenarios as compact cards.
+ * ECEC-Specific Section - 3 strongest real-world scenarios
  */
 
 export default function ECECSpecific() {
@@ -9,41 +7,36 @@ export default function ECECSpecific() {
     {
       scenario: "Room-by-Room Kit Management",
       summary: "Track every room's kit — infants, toddlers, preschool, outdoor — with one tap per check.",
-      story: "→ Sarah scans the infant room kit in 2 minutes. Dashboard flags which items need replacing."
-    },
-    {
-      scenario: "Excursions & Off-Site Visits",
-      summary: "Portable kits leave the centre regularly. Mark them 'in transit' and track their return automatically.",
-      story: "→ Staff verify the park-visit kit is complete before and after — logged automatically."
+      story: "Staff scan the infant room kit in 2 minutes. The dashboard flags which items need replacing before the next check is due."
     },
     {
       scenario: "Regulatory Audits & NQF Compliance",
       summary: "Export timestamped check logs for any date range in 2 clicks when auditors arrive.",
-      story: "→ 6 months of check records, expiry alerts, and maintenance logs ready to share — same day."
+      story: "Six months of check records, expiry alerts, and maintenance logs available to share on the same day as an inspection."
     },
     {
       scenario: "Multi-Centre Network Oversight",
       summary: "One dashboard shows compliance status across 2, 5, or 15 centres — no spreadsheets.",
-      story: "→ Directors see at a glance which centres are compliant and which need action. Drill down in seconds."
+      story: "Directors see at a glance which centres are compliant and which need action, with the ability to drill down in seconds."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Built for Early Childhood. Built for You.
+            Built for Early Childhood Education
           </h2>
-          <p className="text-lg text-slate-600">Real-world ECEC scenarios — SafetyKit handles them all</p>
+          <p className="text-lg text-slate-600">How ECEC centres use SafetyKit day to day</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {ececPoints.map((point, idx) => (
             <div key={idx} className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-bold text-slate-900 mb-2 text-base">{point.scenario}</h3>
               <p className="text-sm text-slate-600 mb-3 leading-snug">{point.summary}</p>
-              <p className="text-xs text-emerald-700 font-medium">{point.story}</p>
+              <p className="text-xs text-slate-500 leading-snug italic">{point.story}</p>
             </div>
           ))}
         </div>
