@@ -1,8 +1,3 @@
-/**
- * Common Compliance Issues vs SafetyKit Solutions
- * Simple two-column layout: Common problem | How SafetyKit helps
- */
-
 export default function IssuesVsSolutions() {
   const comparisons = [
     {
@@ -41,23 +36,36 @@ export default function IssuesVsSolutions() {
     <section className="py-16 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
+          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+            Common Challenges
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Kit Compliance Fails Today</h2>
           <p className="text-lg text-slate-600">Common problems, and how SafetyKit addresses each one</p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {comparisons.map((comp, idx) => (
-            <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-sm transition-shadow">
-              {/* Left: Problem */}
-              <div className="p-5 border-b md:border-b-0 md:border-r border-slate-100">
-                <div className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">Common problem</div>
-                <p className="text-slate-900 font-medium text-sm mb-1">{comp.issue}</p>
+            <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Problem card */}
+              <div className="bg-white rounded-xl border-l-4 border-amber-400 border border-slate-200 p-5 shadow-sm">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-base" aria-hidden>⚠️</span>
+                  <span className="text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    Common problem
+                  </span>
+                </div>
+                <p className="text-slate-900 font-semibold text-sm mb-1">{comp.issue}</p>
                 <p className="text-slate-500 text-xs leading-snug">{comp.problem}</p>
               </div>
-              
-              {/* Right: Solution */}
-              <div className="p-5">
-                <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">How SafetyKit helps</div>
+
+              {/* Solution card */}
+              <div className="bg-white rounded-xl border-l-4 border-emerald-500 border border-slate-200 p-5 shadow-sm">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-base" aria-hidden>✅</span>
+                  <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    How SafetyKit helps
+                  </span>
+                </div>
                 <p className="text-slate-700 text-sm leading-snug">{comp.solution}</p>
               </div>
             </div>

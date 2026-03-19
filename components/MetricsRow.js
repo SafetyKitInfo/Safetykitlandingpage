@@ -1,23 +1,38 @@
 import content from '../content/safetykit-copy.json';
 
-export default function MetricsRow(){
+export default function MetricsRow() {
   const metrics = (content && content.hero && content.hero.metrics) || [];
+
+  const trends = [
+    { tag: "↑ Positive", color: "text-emerald-700 bg-emerald-50" },
+    { tag: "↑ Improving", color: "text-emerald-700 bg-emerald-50" },
+    { tag: "↑ Positive", color: "text-emerald-700 bg-emerald-50" },
+    { tag: "✓ Verified", color: "text-emerald-700 bg-emerald-50" },
+  ];
 
   return (
     <section className="py-12 bg-white border-y border-slate-100">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {metrics.map((m, i) => (
-            <div key={i}>
-              <div className="text-3xl md:text-4xl font-bold text-slate-900">{m.value}</div>
-              <div className="text-xs text-slate-500 mt-1 leading-snug uppercase tracking-wide">{m.label}</div>
+            <div key={i} className="relative bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="h-1 w-full bg-emerald-500" />
+              <div className="p-5 text-center">
+                <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">{m.value}</div>
+                <div className="text-xs text-slate-500 uppercase tracking-wide leading-snug mb-3">{m.label}</div>
+                {trends[i] && (
+                  <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${trends[i].color}`}>
+                    {trends[i].tag}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>
-        <p className="text-xs text-slate-400 text-center mt-6">
+        <p className="text-xs text-slate-400 text-center mt-5">
           Indicators based on data entered into SafetyKit — not a legal compliance certification.
         </p>
       </div>
     </section>
-  )
+  );
 }

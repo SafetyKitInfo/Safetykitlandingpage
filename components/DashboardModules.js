@@ -1,34 +1,37 @@
-/**
- * Inside the SafetyKit Dashboard
- * Concrete, plain-language descriptions of each module
- */
-
 export default function DashboardModules() {
   const modules = [
     {
       name: "WHS Compliance Dashboard",
       description: "Live status of every kit, first aider certifications, and outstanding actions across all centres.",
-      tag: "Readiness"
+      benefit: "See readiness across every centre in one view",
+      tag: "Readiness",
+      icon: "📊",
     },
     {
       name: "Proactive Engine",
       description: "Ranks upcoming expiry, overdue checks, and certification gaps so teams know exactly what to do next.",
-      tag: "Guidance"
+      benefit: "Your next three steps, always clear",
+      tag: "Guidance",
+      icon: "🎯",
     },
     {
       name: "ROI & Time Savings",
       description: "Tracks time spent on checks and cost avoided from prevented expiries, measured against data you record.",
-      tag: "Savings"
+      benefit: "Measure the hours and dollars you're saving",
+      tag: "Savings",
+      icon: "💰",
     },
     {
       name: "Risk Trend Monitoring",
       description: "Visualises expiry breaches, incidents, and audit readiness over time so issues are caught early.",
-      tag: "Risk"
+      benefit: "Catch problems before they become incidents",
+      tag: "Risk",
+      icon: "📈",
     }
   ];
 
   const tagColors = {
-    Readiness: "bg-blue-100 text-blue-700",
+    Readiness: "bg-emerald-100 text-emerald-700",
     Guidance: "bg-emerald-100 text-emerald-700",
     Savings: "bg-purple-100 text-purple-700",
     Risk: "bg-amber-100 text-amber-700"
@@ -38,18 +41,33 @@ export default function DashboardModules() {
     <section id="dashboard" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
+          <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">
+            Platform
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetyKit Dashboard</h2>
           <p className="text-lg text-slate-600">Four core modules you will use from day one</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {modules.map((mod, idx) => (
-            <div key={idx} className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-slate-900 text-base leading-snug pr-4">{mod.name}</h3>
-                <span className={`flex-shrink-0 text-xs font-semibold px-2 py-1 rounded-full ${tagColors[mod.tag]}`}>{mod.tag}</span>
+            <div key={idx} className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl">
+                  {mod.icon}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="font-bold text-slate-900 text-base leading-snug">{mod.name}</h3>
+                    <span className={`flex-shrink-0 text-xs font-semibold px-2 py-1 rounded-full ${tagColors[mod.tag]}`}>
+                      {mod.tag}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">{mod.description}</p>
+              <p className="text-sm text-slate-600 leading-relaxed mb-3">{mod.description}</p>
+              <p className="text-xs font-semibold text-emerald-700 border-t border-slate-100 pt-3">
+                ✓ {mod.benefit}
+              </p>
             </div>
           ))}
         </div>
