@@ -27,8 +27,8 @@ export default function LandingPage() {
             <a href="#contact" className="hover:text-slate-900">Contact</a>
           </div>
           <div className="flex items-center gap-3">
-            <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Book a demo</a>
-            <a href="#contact" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">Start 30-day Pilot</a>
+            <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
+            <a href="#contact" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">Book demo</a>
           </div>
         </div>
       </nav>
@@ -54,8 +54,8 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-3">
-              <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none text-center">Start 30-day Pilot</a>
-              <a href="#contact" className="inline-block border border-slate-300 text-slate-700 px-7 py-3 rounded-lg font-medium hover:border-slate-400 hover:bg-slate-50 text-center">Book a demo</a>
+              <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none text-center">Book a demo</a>
+              <a href="#contact" className="inline-block text-slate-600 px-7 py-3 rounded-lg font-medium hover:text-slate-900 text-center underline-offset-4 hover:underline">Start 30-day pilot</a>
             </div>
 
             <p className="text-xs text-slate-400">
@@ -80,6 +80,18 @@ export default function LandingPage() {
 
       {/* Metrics strip */}
       <MetricsRow />
+
+      {/* Trusted by */}
+      <div className="py-8 bg-white border-b border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">Trusted by ECEC &amp; healthcare organisations</p>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            {["Sunnydale Early Learning","KinderCare Network","Bright Futures Childcare","MediSafe Clinics"].map((name, i) => (
+              <span key={i} className="text-sm font-medium text-slate-400 tracking-tight">{name}</span>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Platform at a glance */}
       <div className="bg-slate-50 border-y border-slate-100 py-4">
@@ -118,37 +130,38 @@ export default function LandingPage() {
             <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-2">EHS Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
-              <ul className="space-y-2 mb-5 text-sm text-slate-700 flex-1">
+              <ul className="space-y-2 text-sm text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
               </ul>
-              <a href="#contact" className="inline-block text-sm font-semibold text-blue-600 hover:underline mt-auto">Book a demo</a>
             </div>
 
             {/* Clinical / Medical Coordinators */}
             <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">Clinical Coordinators</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
-              <ul className="space-y-2 mb-5 text-sm text-slate-700 flex-1">
+              <ul className="space-y-2 text-sm text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
               </ul>
-              <a href="#contact" className="inline-block text-sm font-semibold text-emerald-600 hover:underline mt-auto">Book a demo</a>
             </div>
 
             {/* Centre / Facilities Managers */}
             <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">Centre Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
-              <ul className="space-y-2 mb-5 text-sm text-slate-700 flex-1">
+              <ul className="space-y-2 text-sm text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
               </ul>
-              <a href="#contact" className="inline-block text-sm font-semibold text-amber-700 hover:underline mt-auto">Book a demo</a>
             </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">Book a demo</a>
           </div>
         </div>
       </section>
@@ -183,6 +196,24 @@ export default function LandingPage() {
 
       {/* Contact / Book Demo */}
       <ContactForm />
+
+      {/* Final CTA band */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
+          <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-blue-100 mb-10">
+            {["Go paperless","Boost compliance","Reduce expired incidents","Save 8–12h per month"].map((b, i) => (
+              <span key={i} className="flex items-center gap-2"><span className="text-blue-300">✓</span>{b}</span>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#contact" className="inline-block bg-white text-blue-600 px-7 py-3 rounded-lg font-semibold hover:bg-blue-50 focus-visible:ring-2 focus-visible:ring-blue-200 focus-visible:outline-none">Book a demo</a>
+            <a href="#contact" className="inline-block border border-blue-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-blue-700 text-center">Start 30-day pilot</a>
+          </div>
+          <p className="text-xs text-blue-200 mt-4">No credit card required · Set up in under 1 day</p>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12">
