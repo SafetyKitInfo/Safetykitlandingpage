@@ -33,30 +33,30 @@ export default function TrustAndCompliance() {
             <div className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-sm font-bold text-slate-900 mb-3">Security by Design</h3>
               <ul className="space-y-1.5 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> End-to-end encryption</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> AU/NZ compliant servers</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> Role-based access controls</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> SOC 2 Type II ready</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> End-to-end encryption</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> AU/NZ compliant servers</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Role-based access controls</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> SOC 2 Type II ready</li>
               </ul>
             </div>
 
             <div className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-sm font-bold text-slate-900 mb-3">Regulatory Alignment</h3>
               <ul className="space-y-1.5 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> Queensland ECEC standards &amp; NQF-aligned</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> First-aid kit standards (AS/NZS 4003)</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> Healthcare accreditation evidence support</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-500">•</span> GDPR &amp; Privacy Act compliant</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Queensland ECEC standards &amp; NQF-aligned</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> First-aid kit standards (AS/NZS 4003)</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> Healthcare accreditation evidence support</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-500" aria-hidden>•</span> GDPR &amp; Privacy Act compliant</li>
               </ul>
             </div>
 
             <div className="p-5 bg-emerald-700 rounded-xl border border-emerald-800 shadow-md text-white">
               <h3 className="text-sm font-bold mb-3">Risk-Free Pilot</h3>
               <ul className="space-y-1.5 text-sm text-emerald-100">
-                <li className="flex items-center gap-2"><span className="text-emerald-300">•</span> 30-day pilot for 1–2 centres</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300">•</span> Full setup support included</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300">•</span> Zero obligation to continue</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-300">•</span> Free migration if you proceed</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> 30-day pilot for 1–2 centres</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Full setup support included</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Zero obligation to continue</li>
+                <li className="flex items-center gap-2"><span className="text-emerald-300" aria-hidden>•</span> Free migration if you proceed</li>
               </ul>
               <a href="#contact" className="mt-5 inline-block bg-white text-emerald-700 font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-emerald-50">
                 Start your free pilot

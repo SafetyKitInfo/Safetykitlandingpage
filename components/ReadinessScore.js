@@ -58,9 +58,9 @@ export default function ReadinessScore() {
   const legend = [
     { label: "Excellent", range: "95+", dot: "bg-emerald-500" },
     { label: "Good", range: "80+", dot: "bg-emerald-400" },
-    { label: "Satisfactory", range: "65+", dot: "bg-amber-400" },
-    { label: "Poor", range: "50+", dot: "bg-orange-400" },
-    { label: "Critical", range: "<50", dot: "bg-red-500" },
+    { label: "Satisfactory", range: "75+", dot: "bg-amber-400" },
+    { label: "Poor", range: "55+", dot: "bg-orange-400" },
+    { label: "Critical", range: "<55", dot: "bg-red-500" },
   ];
 
   return (

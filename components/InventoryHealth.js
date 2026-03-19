@@ -1,4 +1,5 @@
 export default function InventoryHealth() {
+  const inventoryHealthPct = 72;
   const inventoryItems = [
     { label: "Healthy", count: 24, color: "text-emerald-700", dot: "bg-emerald-500" },
     { label: "Expiring Soon", count: 4, color: "text-amber-700", dot: "bg-amber-400" },
@@ -33,11 +34,11 @@ export default function InventoryHealth() {
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-bold text-slate-900 text-base">Inventory Health Overview</h3>
               <span className="text-xs font-semibold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
-                72% Healthy
+                {inventoryHealthPct}% Healthy
               </span>
             </div>
             <div className="h-2 rounded-full bg-slate-100 overflow-hidden mb-5">
-              <div className="h-2 rounded-full bg-emerald-500" style={{ width: "72%" }} />
+              <div className="h-2 rounded-full bg-emerald-500" style={{ width: `${inventoryHealthPct}%` }} />
             </div>
             <div className="space-y-3">
               {inventoryItems.map((item, i) => (

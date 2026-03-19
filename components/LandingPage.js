@@ -1,5 +1,4 @@
 import ContactForm from './ContactForm';
-import DeviceFrame from './DeviceFrame';
 import MetricsRow from './MetricsRow';
 import HowItWorks from './HowItWorks';
 import IssuesVsSolutions from './IssuesVsSolutions';
@@ -8,11 +7,18 @@ import HowToGetStarted from './HowToGetStarted';
 import ECECSpecific from './ECECSpecific';
 import DashboardModules from './DashboardModules';
 import StickyCTA from './StickyCTA';
+import ProactiveEngine from './ProactiveEngine';
+import ReadinessScore from './ReadinessScore';
+import ROIMetrics from './ROIMetrics';
+import RiskTrend from './RiskTrend';
+import InventoryHealth from './InventoryHealth';
 import { Process } from './ui/cards-demo';
 import { Linkedin, Twitter, Monitor, Wifi, Globe } from 'lucide-react';
-import content from '../content/safetykit-copy.json';
 
 export default function LandingPage() {
+  const heroReadinessScore = 65;
+  const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
+  const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
 
@@ -28,7 +34,7 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-3">
             <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
-            <a href="#contact" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">Book demo</a>
+            <a href="#contact" className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">Book demo</a>
           </div>
         </div>
       </nav>
@@ -49,12 +55,12 @@ export default function LandingPage() {
               Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
             </p>
 
-            <p className="text-sm font-medium text-blue-700 mb-6">
+            <p className="text-sm font-medium text-emerald-700 mb-6">
               Centres typically see up to 80% fewer expired-kit incidents within 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-3">
-              <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none text-center">Book a demo</a>
+              <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none text-center">Book a demo</a>
               <a href="#contact" className="inline-block text-slate-600 px-7 py-3 rounded-lg font-medium hover:text-slate-900 text-center underline-offset-4 hover:underline">Start 30-day pilot</a>
             </div>
 
@@ -64,15 +70,87 @@ export default function LandingPage() {
           </div>
 
           <div className="order-first md:order-last">
-            <div className="relative device-frame shadow-xl rounded-xl overflow-hidden bg-white border border-slate-200">
-              <DeviceFrame>
-                <img
-                  src={(content && content.hero && content.hero.images && content.hero.images[0]) || '/hero.png'}
-                  alt="SafetyKit dashboard showing kit compliance status"
-                  className="w-full block"
-                  loading="lazy"
-                />
-              </DeviceFrame>
+            {/* WHS Compliance Dashboard Mockup */}
+            <div className="rounded-2xl border border-slate-200 shadow-xl bg-white overflow-hidden text-sm">
+              {/* Header */}
+              <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
+                <span className="font-semibold text-sm">WHS Compliance Dashboard</span>
+                <button className="text-xs bg-slate-700 hover:bg-slate-600 px-2.5 py-1 rounded text-slate-200 flex items-center gap-1">
+                  <span>↻</span> Sync
+                </button>
+              </div>
+
+              <div className="p-4 space-y-4 bg-slate-50">
+                {/* Readiness Score */}
+                <div className="bg-white rounded-xl border border-slate-200 p-4">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Readiness Score</p>
+                  <div className="flex items-center gap-4">
+                    <div className="relative flex-shrink-0">
+                      <svg width="64" height="64" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
+                        <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#fee2e2" strokeWidth="7" />
+                        <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#ef4444" strokeWidth="7"
+                          strokeLinecap="round"
+                          strokeDasharray={heroScoreCircumference}
+                          strokeDashoffset={heroScoreCircumference * (1 - heroReadinessScore / 100)}
+                          transform="rotate(-90 32 32)" />
+                        <text x="32" y="35" textAnchor="middle" fontSize="13" fontWeight="700" fill="#0f172a">{heroReadinessScore}</text>
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-slate-500 text-xs">/100</div>
+                      <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full mt-0.5">Poor</span>
+                      <p className="text-xs text-slate-400 mt-0.5">Significant gaps</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3 stat tiles */}
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                    <div className="text-xs font-semibold text-slate-500 mb-1">Kits Ready</div>
+                    <div className="text-lg font-extrabold text-slate-900">4/6</div>
+                    <div className="flex items-center justify-center gap-1 mt-1">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
+                      <span className="text-xs text-amber-700">2 exp</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                    <div className="text-xs font-semibold text-slate-500 mb-1">Inventory</div>
+                    <div className="text-lg font-extrabold text-slate-900">72%</div>
+                    <div className="flex items-center justify-center gap-1 mt-1">
+                      <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
+                      <span className="text-xs text-orange-700">2 exp</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                    <div className="text-xs font-semibold text-slate-500 mb-1">Certs Valid</div>
+                    <div className="text-lg font-extrabold text-slate-900">3/5</div>
+                    <div className="flex items-center justify-center gap-1 mt-1">
+                      <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+                      <span className="text-xs text-red-700">1 exp</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Next 3 Actions */}
+                <div className="bg-white rounded-xl border border-slate-200 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-xs font-semibold text-slate-700">Next 3 Actions</p>
+                    <span className="text-xs bg-emerald-100 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
+                  </div>
+                  <ul className="space-y-2">
+                    {["Run 10-min mini-audit","Complete first inspection","Invite additional first aider"].map((action, i) => (
+                      <li key={i} className="flex items-center justify-between text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
+                        <span className="flex items-center gap-2">
+                          <span className="text-emerald-500 font-bold">►</span>
+                          {action}
+                        </span>
+                        <span className="text-slate-400 font-bold">→</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,13 +172,13 @@ export default function LandingPage() {
       </div>
 
       {/* Platform at a glance */}
-      <div className="bg-slate-50 border-y border-slate-100 py-4">
+      <div className="bg-emerald-50 border-y border-emerald-100 py-4">
         <div className="max-w-4xl mx-auto px-4 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
-          <span className="flex items-center gap-2"><Monitor size={15} className="text-blue-500" aria-hidden /> Mobile-first</span>
+          <span className="flex items-center gap-2"><Monitor size={15} className="text-emerald-500" aria-hidden /> Mobile-first</span>
           <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Wifi size={15} className="text-blue-500" aria-hidden /> Works offline</span>
+          <span className="flex items-center gap-2"><Wifi size={15} className="text-emerald-500" aria-hidden /> Works offline</span>
           <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Globe size={15} className="text-blue-500" aria-hidden /> Built for AU/NZ compliance</span>
+          <span className="flex items-center gap-2"><Globe size={15} className="text-emerald-500" aria-hidden /> Built for AU/NZ compliance</span>
         </div>
       </div>
 
@@ -108,6 +186,21 @@ export default function LandingPage() {
 
       {/* Features / Product Modules */}
       <Process />
+
+      {/* Proactive Engine */}
+      <ProactiveEngine />
+
+      {/* Readiness Score */}
+      <ReadinessScore />
+
+      {/* ROI Metrics */}
+      <ROIMetrics />
+
+      {/* Risk Trend */}
+      <RiskTrend />
+
+      {/* Inventory Health */}
+      <InventoryHealth />
 
       {/* How SafetyKit Works - 3-Step Flow */}
       <section id="how-it-works">
@@ -121,14 +214,15 @@ export default function LandingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-2 block">Roles</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for every role</h2>
             <p className="text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* EHS Managers */}
-            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-2">EHS Managers</div>
+            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">EHS Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
                 <li className="flex items-start gap-2"><span className="text-emerald-600 mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
@@ -138,7 +232,7 @@ export default function LandingPage() {
             </div>
 
             {/* Clinical / Medical Coordinators */}
-            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">Clinical Coordinators</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
@@ -149,7 +243,7 @@ export default function LandingPage() {
             </div>
 
             {/* Centre / Facilities Managers */}
-            <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">Centre Managers</div>
               <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
               <ul className="space-y-2 text-sm text-slate-700 flex-1">
@@ -161,7 +255,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="#contact" className="inline-block bg-blue-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none">Book a demo</a>
+            <a href="#contact" className="inline-block bg-emerald-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none">Book a demo</a>
           </div>
         </div>
       </section>
@@ -198,20 +292,20 @@ export default function LandingPage() {
       <ContactForm />
 
       {/* Final CTA band */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-emerald-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-blue-100 mb-10">
+          <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-emerald-100 mb-10">
             {["Go paperless","Boost compliance","Reduce expired incidents","Save 8–12h per month"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-blue-300">✓</span>{b}</span>
+              <span key={i} className="flex items-center gap-2"><span className="text-emerald-300">✓</span>{b}</span>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#contact" className="inline-block bg-white text-blue-600 px-7 py-3 rounded-lg font-semibold hover:bg-blue-50 focus-visible:ring-2 focus-visible:ring-blue-200 focus-visible:outline-none">Book a demo</a>
-            <a href="#contact" className="inline-block border border-blue-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-blue-700 text-center">Start 30-day pilot</a>
+            <a href="#contact" className="inline-block bg-white text-emerald-700 px-7 py-3 rounded-lg font-semibold hover:bg-emerald-50 focus-visible:ring-2 focus-visible:ring-emerald-200 focus-visible:outline-none">Book a demo</a>
+            <a href="#contact" className="inline-block border border-emerald-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-emerald-800 text-center">Start 30-day pilot</a>
           </div>
-          <p className="text-xs text-blue-200 mt-4">No credit card required · Set up in under 1 day</p>
+          <p className="text-xs text-emerald-200 mt-4">No credit card required · Set up in under 1 day</p>
         </div>
       </section>
 
