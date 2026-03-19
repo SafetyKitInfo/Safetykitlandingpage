@@ -1,3 +1,5 @@
+import { QrCode, Bell, FileCheck } from 'lucide-react';
+
 export default function HowItWorks() {
   const steps = [
     {
@@ -6,6 +8,7 @@ export default function HowItWorks() {
       description: "Mobile scans with offline support. Standardised checklists for every kit, every time.",
       benefits: ["QR/barcode scanning", "Works offline", "Auditable check logs"],
       chip: null,
+      Icon: QrCode,
     },
     {
       number: "2",
@@ -13,6 +16,7 @@ export default function HowItWorks() {
       description: "Real-time alerts stop expired items before they reach staff or families.",
       benefits: ["Expiry alerts (30/60/90 days out)", "Low-stock warnings", "Maintenance task assignment"],
       chip: "Proactive Engine",
+      Icon: Bell,
     },
     {
       number: "3",
@@ -20,6 +24,7 @@ export default function HowItWorks() {
       description: "Export timestamped check logs and evidence records on demand. A full historical record to support regulators and auditors.",
       benefits: ["Timestamp-verified check logs", "Audit evidence reports", "Training & certification record trail"],
       chip: null,
+      Icon: FileCheck,
     }
   ];
 
@@ -34,11 +39,15 @@ export default function HowItWorks() {
           <p className="text-lg text-slate-600">Three simple steps from scanning to compliance proof</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        {/* Step flow with connectors */}
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Connector line (desktop only) */}
+          <div className="hidden md:block absolute top-8 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-px bg-slate-200 z-0" aria-hidden />
+
           {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sk-primaryLight text-sk-primary font-bold text-4xl">
+            <div key={idx} className="flex flex-col relative z-10">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sk-primary text-white font-bold text-2xl shadow-md">
                   {step.number}
                 </div>
                 {step.chip && (
@@ -48,8 +57,11 @@ export default function HowItWorks() {
                 )}
               </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+              <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <step.Icon size={16} className="text-sk-primary flex-shrink-0" aria-hidden />
+                  <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
+                </div>
                 <p className="text-slate-600 text-sm mb-4">{step.description}</p>
                 <ul className="space-y-2">
                   {step.benefits.slice(0, 3).map((benefit, bidx) => (

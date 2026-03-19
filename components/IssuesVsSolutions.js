@@ -1,3 +1,5 @@
+import { AlertTriangle, CheckCircle } from 'lucide-react';
+
 export default function IssuesVsSolutions() {
   const comparisons = [
     {
@@ -49,7 +51,7 @@ export default function IssuesVsSolutions() {
               {/* Problem card */}
               <div className="bg-white rounded-xl border-l-4 border-amber-400 border border-slate-200 p-5 shadow-sm">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-base" aria-hidden>⚠️</span>
+                  <AlertTriangle size={14} className="text-amber-500 flex-shrink-0" aria-hidden />
                   <span className="text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full uppercase tracking-wide">
                     Common problem
                   </span>
@@ -61,7 +63,7 @@ export default function IssuesVsSolutions() {
               {/* Solution card */}
               <div className="bg-white rounded-xl border-l-4 border-sk-success border border-slate-200 p-5 shadow-sm">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-base" aria-hidden>✅</span>
+                  <CheckCircle size={14} className="text-sk-success flex-shrink-0" aria-hidden />
                   <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full uppercase tracking-wide">
                     How SafetyKit helps
                   </span>

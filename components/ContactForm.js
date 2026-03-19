@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { ContactCard } from './ui/contact-card'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
-import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 
 // Default to FormSubmit using the activation token so the form is already
 // activated. You can still override by setting `NEXT_PUBLIC_FORMSPREE_ENDPOINT`.
@@ -134,15 +133,40 @@ export default function ContactForm(){
 
   return (
     <section id="contact" className="py-20 bg-slate-50">
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Book a demo</h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">Share your details and we'll get back to you within 1 business day.</p>
         </div>
 
-        {/* Form card */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Left: What you'll get */}
+          <div className="bg-sk-primary rounded-xl p-8 text-white">
+            <h3 className="text-lg font-bold mb-6">What you'll get</h3>
+            <ul className="space-y-5">
+              {[
+                { title: "Live demo of SafetyKit", detail: "A 15–30 min walkthrough of the compliance dashboard, proactive engine, and mobile scanning." },
+                { title: "Tailored setup plan", detail: "We'll map out how SafetyKit fits your centres, rooms, and compliance workflow." },
+                { title: "30-day pilot included", detail: "Full setup, QR tagging, and onboarding support — no credit card required." },
+                { title: "Audit-readiness review", detail: "We'll identify the biggest gaps in your current kit compliance and how to close them." },
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle size={16} className="text-teal-300 flex-shrink-0 mt-0.5" aria-hidden />
+                  <div>
+                    <p className="text-sm font-semibold text-white">{item.title}</p>
+                    <p className="text-xs text-teal-100 mt-0.5">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 pt-6 border-t border-teal-600">
+              <p className="text-xs text-teal-200">No credit card required · Cancel anytime · Reply within 1 business day</p>
+            </div>
+          </div>
+
+          {/* Right: Form card */}
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
           <form
             action={USE_FORMSPREE ? FORMSPREE_ENDPOINT : '/api/contact'}
             method={USE_FORMSPREE ? 'POST' : undefined}
@@ -257,6 +281,7 @@ export default function ContactForm(){
             <p className="text-xs text-slate-500">
               Prefer email? <a href="mailto:info.safetykit@gmail.com" className="text-sk-primary hover:underline font-medium">info.safetykit@gmail.com</a>
             </p>
+          </div>
           </div>
         </div>
       </div>
