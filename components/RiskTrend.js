@@ -1,3 +1,5 @@
+import { AlertTriangle, CheckCircle, ClipboardList, Shield } from 'lucide-react';
+
 export default function RiskTrend() {
   const tiles = [
     {
@@ -5,33 +7,45 @@ export default function RiskTrend() {
       status: "Increasing",
       statusColor: "bg-amber-100 text-amber-700",
       detail: "3 near-miss events this quarter",
-      icon: "⚠️",
+      Icon: AlertTriangle,
+      iconColor: "text-amber-500",
+      trend: "↑",
+      trendColor: "text-amber-600",
     },
     {
       title: "Expiry Breaches",
       status: "Improving",
       statusColor: "bg-sk-successLight text-sk-successText",
-      detail: "↓ Down 60% since onboarding",
-      icon: "✅",
+      detail: "Down 60% since onboarding",
+      Icon: CheckCircle,
+      iconColor: "text-sk-success",
+      trend: "↓",
+      trendColor: "text-sk-successText",
     },
     {
       title: "Audit Readiness",
       status: "Attention Needed",
       statusColor: "bg-amber-100 text-amber-700",
       detail: "2 centres overdue for review",
-      icon: "📋",
+      Icon: ClipboardList,
+      iconColor: "text-amber-500",
+      trend: "→",
+      trendColor: "text-amber-600",
     },
     {
       title: "Critical Issues",
       status: "Improving",
       statusColor: "bg-sk-successLight text-sk-successText",
-      detail: "✓ 0 critical items this week",
-      icon: "🛡️",
+      detail: "0 critical items this week",
+      Icon: Shield,
+      iconColor: "text-sk-success",
+      trend: "↓",
+      trendColor: "text-sk-successText",
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50 border-y border-slate-100">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
@@ -49,18 +63,21 @@ export default function RiskTrend() {
           {tiles.map((tile, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 flex flex-col gap-3"
+              className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 flex items-start gap-4"
             >
-              <div className="flex items-center gap-3">
-                <span className="text-2xl" aria-hidden>{tile.icon}</span>
-                <h3 className="font-bold text-slate-900 text-base">{tile.title}</h3>
+              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center">
+                <tile.Icon size={18} className={tile.iconColor} aria-hidden />
               </div>
-              <div>
-                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${tile.statusColor}`}>
+              <div className="flex-1">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-bold text-slate-900 text-base">{tile.title}</h3>
+                  <span className={`text-lg font-bold ${tile.trendColor}`}>{tile.trend}</span>
+                </div>
+                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${tile.statusColor} mb-2`}>
                   {tile.status}
                 </span>
+                <p className="text-sm text-slate-600">{tile.detail}</p>
               </div>
-              <p className="text-sm text-slate-600">{tile.detail}</p>
             </div>
           ))}
         </div>

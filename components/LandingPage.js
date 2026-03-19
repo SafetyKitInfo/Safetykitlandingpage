@@ -13,7 +13,7 @@ import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Wifi, Globe } from 'lucide-react';
+import { Linkedin, Twitter, Monitor, Wifi, Globe, AlertTriangle, Package, ShieldCheck } from 'lucide-react';
 
 export default function LandingPage() {
   const heroReadinessScore = 65;
@@ -40,8 +40,8 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <header id="hero" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <header id="hero" className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div>
             <div className="mb-4">
               <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For ECEC &amp; Healthcare Organisations</span>
@@ -51,17 +51,17 @@ export default function LandingPage() {
               Eliminate expired first-aid kits across every centre
             </h1>
 
-            <p className="text-lg text-slate-600 max-w-lg leading-relaxed mb-3">
+            <p className="text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
               Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
             </p>
 
-            <p className="text-sm font-medium text-sk-primary mb-6">
-              Centres typically see up to 80% fewer expired-kit incidents within 90 days.
+            <p className="text-sm font-semibold text-sk-primary bg-sk-primaryLight border border-teal-200 rounded-lg px-4 py-2 inline-block mb-7">
+              ↑ Centres typically see up to 80% fewer expired-kit incidents within 90 days.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-3">
-              <a href="#contact" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center">Book a demo</a>
-              <a href="#contact" className="inline-block text-slate-600 px-7 py-3 rounded-lg font-medium hover:text-slate-900 text-center underline-offset-4 hover:underline">Start 30-day pilot</a>
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
+              <a href="#contact" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Start 30-day pilot</a>
+              <a href="#contact" className="inline-block border-2 border-sk-primary text-sk-primary px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-sk-primaryLight focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center">Book a demo</a>
             </div>
 
             <p className="text-xs text-slate-400">
@@ -71,7 +71,7 @@ export default function LandingPage() {
 
           <div className="order-first md:order-last">
             {/* WHS Compliance Dashboard Mockup */}
-            <div className="rounded-2xl border border-slate-200 shadow-xl bg-white overflow-hidden text-sm">
+            <div className="rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
                 <span className="font-semibold text-sm">WHS Compliance Dashboard</span>
@@ -82,70 +82,66 @@ export default function LandingPage() {
 
               <div className="p-4 space-y-4 bg-slate-50">
                 {/* Readiness Score */}
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
+                <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
                   <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Readiness Score</p>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-5">
                     <div className="relative flex-shrink-0">
-                      <svg width="64" height="64" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
+                      <svg width="72" height="72" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#fee2e2" strokeWidth="7" />
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#ef4444" strokeWidth="7"
                           strokeLinecap="round"
                           strokeDasharray={heroScoreCircumference}
                           strokeDashoffset={heroScoreCircumference * (1 - heroReadinessScore / 100)}
                           transform="rotate(-90 32 32)" />
-                        <text x="32" y="35" textAnchor="middle" fontSize="13" fontWeight="700" fill="#0f172a">{heroReadinessScore}</text>
+                        <text x="32" y="33" textAnchor="middle" fontSize="15" fontWeight="800" fill="#0f172a">{heroReadinessScore}</text>
+                        <text x="32" y="44" textAnchor="middle" fontSize="8" fill="#64748b">/100</text>
                       </svg>
                     </div>
                     <div>
-                      <div className="text-slate-500 text-xs">/100</div>
-                      <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full mt-0.5">Poor</span>
-                      <p className="text-xs text-slate-400 mt-0.5">Significant gaps</p>
+                      <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mb-1">Poor</span>
+                      <p className="text-xs text-slate-400">Significant gaps present</p>
                     </div>
                   </div>
                 </div>
 
                 {/* 3 stat tiles */}
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
+                    <AlertTriangle size={14} className="text-amber-500 mx-auto mb-1" aria-hidden />
                     <div className="text-xs font-semibold text-slate-500 mb-1">Kits Ready</div>
-                    <div className="text-lg font-extrabold text-slate-900">4/6</div>
-                    <div className="flex items-center justify-center gap-1 mt-1">
-                      <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
-                      <span className="text-xs text-amber-700">2 exp</span>
-                    </div>
+                    <div className="text-xl font-extrabold text-slate-900">4/6</div>
+                    <span className="text-xs text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">2 exp</span>
                   </div>
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
+                    <Package size={14} className="text-orange-500 mx-auto mb-1" aria-hidden />
                     <div className="text-xs font-semibold text-slate-500 mb-1">Inventory</div>
-                    <div className="text-lg font-extrabold text-slate-900">72%</div>
-                    <div className="flex items-center justify-center gap-1 mt-1">
-                      <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
-                      <span className="text-xs text-orange-700">2 exp</span>
-                    </div>
+                    <div className="text-xl font-extrabold text-slate-900">72%</div>
+                    <span className="text-xs text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">2 exp</span>
                   </div>
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
+                    <ShieldCheck size={14} className="text-red-500 mx-auto mb-1" aria-hidden />
                     <div className="text-xs font-semibold text-slate-500 mb-1">Certs Valid</div>
-                    <div className="text-lg font-extrabold text-slate-900">3/5</div>
-                    <div className="flex items-center justify-center gap-1 mt-1">
-                      <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
-                      <span className="text-xs text-red-700">1 exp</span>
-                    </div>
+                    <div className="text-xl font-extrabold text-slate-900">3/5</div>
+                    <span className="text-xs text-red-700 bg-red-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">1 exp</span>
                   </div>
                 </div>
 
                 {/* Next 3 Actions */}
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
+                <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
                   <div className="flex items-center justify-between mb-3">
                     <p className="text-xs font-semibold text-slate-700">Next 3 Actions</p>
                     <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
                   </div>
                   <ul className="space-y-2">
-                    {["Run 10-min mini-audit","Complete first inspection","Invite additional first aider"].map((action, i) => (
-                      <li key={i} className="flex items-center justify-between text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
-                        <span className="flex items-center gap-2">
-                          <span className="text-sk-success font-bold">►</span>
-                          {action}
-                        </span>
-                        <span className="text-slate-400 font-bold">→</span>
+                    {[
+                      { label: "Run 10-min mini-audit", chip: "#1" },
+                      { label: "Complete first inspection", chip: "#2" },
+                      { label: "Invite additional first aider", chip: "#3" },
+                    ].map((action, i) => (
+                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
+                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
+                        <span className="flex-1">{action.label}</span>
+                        <span className="text-slate-300">→</span>
                       </li>
                     ))}
                   </ul>
@@ -156,20 +152,20 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Metrics strip */}
-      <MetricsRow />
-
-      {/* Trusted by */}
-      <div className="py-8 bg-white border-b border-slate-100">
+      {/* Trusted by — immediately below hero, above the fold */}
+      <div className="py-6 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">Trusted by ECEC &amp; healthcare organisations</p>
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Trusted by ECEC &amp; healthcare organisations</p>
+          <div className="flex flex-wrap items-center justify-center gap-10">
             {["Sunnydale Early Learning","KinderCare Network","Bright Futures Childcare","MediSafe Clinics"].map((name, i) => (
-              <span key={i} className="text-sm font-medium text-slate-400 tracking-tight">{name}</span>
+              <span key={i} className="text-sm font-semibold text-slate-300 tracking-tight">{name}</span>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Metrics strip */}
+      <MetricsRow />
 
       {/* Platform at a glance */}
       <div className="bg-sk-surfaceMuted border-y border-sk-border py-4">
@@ -292,20 +288,20 @@ export default function LandingPage() {
       <ContactForm />
 
       {/* Final CTA band */}
-      <section className="py-20 bg-sk-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-24 bg-sk-primary text-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
           <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-teal-100 mb-10">
-            {["Go paperless","Boost compliance","Reduce expired incidents","Save 8–12h per month"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-teal-300">✓</span>{b}</span>
+          <div className="flex flex-wrap items-center justify-center gap-5 text-sm text-teal-100 mb-10">
+            {["Go paperless","Boost compliance","Fewer expired incidents"].map((b, i) => (
+              <span key={i} className="flex items-center gap-2"><span className="text-teal-300 font-bold">✓</span>{b}</span>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#contact" className="inline-block bg-white text-sk-primary px-7 py-3 rounded-lg font-semibold hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book a demo</a>
-            <a href="#contact" className="inline-block border border-teal-400 text-white px-7 py-3 rounded-lg font-medium hover:bg-sk-primaryHover text-center">Start 30-day pilot</a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Start 30-day pilot</a>
+            <a href="#contact" className="inline-block border-2 border-teal-300 text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-sk-primaryHover text-center">Book a demo</a>
           </div>
-          <p className="text-xs text-teal-200 mt-4">No credit card required · Set up in under 1 day</p>
+          <p className="text-xs text-teal-200 mt-5">No credit card required · Set up in under 1 day</p>
         </div>
       </section>
 

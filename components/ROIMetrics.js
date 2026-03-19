@@ -7,7 +7,7 @@ export default function ROIMetrics() {
       description: "Automated checks and mobile scanning eliminate manual spreadsheet audits.",
     },
     {
-      value: "Up to 80%",
+      value: "80%",
       label: "Fewer Expired Incidents",
       tag: "↑ Improving",
       description: "Proactive expiry alerts catch issues weeks before they become compliance failures.",
@@ -41,21 +41,19 @@ export default function ROIMetrics() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {metrics.map((m, i) => (
             <div
               key={i}
-              className="relative bg-white rounded-xl border border-sk-border shadow-sm overflow-hidden"
+              className="relative bg-white rounded-xl border border-sk-border shadow-sm overflow-hidden text-center"
             >
               <div className="h-1 w-full bg-sk-primary" />
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-3xl font-extrabold text-slate-900">{m.value}</div>
-                  <span className="text-xs font-semibold text-sk-success bg-sk-successLight px-2 py-0.5 rounded-full">
-                    {m.tag}
-                  </span>
-                </div>
-                <div className="text-sm font-semibold text-slate-700 mb-1">{m.label}</div>
+              <div className="px-4 py-6">
+                <div className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-1 leading-none">{m.value}</div>
+                <div className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-3 leading-snug">{m.label}</div>
+                <span className="inline-block text-xs font-semibold text-sk-success bg-sk-successLight px-2 py-0.5 rounded-full mb-3">
+                  {m.tag}
+                </span>
                 <p className="text-xs text-slate-500 leading-relaxed">{m.description}</p>
               </div>
             </div>

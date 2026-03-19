@@ -1,22 +1,21 @@
+import { CheckCircle } from 'lucide-react';
+
 export default function ProactiveEngine() {
   const actions = [
     {
-      number: "#1",
+      number: 1,
       title: "Run 10-minute mini-audit",
       description: "Complete a quick walk-through to identify gaps and update your readiness score.",
-      pill: "Proactive Engine",
     },
     {
-      number: "#2",
+      number: 2,
       title: "Complete first inspection",
       description: "Log each kit with QR scanning to establish your compliance baseline.",
-      pill: "Proactive Engine",
     },
     {
-      number: "#3",
+      number: 3,
       title: "Invite additional first aider",
       description: "Ensure certification coverage across all rooms and shifts.",
-      pill: "Proactive Engine",
     },
   ];
 
@@ -35,30 +34,61 @@ export default function ProactiveEngine() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {actions.map((action, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl border border-sk-border shadow-sm p-6 flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-extrabold text-sk-primary">{action.number}</span>
-                <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full">
-                  {action.pill}
-                </span>
-              </div>
-              <h3 className="font-bold text-slate-900 text-base mb-2">{action.title}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed flex-1">{action.description}</p>
-              <div className="mt-5">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-sk-primary hover:text-sk-primaryHover"
-                >
-                  Get started <span aria-hidden>→</span>
-                </a>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Left: app-style "Next 3 Actions" preview */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
+            <div className="bg-slate-800 px-4 py-3 flex items-center justify-between">
+              <span className="text-white font-semibold text-sm">Next 3 Actions</span>
+              <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
             </div>
-          ))}
+            <div className="p-4 bg-slate-50 space-y-3">
+              {actions.map((action) => (
+                <div key={action.number} className="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3 shadow-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-sk-primary text-white flex items-center justify-center font-bold text-sm" aria-label={`Step ${action.number}`}>
+                    <span aria-hidden="true">{action.number}</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900 mb-0.5">{action.title}</p>
+                    <p className="text-xs text-slate-500">{action.description}</p>
+                  </div>
+                  <div className="ml-auto flex-shrink-0 self-center">
+                    <span className="text-slate-300 text-sm">→</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: textual explanation */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Stop guessing what to fix next</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                SafetyKit's Proactive Engine analyses your kit data and ranks the actions that will have the biggest compliance impact. No more prioritising from a spreadsheet — the platform does it for you.
+              </p>
+            </div>
+            <ul className="space-y-4">
+              {[
+                { label: "Ranked by compliance impact", detail: "Actions are scored and ordered by how much they improve your readiness score." },
+                { label: "Always up to date", detail: "The list refreshes automatically as conditions change across your centres." },
+                { label: "Assign in one tap", detail: "Delegate any action to a team member directly from the dashboard." },
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <CheckCircle size={16} className="text-sk-success flex-shrink-0 mt-0.5" aria-hidden />
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                    <p className="text-xs text-slate-500">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-sk-primary hover:text-sk-primaryHover"
+            >
+              See it in action <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
