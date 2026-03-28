@@ -152,18 +152,6 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Trusted by — immediately below hero, above the fold */}
-      <div className="py-6 bg-slate-50 border-y border-slate-100">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Trusted by ECEC &amp; healthcare organisations</p>
-          <div className="flex flex-wrap items-center justify-center gap-10">
-            {["Sunnydale Early Learning","KinderCare Network","Bright Futures Childcare","MediSafe Clinics"].map((name, i) => (
-              <span key={i} className="text-sm font-semibold text-slate-300 tracking-tight">{name}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Metrics strip */}
       <MetricsRow />
 
