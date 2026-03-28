@@ -196,7 +196,7 @@ export default function ContactForm(){
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex flex-col">
                 <Label htmlFor="contact-org" className="mb-2 font-medium">Centre/Organisation</Label>
-                <Input id="contact-org" name="organization" placeholder="e.g., Sunnydale Early Learning" autoComplete="organization" />
+                <Input id="contact-org" name="organization" placeholder="e.g., My Organisation" autoComplete="organization" />
               </div>
               <div className="flex flex-col">
                 <Label htmlFor="contact-phone" className="mb-2 font-medium text-slate-500">Phone <span className="text-slate-400">(optional)</span></Label>
