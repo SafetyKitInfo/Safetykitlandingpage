@@ -4,6 +4,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/api/contact": "pages/api/contact.js",
+  "/api/vision-scan": "pages/api/vision-scan.js",
   "/aurora-demo": "pages/aurora-demo.html",
   "/404": "pages/404.html"
 }

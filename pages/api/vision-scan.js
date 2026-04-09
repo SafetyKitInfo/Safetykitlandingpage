@@ -1,8 +1,8 @@
-import OpenAI from 'openai'
+import { Groq } from 'groq-sdk'
 import { VISION_SYSTEM_PROMPT } from '../../lib/visionSystemPrompt'
 
 // Simple in-memory rate limiter — resets per serverless instance cold start.
-// For a persistent rate limit, use Vercel KV or a Redis-backed store.
+// For a persistent rate limit across instances, use Vercel KV or a Redis-backed store.
 const rateLimitMap = new Map()
 const RATE_LIMIT_WINDOW_MS = 60_000  // 1 minute
 const RATE_LIMIT_MAX_REQUESTS = 5    // max 5 scans per IP per minute
@@ -56,18 +56,18 @@ export default async function handler(req, res) {
   const mimeType = media_type || 'image/jpeg'
   const imageUrl = `data:${mimeType};base64,${image_base64}`
 
-  const kitLabel = kit_id ? String(kit_id).slice(0, 100) : 'Unknown'
+  // Sanitize kit_id: allow alphanumeric characters, hyphens, underscores, and spaces only.
+  // This prevents prompt injection via a crafted kit_id value.
+  const kitLabel = kit_id
+    ? String(kit_id).slice(0, 100).replace(/[^a-zA-Z0-9\-_ ]/g, '')
+    : 'Unknown'
   const userText = `Kit ID: ${kitLabel}. Please analyse this safety kit image and return a JSON inspection report.`
 
-  const client = new OpenAI({
-    apiKey,
-    baseURL: 'https://api.groq.com/openai/v1',
-  })
+  const groq = new Groq({ apiKey })
 
   let rawContent = ''
   try {
-    const response = await client.chat.completions.create({
-      model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+    const chatCompletion = await groq.chat.completions.create({
       messages: [
         { role: 'system', content: VISION_SYSTEM_PROMPT },
         {
@@ -78,21 +78,25 @@ export default async function handler(req, res) {
           ],
         },
       ],
-      temperature: 0.1,
-      max_tokens: 1024,
+      model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+      temperature: 1,
+      max_completion_tokens: 1024,
+      top_p: 1,
+      stream: false,
+      stop: null,
     })
 
-    rawContent = response.choices?.[0]?.message?.content || ''
+    rawContent = chatCompletion.choices?.[0]?.message?.content || ''
   } catch (err) {
     const msg = err?.message || 'groq_request_failed'
     console.error('Groq API error:', msg)
     return res.status(502).json({ ok: false, error: 'groq_request_failed', detail: msg })
   }
 
-  // Parse the JSON returned by the model
+  // Parse the JSON returned by the model.
+  // Strip markdown code fences the model may occasionally add.
   let parsed
   try {
-    // Strip markdown code fences the model may occasionally add
     const cleaned = rawContent.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim()
     parsed = JSON.parse(cleaned)
   } catch (parseErr) {

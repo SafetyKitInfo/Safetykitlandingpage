@@ -12,8 +12,8 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/0d4c3428c53b34e8.js",
       "static/chunks/3934f1032d10c738.js",
       "static/chunks/a407c92e68a96beb.js",
-      "static/chunks/f0a532cf07631102.css",
-      "static/chunks/turbopack-f49927a72297fb3e.js"
+      "static/chunks/df97f863476c7abf.css",
+      "static/chunks/turbopack-441f95810cc3e263.js"
     ],
     "/_error": [
       "static/chunks/a2a580d43b0f834e.js",
