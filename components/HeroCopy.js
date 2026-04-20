@@ -9,7 +9,7 @@ export default function HeroCopy(){
             <span className="bg-gradient-to-r from-emerald-100 to-blue-50 text-emerald-700 px-3 py-1 text-sm rounded-full">Audit-ready. Clinically focused.</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
-            Eliminate expired kits. Simplify audits.
+            Reduce expired-kit risk. Simplify audits.
             <span className="block text-blue-600">Automated expiry tracking and audit-ready reports.</span>
           </h1>
 

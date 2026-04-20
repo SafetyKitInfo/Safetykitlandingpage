@@ -1,28 +1,28 @@
 export default function ROIMetrics() {
   const metrics = [
     {
-      value: "8–12h",
-      label: "Time Saved Per Month",
-      tag: "↑ Positive",
-      description: "Automated checks and mobile scanning eliminate manual spreadsheet audits.",
+      value: "Lower",
+      label: "Manual Admin Load",
+      tag: "Designed Benefit",
+      description: "Automated checks and mobile scanning reduce spreadsheet-heavy audit workflows.",
     },
     {
-      value: "80%",
-      label: "Fewer Expired Incidents",
-      tag: "↑ Improving",
-      description: "Proactive expiry alerts catch issues weeks before they become compliance failures.",
+      value: "Fewer",
+      label: "Expired Item Misses",
+      tag: "Designed Benefit",
+      description: "Proactive expiry alerts help teams catch issues earlier in the workflow.",
     },
     {
-      value: "15–20%",
-      label: "Reduction in Stock Waste",
-      tag: "↑ Positive",
-      description: "Smart reorder suggestions and inventory tracking prevent over-ordering.",
+      value: "Less",
+      label: "Stock Waste",
+      tag: "Designed Benefit",
+      description: "Reorder suggestions and inventory visibility help avoid unnecessary over-ordering.",
     },
     {
-      value: "1 Day",
-      label: "Setup & Training Time",
-      tag: "✓ Fast Onboarding",
-      description: "Guided onboarding with full support means your team is live within 24 hours.",
+      value: "Faster",
+      label: "Team Onboarding",
+      tag: "Designed Benefit",
+      description: "Guided onboarding and support help teams get operational quickly.",
     },
   ];
 
@@ -34,10 +34,10 @@ export default function ROIMetrics() {
             ROI &amp; Time Savings
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Real ROI from Day One
+            Operational Benefits in Early Use
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            Measurable results from the first week of using SafetyKit.
+            Teams often report clearer workflows and less manual follow-up in the first weeks.
           </p>
         </div>
 

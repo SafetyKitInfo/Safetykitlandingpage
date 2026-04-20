@@ -20,7 +20,7 @@ export default function IssuesVsSolutions() {
     {
       issue: "Manual checks waste staff time",
       problem: "Full kit audits done manually average 3–5 hours per week across a centre.",
-      solution: "Mobile scanning completes a full kit check in 90 seconds. Centres typically reclaim 8–12 hours per month."
+      solution: "Mobile scanning streamlines full kit checks and can help teams reclaim admin time each month."
     },
     {
       issue: "Inconsistent processes across centres",
@@ -30,7 +30,7 @@ export default function IssuesVsSolutions() {
     {
       issue: "Untracked stock waste",
       problem: "Over-ordering and disposal of unused items adds up to significant budget waste each year.",
-      solution: "Automated inventory alerts and reorder suggestions reduce over-ordering and help centres save up to 15–20% on wasted stock."
+      solution: "Automated inventory alerts and reorder suggestions help reduce over-ordering and stock waste."
     }
   ];
 

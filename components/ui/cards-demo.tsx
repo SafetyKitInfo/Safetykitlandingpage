@@ -30,9 +30,9 @@ const PROCESS_PHASES = [
   },
   {
     id: "process-4",
-    title: "Always audit-ready",
+    title: "Stronger audit readiness",
     description:
-      "Every inspection is automatically logged, time-stamped, and exportable — cutting audit prep from hours to minutes.",
+      "Every inspection is automatically logged, time-stamped, and exportable — helping reduce audit prep time.",
     Icon: ClipboardCheck,
     iconBg: "bg-sk-primaryLight",
     iconColor: "text-sk-primary",

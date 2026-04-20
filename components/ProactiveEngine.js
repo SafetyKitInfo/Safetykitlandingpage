@@ -27,10 +27,10 @@ export default function ProactiveEngine() {
             Proactive Engine
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Your Next 3 Actions — Always Clear
+            Your Next 3 Actions — Clearly Prioritised
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            SafetyKit surfaces the most important steps so your team always knows what to do next.
+            SafetyKit surfaces the most important steps so your team can quickly decide what to do next.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function ProactiveEngine() {
             <ul className="space-y-4">
               {[
                 { label: "Ranked by compliance impact", detail: "Actions are scored and ordered by how much they improve your readiness score." },
-                { label: "Always up to date", detail: "The list refreshes automatically as conditions change across your centres." },
+                { label: "Kept up to date", detail: "The list refreshes automatically as conditions change across your centres." },
                 { label: "Assign in one tap", detail: "Delegate any action to a team member directly from the dashboard." },
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">

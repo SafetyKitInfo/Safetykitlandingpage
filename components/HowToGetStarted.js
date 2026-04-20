@@ -4,13 +4,13 @@ export default function HowToGetStarted() {
       number: "1",
       title: "Book a discovery call",
       description: "A short call to understand your centres, workflows, and regulatory context. We'll outline a setup plan tailored to your organisation.",
-      details: ["Understand your current compliance workflow", "Identify quick wins for your specific centres", "No obligation — answer your questions first"]
+      details: ["Understand your current readiness workflow", "Identify quick wins for your specific centres", "No obligation — answer your questions first"]
     },
     {
       number: "2",
       title: "Set up your kits and locations",
       description: "Our team guides you through onboarding. Tag kits with QR codes, configure centres and rooms, and set up checklists.",
-      details: ["Takes 30–60 minutes for your first centre", "Remote or in-person — your choice", "Your team gets full access and training on day one"]
+      details: ["Initial setup can take 30–60 minutes for your first centre", "Remote or in-person — your choice", "Your team gets full access and guided training early in rollout"]
     },
     {
       number: "3",
@@ -31,7 +31,7 @@ export default function HowToGetStarted() {
             Get started in three steps
           </h2>
           <p className="text-lg text-slate-600">
-            From first conversation to full compliance visibility in under a week
+            From first conversation to stronger readiness visibility in the first weeks
           </p>
         </div>
 

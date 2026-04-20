@@ -68,13 +68,13 @@ export default function ReadinessScore() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
-            WHS Compliance
+            WHS Readiness
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
             Know Your Readiness Score
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            A single score that tells you exactly where you stand across every compliance dimension.
+            A single score that helps you understand where you stand across key readiness dimensions.
           </p>
         </div>
 

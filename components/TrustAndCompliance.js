@@ -9,9 +9,9 @@ export default function TrustAndCompliance() {
       title: "Security by Design",
       bullets: [
         "End-to-end encryption",
-        "AU/NZ compliant servers",
+        "AU/NZ data hosting options",
         "Role-based access controls",
-        "SOC 2 Type II ready",
+        "Security controls aligned with SOC 2 practices",
       ],
     },
     {
@@ -20,10 +20,10 @@ export default function TrustAndCompliance() {
       iconColor: "text-amber-700",
       title: "Regulatory Alignment",
       bullets: [
-        "Queensland ECEC standards & NQF-aligned",
-        "First-aid kit standards (AS/NZS 4003)",
-        "Healthcare accreditation evidence support",
-        "GDPR & Privacy Act compliant",
+        "Designed to support Queensland ECEC standards and NQF requirements",
+        "Supports documentation against first-aid kit standards (AS/NZS 4003)",
+        "Supports evidence collection for healthcare accreditation",
+        "Privacy controls designed to support GDPR and Privacy Act obligations",
       ],
     },
     {
@@ -32,9 +32,9 @@ export default function TrustAndCompliance() {
       iconColor: "text-purple-700",
       title: "Data Location & Audit Trail",
       bullets: [
-        "All data stored on AU/NZ compliant servers",
+        "Data hosted in AU/NZ regions",
         "Every action timestamped and logged",
-        "Full traceability for regulators",
+        "Full traceability for internal reviews and audits",
         "Export audit evidence on demand",
       ],
     },
@@ -49,7 +49,7 @@ export default function TrustAndCompliance() {
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for compliance. Built for trust.</h2>
           <p className="text-slate-600 text-base max-w-xl mx-auto">
-            Designed specifically for ECEC and healthcare sectors where safety is non-negotiable.
+            Designed specifically for ECEC and healthcare sectors where safety is critical.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function TrustAndCompliance() {
             <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-teal-100">
               <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>30-day pilot for 1–2 centres</span>
               <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>Full setup support included</span>
-              <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>Zero obligation to continue</span>
+              <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>No obligation to continue</span>
             </div>
           </div>
           <a href="#contact" className="flex-shrink-0 bg-white text-sk-primary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-sk-surfaceMuted">

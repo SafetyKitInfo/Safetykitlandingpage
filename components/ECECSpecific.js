@@ -10,14 +10,14 @@ export default function ECECSpecific() {
       story: "Staff scan the infant room kit in 2 minutes. The dashboard flags which items need replacing before the next check is due."
     },
     {
-      scenario: "Regulatory Audits & NQF Compliance",
-      summary: "Export timestamped check logs for any date range in 2 clicks when auditors arrive.",
+      scenario: "Regulatory Audits & NQF Readiness",
+      summary: "Export timestamped check logs for any date range in a few clicks when auditors arrive.",
       story: "Six months of check records, expiry alerts, and maintenance logs available to share on the same day as an inspection."
     },
     {
       scenario: "Multi-Centre Network Oversight",
-      summary: "One dashboard shows compliance status across 2, 5, or 15 centres — no spreadsheets.",
-      story: "Directors see at a glance which centres are compliant and which need action, with the ability to drill down in seconds."
+      summary: "One dashboard shows readiness status across 2, 5, or 15 centres — no spreadsheets.",
+      story: "Directors see at a glance which centres need attention first, with the ability to drill down quickly."
     }
   ];
 

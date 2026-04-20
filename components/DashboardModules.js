@@ -3,7 +3,7 @@ import { LayoutDashboard, Zap, TrendingUp, BarChart2 } from 'lucide-react';
 export default function DashboardModules() {
   const modules = [
     {
-      name: "WHS Compliance Dashboard",
+      name: "WHS Readiness Dashboard",
       description: "Live status of every kit, first aider certifications, and outstanding actions across all centres.",
       benefit: "See readiness across every centre in one view",
       tag: "Readiness",
@@ -14,7 +14,7 @@ export default function DashboardModules() {
     {
       name: "Proactive Engine",
       description: "Ranks upcoming expiry, overdue checks, and certification gaps so teams know exactly what to do next.",
-      benefit: "Your next three steps, always clear",
+      benefit: "Your next three steps, clearly prioritised",
       tag: "Guidance",
       Icon: Zap,
       iconBg: "bg-sk-primaryLight",
@@ -55,7 +55,7 @@ export default function DashboardModules() {
             Platform
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetyKit Dashboard</h2>
-          <p className="text-lg text-slate-600">Four core modules you will use from day one</p>
+          <p className="text-lg text-slate-600">Four core modules to support daily operations</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

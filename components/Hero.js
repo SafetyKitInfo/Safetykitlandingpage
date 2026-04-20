@@ -9,16 +9,16 @@ export default function Hero() {
 
         {/* Left column: headline, subhead, outcomes, CTAs */}
         <div className="order-2 md:order-1">
-          <div className="mb-4 text-sm font-medium text-sk-primary uppercase tracking-wide">Built for compliance. Built for trust.</div>
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">Reliable kit compliance your teams will actually use</h1>
-          <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">Reduce expired items, simplify audits, and prove compliance — without extra administrative work.</p>
+          <div className="mb-4 text-sm font-medium text-sk-primary uppercase tracking-wide">Built for readiness. Built for trust.</div>
+          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">Reliable kit readiness your teams will actually use</h1>
+          <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">Reduce expired items, simplify audits, and improve visibility — without extra administrative work.</p>
 
           {/* Outcomes pill/card */}
           <div className="mt-6 inline-flex items-center rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm">
             <div className="flex gap-4 text-sm text-slate-700">
-              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">80% fewer expired incidents</span></div>
-              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">~10h saved / month</span></div>
-              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">1‑day setup & training</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">Fewer expired incidents over time</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">Less admin vs manual tracking</span></div>
+              <div className="flex items-center gap-2"><IconCheck className="text-sk-success" /> <span className="font-medium">Guided setup and training</span></div>
             </div>
           </div>
 

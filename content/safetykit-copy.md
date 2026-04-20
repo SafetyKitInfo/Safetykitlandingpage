@@ -7,7 +7,7 @@ This file contains the full landing-page copy for SafetyKit in content-only form
 # Hero
 
 ## Headline
-Zero Expired First‑Aid Kits. Zero Audit Stress.
+Reduce expired first-aid kit risk. Reduce audit stress.
 
 ## Subhead
 Automate kit checks, track expiries, and stay audit‑ready across every room and centre.
@@ -40,7 +40,7 @@ Core modules that make kit compliance simple and repeatable.
 - Expiry Tracking — Predictive alerts months before expiry.
 - Inventory Alerts — Low-stock triggers and suggested reorders.
 - Audit Logs — Complete evidence trail for every check.
-- Compliance Dashboard — Centre & room visibility at a glance.
+- Readiness Dashboard — Centre & room visibility at a glance.
 - AI Safety Assistant — Quick SOP answers and reminders.
 
 ---
@@ -63,7 +63,7 @@ Before SafetyKit
 - No cross-centre visibility for managers.
 
 ## Quote
-“We were always chasing records and praying we’d pass audits.” — Centre Director
+“We were often chasing records and hoping we’d pass audits.” — Centre Director
 
 ---
 
@@ -73,7 +73,7 @@ Before SafetyKit
 After SafetyKit
 
 ## Lead
-From chaotic audits to always‑ready compliance.
+From chaotic audits to stronger day-to-day readiness.
 
 ## Benefits (short bullets)
 - Scan kits in 3 seconds and record evidence instantly.
@@ -181,13 +181,13 @@ CTAs: Request pricing / Book pilot
 # Bottom CTA
 
 ## Headline
-Ready to eliminate expired kits and pass audits with confidence?
+Ready to reduce expired kits and prepare for audits with confidence?
 
 ## Bullets
-- Eliminate expired items
+- Reduce expired items
 - Reduce admin load
 - Standardise kit checks
-- Pass audits confidently
+- Prepare for audits with confidence
 - Keep children and staff safe
 
 ## CTAs

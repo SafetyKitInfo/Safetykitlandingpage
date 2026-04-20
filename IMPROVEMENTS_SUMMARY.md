@@ -10,7 +10,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 ### Changes Made:
 - **Added positioning header** under navigation banner: "Built with ECEC and healthcare compliance teams."
 - **Hero tagline updated**: Badge now reads "For ECEC & Healthcare Centres" (instead of generic "Audit-ready. Clinically focused.")
-- **Headline refocused**: "Cut expired-kit incidents by 80% in 90 days" (outcome-driven)
+- **Headline refocused**: "Reduce expired-kit incidents across every centre" (outcome-driven)
 - **Subheadline specific**: "Standardise kit checks across every room and centre."
 - **Specific audience language**: Mentions "early childhood" and "healthcare compliance teams" explicitly
 
@@ -25,11 +25,11 @@ This document outlines the comprehensive, conversion-focused improvements implem
 
 ### Changes Made:
 - **Quantitative outcomes highlighted**:
-  - "Cut expired-kit incidents by 80% in 90 days"
+   - "Reduce expired-kit incidents across every centre"
   - "3-second kit checks" 
   - "Audit-ready reports"
 - **Concrete benefit bullets** (not generic features):
-  - "80% fewer expired incidents"
+   - "Fewer expired incidents"
   - "3-second kit checks"
   - "Offline mobile app"
   - "Audit-ready reports"
@@ -81,7 +81,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 ### Structure:
 1. **Scan & Check Kits Anywhere** – Mobile scans, offline support, standardised checklists
 2. **Track Expiry & Issues Automatically** – Alerts, warnings, task assignment
-3. **Prove Compliance in Seconds** – Audit-ready reports, verification logs, training audit trail
+3. **Support Compliance Reviews Quickly** – Audit-ready reports, verification logs, training audit trail
 
 ### Benefits Listed Per Step:
 - QR/barcode scanning, Works offline, Auditable logs
@@ -107,7 +107,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 6. Stock waste (untracked) → Automated inventory alerts & reorder suggestions
 
 ### Bottom Panel:
-- Result statement: "80% reduction in expired-kit incidents within 90 days, plus 8–12 hours reclaimed per month per centre"
+- Result statement: "Fewer expired-kit incidents over time, plus reclaimed staff hours versus manual checks"
 
 ### Impact:
 ✓ Direct validation of buyer pain points
@@ -132,7 +132,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 ### For Centre Managers:
 - Assign maintenance tasks & track completion
 - Reduce onboarding time for new staff
-- **Save 8–12 hours/month on manual checks**
+- **Reduce time spent on manual checks**
 
 ### Impact:
 ✓ Each persona sees their specific outcome
@@ -153,22 +153,22 @@ This document outlines the comprehensive, conversion-focused improvements implem
    - SOC 2 Type II ready
 
 2. **Regulatory Alignment**:
-   - Queensland ECEC standards & NQF-aligned
+   - Designed to support Queensland ECEC standards and NQF requirements
    - First Aid Kit standards (AS/NZS 4003)
    - Healthcare accreditation ready
    - Aged care & disability compliance support
-   - GDPR & Privacy Act compliant
+   - Privacy controls designed to support GDPR & Privacy Act obligations
 
 3. **Risk-Free Pilot**:
    - 30-day pilot in 1–2 centres
    - Full support & onboarding included
-   - Zero obligation to continue
+   - No obligation to continue
    - Dedicated success manager
    - Free migration if proceeding
 
 ### Trust Indicators:
 - 50+ centres & organisations
-- 80% fewer expiry incidents
+- Fewer expiry incidents
 - 10 hrs saved per centre/month
 - 1 day setup & onboarding
 
@@ -197,7 +197,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
    - New: "✓ Got it! We received your message. We'll respond within 1 business day with next steps, suggested times, and more info on the pilot. Check your inbox soon."
 
 4. **Bottom reassurance line**:
-   - "We typically reply within 1 business day. Your pilot includes full onboarding support."
+   - "We usually reply within 1 business day. Your pilot includes full onboarding support."
 
 5. **Section heading updated**:
    - Old: "Contact Us / Book a Demo"
@@ -243,12 +243,12 @@ This document outlines the comprehensive, conversion-focused improvements implem
 1. **Room-by-Room Kit Management** – Each room tracked separately
 2. **Excursions & Off-Site Visits** – Portable kits tracked in transit
 3. **Staff Ratios & New Starters** – Consistent checklist for casual/relief staff
-4. **Regulatory Audits & NQF Compliance** – Export compliance reports in 2 clicks
+4. **Regulatory Audits & NQF Readiness** – Export readiness reports in a few clicks
 5. **Vaccine & Medical Records Integration** – Center-wide compliance tracking
 6. **Multi-Centre Network Oversight** – Dashboard view across all centres
 
 ### ECEC Outcomes Summary:
-- Zero expired kit surprises
+- Fewer expired kit surprises
 - 10–12 hrs reclaimed per centre/month
 - 100% staff following same process
 - 1 click to pull compliance reports
@@ -335,7 +335,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 
 ### Pre-Improvement Issues Addressed:
 - ✅ Generic positioning → Specific ECEC/healthcare focus
-- ✅ Abstract hero → Concrete outcomes (80% reduction, 3-second checks)
+- ✅ Abstract hero → Concrete operational outcomes (fewer misses, faster checks)
 - ✅ CTA confusion (5+ variants) → Clear dual CTA structure
 - ✅ Generic features → Problem-to-solution mapping
 - ✅ Adoption anxiety → 3-step "How to Get Started"

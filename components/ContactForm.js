@@ -44,7 +44,7 @@ export default function ContactForm(){
     if (USE_FORMSPREE) {
       const fd = new FormData(form)
       // Also send a JSON copy to our internal API so submissions are persisted
-      // locally (data/contacts.jsonl). This guarantees you can inspect messages
+      // locally (data/contacts.jsonl). This ensures you can inspect messages
       // even if FormSubmit doesn't forward or verification wasn't clicked.
       try {
         const jsonBody = Object.fromEntries(fd.entries())
@@ -146,10 +146,10 @@ export default function ContactForm(){
             <h3 className="text-lg font-bold mb-6">What you'll get</h3>
             <ul className="space-y-5">
               {[
-                { title: "Live demo of SafetyKit", detail: "A 15–30 min walkthrough of the compliance dashboard, proactive engine, and mobile scanning." },
-                { title: "Tailored setup plan", detail: "We'll map out how SafetyKit fits your centres, rooms, and compliance workflow." },
+                { title: "Live demo of SafetyKit", detail: "A 15–30 min walkthrough of the readiness dashboard, proactive engine, and mobile scanning." },
+                { title: "Tailored setup plan", detail: "We'll map out how SafetyKit fits your centres, rooms, and readiness workflow." },
                 { title: "30-day pilot included", detail: "Full setup, QR tagging, and onboarding support — no credit card required." },
-                { title: "Audit-readiness review", detail: "We'll identify the biggest gaps in your current kit compliance and how to close them." },
+                { title: "Audit-readiness review", detail: "We'll identify the biggest gaps in your current kit process and how to close them." },
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle size={16} className="text-teal-300 flex-shrink-0 mt-0.5" aria-hidden />

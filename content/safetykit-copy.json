@@ -1,22 +1,22 @@
 {
   "hero": {
-    "headline": "Eliminate expired kits and cut audit prep from hours to minutes.",
+    "headline": "Reduce expired-kit risk and simplify audit preparation.",
     "subhead": "Monitor every kit, prevent expiry incidents, and streamline compliance across all centres.",
     "metrics": [
       {
-        "value": "50+",
-        "label": "Centres & Healthcare Orgs"
+        "value": "Multi-site",
+        "label": "ECEC & Healthcare Teams"
       },
       {
-        "value": "Up to 80%",
-        "label": "Fewer Expired Incidents"
+        "value": "Fewer",
+        "label": "Expired Incidents"
       },
       {
-        "value": "8\u201312h",
-        "label": "Saved Per Month"
+        "value": "Less",
+        "label": "Manual Admin"
       },
       {
-        "value": "1 Day",
+        "value": "Guided",
         "label": "Setup & Training"
       }
     ],
@@ -51,7 +51,7 @@
         "desc": "Complete evidence trail for every check."
       },
       {
-        "title": "Compliance Dashboard",
+        "title": "Readiness Dashboard",
         "desc": "Centre & room visibility at a glance."
       },
       {
@@ -76,7 +76,7 @@
   },
   "solution": {
     "title": "After SafetyKit",
-    "lead": "From chaotic audits to always\u2011ready compliance.",
+    "lead": "From chaotic audits to stronger day-to-day readiness.",
     "benefits": [
       "Scan kits quickly and record evidence instantly.",
       "Automated expiry alerts to reduce expired items.",
@@ -152,12 +152,12 @@
   },
   "pricing_tease": "Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per\u2011feature tiers.",
   "bottom_cta": {
-    "headline": "Ready to eliminate expired kits and pass audits with confidence?",
+    "headline": "Ready to reduce expired kits and prepare for audits with confidence?",
     "bullets": [
-      "Eliminate expired items",
+      "Reduce expired items",
       "Reduce admin load",
       "Standardise kit checks",
-      "Pass audits confidently",
+      "Prepare for audits with confidence",
       "Keep children and staff safe"
     ],
     "ctas": [

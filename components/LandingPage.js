@@ -48,7 +48,7 @@ export default function LandingPage() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
-              Eliminate expired first-aid kits across every centre
+              Reduce expired first-aid kit risk across every centre
             </h1>
 
             <p className="text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
@@ -56,7 +56,7 @@ export default function LandingPage() {
             </p>
 
             <p className="text-sm font-semibold text-sk-primary bg-sk-primaryLight border border-teal-200 rounded-lg px-4 py-2 inline-block mb-7">
-              ↑ Centres typically see up to 80% fewer expired-kit incidents within 90 days.
+              Centres can significantly reduce expired-kit incidents within the first 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
@@ -70,11 +70,11 @@ export default function LandingPage() {
           </div>
 
           <div className="order-first md:order-last">
-            {/* WHS Compliance Dashboard Mockup */}
+            {/* WHS Readiness Dashboard Mockup */}
             <div className="rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
-                <span className="font-semibold text-sm">WHS Compliance Dashboard</span>
+                <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
                 <button className="text-xs bg-slate-700 hover:bg-slate-600 px-2.5 py-1 rounded text-slate-200 flex items-center gap-1">
                   <span>↻</span> Sync
                 </button>
@@ -162,7 +162,7 @@ export default function LandingPage() {
           <span className="text-slate-300">·</span>
           <span className="flex items-center gap-2"><Wifi size={15} className="text-sk-success" aria-hidden /> Works offline</span>
           <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Globe size={15} className="text-sk-success" aria-hidden /> Built for AU/NZ compliance</span>
+          <span className="flex items-center gap-2"><Globe size={15} className="text-sk-success" aria-hidden /> Built to support AU/NZ WHS obligations</span>
         </div>
       </div>
 
@@ -279,7 +279,7 @@ export default function LandingPage() {
       <section className="py-24 bg-sk-primary text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
-          <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, eliminate expired items, and stay audit-ready — without extra overhead.</p>
+          <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
           <div className="flex flex-wrap items-center justify-center gap-5 text-sm text-teal-100 mb-10">
             {["Go paperless","Boost compliance","Fewer expired incidents"].map((b, i) => (
               <span key={i} className="flex items-center gap-2"><span className="text-teal-300 font-bold">✓</span>{b}</span>
