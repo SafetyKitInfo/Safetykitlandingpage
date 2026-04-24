@@ -1,0 +1,54 @@
+# SafetyKit
+
+> SafetyKit is a mobile-first compliance platform that helps small and medium businesses (SMEs) manage first-aid kit expiry, inventory health, and audit readiness across one or more locations. While purpose-built features exist for ECEC and healthcare, SafetyKit serves any SME with WHS first-aid kit obligations — including trades, hospitality, retail, construction, childcare, clinics, and offices. Built for the Australian and New Zealand market.
+
+SafetyKit replaces manual spreadsheet-based kit audits with mobile QR scanning, automated expiry alerts, and timestamped audit-ready reports. It supports compliance with Australian WHS regulations, Queensland ECEC standards, the National Quality Framework (NQF), and first-aid kit standards (AS/NZS 4003).
+
+## Core Product
+
+- [Platform Overview](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): How SafetyKit works — scan, track, and report in three steps
+- [WHS Readiness Dashboard](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Live readiness score across kits, inventory, certifications, and audit frequency
+- [Proactive Engine](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): Automatically ranks and surfaces the next three highest-impact compliance actions
+- [Risk Trend Monitoring](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Tracks expiry breaches, incidents, and audit readiness over time
+
+## Who It's For
+
+SafetyKit is designed for any SME in Australia or New Zealand that must maintain compliant first-aid kits under WHS regulations.
+
+- [ECEC Centres](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Early childhood centres managing room-by-room kit compliance and NQF audits
+- [Healthcare Clinics & Medical Practices](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Clinics needing audit evidence for healthcare accreditation
+- [Multi-site Networks](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Any business overseeing 2–15+ locations from a single dashboard
+- [Trades & Construction](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Businesses with mobile or site-based kit obligations
+- [Hospitality & Retail](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Venues and stores needing simple, consistent kit checks
+- [Disability, Aged Care & Allied Health](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Providers with ongoing WHS compliance obligations
+- [Offices & Corporate Sites](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Any workplace required to maintain compliant first-aid kits under the Work Health and Safety Act
+
+## Key Features
+
+- Mobile QR/barcode scanning with offline support
+- Automated expiry alerts at 30, 60, and 90 days
+- Room-by-room kit tracking (infants, toddlers, preschool, outdoor)
+- First aider certification tracking with expiry alerts
+- Timestamped, exportable audit logs
+- Multi-site dashboard with drill-down by centre or room
+- Task delegation and guided SOPs for consistent execution
+- Inventory health monitoring with reorder suggestions
+
+## Security & Compliance
+
+- [Trust & Security](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#trust): End-to-end encryption, AU/NZ data hosting, role-based access controls
+- Designed to support Queensland ECEC standards and NQF requirements
+- Supports documentation against AS/NZS 4003 first-aid kit standards
+- Privacy controls aligned with GDPR and Australian Privacy Act obligations
+- Security controls aligned with SOC 2 practices
+
+## Getting Started
+
+- [Book a Demo](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): 15–30 min live walkthrough of the dashboard and mobile scanning
+- [30-Day Pilot](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): Full setup, QR tagging, and onboarding support — no credit card required
+- Setup time: under 1 day for the first centre
+- Contact: info.safetykit@gmail.com
+
+## About
+
+SafetyKit is an early-stage SaaS company founded in Australia, focused on reducing first-aid kit compliance risk for SMEs across any industry — from childcare and healthcare to trades, hospitality, retail, and corporate offices. The platform is guidance and record-keeping software — it supports WHS readiness but does not certify legal compliance or replace professional WHS advice.
