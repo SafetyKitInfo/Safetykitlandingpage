@@ -60,13 +60,8 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
-              <a href="#contact" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Start 30-day pilot</a>
-              <a href="#contact" className="inline-block border-2 border-sk-primary text-sk-primary px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-sk-primaryLight focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center">Book a demo</a>
+              <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
             </div>
-
-            <p className="text-xs text-slate-400">
-              No credit card required · Cancel anytime · Set up in under 1 day
-            </p>
           </div>
 
           <div className="order-first md:order-last">
@@ -239,7 +234,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="#contact" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book a demo</a>
+            <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
           </div>
         </div>
       </section>
@@ -286,10 +281,8 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Start 30-day pilot</a>
-            <a href="#contact" className="inline-block border-2 border-teal-300 text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-sk-primaryHover text-center">Book a demo</a>
+            <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
           </div>
-          <p className="text-xs text-teal-200 mt-5">No credit card required · Set up in under 1 day</p>
         </div>
       </section>
 
