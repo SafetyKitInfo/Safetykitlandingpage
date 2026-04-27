@@ -60,7 +60,7 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
-              <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
+              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
             </div>
           </div>
 
@@ -234,7 +234,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
           </div>
         </div>
       </section>
@@ -281,7 +281,7 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://tally.so/r/REPLACE_WITH_YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
           </div>
         </div>
       </section>
