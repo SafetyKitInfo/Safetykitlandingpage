@@ -76,15 +76,15 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
           <div>
             <div className="mb-4">
-              <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For ECEC &amp; Healthcare Organisations</span>
+              <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For SMEs &amp; Australian Businesses</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
-              Reduce expired first-aid kit risk across every centre
+              First Aid Kit Compliance Software for Every Centre
             </h1>
 
             <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
-              Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
+              SafetySight is first aid kit compliance software built for SMEs across Australia. Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports.
             </p>
 
             <p className="text-sm font-semibold text-sk-primary bg-sk-primaryLight border border-teal-200 rounded-lg px-4 py-2 inline-block mb-7">
@@ -289,7 +289,7 @@ export default function LandingPage() {
             <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Who we serve</h3>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {["Early Childhood Centres","Healthcare Clinics","Multi-site Childcare Networks","Medical Practices","Disability & Aged Care","ECEC Training Providers"].map((i, idx) => (
+            {["Trades & Construction","Retail & Hospitality","Professional Services","Healthcare Clinics","Childcare Centres","Multi-site SMEs"].map((i, idx) => (
               <span key={idx} className="px-4 py-2 bg-white rounded-full text-sm text-slate-700 border border-slate-200 shadow-sm">{i}</span>
             ))}
           </div>
@@ -333,7 +333,7 @@ export default function LandingPage() {
             <div>
               <div className="font-semibold text-white text-xs md:text-sm mb-3">Customers</div>
               <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
-                <li><a href="#who-we-serve" className="hover:text-white">ECEC Centres</a></li>
+                <li><a href="#who-we-serve" className="hover:text-white">SMEs</a></li>
                 <li><a href="#who-we-serve" className="hover:text-white">Healthcare Clinics</a></li>
                 <li><a href="#who-we-serve" className="hover:text-white">Multi-site Networks</a></li>
               </ul>

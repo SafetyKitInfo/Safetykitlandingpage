@@ -35,7 +35,7 @@ export default function HowItWorks() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             How It Works
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How SafetySight Works</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How Our First Aid Kit Compliance Platform Works</h2>
           <p className="text-base md:text-lg text-slate-600">Three simple steps from scanning to compliance proof</p>
         </div>
 
