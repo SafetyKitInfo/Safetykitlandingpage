@@ -54,7 +54,7 @@ export default function DashboardModules() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Platform
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetyKit Dashboard</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Inside the SafetySight Dashboard</h2>
           <p className="text-lg text-slate-600">Four core modules to support daily operations</p>
         </div>
 

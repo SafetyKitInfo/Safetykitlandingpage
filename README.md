@@ -1,6 +1,6 @@
-# SafetyKit Landing Page (Next.js + Tailwind)
+# SafetySight Landing Page (Next.js + Tailwind)
 
-This repository contains a minimal, modern landing page scaffold for SafetyKit built with Next.js and Tailwind CSS. It's ready to customize and deploy to Vercel.
+This repository contains a minimal, modern landing page scaffold for SafetySight built with Next.js and Tailwind CSS. It's ready to customize and deploy to Vercel.
 
 ## What’s included
 

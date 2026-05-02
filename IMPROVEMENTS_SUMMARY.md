@@ -1,7 +1,7 @@
-# SafetyKit Landing Page - Strategic Improvements Summary
+# SafetySight Landing Page - Strategic Improvements Summary
 
 ## Overview
-This document outlines the comprehensive, conversion-focused improvements implemented to the SafetyKit landing page. These changes align the page with ECEC and healthcare audience expectations, reduce friction, and drive higher-quality leads.
+This document outlines the comprehensive, conversion-focused improvements implemented to the SafetySight landing page. These changes align the page with ECEC and healthcare audience expectations, reduce friction, and drive higher-quality leads.
 
 ---
 
@@ -75,7 +75,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 
 ---
 
-## 4. **New "How SafetyKit Works" (1-2-3 Flow)** 
+## 4. **New "How SafetySight Works" (1-2-3 Flow)** 
 *Created: [HowItWorks.js](components/HowItWorks.js)*
 
 ### Structure:
@@ -111,7 +111,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 
 ### Impact:
 ✓ Direct validation of buyer pain points
-✓ Shows SafetyKit as purposeful solution (not generic kit tool)
+✓ Shows SafetySight as purposeful solution (not generic kit tool)
 ✓ Builds confidence in product-market fit
 
 ---
@@ -302,7 +302,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 2. **Hero** – Outcome, sub-head, benefits, dual CTAs, risk reversal
 3. **Sticky CTA** – Persistent call-to-action
 4. **Features/Product Modules** – (Existing Process component)
-5. **How SafetyKit Works** – 3-step flow (NEW)
+5. **How SafetySight Works** – 3-step flow (NEW)
 6. **Common Issues vs Solutions** – Pain-to-solution mapping (NEW)
 7. **Key Metrics** – (Existing MetricsRow)
 8. **Persona Value Props** – Enhanced with specific outcomes (UPDATED)
@@ -377,7 +377,7 @@ This document outlines the comprehensive, conversion-focused improvements implem
 
 ## **Summary**
 
-The SafetyKit landing page now clearly communicates:
+The SafetySight landing page now clearly communicates:
 1. **Who it's for**: ECEC and healthcare compliance teams
 2. **What it does**: Cuts expired-kit incidents by 80% in 90 days
 3. **How it works**: 3-step process from scanning to compliance proof

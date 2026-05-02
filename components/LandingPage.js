@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import ContactForm from './ContactForm';
 import MetricsRow from './MetricsRow';
 import HowItWorks from './HowItWorks';
@@ -16,6 +17,7 @@ import { Process } from './ui/cards-demo';
 import { Linkedin, Twitter, Monitor, Wifi, Globe, AlertTriangle, Package, ShieldCheck } from 'lucide-react';
 
 export default function LandingPage() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
@@ -23,9 +25,11 @@ export default function LandingPage() {
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
 
       {/* Top Nav */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-slate-200">
+      <nav className="sticky top-0 z-40 bg-white border-b border-slate-200 relative">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-          <a href="/" className="font-bold text-slate-900 text-base tracking-tight">SafetyKit</a>
+          <a href="/" className="flex items-center gap-3">
+            <img src="/images/safetysight-logo.png" alt="SafetySight" className="h-7 sm:h-8" />
+          </a>
           <div className="hidden md:flex items-center gap-6 text-sm text-slate-600">
             <a href="#how-it-works" className="hover:text-slate-900">Product</a>
             <a href="#who-we-serve" className="hover:text-slate-900">Customers</a>
@@ -33,25 +37,53 @@ export default function LandingPage() {
             <a href="#contact" className="hover:text-slate-900">Contact</a>
           </div>
           <div className="flex items-center gap-3">
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100"
+              aria-expanded={mobileOpen}
+              aria-label="Toggle menu"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {mobileOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
             <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
             <a href="#contact" className="inline-block bg-sk-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book demo</a>
+          </div>
+        </div>
+        {/* Mobile menu panel */}
+        <div className={`md:hidden ${mobileOpen ? 'block' : 'hidden'} border-t border-slate-200 bg-white`}>
+          <div className="px-4 py-3 space-y-2">
+            <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Product</a>
+            <a href="#who-we-serve" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Customers</a>
+            <a href="#trust" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Security</a>
+            <a href="#contact" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Contact</a>
+            <div className="pt-2">
+              <a href="#contact" onClick={() => setMobileOpen(false)} className="block w-full text-center bg-sk-primary text-white px-4 py-2 rounded-lg font-semibold">Book demo</a>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero */}
-      <header id="hero" className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+      <header id="hero" className="py-16 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
           <div>
             <div className="mb-4">
               <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For ECEC &amp; Healthcare Organisations</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
               Reduce expired first-aid kit risk across every centre
             </h1>
 
-            <p className="text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
+            <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
               Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
             </p>
 
@@ -60,13 +92,13 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
-              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
+              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
             </div>
           </div>
 
           <div className="order-first md:order-last">
             {/* WHS Readiness Dashboard Mockup */}
-            <div className="rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
+            <div className="w-full max-w-md mx-auto rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
                 <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
@@ -181,7 +213,7 @@ export default function LandingPage() {
       {/* Inventory Health */}
       <InventoryHealth />
 
-      {/* How SafetyKit Works - 3-Step Flow */}
+      {/* How SafetySight Works - 3-Step Flow */}
       <section id="how-it-works">
         <HowItWorks />
       </section>
@@ -190,15 +222,15 @@ export default function LandingPage() {
       <IssuesVsSolutions />
 
       {/* Personas with Specific Outcomes */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 md:mb-12">
             <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">Roles</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for every role</h2>
-            <p className="text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-3">Built for every role</h2>
+            <p className="text-base md:text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* EHS Managers */}
             <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide mb-2">EHS Managers</div>
@@ -234,7 +266,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
           </div>
         </div>
       </section>
@@ -244,7 +276,7 @@ export default function LandingPage() {
         <TrustAndCompliance />
       </section>
 
-      {/* Inside the SafetyKit Dashboard */}
+      {/* Inside the SafetySight Dashboard */}
       <DashboardModules />
 
       {/* ECEC-Specific Deep Dive */}
@@ -271,58 +303,58 @@ export default function LandingPage() {
       <ContactForm />
 
       {/* Final CTA band */}
-      <section className="py-24 bg-sk-primary text-white">
+      <section className="py-16 md:py-24 bg-sk-primary text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Reduce kit risk across every centre</h2>
-          <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-5 text-sm text-teal-100 mb-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">Reduce kit risk across every centre</h2>
+          <p className="text-teal-100 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-5 text-sm text-teal-100 mb-8 md:mb-10">
             {["Go paperless","Boost compliance","Fewer expired incidents"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-teal-300 font-bold">✓</span>{b}</span>
+              <span key={i} className="flex items-center gap-2"><span className="text-teal-300 font-bold">✓</span><span>{b}</span></span>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12">
+      <footer className="bg-slate-900 text-slate-400 py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-10">
             <div>
-              <div className="font-semibold text-white text-sm mb-3">Product</div>
-              <ul className="space-y-2 text-sm">
+              <div className="font-semibold text-white text-xs md:text-sm mb-3">Product</div>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                 <li><a href="#how-it-works" className="hover:text-white">How it works</a></li>
                 <li><a href="#dashboard" className="hover:text-white">Dashboard</a></li>
                 <li><a href="#trust" className="hover:text-white">Security</a></li>
               </ul>
             </div>
             <div>
-              <div className="font-semibold text-white text-sm mb-3">Customers</div>
-              <ul className="space-y-2 text-sm">
+              <div className="font-semibold text-white text-xs md:text-sm mb-3">Customers</div>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                 <li><a href="#who-we-serve" className="hover:text-white">ECEC Centres</a></li>
                 <li><a href="#who-we-serve" className="hover:text-white">Healthcare Clinics</a></li>
                 <li><a href="#who-we-serve" className="hover:text-white">Multi-site Networks</a></li>
               </ul>
             </div>
             <div>
-              <div className="font-semibold text-white text-sm mb-3">Company</div>
-              <ul className="space-y-2 text-sm">
+              <div className="font-semibold text-white text-xs md:text-sm mb-3">Company</div>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                 <li><a href="#about" className="hover:text-white">About</a></li>
                 <li><a href="#contact" className="hover:text-white">Contact</a></li>
               </ul>
             </div>
             <div>
-              <div className="font-semibold text-white text-sm mb-3">Legal</div>
-              <ul className="space-y-2 text-sm">
+              <div className="font-semibold text-white text-xs md:text-sm mb-3">Legal</div>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                 <li><a href="#privacy" className="hover:text-white">Privacy</a></li>
                 <li><a href="#terms" className="hover:text-white">Terms</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs">&copy; {new Date().getFullYear()} SafetyKit. All rights reserved.</p>
+          <div className="border-t border-slate-800 pt-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} SafetySight. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <a href="https://www.linkedin.com" aria-label="LinkedIn" className="hover:text-white">
                 <Linkedin size={18} />

@@ -42,7 +42,7 @@ export default function IssuesVsSolutions() {
             Common Challenges
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Kit Compliance Fails Today</h2>
-          <p className="text-lg text-slate-600">Common problems, and how SafetyKit addresses each one</p>
+          <p className="text-lg text-slate-600">Common problems, and how SafetySight addresses each one</p>
         </div>
 
         <div className="space-y-4">
@@ -65,7 +65,7 @@ export default function IssuesVsSolutions() {
                 <div className="flex items-center gap-2 mb-2">
                   <CheckCircle size={14} className="text-sk-success flex-shrink-0" aria-hidden />
                   <span className="text-xs font-semibold text-sk-primary bg-sk-primaryLight px-2 py-0.5 rounded-full uppercase tracking-wide">
-                    How SafetyKit helps
+                    How SafetySight helps
                   </span>
                 </div>
                 <p className="text-slate-700 text-sm leading-snug">{comp.solution}</p>

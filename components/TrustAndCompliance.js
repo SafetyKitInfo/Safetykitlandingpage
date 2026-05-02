@@ -77,7 +77,7 @@ export default function TrustAndCompliance() {
         <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
           <AlertTriangle size={16} className="text-amber-500 flex-shrink-0 mt-0.5" aria-hidden />
           <p className="text-xs text-amber-800 leading-relaxed">
-            <strong>SafetyKit is a guidance and record-keeping tool, not a legal authority.</strong> It supports your WHS readiness but does not certify legal compliance or replace professional WHS advice.
+            <strong>SafetySight is a guidance and record-keeping tool, not a legal authority.</strong> It supports your WHS readiness but does not certify legal compliance or replace professional WHS advice.
           </p>
         </div>
 

@@ -21,6 +21,9 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/safetysight-logo.png" />
+        <link rel="apple-touch-icon" href="/images/safetysight-logo.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <GA />
       <Component {...pageProps} />

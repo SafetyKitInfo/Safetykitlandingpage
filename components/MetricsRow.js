@@ -30,7 +30,7 @@ export default function MetricsRow() {
           ))}
         </div>
         <p className="text-xs text-slate-400 text-center mt-5">
-          Indicators based on data entered into SafetyKit — not a legal compliance certification.
+          Indicators based on data entered into SafetySight — not a legal compliance certification.
         </p>
       </div>
     </section>

@@ -1,11 +1,11 @@
 import { RefreshCw, ShieldOff, PackageX, ClipboardCheck, Eye, CheckSquare } from 'lucide-react';
 
 const PROCESS_PHASES = [
-  {
+      {
     id: "process-1",
     title: "Compliance that runs itself",
     description:
-      "SafetyKit monitors inspections, expiries, and risk rules in the background — nothing is missed without manual follow-up.",
+      "SafetySight monitors inspections, expiries, and risk rules in the background — nothing is missed without manual follow-up.",
     Icon: RefreshCw,
     iconBg: "bg-sk-primaryLight",
     iconColor: "text-sk-primary",

@@ -11,8 +11,8 @@ export function HeroScrollDemo() {
           <>
             <h1 className="text-3xl md:text-4xl font-extrabold leading-tight text-black dark:text-white">
               Reduce expired-kit risk
-              <span className="block text-4xl md:text-[6rem] font-bold mt-1 leading-none text-blue-600">
-                Unleash SafetyKit
+                <span className="block text-4xl md:text-[6rem] font-bold mt-1 leading-none text-blue-600">
+                Unleash SafetySight
               </span>
             </h1>
           </>

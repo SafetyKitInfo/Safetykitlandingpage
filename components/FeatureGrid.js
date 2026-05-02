@@ -11,7 +11,7 @@ export default function FeatureGrid(){
   return (
     <section className="py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">We use SafetyKit for…</h2>
+        <h2 className="text-2xl font-bold mb-4">We use SafetySight for…</h2>
         <p className="text-slate-600 mb-6">Core modules that make kit compliance simple and repeatable.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f) => (

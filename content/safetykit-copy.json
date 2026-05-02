@@ -31,7 +31,7 @@
     ]
   },
   "modules": {
-    "title": "We use SafetyKit for\u2026",
+    "title": "We use SafetySight for\u2026",
     "subline": "Core modules that make kit compliance simple and repeatable.",
     "cards": [
       {
@@ -62,10 +62,10 @@
   },
   "customer_context": {
     "headline": "Customer Example",
-    "body": "A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness."
+    "body": "A multi-site customer struggled with manual checks and spreadsheets. SafetySight replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness."
   },
   "problem": {
-    "title": "Before SafetyKit",
+    "title": "Before SafetySight",
     "bullets": [
       "Paper and Excel for kit checks.",
       "Expired items missed between rounds.",
@@ -75,7 +75,7 @@
     "quote": ""
   },
   "solution": {
-    "title": "After SafetyKit",
+    "title": "After SafetySight",
     "lead": "From chaotic audits to stronger day-to-day readiness.",
     "benefits": [
       "Scan kits quickly and record evidence instantly.",

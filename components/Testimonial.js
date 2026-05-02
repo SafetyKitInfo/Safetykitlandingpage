@@ -8,7 +8,7 @@ export default function Testimonial({ quote, by, logoSrc, metric }) {
           </div>
         )}
         <div className="md:flex-1 text-center md:text-left">
-          <blockquote className="italic text-xl text-gray-700">{quote || '“SafetyKit made compliance easy for our team!”'}</blockquote>
+          <blockquote className="italic text-xl text-gray-700">{quote || '“SafetySight made compliance easy for our team!”'}</blockquote>
           <div className="mt-2 text-gray-500">— {by}</div>
           {metric && <div className="mt-3 text-sm text-slate-600">{metric}</div>}
         </div>

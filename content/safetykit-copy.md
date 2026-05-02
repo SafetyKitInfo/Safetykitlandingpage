@@ -1,6 +1,6 @@
-# SafetyKit — Content Export
+# SafetySight — Content Export
 
-This file contains the full landing-page copy for SafetyKit in content-only format (CMS-ready).
+This file contains the full landing-page copy for SafetySight in content-only format (CMS-ready).
 
 ---
 
@@ -30,7 +30,7 @@ Automate kit checks, track expiries, and stay audit‑ready across every room an
 # Product Modules (short cards)
 
 ## Section title
-We use SafetyKit for…
+We use SafetySight for…
 
 ## Subline
 Core modules that make kit compliance simple and repeatable.
@@ -47,14 +47,14 @@ Core modules that make kit compliance simple and repeatable.
 
 # Customer Context (micro case intro)
 
-A multi-site customer struggled with manual checks and spreadsheets. SafetyKit replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness.
+A multi-site customer struggled with manual checks and spreadsheets. SafetySight replaced paper processes, centralised records, and automated expiry alerts to improve consistency and audit readiness.
 
 ---
 
 # The Problem (Before SafetyKit)
 
 ## Title
-Before SafetyKit
+Before SafetySight
 
 ## Bullets
 - Paper and Excel for kit checks.
@@ -70,7 +70,7 @@ Before SafetyKit
 # The Solution (After SafetyKit)
 
 ## Headline
-After SafetyKit
+After SafetySight
 
 ## Lead
 From chaotic audits to stronger day-to-day readiness.
@@ -104,7 +104,7 @@ Templates, mini‑checks, and self‑audits keep improvements permanent.
 3. Audit — Instant evidence exports for assessors.
 
 ## Quote
-“We don’t think about kit compliance anymore — SafetyKit handles it.” — Regional Manager
+”We don’t think about kit compliance anymore — SafetySight handles it.” — Regional Manager
 
 ---
 
@@ -141,7 +141,7 @@ Integrations & API — Sync with rostering, procurement, and asset systems.
 
 # Case Studies / Testimonials (sample entries)
 
-- Customer Example — “SafetyKit simplified our kit checks and improved audit readiness.” — Centre Director.
+- Customer Example — “SafetySight simplified our kit checks and improved audit readiness.” — Centre Director.
 - Maple Childcare — “Audits used to take days. Now they take minutes.” — Operations Lead.
 - Pilot School Group — “We standardised kit checks across multiple sites during the pilot.” — Regional Manager.
 
