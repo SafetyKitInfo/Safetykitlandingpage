@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "echo \"No lint configured for Next.js 16; install ESLint and configure it to enable linting.\"",
     "optimize-hero": "node scripts/optimize-hero.js",
     "optimize-hero-sharp": "node scripts/optimize-hero-sharp.js"
   },
