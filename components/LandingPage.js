@@ -28,7 +28,7 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-40 bg-white border-b border-slate-200 relative">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3">
-            <img src="/images/safetysight-logo.png" alt="SafetySight" className="h-7 sm:h-8" />
+            <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-10 sm:h-12" />
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm text-slate-600">
             <a href="#how-it-works" className="hover:text-slate-900">Product</a>
