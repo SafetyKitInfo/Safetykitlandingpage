@@ -14,7 +14,7 @@ import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Wifi, Globe, AlertTriangle, Package, ShieldCheck } from 'lucide-react';
+import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users } from 'lucide-react';
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -91,29 +91,27 @@ export default function LandingPage() {
               Centres can significantly reduce expired-kit incidents within the first 90 days.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
             </div>
           </div>
 
           <div className="order-first md:order-last">
-            {/* WHS Readiness Dashboard Mockup */}
+            {/* WHS Readiness Dashboard Mockup — simplified for clarity */}
             <div className="w-full max-w-md mx-auto rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
               {/* Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
+              <div className="flex items-center justify-between px-5 py-3.5 bg-slate-800 text-white">
                 <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
-                <button className="text-xs bg-slate-700 hover:bg-slate-600 px-2.5 py-1 rounded text-slate-200 flex items-center gap-1">
-                  <span>↻</span> Sync
-                </button>
+                <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Live</span>
               </div>
 
-              <div className="p-4 space-y-4 bg-slate-50">
-                {/* Readiness Score */}
-                <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Readiness Score</p>
-                  <div className="flex items-center gap-5">
+              <div className="p-6 space-y-5 bg-slate-50">
+                {/* Readiness Score — hero element */}
+                <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Readiness Score</p>
+                  <div className="flex items-center gap-6">
                     <div className="relative flex-shrink-0">
-                      <svg width="72" height="72" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
+                      <svg width="96" height="96" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#fee2e2" strokeWidth="7" />
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#ef4444" strokeWidth="7"
                           strokeLinecap="round"
@@ -125,50 +123,28 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <div>
-                      <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mb-1">Poor</span>
-                      <p className="text-xs text-slate-400">Significant gaps present</p>
+                      <span className="inline-block bg-red-100 text-red-700 text-sm font-bold px-3 py-1 rounded-full mb-2">Poor</span>
+                      <p className="text-xs text-slate-400 leading-snug">Significant gaps present.<br/>Improvement actions queued.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* 3 stat tiles */}
-                <div className="grid grid-cols-3 gap-2">
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
-                    <AlertTriangle size={14} className="text-amber-500 mx-auto mb-1" aria-hidden />
-                    <div className="text-xs font-semibold text-slate-500 mb-1">Kits Ready</div>
-                    <div className="text-xl font-extrabold text-slate-900">4/6</div>
-                    <span className="text-xs text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">2 exp</span>
-                  </div>
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
-                    <Package size={14} className="text-orange-500 mx-auto mb-1" aria-hidden />
-                    <div className="text-xs font-semibold text-slate-500 mb-1">Inventory</div>
-                    <div className="text-xl font-extrabold text-slate-900">72%</div>
-                    <span className="text-xs text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">2 exp</span>
-                  </div>
-                  <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-sm">
-                    <ShieldCheck size={14} className="text-red-500 mx-auto mb-1" aria-hidden />
-                    <div className="text-xs font-semibold text-slate-500 mb-1">Certs Valid</div>
-                    <div className="text-xl font-extrabold text-slate-900">3/5</div>
-                    <span className="text-xs text-red-700 bg-red-50 px-1.5 py-0.5 rounded-full mt-1 inline-block">1 exp</span>
-                  </div>
-                </div>
-
                 {/* Next 3 Actions */}
-                <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                  <div className="flex items-center justify-between mb-3">
-                    <p className="text-xs font-semibold text-slate-700">Next 3 Actions</p>
-                    <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
+                <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-sm font-semibold text-slate-700">Next 3 Actions</p>
+                    <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2.5 py-1 rounded-full">Proactive Engine</span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2.5">
                     {[
-                      { label: "Run 10-min mini-audit", chip: "#1" },
-                      { label: "Complete first inspection", chip: "#2" },
-                      { label: "Invite additional first aider", chip: "#3" },
-                    ].map((action, i) => (
-                      <li key={i} className="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
-                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
-                        <span className="flex-1">{action.label}</span>
-                        <span className="text-slate-300">→</span>
+                      "Run 10-min mini-audit",
+                      "Complete first inspection",
+                      "Invite additional first aider",
+                    ].map((label, i) => (
+                      <li key={i} className="flex items-center gap-3 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
+                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
+                        <span className="flex-1">{label}</span>
+                        <span className="text-slate-300 text-sm">→</span>
                       </li>
                     ))}
                   </ul>
@@ -226,42 +202,66 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10 md:mb-12">
             <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">Roles</span>
-            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-3">Built for every role</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Built for every role</h2>
             <p className="text-base md:text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* EHS Managers */}
-            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide mb-2">EHS Managers</div>
-              <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
-              <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
-              </ul>
+            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-1.5 bg-sk-primary" />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-sk-primaryLight flex items-center justify-center flex-shrink-0">
+                    <BarChart2 size={16} className="text-sk-primary" aria-hidden />
+                  </div>
+                  <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide">EHS Managers</div>
+                </div>
+                <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
+                <ul className="space-y-2 text-sm text-slate-700 flex-1">
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
+                </ul>
+              </div>
             </div>
 
             {/* Clinical / Medical Coordinators */}
-            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide mb-2">Clinical Coordinators</div>
-              <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
-              <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
-              </ul>
+            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-1.5 bg-teal-500" />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
+                    <Activity size={16} className="text-teal-600" aria-hidden />
+                  </div>
+                  <div className="text-xs font-semibold text-teal-700 uppercase tracking-wide">Clinical Coordinators</div>
+                </div>
+                <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
+                <ul className="space-y-2 text-sm text-slate-700 flex-1">
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
+                </ul>
+              </div>
             </div>
 
             {/* Centre / Facilities Managers */}
-            <div className="flex flex-col p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">Centre Managers</div>
-              <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
-              <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
-                <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
-              </ul>
+            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-1.5 bg-amber-400" />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
+                    <Users size={16} className="text-amber-600" aria-hidden />
+                  </div>
+                  <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide">Centre Managers</div>
+                </div>
+                <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
+                <ul className="space-y-2 text-sm text-slate-700 flex-1">
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
+                </ul>
+              </div>
             </div>
           </div>
 
