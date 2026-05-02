@@ -80,11 +80,11 @@ export default function LandingPage() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
-              Reduce expired first-aid kit risk across every centre
+              First Aid Kit Compliance Software for Every Centre
             </h1>
 
             <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
-              Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports for ECEC and healthcare organisations.
+              SafetySight is first aid kit compliance software built for ECEC centres and healthcare organisations across AU/NZ. Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports.
             </p>
 
             <p className="text-sm font-semibold text-sk-primary bg-sk-primaryLight border border-teal-200 rounded-lg px-4 py-2 inline-block mb-7">
