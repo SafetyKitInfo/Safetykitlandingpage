@@ -20,7 +20,7 @@ export default function TrustAndCompliance() {
       iconColor: "text-amber-700",
       title: "Regulatory Alignment",
       bullets: [
-        "Designed to support Queensland ECEC standards and NQF requirements",
+        "Designed to support Queensland WHS standards and first-aid kit requirements",
         "Supports documentation against first-aid kit standards (AS/NZS 4003)",
         "Supports evidence collection for healthcare accreditation",
         "Privacy controls designed to support GDPR and Privacy Act obligations",
@@ -49,7 +49,7 @@ export default function TrustAndCompliance() {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Built for compliance. Built for trust.</h2>
           <p className="text-slate-600 text-base max-w-xl mx-auto">
-            Designed specifically for ECEC and healthcare sectors where safety is critical.
+            Designed specifically for SMEs where safety and compliance are critical.
           </p>
         </div>
 

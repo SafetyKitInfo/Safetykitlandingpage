@@ -5,14 +5,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://safetysight.net'
 
 const PAGE_TITLE = 'First Aid Kit Compliance Software for SMEs AU/QLD | SafetySight'
 const PAGE_DESCRIPTION =
-  'SafetySight is first aid kit compliance software for ECEC centres and healthcare organisations across Australia and New Zealand. Mobile scanning, automated expiry alerts, and audit-ready reports — built to support WHS and NQF obligations.'
+  'SafetySight is first aid kit compliance software for SMEs across Australia. Mobile scanning, automated expiry alerts, and audit-ready reports — built to support WHS obligations.'
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'SafetySight',
   description:
-    'First aid kit compliance software for ECEC centres and healthcare organisations across Australia and New Zealand.',
+    'First aid kit compliance software for SMEs across Australia.',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web, iOS, Android',
   offers: {
