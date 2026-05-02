@@ -3,7 +3,7 @@ import LandingPage from '../components/LandingPage'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://safetysight.net'
 
-const PAGE_TITLE = 'First Aid Kit Compliance Software for Childcare & Healthcare AU/NZ | SafetySight'
+const PAGE_TITLE = 'First Aid Kit Compliance Software for SMEs AU/QLD | SafetySight'
 const PAGE_DESCRIPTION =
   'SafetySight is first aid kit compliance software for ECEC centres and healthcare organisations across Australia and New Zealand. Mobile scanning, automated expiry alerts, and audit-ready reports — built to support WHS and NQF obligations.'
 
