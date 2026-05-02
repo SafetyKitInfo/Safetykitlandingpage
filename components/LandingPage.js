@@ -14,7 +14,7 @@ import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Wifi, Globe, AlertTriangle, Package, ShieldCheck, BarChart2, Activity, Users } from 'lucide-react';
+import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users } from 'lucide-react';
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
