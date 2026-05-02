@@ -1,5 +1,5 @@
 const features = [
-  { title: 'Checklists', desc: 'Create and share safety checklists to ensure compliance and readiness.' },
+  { title: 'Checklists', desc: 'Create and share safety checklists to support consistent, repeatable kit checks.' },
   { title: 'Real-time Alerts', desc: 'Notify teams instantly with push & SMS-ready integrations.' },
   { title: 'Reports', desc: 'Generate audit-ready reports with one click.' },
 ]

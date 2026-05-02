@@ -8,22 +8,22 @@ export default function TrustAndCompliance() {
       iconColor: "text-sk-primary",
       title: "Security by Design",
       bullets: [
-        "End-to-end encryption",
+        "Data encrypted in transit and at rest",
         "AU/NZ data hosting options",
         "Role-based access controls",
-        "Security controls aligned with SOC 2 practices",
+        "Security practices informed by industry standards",
       ],
     },
     {
       Icon: BookOpen,
       iconBg: "bg-amber-100",
       iconColor: "text-amber-700",
-      title: "Regulatory Alignment",
+      title: "Record-Keeping Support",
       bullets: [
-        "Designed to support Queensland WHS standards and first-aid kit requirements",
-        "Supports documentation against first-aid kit standards (AS/NZS 4003)",
-        "Supports evidence collection for healthcare accreditation",
-        "Privacy controls designed to support GDPR and Privacy Act obligations",
+        "Designed to help with workplace safety record-keeping and first-aid kit management",
+        "Supports evidence collection and documentation for kit inspections",
+        "Exportable records to support your own review and compliance processes",
+        "Privacy controls designed with data protection principles in mind",
       ],
     },
     {
@@ -47,7 +47,7 @@ export default function TrustAndCompliance() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Trust &amp; Security
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Built for compliance. Built for trust.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Designed with security and privacy in mind.</h2>
           <p className="text-slate-600 text-base max-w-xl mx-auto">
             Designed specifically for SMEs where safety and compliance are critical.
           </p>
