@@ -41,7 +41,7 @@ export default function IssuesVsSolutions() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Common Challenges
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Why Kit Compliance Fails Today</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Why Kit Compliance Fails Today</h2>
           <p className="text-lg text-slate-600">Common problems, and how SafetySight addresses each one</p>
         </div>
 

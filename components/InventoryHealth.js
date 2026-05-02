@@ -20,7 +20,7 @@ export default function InventoryHealth() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Inventory &amp; Certifications
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Protect Your People and Inventory
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">

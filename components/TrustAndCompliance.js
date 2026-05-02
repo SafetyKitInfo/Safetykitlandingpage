@@ -47,7 +47,7 @@ export default function TrustAndCompliance() {
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
             Trust &amp; Security
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Built for compliance. Built for trust.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Built for compliance. Built for trust.</h2>
           <p className="text-slate-600 text-base max-w-xl mx-auto">
             Designed specifically for ECEC and healthcare sectors where safety is critical.
           </p>
