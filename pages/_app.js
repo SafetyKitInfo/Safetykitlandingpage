@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { Analytics } from '@vercel/analytics/next'
 
 function GA() {
   const id = process.env.NEXT_PUBLIC_GA_ID
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GA />
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }
