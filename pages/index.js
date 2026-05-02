@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import LandingPage from '../components/LandingPage'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://safetysight.com.au'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://safetysight.net'
 
 const PAGE_TITLE = 'First Aid Kit Compliance Software for Childcare & Healthcare AU/NZ | SafetySight'
 const PAGE_DESCRIPTION =
