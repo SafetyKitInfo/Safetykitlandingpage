@@ -18,6 +18,8 @@ import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users } f
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://app.safetysight.net';
+  const signInHref = new URL('/sign-in', appUrl).toString();
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
@@ -54,6 +56,7 @@ export default function LandingPage() {
               </svg>
             </button>
             <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
+            <a href={signInHref} className="hidden sm:inline-flex items-center justify-center text-sm font-semibold px-4 py-2 rounded-lg border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-400 focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Sign in</a>
             <a href="#contact" className="inline-block bg-sk-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book demo</a>
           </div>
         </div>
@@ -64,6 +67,9 @@ export default function LandingPage() {
             <a href="#who-we-serve" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Customers</a>
             <a href="#trust" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Security</a>
             <a href="#contact" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Contact</a>
+            <div className="pt-2">
+              <a href={signInHref} onClick={() => setMobileOpen(false)} className="block w-full text-center border border-slate-300 text-slate-700 bg-white px-4 py-2 rounded-lg font-semibold hover:bg-slate-50">Sign in</a>
+            </div>
             <div className="pt-2">
               <a href="#contact" onClick={() => setMobileOpen(false)} className="block w-full text-center bg-sk-primary text-white px-4 py-2 rounded-lg font-semibold">Book demo</a>
             </div>
