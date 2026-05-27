@@ -26,8 +26,8 @@ export default function DashboardModules() {
       benefit: "Measure the hours and dollars you're saving",
       tag: "Savings",
       Icon: TrendingUp,
-      iconBg: "bg-purple-100",
-      iconColor: "text-purple-700",
+      iconBg: "bg-sky-50",
+      iconColor: "text-sky-700",
     },
     {
       name: "Risk Trend Monitoring",
@@ -43,14 +43,14 @@ export default function DashboardModules() {
   const tagColors = {
     Readiness: "bg-sk-primaryLight text-sk-primary",
     Guidance: "bg-sk-primaryLight text-sk-primary",
-    Savings: "bg-purple-100 text-purple-700",
+    Savings: "bg-sky-50 text-sky-700",
     Risk: "bg-amber-100 text-amber-700"
   };
 
   const tagTopColor = {
     Readiness: "bg-sk-primary",
     Guidance:  "bg-sk-primary",
-    Savings:   "bg-purple-500",
+    Savings:   "bg-sky-400",
     Risk:      "bg-amber-400",
   };
 

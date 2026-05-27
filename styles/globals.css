@@ -7,10 +7,15 @@ html, body, #__next {
 }
 
 body {
-  @apply bg-gray-50 text-gray-800;
+  @apply bg-slate-50 text-slate-800;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Stronger chapter headings */
@@ -55,10 +60,42 @@ h2 {
 /* Animations */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes pulseBadge { 0% { transform: translateY(0) scale(1); opacity: 1 } 50% { transform: translateY(-2px) scale(1.02); opacity: .98 } 100% { transform: translateY(0) scale(1); opacity: 1 } }
+@keyframes growBar { from { height: 8px; opacity: .35; } to { height: var(--bar-height); opacity: 1; } }
 
 .fade-up { animation: fadeUp 420ms ease both; }
 .pulse { animation: pulseBadge 2600ms ease-in-out infinite; }
 .focus-visible-ring { box-shadow: 0 0 0 4px rgba(15,118,110,0.12); }
+.hero-bar {
+  height: var(--bar-height);
+  animation: growBar 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(11, 95, 120, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 95, 120, 0.065) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 78%);
+}
+
+.dashboard-sheen {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.97), rgba(246,250,249,0.93)),
+    radial-gradient(circle at 20% 10%, rgba(20,184,166,0.16), transparent 32%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* Improve keyboard focus visuals */
 :focus {

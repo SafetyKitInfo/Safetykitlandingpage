@@ -20,7 +20,7 @@ export default function ContactForm() {
   ]
 
   return (
-    <section id="contact" className="py-12 md:py-20 bg-slate-50">
+    <section id="contact" className="py-12 md:py-20 bg-sk-surfaceMuted">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-8 md:mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sk-primary mb-2">Waitlist</p>
@@ -31,21 +31,21 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-          <div className="bg-sk-primary rounded-xl p-6 md:p-8 text-white">
+          <div className="bg-[#073548] rounded-xl p-6 md:p-8 text-white">
             <h3 className="text-lg font-bold mb-5 md:mb-6">What you get</h3>
             <ul className="space-y-4 md:space-y-5">
               {benefits.map((item) => (
                 <li key={item.title} className="flex items-start gap-2 md:gap-3">
-                  <CheckCircle size={16} className="text-teal-300 flex-shrink-0 mt-0.5" aria-hidden />
+                  <CheckCircle size={16} className="text-[#37d5ca] flex-shrink-0 mt-0.5" aria-hidden />
                   <div>
                     <p className="text-sm font-semibold text-white">{item.title}</p>
-                    <p className="text-xs text-teal-100 mt-0.5 leading-snug">{item.detail}</p>
+                    <p className="text-xs text-[#d9f4f3] mt-0.5 leading-snug">{item.detail}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-teal-600">
-              <p className="text-xs text-teal-200 leading-snug">No credit card required · Reply within 1 business day</p>
+            <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/15">
+              <p className="text-xs text-[#a8f3ef] leading-snug">No credit card required · Reply within 1 business day</p>
             </div>
           </div>
 

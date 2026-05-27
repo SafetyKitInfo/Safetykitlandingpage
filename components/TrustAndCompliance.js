@@ -16,8 +16,8 @@ export default function TrustAndCompliance() {
     },
     {
       Icon: BookOpen,
-      iconBg: "bg-amber-100",
-      iconColor: "text-amber-700",
+      iconBg: "bg-sk-primaryLight",
+      iconColor: "text-sk-accent",
       title: "Record-Keeping Support",
       bullets: [
         "Designed to help with workplace safety record-keeping and first-aid kit management",
@@ -28,8 +28,8 @@ export default function TrustAndCompliance() {
     },
     {
       Icon: Database,
-      iconBg: "bg-purple-100",
-      iconColor: "text-purple-700",
+      iconBg: "bg-sky-50",
+      iconColor: "text-sky-700",
       title: "Data Location & Audit Trail",
       bullets: [
         "Data hosted in AU/NZ regions",
@@ -41,7 +41,7 @@ export default function TrustAndCompliance() {
   ];
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-sk-surfaceMuted">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
@@ -82,13 +82,13 @@ export default function TrustAndCompliance() {
         </div>
 
         {/* Risk-Free Pilot CTA */}
-        <div className="mt-6 p-6 bg-sk-primary rounded-xl border border-sk-primaryHover shadow-md text-white flex flex-col sm:flex-row items-start sm:items-center gap-5">
+        <div className="mt-6 p-6 bg-[#073548] rounded-xl border border-[#0b5f78] shadow-md text-white flex flex-col sm:flex-row items-start sm:items-center gap-5">
           <div className="flex-1">
             <h3 className="text-sm font-bold mb-2">Risk-Free Pilot</h3>
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-teal-100">
-              <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>30-day pilot for 1–2 centres</span>
-              <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>Full setup support included</span>
-              <span className="flex items-center gap-1.5"><span className="text-teal-300">•</span>No obligation to continue</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-[#d9f4f3]">
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">•</span>30-day pilot for 1–2 centres</span>
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">•</span>Full setup support included</span>
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">•</span>No obligation to continue</span>
             </div>
           </div>
           <a href="#contact" className="flex-shrink-0 bg-white text-sk-primary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-sk-surfaceMuted">

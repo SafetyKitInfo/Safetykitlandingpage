@@ -22,7 +22,7 @@ export default function ECECSpecific() {
   ];
 
   return (
-    <section className="py-20 bg-teal-50 border-y border-teal-100">
+    <section className="py-20 bg-sk-surfaceMuted border-y border-sk-border">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -44,4 +44,3 @@ export default function ECECSpecific() {
     </section>
   );
 }
-

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import ContactForm from './ContactForm';
 import MetricsRow from './MetricsRow';
 import HowItWorks from './HowItWorks';
@@ -14,7 +15,7 @@ import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users } from 'lucide-react';
+import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -23,20 +24,37 @@ export default function LandingPage() {
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
+  const remotionEase = [0.16, 1, 0.3, 1];
+  const heroSequence = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+  const revealUp = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.72, ease: remotionEase },
+    },
+  };
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+    <div className="min-h-screen flex flex-col bg-[#f6faf9] text-[#102a43]">
 
       {/* Top Nav */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-slate-200 relative">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <nav className="sticky top-0 z-40 border-b border-[#d8e7ea]/80 bg-white/92 backdrop-blur-xl relative shadow-[0_1px_20px_rgba(8,70,91,0.06)]">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3">
             <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-10 sm:h-12" />
           </a>
-          <div className="hidden md:flex items-center gap-6 text-sm text-slate-600">
-            <a href="#how-it-works" className="hover:text-slate-900">Product</a>
-            <a href="#who-we-serve" className="hover:text-slate-900">Customers</a>
-            <a href="#trust" className="hover:text-slate-900">Security</a>
-            <a href="#contact" className="hover:text-slate-900">Contact</a>
+          <div className="hidden md:flex items-center gap-1 rounded-full border border-[#d8e7ea] bg-[#f6faf9]/90 p-1 text-sm text-slate-600">
+            <a href="#how-it-works" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Product</a>
+            <a href="#who-we-serve" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Customers</a>
+            <a href="#trust" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Security</a>
+            <a href="#contact" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Contact</a>
           </div>
           <div className="flex items-center gap-3">
             {/* Mobile menu button */}
@@ -55,9 +73,9 @@ export default function LandingPage() {
                 )}
               </svg>
             </button>
-            <a href="#contact" className="hidden sm:inline-block text-sm text-slate-600 hover:text-slate-900">Start pilot</a>
-            <a href={signInHref} className="hidden sm:inline-flex items-center justify-center text-sm font-semibold px-4 py-2 rounded-lg border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-400 focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Sign in</a>
-            <a href="#contact" className="inline-block bg-sk-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Book demo</a>
+            <a href="#contact" className="hidden sm:inline-block text-sm font-medium text-slate-600 hover:text-[#102a43]">Start pilot</a>
+            <a href={signInHref} className="hidden sm:inline-flex items-center justify-center text-sm font-semibold px-4 py-2 rounded-full border border-[#cbdde2] text-[#102a43] bg-white hover:bg-[#f6faf9] hover:border-sk-primary focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Sign in</a>
+            <a href="#contact" className="inline-flex items-center gap-2 bg-sk-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-sm shadow-sky-950/20">Book demo <ArrowRight size={14} aria-hidden /></a>
           </div>
         </div>
         {/* Mobile menu panel */}
@@ -78,46 +96,87 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <header id="hero" className="py-16 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
-          <div>
-            <div className="mb-4">
-              <span className="text-xs font-semibold text-sk-primary uppercase tracking-wide">For SMEs &amp; Australian Businesses</span>
-            </div>
+      <header id="hero" className="relative overflow-hidden bg-[linear-gradient(180deg,#f6faf9_0%,#ffffff_56%,#edf7f6_100%)]">
+        <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden />
+        <div className="relative max-w-7xl mx-auto px-4 pt-14 pb-16 md:pt-24 md:pb-24 grid grid-cols-1 md:grid-cols-[0.92fr_1.08fr] gap-10 md:gap-16 items-center">
+          <motion.div variants={heroSequence} initial="hidden" animate="show">
+            <motion.div variants={revealUp} className="mb-5 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#b9e7ea] bg-white px-3 py-1.5 text-xs font-bold text-sk-primary shadow-sm">
+                <ShieldCheck size={14} aria-hidden />
+                For SMEs &amp; Australian Businesses
+              </span>
+              <span className="inline-flex items-center rounded-full bg-[#eef8ff] px-3 py-1.5 text-xs font-bold text-[#0b5f78] ring-1 ring-[#c9e7f5]">Early access open</span>
+            </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 mb-4">
+            <motion.h1 variants={revealUp} className="max-w-2xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.96] text-[#102a43] mb-6 tracking-tight">
               First Aid Kit Compliance Software for Every Centre
-            </h1>
+            </motion.h1>
 
-            <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed mb-4">
+            <motion.p variants={revealUp} className="text-base md:text-xl text-[#506575] max-w-xl leading-relaxed mb-5">
               SafetySight is first aid kit compliance software built for SMEs across Australia. Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports.
-            </p>
+            </motion.p>
 
-            <p className="text-sm font-semibold text-sk-primary bg-sk-primaryLight border border-teal-200 rounded-lg px-4 py-2 inline-block mb-7">
+            <motion.div variants={revealUp} className="mb-8 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
+              {[
+                "Expiry alerts",
+                "Mobile scanning",
+                "Audit-ready reports",
+              ].map((item) => (
+                <motion.div
+                  key={item}
+                  whileHover={{ y: -3, transition: { duration: 0.2, ease: remotionEase } }}
+                  className="flex items-center gap-2 rounded-lg border border-[#d8e7ea] bg-white/85 px-3 py-2 text-sm font-semibold text-[#102a43] shadow-sm"
+                >
+                  <CheckCircle2 size={16} className="text-sk-success" aria-hidden />
+                  <span>{item}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sk-primary text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-lg shadow-sky-950/20">Join Waitlist <ArrowRight size={18} aria-hidden /></a>
+              <a href="#how-it-works" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#cbdde2] bg-white px-8 py-3.5 rounded-full font-bold text-base text-[#102a43] hover:border-sk-primary hover:bg-[#f6faf9] focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-sm">See product</a>
+            </motion.div>
+
+            <motion.p variants={revealUp} className="flex items-center gap-2 text-sm font-semibold text-[#506575]">
+              <Zap size={16} className="text-sk-accent" aria-hidden />
               Centres can significantly reduce expired-kit incidents within the first 90 days.
-            </p>
+            </motion.p>
+          </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-md">Join Waitlist</a>
-            </div>
-          </div>
-
-          <div className="order-first md:order-last">
+          <div>
             {/* WHS Readiness Dashboard Mockup — simplified for clarity */}
-            <div className="w-full max-w-md mx-auto rounded-2xl border border-slate-200 shadow-2xl bg-white overflow-hidden text-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 28, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.9, delay: 0.12, ease: remotionEase }}
+              className="w-full max-w-xl mx-auto rounded-[1.75rem] border border-white/80 bg-white/80 p-2 shadow-[0_24px_70px_rgba(15,23,42,0.18)] backdrop-blur"
+            >
+            <div className="dashboard-sheen overflow-hidden rounded-[1.35rem] border border-slate-200 text-sm">
               {/* Header */}
-              <div className="flex items-center justify-between px-5 py-3.5 bg-slate-800 text-white">
-                <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
-                <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Live</span>
+              <div className="flex items-center justify-between border-b border-[#073548] bg-[#073548] px-5 py-4 text-white">
+                <div>
+                  <span className="block text-xs font-semibold uppercase tracking-widest text-[#a8f3ef]">SafetySight</span>
+                  <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
+                </div>
+                <span className="text-xs bg-[#a8f3ef] text-[#073548] font-bold px-2.5 py-1 rounded-full">Live</span>
               </div>
 
-              <div className="p-6 space-y-5 bg-slate-50">
+              <div className="grid gap-4 p-5 bg-[#f6faf9]/95 sm:grid-cols-[1fr_0.88fr]">
                 {/* Readiness Score — hero element */}
-                <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Readiness Score</p>
-                  <div className="flex items-center gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.62, delay: 0.38, ease: remotionEase }}
+                  className="rounded-2xl border border-[#d8e7ea] bg-white p-5 shadow-sm sm:row-span-2"
+                >
+                  <div className="mb-5 flex items-center justify-between">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Readiness Score</p>
+                    <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-bold text-red-700">Action needed</span>
+                  </div>
+                  <div className="flex items-center gap-5">
                     <div className="relative flex-shrink-0">
-                      <svg width="96" height="96" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
+                      <svg width="116" height="116" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#fee2e2" strokeWidth="7" />
                         <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#ef4444" strokeWidth="7"
                           strokeLinecap="round"
@@ -130,13 +189,30 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <span className="inline-block bg-red-100 text-red-700 text-sm font-bold px-3 py-1 rounded-full mb-2">Poor</span>
-                      <p className="text-xs text-slate-400 leading-snug">Significant gaps present.<br/>Improvement actions queued.</p>
+                      <p className="text-sm text-slate-500 leading-snug">Significant gaps present.<br/>Improvement actions queued.</p>
                     </div>
                   </div>
-                </div>
+                  <div className="mt-6 grid grid-cols-3 gap-2">
+                    {[
+                      ["18", "Items due"],
+                      ["6", "Sites"],
+                      ["2m", "Scan time"],
+                    ].map(([value, label]) => (
+                      <div key={label} className="rounded-xl bg-[#f6faf9] px-3 py-2 text-center ring-1 ring-[#d8e7ea]/70">
+                        <div className="text-lg font-black text-[#102a43]">{value}</div>
+                        <div className="text-[11px] font-semibold text-slate-500">{label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
 
                 {/* Next 3 Actions */}
-                <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                <motion.div
+                  initial={{ opacity: 0, x: 18 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.62, delay: 0.52, ease: remotionEase }}
+                  className="rounded-2xl border border-[#d8e7ea] bg-white p-5 shadow-sm"
+                >
                   <div className="flex items-center justify-between mb-4">
                     <p className="text-sm font-semibold text-slate-700">Next 3 Actions</p>
                     <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2.5 py-1 rounded-full">Proactive Engine</span>
@@ -150,13 +226,35 @@ export default function LandingPage() {
                       <li key={i} className="flex items-center gap-3 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
                         <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
                         <span className="flex-1">{label}</span>
-                        <span className="text-slate-300 text-sm">→</span>
+                        <ArrowRight size={14} className="text-slate-300" aria-hidden />
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 18 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.62, delay: 0.66, ease: remotionEase }}
+                  className="rounded-2xl border border-[#073548] bg-[#073548] p-5 text-white shadow-sm"
+                >
+                  <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#a8f3ef]">This week</p>
+                  <div className="flex items-end justify-between gap-2">
+                    {[42, 58, 47, 72, 66, 84, 76].map((height, i) => (
+                      <span
+                        key={i}
+                        className="hero-bar w-full rounded-t bg-[#37d5ca]"
+                        style={{ '--bar-height': `${height}px`, animationDelay: `${0.08 * i}s` }}
+                      />
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center justify-between text-xs font-semibold text-slate-300">
+                    <span>Inspections</span>
+                    <span className="text-[#a8f3ef]">+24%</span>
+                  </div>
+                </motion.div>
               </div>
             </div>
+            </motion.div>
           </div>
         </div>
       </header>
@@ -165,13 +263,11 @@ export default function LandingPage() {
       <MetricsRow />
 
       {/* Platform at a glance */}
-      <div className="bg-sk-surfaceMuted border-y border-sk-border py-4">
-        <div className="max-w-4xl mx-auto px-4 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
-          <span className="flex items-center gap-2"><Monitor size={15} className="text-sk-success" aria-hidden /> Mobile-first</span>
-          <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Wifi size={15} className="text-sk-success" aria-hidden /> Works offline</span>
-          <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-2"><Globe size={15} className="text-sk-success" aria-hidden /> Built to support AU/NZ WHS obligations</span>
+      <div className="bg-white border-y border-slate-200 py-5 shadow-sm">
+        <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 gap-3 text-sm font-semibold text-[#506575] sm:grid-cols-3">
+          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Monitor size={16} className="text-sk-accent" aria-hidden /> Mobile-first</span>
+          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Wifi size={16} className="text-sk-accent" aria-hidden /> Works offline</span>
+          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Globe size={16} className="text-sk-accent" aria-hidden /> AU/NZ WHS support</span>
         </div>
       </div>
 
@@ -234,13 +330,13 @@ export default function LandingPage() {
 
             {/* Clinical / Medical Coordinators */}
             <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1.5 bg-teal-500" />
+              <div className="h-1.5 bg-sk-accent" />
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
-                    <Activity size={16} className="text-teal-600" aria-hidden />
+                  <div className="w-9 h-9 rounded-lg bg-sk-primaryLight flex items-center justify-center flex-shrink-0">
+                    <Activity size={16} className="text-sk-accent" aria-hidden />
                   </div>
-                  <div className="text-xs font-semibold text-teal-700 uppercase tracking-wide">Clinical Coordinators</div>
+                  <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide">Clinical Coordinators</div>
                 </div>
                 <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
                 <ul className="space-y-2 text-sm text-slate-700 flex-1">
@@ -253,13 +349,13 @@ export default function LandingPage() {
 
             {/* Centre / Facilities Managers */}
             <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1.5 bg-amber-400" />
+              <div className="h-1.5 bg-sky-400" />
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
-                    <Users size={16} className="text-amber-600" aria-hidden />
+                  <div className="w-9 h-9 rounded-lg bg-sky-50 flex items-center justify-center flex-shrink-0">
+                    <Users size={16} className="text-sky-700" aria-hidden />
                   </div>
-                  <div className="text-xs font-semibold text-amber-700 uppercase tracking-wide">Centre Managers</div>
+                  <div className="text-xs font-semibold text-sky-800 uppercase tracking-wide">Centre Managers</div>
                 </div>
                 <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
                 <ul className="space-y-2 text-sm text-slate-700 flex-1">
@@ -309,13 +405,13 @@ export default function LandingPage() {
       <ContactForm />
 
       {/* Final CTA band */}
-      <section className="py-16 md:py-24 bg-sk-primary text-white">
+      <section className="py-16 md:py-24 bg-[#073548] text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">Reduce kit risk across every centre</h2>
-          <p className="text-teal-100 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-5 text-sm text-teal-100 mb-8 md:mb-10">
+          <p className="text-[#d9f4f3] text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-5 text-sm text-[#d9f4f3] mb-8 md:mb-10">
             {["Go paperless","Boost compliance","Fewer expired incidents"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-teal-300 font-bold">✓</span><span>{b}</span></span>
+              <span key={i} className="flex items-center gap-2"><span className="text-[#37d5ca] font-bold">✓</span><span>{b}</span></span>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -325,7 +421,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-10 md:py-12">
+      <footer className="bg-[#061f2d] text-slate-400 py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-10">
             <div>
@@ -359,7 +455,7 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="border-t border-white/10 pt-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} SafetySight. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <a href="https://www.linkedin.com" aria-label="LinkedIn" className="hover:text-white">
@@ -375,5 +471,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-

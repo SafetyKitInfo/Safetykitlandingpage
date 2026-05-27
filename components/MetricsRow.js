@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
 import content from '../content/safetykit-copy.json';
 
 export default function MetricsRow() {
   const metrics = (content && content.hero && content.hero.metrics) || [];
+  const remotionEase = [0.16, 1, 0.3, 1];
 
   const trends = [
     { tag: "↑ Positive", color: "text-sk-success bg-sk-successLight" },
@@ -13,9 +15,23 @@ export default function MetricsRow() {
   return (
     <section className="py-12 bg-white border-y border-slate-100">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.35 }}
+          variants={{ show: { transition: { staggerChildren: 0.08 } } }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
           {metrics.map((m, i) => (
-            <div key={i} className="relative bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 18 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.58, ease: remotionEase } },
+              }}
+              whileHover={{ y: -4, transition: { duration: 0.2, ease: remotionEase } }}
+              className="relative bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden"
+            >
               <div className="h-1 w-full bg-sk-primary" />
               <div className="p-5 text-center">
                 <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">{m.value}</div>
@@ -26,9 +42,9 @@ export default function MetricsRow() {
                   </span>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <p className="text-xs text-slate-400 text-center mt-5">
           Indicators based on data entered into SafetySight — not a legal compliance certification.
         </p>

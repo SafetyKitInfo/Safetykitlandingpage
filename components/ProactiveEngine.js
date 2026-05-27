@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
 export default function ProactiveEngine() {
+  const remotionEase = [0.16, 1, 0.3, 1];
   const actions = [
     {
       number: 1,
@@ -36,14 +38,34 @@ export default function ProactiveEngine() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left: app-style "Next 3 Actions" preview */}
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.7, ease: remotionEase }}
+            className="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden"
+          >
             <div className="bg-slate-800 px-4 py-3 flex items-center justify-between">
               <span className="text-white font-semibold text-sm">Next 3 Actions</span>
               <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2 py-0.5 rounded-full">Proactive Engine</span>
             </div>
-            <div className="p-4 bg-slate-50 space-y-3">
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={{ show: { transition: { staggerChildren: 0.08 } } }}
+              className="p-4 bg-slate-50 space-y-3"
+            >
               {actions.map((action) => (
-                <div key={action.number} className="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3 shadow-sm">
+                <motion.div
+                  key={action.number}
+                  variants={{
+                    hidden: { opacity: 0, x: -16 },
+                    show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: remotionEase } },
+                  }}
+                  whileHover={{ x: 4, transition: { duration: 0.2, ease: remotionEase } }}
+                  className="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3 shadow-sm"
+                >
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-sk-primary text-white flex items-center justify-center font-bold text-sm" aria-label={`Step ${action.number}`}>
                     <span aria-hidden="true">{action.number}</span>
                   </div>
@@ -54,10 +76,10 @@ export default function ProactiveEngine() {
                   <div className="ml-auto flex-shrink-0 self-center">
                     <span className="text-slate-300 text-sm">→</span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right: textual explanation */}
           <div className="space-y-6">
