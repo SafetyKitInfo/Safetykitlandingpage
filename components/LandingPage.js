@@ -19,8 +19,8 @@ import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users, Ar
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://app.safetysight.net';
-  const signInHref = new URL('/sign-in', appUrl).toString();
+  const appVersion = process.env.NEXT_PUBLIC_APP_VERSION || '';
+  const signInHref = `https://app.safetysight.net/sign-in?_v=${encodeURIComponent(appVersion)}`;
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
