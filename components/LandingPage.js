@@ -14,6 +14,7 @@ import ReadinessScore from './ReadinessScore';
 import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
+import AboutUs from './AboutUs';
 import { Process } from './ui/cards-demo';
 import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 
@@ -53,6 +54,7 @@ export default function LandingPage() {
             <a href="#how-it-works" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Product</a>
             <a href="#who-we-serve" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Customers</a>
             <a href="#trust" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Security</a>
+            <a href="#about" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">About</a>
             <a href="#contact" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Contact</a>
           </div>
           <div className="flex items-center gap-3">
@@ -83,6 +85,7 @@ export default function LandingPage() {
             <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Product</a>
             <a href="#who-we-serve" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Customers</a>
             <a href="#trust" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Security</a>
+            <a href="#about" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">About</a>
             <a href="#contact" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Contact</a>
             <div className="pt-2">
               <a href={signInHref} onClick={() => setMobileOpen(false)} className="block w-full text-center border border-slate-300 text-slate-700 bg-white px-4 py-2 rounded-lg font-semibold hover:bg-slate-50">Sign in</a>
@@ -396,6 +399,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* About SafetySight */}
+      <AboutUs />
 
       {/* How to Get Started Section */}
       <HowToGetStarted />
