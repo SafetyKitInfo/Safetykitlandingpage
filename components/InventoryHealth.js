@@ -7,10 +7,10 @@ export default function InventoryHealth() {
     { label: "Expired", count: 1, color: "text-red-700", dot: "bg-sk-danger" },
   ];
 
-  const certItems = [
-    { label: "Active", count: 3, color: "text-sk-successText", dot: "bg-sk-success" },
-    { label: "Expiring Soon", count: 1, color: "text-amber-700", dot: "bg-amber-400" },
-    { label: "Expired", count: 1, color: "text-red-700", dot: "bg-sk-danger" },
+  const priorityActions = [
+    { label: "Replace expired item", detail: "Vehicle kit", color: "text-red-700", dot: "bg-sk-danger" },
+    { label: "Review expiring stock", detail: "4 items", color: "text-amber-700", dot: "bg-amber-400" },
+    { label: "Restock low supplies", detail: "2 items", color: "text-sk-primary", dot: "bg-sk-primary" },
   ];
 
   return (
@@ -18,13 +18,13 @@ export default function InventoryHealth() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">
-            Inventory &amp; Certifications
+            Inventory Control
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Protect Your People and Inventory
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            Real-time visibility into stock health and first aider certification status.
+            Real-time visibility into stock health and the actions that need attention next.
           </p>
         </div>
 
@@ -53,27 +53,27 @@ export default function InventoryHealth() {
             </div>
           </div>
 
-          {/* Card B: First Aider Certifications */}
+          {/* Card B: Priority Stock Actions */}
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="font-bold text-slate-900 text-base">First Aider Certifications</h3>
-              <span className="text-xs font-semibold bg-sk-successLight text-sk-successText px-2 py-0.5 rounded-full">
-                3 Active
+              <h3 className="font-bold text-slate-900 text-base">Priority Stock Actions</h3>
+              <span className="text-xs font-semibold bg-red-100 text-red-700 px-2 py-0.5 rounded-full">
+                3 Open
               </span>
             </div>
             <div className="space-y-4 mt-2">
-              {certItems.map((item, i) => (
+              {priorityActions.map((item, i) => (
                 <div key={i} className="flex items-center justify-between py-2 border-b border-slate-100 last:border-0">
                   <span className="flex items-center gap-2 text-sm text-slate-700">
                     <span className={`inline-block w-2.5 h-2.5 rounded-full ${item.dot}`} />
                     {item.label}
                   </span>
-                  <span className={`text-sm font-bold ${item.color}`}>{item.count}</span>
+                  <span className={`text-sm font-bold ${item.color}`}>{item.detail}</span>
                 </div>
               ))}
             </div>
             <p className="text-xs text-slate-400 mt-4">
-              Certifications tracked per staff member with expiry alerts.
+              Actions are prioritised using expiry dates and stock levels.
             </p>
           </div>
         </div>

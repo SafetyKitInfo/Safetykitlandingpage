@@ -16,8 +16,8 @@ export default function ProactiveEngine() {
     },
     {
       number: 3,
-      title: "Invite additional first aider",
-      description: "Ensure certification coverage across all rooms and shifts.",
+      title: "Replace two expiring items",
+      description: "Resolve the highest-priority stock risks before the next inspection.",
     },
   ];
 

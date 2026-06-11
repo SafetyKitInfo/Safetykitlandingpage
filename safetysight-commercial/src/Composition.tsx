@@ -505,7 +505,7 @@ const SceneTwo: React.FC = () => {
           gap: 14,
         }}
       >
-        {["3 sec checks", "Offline ready", "Evidence logged"].map(
+        {["3 sec checks", "Expiry alerts", "Evidence logged"].map(
           (label, index) => (
             <div
               key={label}

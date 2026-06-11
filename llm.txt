@@ -7,7 +7,7 @@ SafetySight replaces manual spreadsheet-based kit audits with mobile QR scanning
 ## Core Product
 
 - [Platform Overview](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): How SafetySight works — scan, track, and report in three steps
-- [WHS Readiness Dashboard](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Live readiness score across kits, inventory, certifications, and audit frequency
+- [WHS Readiness Dashboard](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Live readiness score across kits, inventory, inspection coverage, and audit frequency
 - [Proactive Engine](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): Automatically ranks and surfaces the next three highest-impact compliance actions
 - [Risk Trend Monitoring](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Tracks expiry breaches, incidents, and audit readiness over time
 
@@ -25,10 +25,10 @@ SafetySight is designed for any SME in Australia or New Zealand that must mainta
 
 ## Key Features
 
-- Mobile QR/barcode scanning with offline support
+- Mobile QR/barcode scanning with guided checklists
 - Automated expiry alerts at 30, 60, and 90 days
 - Room-by-room kit tracking (infants, toddlers, preschool, outdoor)
-- First aider certification tracking with expiry alerts
+- Inspection scheduling with overdue-check alerts
 - Timestamped, exportable audit logs
 - Multi-site dashboard with drill-down by centre or room
 - Task delegation and guided SOPs for consistent execution

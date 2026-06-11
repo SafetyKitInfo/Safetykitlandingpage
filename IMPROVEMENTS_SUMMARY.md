@@ -31,11 +31,11 @@ This document outlines the comprehensive, conversion-focused improvements implem
 - **Concrete benefit bullets** (not generic features):
    - "Fewer expired incidents"
   - "3-second kit checks"
-  - "Offline mobile app"
+  - "Guided mobile checks"
   - "Audit-ready reports"
 - **Risk reversal copy added**:
   - "No credit card required · Cancel anytime · Set up in under 10 minutes"
-- **Trust signals embedded**: "Secure by design", "Offline mobile app", "SOC 2 ready"
+- **Trust signals embedded**: "Secure by design", "Guided mobile checks", "SOC 2 ready"
 
 ### Impact:
 ✓ Visitors immediately understand tangible benefits
@@ -79,12 +79,12 @@ This document outlines the comprehensive, conversion-focused improvements implem
 *Created: [HowItWorks.js](components/HowItWorks.js)*
 
 ### Structure:
-1. **Scan & Check Kits Anywhere** – Mobile scans, offline support, standardised checklists
+1. **Scan & Check Kits Anywhere** – Mobile scans and standardised checklists
 2. **Track Expiry & Issues Automatically** – Alerts, warnings, task assignment
 3. **Support Compliance Reviews Quickly** – Audit-ready reports, verification logs, training audit trail
 
 ### Benefits Listed Per Step:
-- QR/barcode scanning, Works offline, Auditable logs
+- QR/barcode scanning, Standardised checklists, Auditable logs
 - Expiry alerts, Low-stock warnings, Maintenance task assignment
 - Timestamp-verified logs, Compliance reports, Training audit trail
 

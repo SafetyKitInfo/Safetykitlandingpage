@@ -36,7 +36,7 @@ We use SafetySight for…
 Core modules that make kit compliance simple and repeatable.
 
 ## Cards
-- Kit Scanning — Scan, log, and verify contents in seconds—works offline.
+- Kit Scanning — Scan, log, and verify contents in seconds.
 - Expiry Tracking — Predictive alerts months before expiry.
 - Inventory Alerts — Low-stock triggers and suggested reorders.
 - Audit Logs — Complete evidence trail for every check.
@@ -125,7 +125,7 @@ Real time saved for educators and faster audit prep for managers.
 
 # Feature Deep-dive (6 tiles)
 
-Kit Scanning — Scan a kit and log contents in seconds, even offline.
+Kit Scanning — Scan a kit and log contents in seconds.
 
 Expiry Alerts — Predictive alerts so you replace early, not late.
 

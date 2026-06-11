@@ -18,10 +18,10 @@ export default function ReadinessScore() {
       detail: "2 expiring · 1 low stock",
     },
     {
-      name: "Certifications",
+      name: "Inspection Coverage",
       pct: 60,
       color: "amber",
-      detail: "1 expired · 1 expiring",
+      detail: "3 due this week · 1 overdue",
     },
     {
       name: "Audit Frequency",

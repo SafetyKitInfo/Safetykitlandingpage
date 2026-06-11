@@ -7,8 +7,8 @@ export default function HowItWorks() {
     {
       number: "1",
       title: "Scan & Check Kits Anywhere",
-      description: "Mobile scans with offline support. Standardised checklists for every kit, every time.",
-      benefits: ["QR/barcode scanning", "Works offline", "Auditable check logs"],
+      description: "Mobile scanning and standardised checklists for every kit, every time.",
+      benefits: ["QR/barcode scanning", "Standardised checklists", "Auditable check logs"],
       chip: null,
       Icon: QrCode,
     },
@@ -24,7 +24,7 @@ export default function HowItWorks() {
       number: "3",
       title: "Provide Audit-Ready Evidence in Seconds",
       description: "Export timestamped check logs and evidence records on demand. A full historical record to support regulators and auditors.",
-      benefits: ["Timestamp-verified check logs", "Audit evidence reports", "Training & certification record trail"],
+      benefits: ["Timestamp-verified check logs", "Audit evidence reports", "Complete inspection history"],
       chip: null,
       Icon: FileCheck,
     }

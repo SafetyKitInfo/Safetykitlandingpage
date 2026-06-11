@@ -16,7 +16,7 @@ import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import AboutUs from './AboutUs';
 import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Wifi, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import { Linkedin, Twitter, Monitor, Bell, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -223,7 +223,7 @@ export default function LandingPage() {
                     {[
                       "Run 10-min mini-audit",
                       "Complete first inspection",
-                      "Invite additional first aider",
+                      "Replace two expiring items",
                     ].map((label, i) => (
                       <li key={i} className="flex items-center gap-3 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
                         <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
@@ -268,7 +268,7 @@ export default function LandingPage() {
       <div className="bg-white border-y border-slate-200 py-5 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 gap-3 text-sm font-semibold text-[#506575] sm:grid-cols-3">
           <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Monitor size={16} className="text-sk-accent" aria-hidden /> Mobile-first</span>
-          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Wifi size={16} className="text-sk-accent" aria-hidden /> Works offline</span>
+          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Bell size={16} className="text-sk-accent" aria-hidden /> Expiry alerts</span>
           <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Globe size={16} className="text-sk-accent" aria-hidden /> AU/NZ WHS support</span>
         </div>
       </div>
@@ -328,7 +328,7 @@ export default function LandingPage() {
                 <ul className="space-y-2 text-sm text-slate-700 flex-1">
                   <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
                   <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Certification tracking</strong> — first aider records in one place</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Inspection coverage</strong> — see overdue and upcoming checks</span></li>
                 </ul>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function LandingPage() {
                 <ul className="space-y-2 text-sm text-slate-700 flex-1">
                   <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
                   <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — mobile scanning with offline support</span></li>
+                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — guided mobile scanning</span></li>
                 </ul>
               </div>
             </div>

@@ -36,7 +36,7 @@
     "cards": [
       {
         "title": "Kit Scanning",
-        "desc": "Scan, log, and verify contents in seconds\u2014works offline."
+        "desc": "Scan, log, and verify contents in seconds."
       },
       {
         "title": "Expiry Tracking",
@@ -112,7 +112,7 @@
   "features": [
     {
       "title": "Kit Scanning",
-      "desc": "Scan a kit and log contents in seconds, even offline."
+      "desc": "Scan a kit and log contents in seconds."
     },
     {
       "title": "Expiry Alerts",

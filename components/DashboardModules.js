@@ -4,7 +4,7 @@ export default function DashboardModules() {
   const modules = [
     {
       name: "WHS Readiness Dashboard",
-      description: "Live status of every kit, first aider certifications, and outstanding actions across all centres.",
+      description: "Live status of every kit, inspection schedule, and outstanding action across all centres.",
       benefit: "See readiness across every centre in one view",
       tag: "Readiness",
       Icon: LayoutDashboard,
@@ -13,7 +13,7 @@ export default function DashboardModules() {
     },
     {
       name: "Proactive Engine",
-      description: "Ranks upcoming expiry, overdue checks, and certification gaps so teams know exactly what to do next.",
+      description: "Ranks upcoming expiries, overdue checks, and stock issues so teams know exactly what to do next.",
       benefit: "Your next three steps, clearly prioritised",
       tag: "Guidance",
       Icon: Zap,

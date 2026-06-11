@@ -67,7 +67,7 @@ const Process = () => {
             One platform for kit compliance
           </h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            Mobile-first. Offline-ready. Built for SMEs and Australian businesses.
+            Mobile-first. Audit-ready. Built for SMEs and Australian businesses.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
