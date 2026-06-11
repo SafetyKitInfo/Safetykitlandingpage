@@ -273,6 +273,9 @@ export default function LandingPage() {
         </div>
       </div>
 
+      {/* About SafetySight */}
+      <AboutUs />
+
       <StickyCTA />
 
       {/* Features / Product Modules */}
@@ -399,9 +402,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* About SafetySight */}
-      <AboutUs />
 
       {/* How to Get Started Section */}
       <HowToGetStarted />
