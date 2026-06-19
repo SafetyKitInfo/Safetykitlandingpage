@@ -61,7 +61,7 @@ export default function ContactForm() {
                 Join the waitlist
               </a>
               <p className="text-xs text-slate-500 text-center">
-                Prefer email? <a href="mailto:info.safetykit@gmail.com" className="text-sk-primary hover:underline font-medium">info.safetykit@gmail.com</a>
+                Prefer email? <a href="mailto:info.safetysight@gmail.com" className="text-sk-primary hover:underline font-medium">info.safetysight@gmail.com</a>
               </p>
             </div>
           </div>

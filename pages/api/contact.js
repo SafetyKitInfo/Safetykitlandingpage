@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     try {
       sendgrid.setApiKey(normalized)
       const msg = {
-        to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetykit@gmail.com',
+        to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetysight@gmail.com',
         from: process.env.CONTACT_FROM_EMAIL || 'no-reply@safetykit.com.au',
         subject: `Website contact from ${body.name || 'visitor'}`,
         text: `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\n\nMessage:\n${body.message || ''}`,
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
 
           const mailOpts = {
             from: process.env.SMTP_FROM || process.env.CONTACT_FROM_EMAIL || 'no-reply@safetykit.com.au',
-            to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetykit@gmail.com',
+            to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetysight@gmail.com',
             subject: `Website contact (fallback) from ${body.name || 'visitor'}`,
             text: `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\n\nMessage:\n${body.message || ''}`
           }
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
 
           const mailOpts = {
             from: process.env.SMTP_FROM || process.env.CONTACT_FROM_EMAIL || 'no-reply@safetykit.com.au',
-            to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetykit@gmail.com',
+            to: process.env.CONTACT_RECEIVER_EMAIL || 'info.safetysight@gmail.com',
             subject: `Website contact (ethereal) from ${body.name || 'visitor'}`,
             text: `Name: ${body.name || ''}\nEmail: ${body.email || ''}\nOrg: ${body.organization || ''}\n\nMessage:\n${body.message || ''}`
           }

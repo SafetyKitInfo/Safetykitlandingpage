@@ -47,7 +47,7 @@ SafetySight is designed for any SME in Australia or New Zealand that must mainta
 - [Book a Demo](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): 15–30 min live walkthrough of the dashboard and mobile scanning
 - [30-Day Pilot](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): Full setup, QR tagging, and onboarding support — no credit card required
 - Setup time: under 1 day for the first centre
-- Contact: info.safetykit@gmail.com
+- Contact: info.safetysight@gmail.com
 
 ## About
 
