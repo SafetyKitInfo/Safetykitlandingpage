@@ -56,8 +56,6 @@ export default function ContactForm() {
               </p>
               <a
                 href={WAITLIST_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full bg-sk-primary hover:bg-sk-primaryHover text-white py-3 px-6 rounded-lg font-semibold text-base focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none"
               >
                 Join the waitlist

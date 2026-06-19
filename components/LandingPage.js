@@ -20,7 +20,7 @@ import { Linkedin, Twitter, Monitor, Bell, Globe, BarChart2, Activity, Users, Ar
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const signInHref = 'https://app.safetysight.net';
+  const signInHref = 'https://auth.safetysight.net';
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
@@ -136,7 +136,7 @@ export default function LandingPage() {
             </motion.div>
 
             <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sk-primary text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-lg shadow-sky-950/20">Join Waitlist <ArrowRight size={18} aria-hidden /></a>
+              <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sk-primary text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-lg shadow-sky-950/20">Join Waitlist <ArrowRight size={18} aria-hidden /></a>
               <a href="#how-it-works" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#cbdde2] bg-white px-8 py-3.5 rounded-full font-bold text-base text-[#102a43] hover:border-sk-primary hover:bg-[#f6faf9] focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-sm">See product</a>
             </motion.div>
 
@@ -373,7 +373,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
           </div>
         </div>
       </section>
@@ -420,7 +420,7 @@ export default function LandingPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://tally.so/r/rj0JrX" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
+            <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
           </div>
         </div>
       </section>
