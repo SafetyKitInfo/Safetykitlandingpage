@@ -20,7 +20,7 @@ import { Linkedin, Twitter, Monitor, Bell, Globe, BarChart2, Activity, Users, Ar
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const signInHref = 'https://auth.safetysight.net';
+  const signInHref = 'https://app.safetysight.net/sign-in';
   const heroReadinessScore = 65;
   const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
   const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
