@@ -15,6 +15,7 @@ import ROIMetrics from './ROIMetrics';
 import RiskTrend from './RiskTrend';
 import InventoryHealth from './InventoryHealth';
 import AboutUs from './AboutUs';
+import SafetySightTools from './SafetySightTools';
 import { Process } from './ui/cards-demo';
 import { Linkedin, Twitter, Monitor, Bell, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 
@@ -51,7 +52,8 @@ export default function LandingPage() {
             <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-10 sm:h-12" />
           </a>
           <div className="hidden md:flex items-center gap-1 rounded-full border border-[#d8e7ea] bg-[#f6faf9]/90 p-1 text-sm text-slate-600">
-            <a href="#how-it-works" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Product</a>
+            <a href="/kits/" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Kits</a>
+            <a href="/tools/" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Tools</a>
             <a href="#who-we-serve" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Customers</a>
             <a href="#trust" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Security</a>
             <a href="#about" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">About</a>
@@ -82,7 +84,9 @@ export default function LandingPage() {
         {/* Mobile menu panel */}
         <div className={`md:hidden ${mobileOpen ? 'block' : 'hidden'} border-t border-slate-200 bg-white`}>
           <div className="px-4 py-3 space-y-2">
-            <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Product</a>
+            <div className="pb-1 pt-2 text-xs font-bold uppercase tracking-widest text-slate-400">Products</div>
+            <a href="/kits/" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">SafetySight Kits</a>
+            <a href="/tools/" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">SafetySight Tools</a>
             <a href="#who-we-serve" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Customers</a>
             <a href="#trust" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Security</a>
             <a href="#about" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">About</a>
@@ -276,6 +280,9 @@ export default function LandingPage() {
       {/* About SafetySight */}
       <AboutUs />
 
+      {/* SafetySight product family: Tools */}
+      <SafetySightTools />
+
       <StickyCTA />
 
       {/* Features / Product Modules */}
@@ -432,6 +439,8 @@ export default function LandingPage() {
             <div>
               <div className="font-semibold text-white text-xs md:text-sm mb-3">Product</div>
               <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
+                <li><a href="/kits/" className="hover:text-white">SafetySight Kits</a></li>
+                <li><a href="/tools/" className="hover:text-white">SafetySight Tools</a></li>
                 <li><a href="#how-it-works" className="hover:text-white">How it works</a></li>
                 <li><a href="#dashboard" className="hover:text-white">Dashboard</a></li>
                 <li><a href="#trust" className="hover:text-white">Security</a></li>
