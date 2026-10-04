@@ -14,8 +14,92 @@ body {
   line-height: 1.7;
 }
 
+.font-serif-display {
+  font-family: "DM Serif Display", Georgia, serif;
+}
+
+.hero-image-wash {
+  background: linear-gradient(90deg, rgba(251,251,248,.99) 0%, rgba(251,251,248,.94) 34%, rgba(251,251,248,.42) 59%, rgba(251,251,248,.05) 100%);
+}
+
+@media (max-width: 767px) {
+  .hero-image-wash {
+    background: linear-gradient(180deg, rgba(251,251,248,.97) 0%, rgba(251,251,248,.90) 56%, rgba(251,251,248,.28) 100%);
+  }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.legal-copy h1 {
+  margin-top: .5rem;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.035em;
+  color: #102a43;
+}
+
+.legal-copy h2 {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #102a43;
+}
+
+.legal-copy p,
+.legal-copy li {
+  color: #4c6473;
+  line-height: 1.75;
+}
+
+.legal-copy p {
+  margin-top: 1rem;
+}
+
+.legal-copy ul {
+  margin-top: 1rem;
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.legal-copy li + li {
+  margin-top: .5rem;
+}
+
+.legal-copy a {
+  color: #075f69;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-copy .eyebrow {
+  margin-top: 0;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #087578;
+}
+
+.legal-copy .updated {
+  font-size: .875rem;
+  font-weight: 600;
+  color: #60717e;
+}
+
+.legal-copy .notice {
+  margin-top: 2rem;
+  border-left: 3px solid #087578;
+  border-radius: 0 .75rem .75rem 0;
+  background: #edf7f5;
+  padding: 1rem 1.25rem;
+  color: #30495b;
+  line-height: 1.7;
 }
 
 /* Stronger chapter headings */

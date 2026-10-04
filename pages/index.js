@@ -3,21 +3,21 @@ import LandingPage from '../components/LandingPage'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://safetysight.net'
 
-const PAGE_TITLE = 'First Aid Kit Compliance Software for SMEs AU/QLD | SafetySight'
+const PAGE_TITLE = 'First Aid Kit Check Management for Australian Businesses | SafetySight'
 const PAGE_DESCRIPTION =
-  'SafetySight is first aid kit compliance software for SMEs across Australia. Mobile scanning, automated expiry alerts, and audit-ready reports — built to support WHS obligations.'
+  'SafetySight helps Australian teams record first-aid kit checks, track entered expiry dates, and keep a clearer history across locations.'
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'SafetySight',
   description:
-    'First aid kit compliance software for SMEs across Australia.',
+    'First-aid kit check management for Australian businesses.',
   applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web, iOS, Android',
+  operatingSystem: 'Web',
   offers: {
     '@type': 'Offer',
-    description: '30-day free pilot — no credit card required',
+    description: 'Sign up',
   },
   areaServed: ['AU', 'NZ'],
   url: SITE_URL,

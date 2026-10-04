@@ -1,487 +1,277 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import ContactForm from './ContactForm';
-import MetricsRow from './MetricsRow';
-import HowItWorks from './HowItWorks';
-import IssuesVsSolutions from './IssuesVsSolutions';
-import TrustAndCompliance from './TrustAndCompliance';
-import HowToGetStarted from './HowToGetStarted';
-import ECECSpecific from './ECECSpecific';
-import DashboardModules from './DashboardModules';
-import StickyCTA from './StickyCTA';
-import ProactiveEngine from './ProactiveEngine';
-import ReadinessScore from './ReadinessScore';
-import ROIMetrics from './ROIMetrics';
-import RiskTrend from './RiskTrend';
-import InventoryHealth from './InventoryHealth';
-import AboutUs from './AboutUs';
-import SafetySightTools from './SafetySightTools';
-import { Process } from './ui/cards-demo';
-import { Linkedin, Twitter, Monitor, Bell, Globe, BarChart2, Activity, Users, ArrowRight, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import React, { useState } from 'react'
+import {
+  ArrowRight,
+  Check,
+  ChevronRight,
+  ClipboardCheck,
+  FileClock,
+  MapPin,
+  Menu,
+  PackageSearch,
+  AlertTriangle,
+  X,
+} from 'lucide-react'
+
+const SIGN_UP_URL = 'https://app.safetysight.net/sign-up'
+const SIGN_IN_URL = 'https://app.safetysight.net/sign-in'
+
+const workflow = [
+  { number: '01', title: 'Record the check', copy: 'Open the right kit and work through a consistent check on site.', Icon: ClipboardCheck },
+  { number: '02', title: 'Review what needs attention', copy: 'See items recorded as missing, low or nearing their entered expiry date.', Icon: AlertTriangle },
+  { number: '03', title: 'Keep the history', copy: 'Retain a clear record of what was checked, when and by whom.', Icon: FileClock },
+]
+
+const plans = [
+  {
+    name: 'Free',
+    bestFor: 'Get your first kits organised',
+    description: 'Start with one site, build a more consistent check routine and see how SafetySight fits your team.',
+    included: ['Manage 1 location', 'Track up to 3 kits', 'Use up to 5 SightScans'],
+    cta: 'Create free account',
+    href: SIGN_UP_URL,
+  },
+  {
+    name: 'Standard',
+    bestFor: 'Keep routine checks moving as you grow',
+    description: 'For organisations that need more capacity than Free and a clearer way to manage ongoing kit checks.',
+    included: ['Your paid location allowance', 'Your paid kit allowance', 'Your paid SightScan allowance'],
+    cta: 'Start Standard',
+    href: SIGN_UP_URL,
+    featured: true,
+  },
+  {
+    name: 'Enterprise',
+    bestFor: 'Coordinate a larger rollout',
+    description: 'Shape a setup around your organisation, with agreed limits and help getting teams started.',
+    included: ['Limits agreed around your rollout', 'Onboarding for your team', 'Support for your rollout'],
+    cta: 'Contact sales',
+    href: 'mailto:info.safetysight@gmail.com?subject=SafetySight%20Enterprise',
+  },
+]
+
+const productItems = [
+  { name: 'Gauze swabs', date: '12 Mar 2027', state: 'Review soon', tone: 'warning' },
+  { name: 'Antiseptic wipes', date: '14 Aug 2027', state: 'Recorded', tone: 'ok' },
+  { name: 'Adhesive bandages', date: '03 Sep 2027', state: 'Recorded', tone: 'ok' },
+  { name: 'Eye wash', date: '21 Jan 2028', state: 'Recorded', tone: 'ok' },
+]
+
+function Brand() {
+  return (
+    <a href="#top" className="inline-flex items-center" aria-label="SafetySight home">
+      <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-9 w-auto object-contain sm:h-10" />
+    </a>
+  )
+}
+
+function PrimaryLink({ className = '', children = 'Sign up' }) {
+  return (
+    <a
+      href={SIGN_UP_URL}
+      className={`inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#075f69] px-6 py-3 text-sm font-bold text-white shadow-[0_10px_30px_rgba(7,95,105,0.18)] transition hover:-translate-y-0.5 hover:bg-[#064e57] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#075f69] focus-visible:ring-offset-2 ${className}`}
+    >
+      {children}<ArrowRight size={17} aria-hidden="true" />
+    </a>
+  )
+}
+
+function ProductPreview() {
+  return (
+    <div className="mx-auto w-full max-w-6xl">
+      <div className="overflow-hidden rounded-[1.4rem] border border-white/80 bg-white shadow-[0_30px_80px_rgba(14,38,57,0.20)] ring-1 ring-[#d9e5e5]">
+        <div className="grid min-h-[410px] grid-cols-1 md:grid-cols-[170px_minmax(0,1fr)_250px]">
+          <aside className="hidden border-r border-[#e4ecec] bg-[#fbfcfc] p-5 md:block">
+            <img src="/images/safetysight-rectangle.png" alt="" className="mb-8 h-8 w-auto" />
+            <nav aria-label="Illustrative product navigation" className="space-y-1.5 text-sm">
+              {[
+                [PackageSearch, 'Kits', true], [MapPin, 'Sites', false], [ClipboardCheck, 'Inspections', false],
+                [AlertTriangle, 'Issues', false], [FileClock, 'Records', false],
+              ].map(([Icon, label, active]) => (
+                <div key={label} className={`flex items-center gap-2.5 rounded-lg px-3 py-2.5 font-semibold ${active ? 'bg-[#e7f2f1] text-[#075f69]' : 'text-[#60717e]'}`}>
+                  <Icon size={17} aria-hidden="true" />{label}
+                </div>
+              ))}
+            </nav>
+          </aside>
+          <div className="min-w-0 p-5 sm:p-7">
+            <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-[#68808d]">Example workflow</p>
+                <h2 className="text-2xl font-bold tracking-tight text-[#102a43]">Main workshop kit</h2>
+                <p className="mt-1 text-sm text-[#60717e]">Brisbane workshop · First-aid room</p>
+              </div>
+              <span className="rounded-full bg-[#e5f5ed] px-3 py-1.5 text-xs font-bold text-[#176b4d]">Check in progress</span>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-[#dfe8e8]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,1fr)_88px_18px] gap-2 bg-[#f7faf9] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#71818c] sm:grid-cols-[minmax(0,1fr)_130px_110px_22px] sm:gap-3 sm:text-[11px] sm:tracking-[0.12em]">
+                  <span>Item</span><span className="hidden sm:block">Entered expiry</span><span>Status</span><span />
+                </div>
+                {productItems.map((item) => (
+                  <div key={item.name} className="grid grid-cols-[minmax(0,1fr)_88px_18px] items-center gap-2 border-t border-[#e7eeee] px-4 py-4 text-sm sm:grid-cols-[minmax(0,1fr)_130px_110px_22px] sm:gap-3">
+                    <span className="truncate font-semibold text-[#17324a]">{item.name}</span>
+                    <span className="hidden text-[#60717e] sm:block">{item.date}</span>
+                    <span className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-bold ${item.tone === 'warning' ? 'bg-[#fff0e8] text-[#a64b23]' : 'bg-[#e6f5ee] text-[#176b4d]'}`}>{item.state}</span>
+                    <ChevronRight size={15} className="text-[#91a2aa]" aria-hidden="true" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <aside className="border-t border-[#e4ecec] bg-[#fff8f1] p-6 md:border-l md:border-t-0">
+            <div className="mb-5 flex items-center gap-2 text-[#a64b23]"><AlertTriangle size={21} aria-hidden="true" /><span className="text-sm font-bold">Needs review</span></div>
+            <div className="mb-5 rounded-xl bg-white p-4 ring-1 ring-[#f0dfd0]">
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#8c7464]">Example item</p>
+              <p className="mt-2 font-bold text-[#17324a]">Gauze swabs</p>
+              <p className="mt-1 text-sm leading-relaxed text-[#60717e]">The entered expiry date is approaching. Confirm the item and plan the next action.</p>
+            </div>
+            <div className="rounded-lg bg-[#075f69] px-4 py-3 text-center text-sm font-bold text-white">Record follow-up</div>
+            <p className="mt-4 text-xs leading-relaxed text-[#7a6d64]">Example only. Product details may change as SafetySight develops.</p>
+          </aside>
+        </div>
+      </div>
+      <p className="mt-3 text-xs font-medium text-[#5e6f7a]">Concept preview — example data only. Product details may change as SafetySight develops.</p>
+    </div>
+  )
+}
 
 export default function LandingPage() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const signInHref = 'https://app.safetysight.net/sign-in';
-  const heroReadinessScore = 65;
-  const HERO_SCORE_RADIUS = 26; // SVG circle radius (px), matched to viewBox 64x64
-  const heroScoreCircumference = 2 * Math.PI * HERO_SCORE_RADIUS;
-  const remotionEase = [0.16, 1, 0.3, 1];
-  const heroSequence = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-  const revealUp = {
-    hidden: { opacity: 0, y: 20 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.72, ease: remotionEase },
-    },
-  };
+  const [mobileOpen, setMobileOpen] = useState(false)
   return (
-    <div className="min-h-screen flex flex-col bg-[#f6faf9] text-[#102a43]">
-
-      {/* Top Nav */}
-      <nav className="sticky top-0 z-40 border-b border-[#d8e7ea]/80 bg-white/92 backdrop-blur-xl relative shadow-[0_1px_20px_rgba(8,70,91,0.06)]">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
-            <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-10 sm:h-12" />
-          </a>
-          <div className="hidden md:flex items-center gap-1 rounded-full border border-[#d8e7ea] bg-[#f6faf9]/90 p-1 text-sm text-slate-600">
-            <a href="/kits/" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Kits</a>
-            <a href="/tools/" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Tools</a>
-            <a href="#who-we-serve" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Customers</a>
-            <a href="#trust" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Security</a>
-            <a href="#about" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">About</a>
-            <a href="#contact" className="rounded-full px-4 py-1.5 hover:bg-white hover:text-[#102a43] hover:shadow-sm">Contact</a>
+    <div id="top" className="min-h-screen bg-[#fbfbf8] text-[#102a43]">
+      <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
+        <div className="mx-auto flex h-14 max-w-[1360px] items-center justify-between rounded-full border border-white/70 bg-white/85 px-4 shadow-[0_10px_35px_rgba(16,42,67,0.10)] backdrop-blur-xl sm:h-16 sm:px-6">
+          <Brand />
+          <div className="hidden items-center gap-7 text-sm font-semibold text-[#3f5567] md:flex">
+            <a href="#product" className="hover:text-[#075f69]">Product</a><a href="#workflow" className="hover:text-[#075f69]">How it works</a><a href="#pricing" className="hover:text-[#075f69]">Pricing</a><a href="#about" className="hover:text-[#075f69]">About</a><a href="#scope" className="hover:text-[#075f69]">Scope</a>
           </div>
-          <div className="flex items-center gap-3">
-            {/* Mobile menu button */}
-            <button
-              type="button"
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100"
-              aria-expanded={mobileOpen}
-              aria-label="Toggle menu"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {mobileOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-            <a href="#contact" className="hidden sm:inline-block text-sm font-medium text-slate-600 hover:text-[#102a43]">Start pilot</a>
-            <a href={signInHref} className="hidden sm:inline-flex items-center justify-center text-sm font-semibold px-4 py-2 rounded-full border border-[#cbdde2] text-[#102a43] bg-white hover:bg-[#f6faf9] hover:border-sk-primary focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Sign in</a>
-            <a href="#contact" className="inline-flex items-center gap-2 bg-sk-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-sm shadow-sky-950/20">Book demo <ArrowRight size={14} aria-hidden /></a>
+          <div className="hidden items-center gap-4 sm:flex">
+            <a href={SIGN_IN_URL} className="px-2 py-2 text-sm font-semibold text-[#3f5567] hover:text-[#075f69]">Sign in</a><PrimaryLink className="min-h-10 px-5 py-2">Sign up</PrimaryLink>
           </div>
+          <button type="button" aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)} className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[#17324a] hover:bg-[#edf3f2] md:hidden">
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-        {/* Mobile menu panel */}
-        <div className={`md:hidden ${mobileOpen ? 'block' : 'hidden'} border-t border-slate-200 bg-white`}>
-          <div className="px-4 py-3 space-y-2">
-            <div className="pb-1 pt-2 text-xs font-bold uppercase tracking-widest text-slate-400">Products</div>
-            <a href="/kits/" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">SafetySight Kits</a>
-            <a href="/tools/" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">SafetySight Tools</a>
-            <a href="#who-we-serve" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Customers</a>
-            <a href="#trust" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Security</a>
-            <a href="#about" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">About</a>
-            <a href="#contact" onClick={() => setMobileOpen(false)} className="block py-2 text-base text-slate-800">Contact</a>
-            <div className="pt-2">
-              <a href={signInHref} onClick={() => setMobileOpen(false)} className="block w-full text-center border border-slate-300 text-slate-700 bg-white px-4 py-2 rounded-lg font-semibold hover:bg-slate-50">Sign in</a>
-            </div>
-            <div className="pt-2">
-              <a href="#contact" onClick={() => setMobileOpen(false)} className="block w-full text-center bg-sk-primary text-white px-4 py-2 rounded-lg font-semibold">Book demo</a>
+        {mobileOpen && (
+          <div className="mx-auto mt-2 max-w-[1360px] rounded-2xl border border-[#dce7e6] bg-white p-4 shadow-xl md:hidden">
+            <div className="grid gap-1 text-sm font-semibold text-[#30495b]">
+              {[["#product", "Product"], ["#workflow", "How it works"], ["#pricing", "Pricing"], ["#about", "About"], ["#scope", "Scope"]].map(([href, label]) => <a key={href} href={href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 hover:bg-[#f1f6f5]">{label}</a>)}
+              <a href={SIGN_IN_URL} className="rounded-lg px-3 py-3 hover:bg-[#f1f6f5]">Sign in</a><PrimaryLink className="mt-2 w-full">Sign up</PrimaryLink>
             </div>
           </div>
-        </div>
+        )}
       </nav>
 
-      {/* Hero */}
-      <header id="hero" className="relative overflow-hidden bg-[linear-gradient(180deg,#f6faf9_0%,#ffffff_56%,#edf7f6_100%)]">
-        <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden />
-        <div className="relative max-w-7xl mx-auto px-4 pt-14 pb-16 md:pt-24 md:pb-24 grid grid-cols-1 md:grid-cols-[0.92fr_1.08fr] gap-10 md:gap-16 items-center">
-          <motion.div variants={heroSequence} initial="hidden" animate="show">
-            <motion.div variants={revealUp} className="mb-5 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#b9e7ea] bg-white px-3 py-1.5 text-xs font-bold text-sk-primary shadow-sm">
-                <ShieldCheck size={14} aria-hidden />
-                For SMEs &amp; Australian Businesses
-              </span>
-              <span className="inline-flex items-center rounded-full bg-[#eef8ff] px-3 py-1.5 text-xs font-bold text-[#0b5f78] ring-1 ring-[#c9e7f5]">Early access open</span>
-            </motion.div>
-
-            <motion.h1 variants={revealUp} className="max-w-2xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.96] text-[#102a43] mb-6 tracking-tight">
-              First Aid Kit Compliance Software for Every Centre
-            </motion.h1>
-
-            <motion.p variants={revealUp} className="text-base md:text-xl text-[#506575] max-w-xl leading-relaxed mb-5">
-              SafetySight is first aid kit compliance software built for SMEs across Australia. Standardise kit checks with expiry alerts, mobile scanning, and audit-ready reports.
-            </motion.p>
-
-            <motion.div variants={revealUp} className="mb-8 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
-              {[
-                "Expiry alerts",
-                "Mobile scanning",
-                "Audit-ready reports",
-              ].map((item) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ y: -3, transition: { duration: 0.2, ease: remotionEase } }}
-                  className="flex items-center gap-2 rounded-lg border border-[#d8e7ea] bg-white/85 px-3 py-2 text-sm font-semibold text-[#102a43] shadow-sm"
-                >
-                  <CheckCircle2 size={16} className="text-sk-success" aria-hidden />
-                  <span>{item}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sk-primary text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-lg shadow-sky-950/20">Join Waitlist <ArrowRight size={18} aria-hidden /></a>
-              <a href="#how-it-works" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#cbdde2] bg-white px-8 py-3.5 rounded-full font-bold text-base text-[#102a43] hover:border-sk-primary hover:bg-[#f6faf9] focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none text-center shadow-sm">See product</a>
-            </motion.div>
-
-            <motion.p variants={revealUp} className="flex items-center gap-2 text-sm font-semibold text-[#506575]">
-              <Zap size={16} className="text-sk-accent" aria-hidden />
-              Centres can significantly reduce expired-kit incidents within the first 90 days.
-            </motion.p>
-          </motion.div>
-
-          <div>
-            {/* WHS Readiness Dashboard Mockup — simplified for clarity */}
-            <motion.div
-              initial={{ opacity: 0, y: 28, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.12, ease: remotionEase }}
-              className="w-full max-w-xl mx-auto rounded-[1.75rem] border border-white/80 bg-white/80 p-2 shadow-[0_24px_70px_rgba(15,23,42,0.18)] backdrop-blur"
-            >
-            <div className="dashboard-sheen overflow-hidden rounded-[1.35rem] border border-slate-200 text-sm">
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-[#073548] bg-[#073548] px-5 py-4 text-white">
-                <div>
-                  <span className="block text-xs font-semibold uppercase tracking-widest text-[#a8f3ef]">SafetySight</span>
-                  <span className="font-semibold text-sm">WHS Readiness Dashboard</span>
-                </div>
-                <span className="text-xs bg-[#a8f3ef] text-[#073548] font-bold px-2.5 py-1 rounded-full">Live</span>
-              </div>
-
-              <div className="grid gap-4 p-5 bg-[#f6faf9]/95 sm:grid-cols-[1fr_0.88fr]">
-                {/* Readiness Score — hero element */}
-                <motion.div
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.62, delay: 0.38, ease: remotionEase }}
-                  className="rounded-2xl border border-[#d8e7ea] bg-white p-5 shadow-sm sm:row-span-2"
-                >
-                  <div className="mb-5 flex items-center justify-between">
-                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Readiness Score</p>
-                    <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-bold text-red-700">Action needed</span>
-                  </div>
-                  <div className="flex items-center gap-5">
-                    <div className="relative flex-shrink-0">
-                      <svg width="116" height="116" viewBox="0 0 64 64" aria-label={`Score ${heroReadinessScore} out of 100`}>
-                        <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#fee2e2" strokeWidth="7" />
-                        <circle cx="32" cy="32" r={HERO_SCORE_RADIUS} fill="none" stroke="#ef4444" strokeWidth="7"
-                          strokeLinecap="round"
-                          strokeDasharray={heroScoreCircumference}
-                          strokeDashoffset={heroScoreCircumference * (1 - heroReadinessScore / 100)}
-                          transform="rotate(-90 32 32)" />
-                        <text x="32" y="33" textAnchor="middle" fontSize="15" fontWeight="800" fill="#0f172a">{heroReadinessScore}</text>
-                        <text x="32" y="44" textAnchor="middle" fontSize="8" fill="#64748b">/100</text>
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="inline-block bg-red-100 text-red-700 text-sm font-bold px-3 py-1 rounded-full mb-2">Poor</span>
-                      <p className="text-sm text-slate-500 leading-snug">Significant gaps present.<br/>Improvement actions queued.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 grid grid-cols-3 gap-2">
-                    {[
-                      ["18", "Items due"],
-                      ["6", "Sites"],
-                      ["2m", "Scan time"],
-                    ].map(([value, label]) => (
-                      <div key={label} className="rounded-xl bg-[#f6faf9] px-3 py-2 text-center ring-1 ring-[#d8e7ea]/70">
-                        <div className="text-lg font-black text-[#102a43]">{value}</div>
-                        <div className="text-[11px] font-semibold text-slate-500">{label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-
-                {/* Next 3 Actions */}
-                <motion.div
-                  initial={{ opacity: 0, x: 18 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.62, delay: 0.52, ease: remotionEase }}
-                  className="rounded-2xl border border-[#d8e7ea] bg-white p-5 shadow-sm"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-sm font-semibold text-slate-700">Next 3 Actions</p>
-                    <span className="text-xs bg-sk-primaryLight text-sk-primary font-semibold px-2.5 py-1 rounded-full">Proactive Engine</span>
-                  </div>
-                  <ul className="space-y-2.5">
-                    {[
-                      "Run 10-min mini-audit",
-                      "Complete first inspection",
-                      "Replace two expiring items",
-                    ].map((label, i) => (
-                      <li key={i} className="flex items-center gap-3 text-xs text-slate-700 py-1.5 border-b border-slate-50 last:border-0">
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sk-primary text-white text-[10px] font-bold flex-shrink-0">{i + 1}</span>
-                        <span className="flex-1">{label}</span>
-                        <ArrowRight size={14} className="text-slate-300" aria-hidden />
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 18 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.62, delay: 0.66, ease: remotionEase }}
-                  className="rounded-2xl border border-[#073548] bg-[#073548] p-5 text-white shadow-sm"
-                >
-                  <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#a8f3ef]">This week</p>
-                  <div className="flex items-end justify-between gap-2">
-                    {[42, 58, 47, 72, 66, 84, 76].map((height, i) => (
-                      <span
-                        key={i}
-                        className="hero-bar w-full rounded-t bg-[#37d5ca]"
-                        style={{ '--bar-height': `${height}px`, animationDelay: `${0.08 * i}s` }}
-                      />
-                    ))}
-                  </div>
-                  <div className="mt-4 flex items-center justify-between text-xs font-semibold text-slate-300">
-                    <span>Inspections</span>
-                    <span className="text-[#a8f3ef]">+24%</span>
-                  </div>
-                </motion.div>
-              </div>
+      <header className="relative overflow-hidden pt-20 sm:pt-24">
+        <div className="absolute inset-0">
+          <img src="/images/safetysight-workplace-check.png" alt="A site worker checking a first-aid kit" className="h-full w-full object-cover object-[63%_center]" />
+          <div className="absolute inset-0 hero-image-wash" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-5 pb-60 pt-16 sm:px-8 sm:pb-72 sm:pt-24 lg:pb-80 lg:pt-28">
+          <div className="max-w-2xl fade-up">
+            <div className="mb-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#34576a]"><span className="h-px w-9 bg-[#0b8c8b]" />Available for Australian businesses</div>
+            <h1 className="font-serif-display text-[clamp(2.8rem,6vw,5.5rem)] font-normal leading-[0.96] tracking-[-0.045em] text-[#102a43]">A clearer way to manage <span className="text-[#087578]">first-aid kit checks.</span></h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#475f70] sm:text-xl">SafetySight helps teams record kit checks, track entered expiry dates and keep a clearer history across locations.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <PrimaryLink />
+              <a href="#workflow" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-[#b9cbcd] bg-white/86 px-6 py-3 text-sm font-bold text-[#17324a] backdrop-blur-sm transition hover:border-[#075f69] hover:text-[#075f69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#075f69]">See the workflow <ChevronRight size={17} aria-hidden="true" /></a>
             </div>
-            </motion.div>
+            <p className="mt-5 max-w-lg text-sm leading-relaxed text-[#536b79]">Create an account with any email address. SafetySight verifies it securely before setup.</p>
           </div>
         </div>
       </header>
 
-      {/* Metrics strip */}
-      <MetricsRow />
+      <section id="product" className="relative z-10 -mt-48 scroll-mt-24 px-4 pb-14 sm:-mt-56 sm:px-6 lg:-mt-64"><ProductPreview /></section>
 
-      {/* Platform at a glance */}
-      <div className="bg-white border-y border-slate-200 py-5 shadow-sm">
-        <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 gap-3 text-sm font-semibold text-[#506575] sm:grid-cols-3">
-          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Monitor size={16} className="text-sk-accent" aria-hidden /> Mobile-first</span>
-          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Bell size={16} className="text-sk-accent" aria-hidden /> Expiry alerts</span>
-          <span className="flex items-center justify-center gap-2 rounded-lg bg-[#f6faf9] px-4 py-3"><Globe size={16} className="text-sk-accent" aria-hidden /> AU/NZ WHS support</span>
-        </div>
-      </div>
-
-      {/* About SafetySight */}
-      <AboutUs />
-
-      {/* SafetySight product family: Tools */}
-      <SafetySightTools />
-
-      <StickyCTA />
-
-      {/* Features / Product Modules */}
-      <Process />
-
-      {/* Proactive Engine */}
-      <ProactiveEngine />
-
-      {/* Readiness Score */}
-      <ReadinessScore />
-
-      {/* ROI Metrics */}
-      <ROIMetrics />
-
-      {/* Risk Trend */}
-      <RiskTrend />
-
-      {/* Inventory Health */}
-      <InventoryHealth />
-
-      {/* How SafetySight Works - 3-Step Flow */}
-      <section id="how-it-works">
-        <HowItWorks />
-      </section>
-
-      {/* Common Issues vs Solutions */}
-      <IssuesVsSolutions />
-
-      {/* Personas with Specific Outcomes */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10 md:mb-12">
-            <span className="text-xs font-semibold text-sk-primary uppercase tracking-widest mb-2 block">Roles</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Built for every role</h2>
-            <p className="text-base md:text-lg text-slate-600">Tailored workflows and visibility for each team member</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {/* EHS Managers */}
-            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1.5 bg-sk-primary" />
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-sk-primaryLight flex items-center justify-center flex-shrink-0">
-                    <BarChart2 size={16} className="text-sk-primary" aria-hidden />
-                  </div>
-                  <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide">EHS Managers</div>
-                </div>
-                <p className="text-slate-800 font-medium text-sm mb-4">See kit readiness across every site in one dashboard.</p>
-                <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Multi-site dashboard</strong> — live status across all centres</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>2-click reports</strong> — export audit evidence on demand</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Inspection coverage</strong> — see overdue and upcoming checks</span></li>
-                </ul>
+      <section id="workflow" className="scroll-mt-20 bg-[#063f46] py-14 text-white sm:py-16">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mb-10 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#b8dcda]"><span className="h-px w-9 bg-[#6bd4cd]" />A simple workflow for real workplaces</div>
+          <div className="grid gap-9 md:grid-cols-3 md:gap-0">
+            {workflow.map(({ number, title, copy, Icon }, index) => (
+              <div key={number} className={`relative grid grid-cols-[50px_1fr] gap-4 md:px-8 ${index === 0 ? 'md:pl-0' : 'md:border-l md:border-white/20'}`}>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2b7f82] text-sm font-bold">{number}</span>
+                <div><Icon size={28} className={index === 1 ? 'text-[#ff9b53]' : 'text-[#a9e7e1]'} aria-hidden="true" /><h2 className="mt-4 text-xl font-bold">{title}</h2><p className="mt-2 max-w-xs text-sm leading-relaxed text-[#cbe0df]">{copy}</p></div>
               </div>
-            </div>
-
-            {/* Clinical / Medical Coordinators */}
-            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1.5 bg-sk-accent" />
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-sk-primaryLight flex items-center justify-center flex-shrink-0">
-                    <Activity size={16} className="text-sk-accent" aria-hidden />
-                  </div>
-                  <div className="text-xs font-semibold text-sk-primary uppercase tracking-wide">Clinical Coordinators</div>
-                </div>
-                <p className="text-slate-800 font-medium text-sm mb-4">Know which kits need attention before each shift.</p>
-                <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Expiry by room</strong> — track every location independently</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Proactive alerts</strong> — flagged 30, 60, 90 days before expiry</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>90-second checks</strong> — guided mobile scanning</span></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Centre / Facilities Managers */}
-            <div className="flex flex-col rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-1.5 bg-sky-400" />
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-sky-50 flex items-center justify-center flex-shrink-0">
-                    <Users size={16} className="text-sky-700" aria-hidden />
-                  </div>
-                  <div className="text-xs font-semibold text-sky-800 uppercase tracking-wide">Centre Managers</div>
-                </div>
-                <p className="text-slate-800 font-medium text-sm mb-4">Standardise checks across all staff with no extra overhead.</p>
-                <ul className="space-y-2 text-sm text-slate-700 flex-1">
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Assign tasks</strong> — delegate maintenance and follow-ups</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Faster onboarding</strong> — guided workflows reduce training time</span></li>
-                  <li className="flex items-start gap-2"><span className="text-sk-success mt-0.5">•</span><span><strong>Consistent execution</strong> — same standard across every room</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-10">
-            <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-block bg-sk-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-sk-primaryHover focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none">Join Waitlist</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Compliance Section */}
-      <section id="trust">
-        <TrustAndCompliance />
-      </section>
-
-      {/* Inside the SafetySight Dashboard */}
-      <DashboardModules />
-
-      {/* ECEC-Specific Deep Dive */}
-      <ECECSpecific />
-
-      {/* Who we serve */}
-      <section id="who-we-serve" className="py-10 bg-slate-50 border-y border-slate-100">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-5">
-            <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Who we serve</h3>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {["Trades & Construction","Retail & Hospitality","Professional Services","Healthcare Clinics","Childcare Centres","Multi-site SMEs"].map((i, idx) => (
-              <span key={idx} className="px-4 py-2 bg-white rounded-full text-sm text-slate-700 border border-slate-200 shadow-sm">{i}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How to Get Started Section */}
-      <HowToGetStarted />
+      <section className="border-b border-[#dce7e6] bg-[#f4f8f7] py-10">
+        <div className="mx-auto grid max-w-6xl gap-4 px-5 sm:px-8 md:grid-cols-[220px_1fr] md:items-center md:gap-10">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#087578]">What is a SightScan?</p>
+          <p className="text-base leading-relaxed text-[#475f70]">A SightScan is one use of SafetySight’s kit-scanning workflow. Each use counts towards the SightScan allowance included with your plan.</p>
+        </div>
+      </section>
 
-      {/* Contact / Book Demo */}
-      <ContactForm />
-
-      {/* Final CTA band */}
-      <section className="py-16 md:py-24 bg-[#073548] text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">Reduce kit risk across every centre</h2>
-          <p className="text-[#d9f4f3] text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">Standardise kit checks, reduce expired items, and improve audit readiness — without extra overhead.</p>
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-5 text-sm text-[#d9f4f3] mb-8 md:mb-10">
-            {["Go paperless","Boost compliance","Fewer expired incidents"].map((b, i) => (
-              <span key={i} className="flex items-center gap-2"><span className="text-[#37d5ca] font-bold">✓</span><span>{b}</span></span>
-            ))}
+      <section id="scope" className="scroll-mt-20 bg-white py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 md:grid-cols-2 md:gap-0">
+          <div className="md:pr-14">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#087578]">What we’re building</p>
+            <h2 className="font-serif-display text-4xl leading-tight text-[#102a43]">Practical first-aid kit record keeping.</h2>
+            <ul className="mt-7 space-y-5">
+              {['Record consistent kit checks across locations', 'Track expiry dates entered by your team', 'Keep a history of checks and follow-up actions'].map((item) => <li key={item} className="flex gap-3 text-base leading-relaxed text-[#475f70]"><Check size={20} className="mt-0.5 shrink-0 text-[#087578]" aria-hidden="true" />{item}</li>)}
+            </ul>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://tally.so/r/rj0JrX" className="w-full sm:w-auto inline-block bg-white text-sk-primary px-8 py-3.5 rounded-lg font-bold text-base hover:bg-sk-surfaceMuted focus-visible:ring-2 focus-visible:ring-sk-primary focus-visible:outline-none shadow-md">Join Waitlist</a>
+          <div className="border-t border-[#dce5e5] pt-10 md:border-l md:border-t-0 md:pl-14 md:pt-0">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#6a7b84]">Clear about the limits</p>
+            <h2 className="font-serif-display text-4xl leading-tight text-[#102a43]">A tool to support your process—not certify it.</h2>
+            <ul className="mt-7 space-y-5 text-base leading-relaxed text-[#475f70]"><li>SafetySight does not provide legal advice or certify WHS compliance.</li><li>It does not replace workplace procedures, qualified advice or human checks.</li><li>Product features and the interface may change as SafetySight develops.</li></ul>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#061f2d] text-slate-400 py-10 md:py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-10">
-            <div>
-              <div className="font-semibold text-white text-xs md:text-sm mb-3">Product</div>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
-                <li><a href="/kits/" className="hover:text-white">SafetySight Kits</a></li>
-                <li><a href="/tools/" className="hover:text-white">SafetySight Tools</a></li>
-                <li><a href="#how-it-works" className="hover:text-white">How it works</a></li>
-                <li><a href="#dashboard" className="hover:text-white">Dashboard</a></li>
-                <li><a href="#trust" className="hover:text-white">Security</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="font-semibold text-white text-xs md:text-sm mb-3">Customers</div>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
-                <li><a href="#who-we-serve" className="hover:text-white">SMEs</a></li>
-                <li><a href="#who-we-serve" className="hover:text-white">Healthcare Clinics</a></li>
-                <li><a href="#who-we-serve" className="hover:text-white">Multi-site Networks</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="font-semibold text-white text-xs md:text-sm mb-3">Company</div>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
-                <li><a href="#about" className="hover:text-white">About</a></li>
-                <li><a href="#contact" className="hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="font-semibold text-white text-xs md:text-sm mb-3">Legal</div>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
-                <li><a href="#privacy" className="hover:text-white">Privacy</a></li>
-                <li><a href="#terms" className="hover:text-white">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} SafetySight. All rights reserved.</p>
-            <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com" aria-label="LinkedIn" className="hover:text-white">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://twitter.com" aria-label="Twitter" className="hover:text-white">
-                <Twitter size={18} />
-              </a>
-            </div>
-          </div>
+      <section id="about" className="scroll-mt-20 grid bg-[#edf5f3] lg:grid-cols-[58%_42%]">
+        <div className="aspect-[16/9] overflow-hidden lg:aspect-auto lg:min-h-[500px]"><img src="/images/safetysight-founders-studio.png" alt="SafetySight founders Taj Kilchester, Matthew O'Shea and Philip Kasselman" className="h-full w-full object-cover object-center" /></div>
+        <div className="flex items-center px-6 py-16 sm:px-12 lg:px-14 lg:py-16">
+          <div className="max-w-xl"><div className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#34576a]"><span className="h-px w-9 bg-[#0b8c8b]" />The people behind SafetySight</div><h2 className="font-serif-display text-4xl leading-[1.05] text-[#102a43] sm:text-5xl">Built by a young Australian team focused on simpler first-aid readiness.</h2><p className="mt-6 text-lg leading-relaxed text-[#4c6473]">We started SafetySight after seeing how often kit records rely on paper, spreadsheets and memory. We’re building a clearer workflow with input from the businesses that will use it.</p><p className="mt-6 font-semibold text-[#17324a]">Taj Kilchester · Matthew O’Shea · Philip Kasselman</p></div>
         </div>
+      </section>
+
+      <section id="pricing" className="scroll-mt-20 bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#34576a]"><span className="h-px w-9 bg-[#0b8c8b]" />Choose a plan</div>
+              <h2 className="max-w-xl font-serif-display text-4xl leading-[1.05] text-[#102a43] sm:text-5xl">A practical place to start, with room to grow.</h2>
+            </div>
+            <p className="max-w-2xl text-lg leading-relaxed text-[#4c6473] lg:justify-self-end">Choose a plan based on the number of locations, kits and SightScans your organisation needs.</p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {plans.map((plan) => (
+              <article key={plan.name} className={`relative flex min-h-[390px] flex-col rounded-[1.25rem] border p-7 sm:p-8 ${plan.featured ? 'border-[#7eb8b5] bg-[#edf7f5] shadow-[0_18px_45px_rgba(16,42,67,0.10)]' : 'border-[#d7e1e0] bg-white'}`}>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#087578]">{plan.name}</p>
+                <h3 className="mt-5 max-w-xs text-2xl font-bold leading-tight text-[#102a43]">{plan.bestFor}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#60717e]">{plan.description}</p>
+                <div className="my-7 h-px bg-[#d7e1e0]" />
+                <ul className="flex-1 space-y-4">
+                  {plan.included.map((item) => <li key={item} className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-[#30495b]"><Check size={18} className="mt-0.5 shrink-0 text-[#087578]" aria-hidden="true" />{item}</li>)}
+                </ul>
+                <a href={plan.href} className={`mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#075f69] focus-visible:ring-offset-2 ${plan.featured ? 'bg-[#075f69] text-white hover:bg-[#064e57]' : 'border border-[#9eb9ba] text-[#075f69] hover:border-[#075f69] hover:bg-[#edf7f5]'}`}>{plan.cta}<ArrowRight size={17} aria-hidden="true" /></a>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-relaxed text-[#60717e]">Free allowances are shown above. Standard allowances depend on the paid plan available to your account; contact us if you need exact limits before signing up.</p>
+        </div>
+      </section>
+
+      <section className="relative isolate overflow-hidden py-24 sm:py-32">
+        <img src="/images/queensland-landscape.png" alt="Regional Queensland landscape" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" /><div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-[1px]" />
+        <div className="mx-auto max-w-4xl px-5 text-center">
+          <div className="mb-5 flex items-center justify-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#34576a]"><span className="h-px w-9 bg-[#0b8c8b]" />Start free</div>
+          <h2 className="font-serif-display text-4xl leading-tight text-[#102a43] sm:text-6xl">Start organising your first-aid kits.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[#435d6d]">Create your account with any email address. Verify it with a one-time code, then create or join your workplace.</p>
+          <div className="mx-auto mt-8 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
+            {['Verify your email', 'Create or join a workplace', 'Add people and locations'].map((step, index) => <div key={step} className="rounded-xl border border-white/80 bg-white/70 p-4 text-sm font-semibold text-[#30495b] backdrop-blur-sm"><span className="mr-2 text-[#087578]">0{index + 1}</span>{step}</div>)}
+          </div>
+          <PrimaryLink className="mt-8">Create free account</PrimaryLink>
+        </div>
+      </section>
+
+      <footer className="bg-[#082832] py-10 text-[#bad0d2]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-center md:justify-between"><div className="w-fit rounded-lg bg-white px-3 py-2"><Brand /></div><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm"><a href="#product" className="hover:text-white">Product</a><a href="#workflow" className="hover:text-white">How it works</a><a href="#pricing" className="hover:text-white">Pricing</a><a href="#scope" className="hover:text-white">Product scope</a><a href="#about" className="hover:text-white">About</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="mailto:info.safetysight@gmail.com?subject=Security%20enquiry" className="hover:text-white">Security</a></div><p className="text-xs">© {new Date().getFullYear()} SafetySight</p></div>
       </footer>
     </div>
-  );
+  )
 }
