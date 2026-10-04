@@ -56,10 +56,10 @@ const productItems = [
   { name: 'Eye wash', date: '21 Jan 2028', state: 'Recorded', tone: 'ok' },
 ]
 
-function Brand() {
+function Brand({ className = 'h-9 w-auto sm:h-10' }) {
   return (
     <a href="#top" className="inline-flex items-center" aria-label="SafetySight home">
-      <img src="/images/safetysight-rectangle.png" alt="SafetySight" className="h-9 w-auto object-contain sm:h-10" />
+      <img src="/images/safetysight-rectangle.png" alt="SafetySight" className={`${className} object-contain`} />
     </a>
   )
 }
@@ -140,8 +140,8 @@ export default function LandingPage() {
   return (
     <div id="top" className="min-h-screen bg-[#fbfbf8] text-[#102a43]">
       <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
-        <div className="mx-auto flex h-14 max-w-[1360px] items-center justify-between rounded-full border border-white/70 bg-white/85 px-4 shadow-[0_10px_35px_rgba(16,42,67,0.10)] backdrop-blur-xl sm:h-16 sm:px-6">
-          <Brand />
+        <div className="mx-auto flex h-16 max-w-[1360px] items-center justify-between rounded-full border border-white/70 bg-white/90 px-4 shadow-[0_10px_35px_rgba(16,42,67,0.10)] backdrop-blur-xl sm:px-6">
+          <Brand className="h-12 w-auto" />
           <div className="hidden items-center gap-7 text-sm font-semibold text-[#3f5567] md:flex">
             <a href="#product" className="hover:text-[#075f69]">Product</a><a href="#workflow" className="hover:text-[#075f69]">How it works</a><a href="#pricing" className="hover:text-[#075f69]">Pricing</a><a href="#about" className="hover:text-[#075f69]">About</a><a href="#scope" className="hover:text-[#075f69]">Scope</a>
           </div>
@@ -270,7 +270,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="bg-[#082832] py-10 text-[#bad0d2]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-center md:justify-between"><div className="w-fit rounded-lg bg-white px-3 py-2"><Brand /></div><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm"><a href="#product" className="hover:text-white">Product</a><a href="#workflow" className="hover:text-white">How it works</a><a href="#pricing" className="hover:text-white">Pricing</a><a href="#scope" className="hover:text-white">Product scope</a><a href="#about" className="hover:text-white">About</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="mailto:info.safetysight@gmail.com?subject=Security%20enquiry" className="hover:text-white">Security</a></div><p className="text-xs">© {new Date().getFullYear()} SafetySight</p></div>
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-center md:justify-between"><div className="w-fit rounded-lg bg-white px-3 py-2"><Brand className="h-10 w-auto" /></div><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm"><a href="#product" className="hover:text-white">Product</a><a href="#workflow" className="hover:text-white">How it works</a><a href="#pricing" className="hover:text-white">Pricing</a><a href="#scope" className="hover:text-white">Product scope</a><a href="#about" className="hover:text-white">About</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="mailto:info.safetysight@gmail.com?subject=Security%20enquiry" className="hover:text-white">Security</a></div><p className="text-xs">© {new Date().getFullYear()} SafetySight</p></div>
       </footer>
     </div>
   )
