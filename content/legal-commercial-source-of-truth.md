@@ -95,7 +95,7 @@ The following statements are approved for current public copy:
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |
-| Monthly price per location | Decision required | $[REQUIRED] |
+| Monthly price | Verified from supplied pricing | $49 per month |
 | Annual price per location | Decision required | $[REQUIRED] |
 | GST treatment | Decision required | [inclusive/exclusive] |
 | Minimum charge/locations | Decision required | [REQUIRED] |
@@ -125,7 +125,7 @@ The following statements are approved for current public copy:
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |
-| Price | Verified as commercial approach | Custom pricing |
+| Price | Verified from supplied pricing | Negotiable |
 | Limits | Verified as commercial approach | Negotiated |
 | Onboarding | Supplied plan claim; operational verification required | Included or negotiated |
 | Support | Supplied plan claim; scope required | [REQUIRED: channel/hours/response target] |

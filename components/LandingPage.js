@@ -24,6 +24,8 @@ const workflow = [
 const plans = [
   {
     name: 'Free',
+    price: '$0',
+    priceDetail: 'No monthly fee',
     bestFor: 'Get your first kits organised',
     description: 'Start with one site, build a more consistent check routine and see how SafetySight fits your team.',
     included: ['Manage 1 location', 'Track up to 3 kits', 'Use up to 5 SightScans'],
@@ -32,6 +34,8 @@ const plans = [
   },
   {
     name: 'Standard',
+    price: '$49',
+    priceDetail: 'per month',
     bestFor: 'Keep routine checks moving as you grow',
     description: 'For organisations that need more capacity than Free and a clearer way to manage ongoing kit checks.',
     included: ['Your paid location allowance', 'Your paid kit allowance', 'Your paid SightScan allowance'],
@@ -41,6 +45,8 @@ const plans = [
   },
   {
     name: 'Enterprise',
+    price: 'Negotiable',
+    priceDetail: 'Tailored to your rollout',
     bestFor: 'Coordinate a larger rollout',
     description: 'Shape a setup around your organisation, with agreed limits and help getting teams started.',
     included: ['Limits agreed around your rollout', 'Onboarding for your team', 'Support for your rollout'],
@@ -242,7 +248,11 @@ export default function LandingPage() {
             {plans.map((plan) => (
               <article key={plan.name} className={`relative flex min-h-[390px] flex-col rounded-[1.25rem] border p-7 sm:p-8 ${plan.featured ? 'border-[#7eb8b5] bg-[#edf7f5] shadow-[0_18px_45px_rgba(16,42,67,0.10)]' : 'border-[#d7e1e0] bg-white'}`}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#087578]">{plan.name}</p>
-                <h3 className="mt-5 max-w-xs text-2xl font-bold leading-tight text-[#102a43]">{plan.bestFor}</h3>
+                <div className="mt-5 flex min-h-[54px] items-end gap-2">
+                  <p className={`${plan.name === 'Enterprise' ? 'text-3xl' : 'text-4xl'} font-extrabold tracking-[-0.035em] text-[#102a43]`}>{plan.price}</p>
+                  <p className="pb-1 text-sm font-semibold text-[#60717e]">{plan.priceDetail}</p>
+                </div>
+                <h3 className="mt-6 max-w-xs text-2xl font-bold leading-tight text-[#102a43]">{plan.bestFor}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#60717e]">{plan.description}</p>
                 <div className="my-7 h-px bg-[#d7e1e0]" />
                 <ul className="flex-1 space-y-4">
