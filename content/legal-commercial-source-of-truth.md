@@ -131,7 +131,7 @@ The following statements are approved for current public copy:
 | Included SightScans | Verified from supplied pricing | 5 additional per month |
 | Maximum locations | Verified from supplied pricing | 5 total |
 
-### Growth
+### Pro
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |

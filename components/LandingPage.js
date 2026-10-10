@@ -54,13 +54,13 @@ const plans = [
     href: SIGN_UP_URL,
   },
   {
-    name: 'Growth',
+    name: 'Pro',
     price: 'A$149',
     priceDetail: '/month · fixed',
     bestFor: 'Run a larger operation for one fixed price',
     description: 'More capacity for growing organisations that want predictable monthly pricing.',
     included: ['10 locations', '50 first-aid kits', '60 SightScans each month'],
-    cta: 'Choose Growth',
+    cta: 'Choose Pro',
     href: SIGN_UP_URL,
   },
   {
