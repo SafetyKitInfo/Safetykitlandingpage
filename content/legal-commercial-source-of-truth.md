@@ -82,12 +82,11 @@ The following statements are approved for current public copy:
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |
-| Price | Verified from supplied plan | $0 |
+| Price | Verified from supplied plan | A$0 |
 | Expiry | Decision required | Confirm whether Free is permanent or time-limited |
 | Locations | Verified from supplied plan | 1 |
 | Kits | Verified from supplied plan | 3 |
-| SightScans | Verified from supplied plan | 5 |
-| SightScan reset period | Decision required | [REQUIRED: total/lifetime, monthly or other] |
+| SightScans | Verified from supplied plan | 5 trial SightScans |
 | User limit | Decision required | [REQUIRED] |
 | Credit card required | Decision required | [REQUIRED] |
 
@@ -95,14 +94,15 @@ The following statements are approved for current public copy:
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |
-| Monthly price | Verified from supplied pricing | $49 per month |
+| Monthly price | Verified from supplied pricing | A$49 per month |
 | Annual price per location | Decision required | $[REQUIRED] |
 | GST treatment | Decision required | [inclusive/exclusive] |
 | Minimum charge/locations | Decision required | [REQUIRED] |
 | Included users | Decision required | [REQUIRED] |
-| Included kits | Decision required | [REQUIRED] |
-| Included SightScans | Decision required | [REQUIRED] |
-| Overage behaviour | Decision required | [hard limit/add-on/usage charge/fair use] |
+| Included locations | Verified from supplied pricing | 3 |
+| Included kits | Verified from supplied pricing | 15 |
+| Included SightScans | Verified from supplied pricing | 20 per month |
+| Overage behaviour | Verified from supplied pricing | Standard add-on available; maximum 5 locations total |
 | Upgrade timing | Decision required | [immediate/next period] |
 | Downgrade timing | Decision required | [REQUIRED] |
 | Cancellation timing | Proposed | Before next renewal; confirm in checkout and Terms |
@@ -121,12 +121,31 @@ The following statements are approved for current public copy:
 
 **Rule:** A permanent Free plan and a time-limited trial must be described separately. Never call a time-limited trial a Free plan.
 
+### Standard add-on
+
+| Field | Status | Authoritative value |
+| --- | --- | --- |
+| Monthly price | Verified from supplied pricing | A$20 per month |
+| Included locations | Verified from supplied pricing | 1 additional location |
+| Included kits | Verified from supplied pricing | 5 additional kits |
+| Included SightScans | Verified from supplied pricing | 5 additional per month |
+| Maximum locations | Verified from supplied pricing | 5 total |
+
+### Growth
+
+| Field | Status | Authoritative value |
+| --- | --- | --- |
+| Monthly price | Verified from supplied pricing | A$149 per month, fixed |
+| Included locations | Verified from supplied pricing | 10 |
+| Included kits | Verified from supplied pricing | 50 |
+| Included SightScans | Verified from supplied pricing | 60 per month |
+
 ### Enterprise
 
 | Field | Status | Authoritative value |
 | --- | --- | --- |
-| Price | Verified from supplied pricing | Negotiable |
-| Limits | Verified as commercial approach | Negotiated |
+| Price | Verified from supplied pricing | Custom quote |
+| Limits | Verified as commercial approach | Explicitly agreed |
 | Onboarding | Supplied plan claim; operational verification required | Included or negotiated |
 | Support | Supplied plan claim; scope required | [REQUIRED: channel/hours/response target] |
 | Integrations | Decision required | Do not advertise until available or contractually committed |

@@ -24,32 +24,52 @@ const workflow = [
 const plans = [
   {
     name: 'Free',
-    price: '$0',
-    priceDetail: 'No monthly fee',
+    price: 'A$0',
+    priceDetail: '',
     bestFor: 'Get your first kits organised',
     description: 'Start with one site, build a more consistent check routine and see how SafetySight fits your team.',
-    included: ['Manage 1 location', 'Track up to 3 kits', 'Use up to 5 SightScans'],
+    included: ['1 location', '3 first-aid kits', '5 trial SightScans'],
     cta: 'Create free account',
     href: SIGN_UP_URL,
   },
   {
     name: 'Standard',
-    price: '$49',
-    priceDetail: 'per month',
+    price: 'A$49',
+    priceDetail: '/month',
     bestFor: 'Keep routine checks moving as you grow',
-    description: 'For organisations that need more capacity than Free and a clearer way to manage ongoing kit checks.',
-    included: ['Your paid location allowance', 'Your paid kit allowance', 'Your paid SightScan allowance'],
+    description: 'A practical plan for small teams managing several workplaces and kits.',
+    included: ['3 locations', '15 first-aid kits', '20 SightScans each month'],
     cta: 'Start Standard',
     href: SIGN_UP_URL,
     featured: true,
   },
   {
+    name: 'Standard add-on',
+    price: 'A$20',
+    priceDetail: '/month',
+    bestFor: 'Add capacity without changing plans',
+    description: 'Extend Standard one location at a time as your organisation expands.',
+    included: ['1 additional location', '5 additional first-aid kits', '5 additional SightScans each month', 'Up to 5 locations total'],
+    cta: 'Add to Standard',
+    href: SIGN_UP_URL,
+  },
+  {
+    name: 'Growth',
+    price: 'A$149',
+    priceDetail: '/month · fixed',
+    bestFor: 'Run a larger operation for one fixed price',
+    description: 'More capacity for growing organisations that want predictable monthly pricing.',
+    included: ['10 locations', '50 first-aid kits', '60 SightScans each month'],
+    cta: 'Choose Growth',
+    href: SIGN_UP_URL,
+  },
+  {
     name: 'Enterprise',
-    price: 'Negotiable',
-    priceDetail: 'Tailored to your rollout',
+    price: 'Custom quote',
+    priceDetail: '',
     bestFor: 'Coordinate a larger rollout',
     description: 'Shape a setup around your organisation, with agreed limits and help getting teams started.',
-    included: ['Limits agreed around your rollout', 'Onboarding for your team', 'Support for your rollout'],
+    included: ['Allowances agreed for your rollout', 'Services agreed for your organisation'],
     cta: 'Contact sales',
     href: 'mailto:info.safetysight@gmail.com?subject=SafetySight%20Enterprise',
   },
@@ -244,12 +264,12 @@ export default function LandingPage() {
             <p className="max-w-2xl text-lg leading-relaxed text-[#4c6473] lg:justify-self-end">Choose a plan based on the number of locations, kits and SightScans your organisation needs.</p>
           </div>
 
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {plans.map((plan) => (
               <article key={plan.name} className={`relative flex min-h-[390px] flex-col rounded-[1.25rem] border p-7 sm:p-8 ${plan.featured ? 'border-[#7eb8b5] bg-[#edf7f5] shadow-[0_18px_45px_rgba(16,42,67,0.10)]' : 'border-[#d7e1e0] bg-white'}`}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#087578]">{plan.name}</p>
                 <div className="mt-5 flex min-h-[54px] items-end gap-2">
-                  <p className={`${plan.name === 'Enterprise' ? 'text-3xl' : 'text-4xl'} font-extrabold tracking-[-0.035em] text-[#102a43]`}>{plan.price}</p>
+                  <p className={`${plan.price.length > 8 ? 'text-3xl' : 'text-4xl'} font-extrabold tracking-[-0.035em] text-[#102a43]`}>{plan.price}</p>
                   <p className="pb-1 text-sm font-semibold text-[#60717e]">{plan.priceDetail}</p>
                 </div>
                 <h3 className="mt-6 max-w-xs text-2xl font-bold leading-tight text-[#102a43]">{plan.bestFor}</h3>
@@ -262,7 +282,7 @@ export default function LandingPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-sm leading-relaxed text-[#60717e]">Free allowances are shown above. Standard allowances depend on the paid plan available to your account; contact us if you need exact limits before signing up.</p>
+          <p className="mt-6 text-sm leading-relaxed text-[#60717e]">Prices are in Australian dollars. Standard add-ons increase capacity one location at a time, up to 5 locations total.</p>
         </div>
       </section>
 
