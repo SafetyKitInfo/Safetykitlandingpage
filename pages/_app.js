@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 
 const GOOGLE_ANALYTICS_ID = 'G-WDYX3E9F5B'
 
@@ -35,6 +36,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GA />
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }
