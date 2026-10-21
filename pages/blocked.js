@@ -12,43 +12,52 @@ export default function BlockedPage() {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
-      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 px-6 py-16 text-white">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.24),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(45,212,191,0.16),transparent_34%)]"
-        />
+      <main className="relative min-h-screen overflow-hidden bg-[#072b47] text-white">
+        <div className="mx-auto grid min-h-screen w-full max-w-[1600px] lg:grid-cols-[55%_45%]">
+          <section className="relative z-10 flex min-h-screen flex-col px-6 py-7 sm:px-12 sm:py-10 lg:px-[6.25vw] lg:py-14">
+            <div className="w-fit" aria-label="SafetySight">
+              <img
+                src="/images/safetysight-rectangle.png"
+                alt="SafetySight"
+                className="h-auto w-52 brightness-0 invert sm:w-64"
+              />
+            </div>
 
-        <section className="relative w-full max-w-xl rounded-3xl border border-white/10 bg-white/[0.07] p-8 shadow-2xl shadow-black/30 backdrop-blur sm:p-12">
-          <a href="/" aria-label="SafetySight home" className="inline-flex rounded-xl bg-white px-4 py-3">
+            <div className="my-auto max-w-[680px] py-16 lg:py-20">
+              <p className="text-xs font-bold uppercase tracking-[0.34em] text-[#29dccb] sm:text-sm">
+                Access unavailable
+              </p>
+              <h1 className="mt-7 text-[clamp(2.75rem,5.3vw,5.5rem)] font-bold leading-[0.99] tracking-[-0.055em] text-white">
+                Access from this network is restricted.
+              </h1>
+              <p className="mt-8 max-w-[610px] text-base leading-8 text-[#d7e4ec] sm:text-xl sm:leading-9">
+                SafetySight isn’t available from this network. If you believe this restriction is unexpected, contact your network administrator.
+              </p>
+              <a
+                href="/"
+                className="mt-14 inline-flex min-h-11 items-center border-b border-[#9db9c8] text-sm font-medium tracking-[0.08em] text-[#e8f1f5] transition hover:border-[#29dccb] hover:text-[#29dccb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#29dccb] focus-visible:ring-offset-4 focus-visible:ring-offset-[#072b47]"
+              >
+                Return to SafetySight
+              </a>
+            </div>
+
+            <div className="pb-1">
+              <div className="h-0.5 w-9 bg-[#29dccb]" />
+              <p className="mt-4 text-[0.63rem] font-semibold uppercase tracking-[0.32em] text-[#9db9c8]">
+                Safer people. Stronger workplaces.
+              </p>
+            </div>
+          </section>
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42vh] opacity-55 lg:relative lg:h-auto lg:min-h-screen lg:opacity-100">
             <img
-              src="/images/safetysight-rectangle.png"
-              alt="SafetySight"
-              className="h-9 w-auto object-contain"
+              src="/images/network-access-field.png"
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover object-[center_44%]"
             />
-          </a>
-
-          <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-amber-300/25 bg-amber-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-amber-200">
-            Access unavailable
           </div>
-
-          <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-            This network can’t access SafetySight.
-          </h1>
-          <p className="mt-5 max-w-lg text-base leading-7 text-slate-300 sm:text-lg">
-            Access from this network has been restricted. If you believe this is an error, contact the SafetySight team and include the time you attempted to visit.
-          </p>
-
-          <a
-            href="mailto:info.safetysight@gmail.com?subject=SafetySight%20access%20review"
-            className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-sky-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-          >
-            Request an access review
-          </a>
-
-          <p className="mt-8 text-xs leading-5 text-slate-500">
-            Reference: network access policy
-          </p>
-        </section>
+        </div>
       </main>
     </>
   )
