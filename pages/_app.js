@@ -1,15 +1,24 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import Script from 'next/script'
+
+const GOOGLE_ANALYTICS_ID = 'G-WDYX3E9F5B'
 
 function GA() {
-  const id = process.env.NEXT_PUBLIC_GA_ID
-  if (!id) return null
   return (
     <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
-      <script
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${id}');`,
+          __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ANALYTICS_ID}');`,
         }}
       />
     </>
