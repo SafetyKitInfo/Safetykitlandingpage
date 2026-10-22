@@ -37,7 +37,7 @@ npm start
 - Replace `public/logo.png` with your official logo (PNG or SVG). If you provide an SVG, update references to `/logo.svg` or keep `/logo.png` and upload an SVG as `logo.png`-wrapped SVG if desired.
 - Edit hero text in `components/Hero.js`.
 - Update features in `components/Features.js` (an array at the top).
-- Update contact behaviour in `components/ContactForm.js`. The form submits to `/api/contact` which currently logs submissions to the server console. Replace `pages/api/contact.js` with a real integration (SendGrid, Mailgun, Postmark, or a serverless email provider).
+- Update contact behaviour in `components/ContactForm.js` or `components/LandingPage.js`. Current contact actions use fixed external links; the retired `/api/contact` route intentionally rejects submissions so personal data is not written to logs or local files.
 
 ## Deploy to Vercel
 
