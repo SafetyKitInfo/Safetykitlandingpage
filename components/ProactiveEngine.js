@@ -29,7 +29,7 @@ export default function ProactiveEngine() {
             Proactive Engine
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Your Next 3 Actions — Clearly Prioritised
+            Your Next 3 Actions, Clearly Prioritised
           </h2>
             <p className="text-lg text-slate-600 max-w-xl mx-auto">
             SafetySight surfaces the most important steps so your team can quickly decide what to do next.
@@ -86,7 +86,7 @@ export default function ProactiveEngine() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Stop guessing what to fix next</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                SafetySight's Proactive Engine analyses your kit data and ranks the actions that will have the biggest compliance impact. No more prioritising from a spreadsheet — the platform does it for you.
+                SafetySight's Proactive Engine analyses your kit data and ranks the actions that will have the biggest compliance impact. The platform prioritises the work for you, without another spreadsheet.
               </p>
             </div>
             <ul className="space-y-4">

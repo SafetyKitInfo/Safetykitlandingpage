@@ -4,13 +4,13 @@ export default function HowToGetStarted() {
       number: "1",
       title: "Book a discovery call",
       description: "A short call to understand your centres, workflows, and regulatory context. We'll outline a setup plan tailored to your organisation.",
-      details: ["Understand your current readiness workflow", "Identify quick wins for your specific centres", "No obligation — answer your questions first"]
+      details: ["Understand your current readiness workflow", "Identify quick wins for your specific centres", "No obligation. We answer your questions first"]
     },
     {
       number: "2",
       title: "Set up your kits and locations",
       description: "Our team guides you through onboarding. Tag kits with QR codes, configure centres and rooms, and set up checklists.",
-      details: ["Initial setup can take 30–60 minutes for your first centre", "Remote or in-person — your choice", "Your team gets full access and guided training early in rollout"]
+      details: ["Initial setup can take 30---60 minutes for your first centre", "Choose remote or in-person setup", "Your team gets full access and guided training early in rollout"]
     },
     {
       number: "3",
@@ -50,7 +50,7 @@ export default function HowToGetStarted() {
                 <ul className="space-y-1">
                   {step.details.map((detail, didx) => (
                     <li key={didx} className="flex items-start gap-2 text-xs text-slate-500">
-                      <span className="text-sk-success mt-0.5">•</span>
+                      <span className="text-sk-success mt-0.5">--�</span>
                       <span>{detail}</span>
                     </li>
                   ))}

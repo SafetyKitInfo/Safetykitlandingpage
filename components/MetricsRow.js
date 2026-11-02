@@ -46,7 +46,7 @@ export default function MetricsRow() {
           ))}
         </motion.div>
         <p className="text-xs text-slate-400 text-center mt-5">
-          Indicators based on data entered into SafetySight — not a legal compliance certification.
+          Indicators are based on data entered into SafetySight. They are not a legal compliance certification.
         </p>
       </div>
     </section>

@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="order-2 md:order-1">
           <div className="mb-4 text-sm font-medium text-sk-primary uppercase tracking-wide">Built for readiness. Built for trust.</div>
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">Reliable kit readiness your teams will actually use</h1>
-          <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">Reduce expired items, simplify audits, and improve visibility — without extra administrative work.</p>
+          <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">Reduce expired items, simplify audits and improve visibility without extra administrative work.</p>
 
           {/* Outcomes pill/card */}
           <div className="mt-6 inline-flex items-center rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm">
@@ -25,7 +25,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3">
             <a href="#get-started" className="inline-block bg-sk-primary text-white px-5 py-2.5 rounded-lg shadow-sm text-sm font-medium hover:bg-sk-primaryHover">Start 30-day Pilot</a>
-            <a href="#contact" className="inline-block border border-sk-primary text-sk-primary px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-sk-surfaceMuted">Book a 15‑min Demo</a>
+            <a href="#contact" className="inline-block border border-sk-primary text-sk-primary px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-sk-surfaceMuted">Book a 15---min Demo</a>
           </div>
           <p className="text-xs text-slate-500 mt-3">No credit card. Cancel anytime.</p>
         </div>

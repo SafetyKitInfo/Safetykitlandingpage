@@ -1,6 +1,6 @@
 export default function FeatureGrid(){
   const features = [
-    {title:'Faster checks', desc:'Mobile scanning that completes kit checks in seconds — reduces staff time on manual audits.'},
+    {title:'Faster checks', desc:'Mobile scanning completes kit checks in seconds and reduces time spent on manual audits.'},
     {title:'Prevent expiries', desc:'Predictive expiry alerts that remove expired items before they cause incidents.'},
     {title:'Reduce waste', desc:'Automated inventory alerts and reorder suggestions to cut wasted stock and cost.'},
     {title:'Pass audits', desc:'Audit-ready logs and exportable evidence to shorten audit prep and responses.'},

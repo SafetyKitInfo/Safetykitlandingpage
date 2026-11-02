@@ -2,7 +2,7 @@
 
 This repository contains a minimal, modern landing page scaffold for SafetySight built with Next.js and Tailwind CSS. It's ready to customize and deploy to Vercel.
 
-## What’s included
+## What--�s included
 
 - `pages/` - Next.js pages (home and API stub)
 - `components/` - `Hero`, `Features`, `ContactForm`
@@ -53,21 +53,21 @@ vercel
 
 ## Generating a QR code for your deployed site
 
-Option A — Use the `qrencode` CLI (Linux)
+Option A --- Use the `qrencode` CLI (Linux)
 
 ```bash
 sudo apt install qrencode
 qrencode -o qrcode.png "https://your-site.vercel.app" -s 10
 ```
 
-Option B — Use Node locally
+Option B --- Use Node locally
 
 ```bash
 npm install -g qrcode-terminal
 node -e "require('qrcode-terminal').generate('https://your-site.vercel.app', {small: true})"
 ```
 
-Option C — Use an online generator
+Option C --- Use an online generator
 
 Use any trusted QR code generator (e.g. https://www.qr-code-generator.com/) and paste your site URL.
 

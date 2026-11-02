@@ -1,6 +1,6 @@
 # SafetySight Legal and Commercial Source of Truth
 
-**Document status:** Internal working document — not customer-facing
+**Document status:** Internal working document --- not customer-facing
 **Last reviewed:** 4 October 2026
 **Owner:** [REQUIRED: NAME AND ROLE]
 
@@ -10,11 +10,11 @@ Do not publish a claim, price, security control or contractual promise unless it
 
 ## Status key
 
-- **Verified** — supported by the live product, configuration, executed agreement or responsible technical owner.
-- **Decision required** — a commercial or legal decision has not been made.
-- **Technical verification required** — an engineer or provider configuration must confirm it.
-- **Legal review required** — proposed wording requires Australian legal review.
-- **Not offered** — must not appear in public copy.
+- **Verified** --- supported by the live product, configuration, executed agreement or responsible technical owner.
+- **Decision required** --- a commercial or legal decision has not been made.
+- **Technical verification required** --- an engineer or provider configuration must confirm it.
+- **Legal review required** --- proposed wording requires Australian legal review.
+- **Not offered** --- must not appear in public copy.
 
 ## 1. Business identity
 
@@ -174,7 +174,7 @@ The following statements are approved for current public copy:
 
 ## 7. Personal information and customer content
 
-### Expected categories — verify against production
+### Expected categories --- verify against production
 
 - Account name, email, organisation, role and permissions.
 - Workplace, location, kit, inventory and inspection information.
@@ -206,7 +206,7 @@ The following statements are approved for current public copy:
 
 | Function | Status | Provider | Processing/storage country or region |
 | --- | --- | --- | --- |
-| Authentication | Partially verified | Microsoft Entra — exact product [REQUIRED] | [REQUIRED] |
+| Authentication | Partially verified | Microsoft Entra --- exact product [REQUIRED] | [REQUIRED] |
 | Application hosting | Technical verification required | [REQUIRED] | [REQUIRED] |
 | Database | Technical verification required | [REQUIRED] | [REQUIRED] |
 | Object/image storage | Technical verification required | [REQUIRED] | [REQUIRED] |

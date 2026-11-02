@@ -15,11 +15,11 @@ export default function IssuesVsSolutions() {
     {
       issue: "Poor recordkeeping for audits",
       problem: "Scrambling to reconstruct check histories from memory or scattered spreadsheets before an audit.",
-      solution: "Timestamped logs for every check are stored automatically and accessible in one dashboard — ready to export in under two minutes."
+      solution: "Timestamped logs for every check are stored automatically in one dashboard and ready to export in under two minutes."
     },
     {
       issue: "Manual checks waste staff time",
-      problem: "Full kit audits done manually average 3–5 hours per week across a centre.",
+      problem: "Full kit audits done manually average 3---5 hours per week across a centre.",
       solution: "Mobile scanning streamlines full kit checks and can help teams reclaim admin time each month."
     },
     {

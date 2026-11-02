@@ -1,4 +1,4 @@
-# SafetySight — Content Export
+# SafetySight --- Content Export
 
 This file contains the full landing-page copy for SafetySight in content-only format (CMS-ready).
 
@@ -10,7 +10,7 @@ This file contains the full landing-page copy for SafetySight in content-only fo
 Reduce expired first-aid kit risk. Reduce audit stress.
 
 ## Subhead
-Automate kit checks, track expiries, and stay audit‑ready across every room and centre.
+Automate kit checks, track expiries, and stay audit---ready across every room and centre.
 
 ## Micro-metrics
 - Faster kit checks
@@ -30,18 +30,18 @@ Automate kit checks, track expiries, and stay audit‑ready across every room an
 # Product Modules (short cards)
 
 ## Section title
-We use SafetySight for…
+We use SafetySight for--�
 
 ## Subline
 Core modules that make kit compliance simple and repeatable.
 
 ## Cards
-- Kit Scanning — Scan, log, and verify contents in seconds.
-- Expiry Tracking — Predictive alerts months before expiry.
-- Inventory Alerts — Low-stock triggers and suggested reorders.
-- Audit Logs — Complete evidence trail for every check.
-- Readiness Dashboard — Centre & room visibility at a glance.
-- AI Safety Assistant — Quick SOP answers and reminders.
+- Kit Scanning --- Scan, log, and verify contents in seconds.
+- Expiry Tracking --- Predictive alerts months before expiry.
+- Inventory Alerts --- Low-stock triggers and suggested reorders.
+- Audit Logs --- Complete evidence trail for every check.
+- Readiness Dashboard --- Centre & room visibility at a glance.
+- AI Safety Assistant --- Quick SOP answers and reminders.
 
 ---
 
@@ -63,7 +63,7 @@ Before SafetySight
 - No cross-centre visibility for managers.
 
 ## Quote
-“We were often chasing records and hoping we’d pass audits.” — Centre Director
+--�We were often chasing records and hoping we--�d pass audits.--� --- Centre Director
 
 ---
 
@@ -79,11 +79,11 @@ From chaotic audits to stronger day-to-day readiness.
 - Scan kits in 3 seconds and record evidence instantly.
 - Automated expiry alerts stop expired items in their tracks.
 - Managers see centre health in a single dashboard.
-- Pull audit‑ready reports in under 10 seconds.
+- Pull audit---ready reports in under 10 seconds.
 
 ## Comparison lines
-- Before: Manual and inconsistent kit checks → After: Automated checks and centralised records.
-- Before: Guessing what to replace → After: Automatic expiry & stock alerts.
+- Before: Manual and inconsistent kit checks -�� After: Automated checks and centralised records.
+- Before: Guessing what to replace -�� After: Automatic expiry & stock alerts.
 
 ## CTA
 Book a demo
@@ -93,18 +93,18 @@ Book a demo
 # Operational Transformation
 
 ## Headline
-Make compliance a daily habit, not a once‑a‑year scramble
+Make compliance a daily habit, not a once---a---year scramble
 
 ## Subline
-Templates, mini‑checks, and self‑audits keep improvements permanent.
+Templates, mini---checks, and self---audits keep improvements permanent.
 
 ## How it works (3-step)
-1. Scan — QR or barcode scan per kit.
-2. Track — Items, lot numbers and expiries tracked automatically.
-3. Audit — Instant evidence exports for assessors.
+1. Scan --- QR or barcode scan per kit.
+2. Track --- Items, lot numbers and expiries tracked automatically.
+3. Audit --- Instant evidence exports for assessors.
 
 ## Quote
-”We don’t think about kit compliance anymore — SafetySight handles it.” — Regional Manager
+--�We don--�t think about kit compliance anymore --- SafetySight handles it.--� --- Regional Manager
 
 ---
 
@@ -125,33 +125,33 @@ Real time saved for educators and faster audit prep for managers.
 
 # Feature Deep-dive (6 tiles)
 
-Kit Scanning — Scan a kit and log contents in seconds.
+Kit Scanning --- Scan a kit and log contents in seconds.
 
-Expiry Alerts — Predictive alerts so you replace early, not late.
+Expiry Alerts --- Predictive alerts so you replace early, not late.
 
-Inventory & Reorder — Low-stock triggers and suggested orders.
+Inventory & Reorder --- Low-stock triggers and suggested orders.
 
-Training & SOPs — Quick micro‑courses and one‑tap SOP access.
+Training & SOPs --- Quick micro---courses and one---tap SOP access.
 
-Audit Logs & Reports — Filterable evidence for every check.
+Audit Logs & Reports --- Filterable evidence for every check.
 
-Integrations & API — Sync with rostering, procurement, and asset systems.
+Integrations & API --- Sync with rostering, procurement, and asset systems.
 
 ---
 
 # Case Studies / Testimonials (sample entries)
 
-- Customer Example — “SafetySight simplified our kit checks and improved audit readiness.” — Centre Director.
-- Maple Childcare — “Audits used to take days. Now they take minutes.” — Operations Lead.
-- Pilot School Group — “We standardised kit checks across multiple sites during the pilot.” — Regional Manager.
+- Customer Example --- --�SafetySight simplified our kit checks and improved audit readiness.--� --- Centre Director.
+- Maple Childcare --- --�Audits used to take days. Now they take minutes.--� --- Operations Lead.
+- Pilot School Group --- --�We standardised kit checks across multiple sites during the pilot.--� --- Regional Manager.
 
 ---
 
 # How It Works (concise)
 
-1. Tag & scan — Put a QR on each kit, scan with the app.
-2. Automate checks — Schedules, reminders, auto‑alerts.
-3. Report & prove — Export reports for audits or regulators.
+1. Tag & scan --- Put a QR on each kit, scan with the app.
+2. Automate checks --- Schedules, reminders, auto---alerts.
+3. Report & prove --- Export reports for audits or regulators.
 
 ---
 
@@ -166,13 +166,13 @@ Compliance that lasts
 - Managers get oversight without micromanaging.
 
 ## Quote
-“It’s no longer up to memory. Every kit follows the same standard.” — Lead Educator
+--�It--�s no longer up to memory. Every kit follows the same standard.--� --- Lead Educator
 
 ---
 
 # Pricing Tease / Value anchor
 
-Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per‑feature tiers.
+Start small, scale fast. Pilot a single centre or roll out across your entire network. Pricing scales with centres, not complicated per---feature tiers.
 
 CTAs: Request pricing / Book pilot
 
@@ -205,8 +205,8 @@ We respect privacy. No spam. Customer Success assists with adoption.
 # Styling & Copy Guidelines (developer notes)
 
 - Use alternating text/image blocks.
-- Keep paragraphs to 2–4 lines on mobile.
-- Place human quotes every 2–3 sections.
+- Keep paragraphs to 2---4 lines on mobile.
+- Place human quotes every 2---3 sections.
 - Bold numbers and use them as primary visual anchors.
 - CTAs at top, mid, bottom.
 - Use simple verbs: track, scan, alert, verify, report, improve.

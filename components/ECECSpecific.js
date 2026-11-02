@@ -6,7 +6,7 @@ export default function ECECSpecific() {
   const smePoints = [
     {
       scenario: "Multi-Location Kit Management",
-      summary: "Track every location's kit across your business — offices, sites, vehicles — with one tap per check.",
+      summary: "Track kits across every office, site and vehicle with one tap per check.",
       story: "Staff scan the warehouse kit in 2 minutes. The dashboard flags which items need replacing before the next check is due."
     },
     {
@@ -16,7 +16,7 @@ export default function ECECSpecific() {
     },
     {
       scenario: "Multi-Site Business Oversight",
-      summary: "One dashboard shows readiness status across 2, 5, or 15 locations — no spreadsheets.",
+      summary: "One dashboard shows readiness status across 2, 5 or 15 locations without spreadsheets.",
       story: "Business owners see at a glance which sites need attention first, with the ability to drill down quickly."
     }
   ];

@@ -1,12 +1,12 @@
 # SafetySight
 
-> SafetySight is a mobile-first compliance platform that helps small and medium businesses (SMEs) manage first-aid kit expiry, inventory health, and audit readiness across one or more locations. While purpose-built features exist for ECEC and healthcare, SafetySight serves any SME with WHS first-aid kit obligations — including trades, hospitality, retail, construction, childcare, clinics, and offices. Built for the Australian and New Zealand market.
+> SafetySight is a mobile-first compliance platform that helps small and medium businesses (SMEs) manage first-aid kit expiry, inventory health, and audit readiness across one or more locations. While purpose-built features exist for ECEC and healthcare, SafetySight serves any SME with WHS first-aid kit obligations --- including trades, hospitality, retail, construction, childcare, clinics, and offices. Built for the Australian and New Zealand market.
 
 SafetySight replaces manual spreadsheet-based kit audits with mobile QR scanning, automated expiry alerts, and timestamped audit-ready reports. It supports compliance with Australian WHS regulations, Queensland ECEC standards, the National Quality Framework (NQF), and first-aid kit standards (AS/NZS 4003).
 
 ## Core Product
 
-- [Platform Overview](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): How SafetySight works — scan, track, and report in three steps
+- [Platform Overview](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): How SafetySight works --- scan, track, and report in three steps
 - [WHS Readiness Dashboard](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Live readiness score across kits, inventory, inspection coverage, and audit frequency
 - [Proactive Engine](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#how-it-works): Automatically ranks and surfaces the next three highest-impact compliance actions
 - [Risk Trend Monitoring](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#dashboard): Tracks expiry breaches, incidents, and audit readiness over time
@@ -17,7 +17,7 @@ SafetySight is designed for any SME in Australia or New Zealand that must mainta
 
 - [ECEC Centres](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Early childhood centres managing room-by-room kit compliance and NQF audits
 - [Healthcare Clinics & Medical Practices](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Clinics needing audit evidence for healthcare accreditation
-- [Multi-site Networks](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Any business overseeing 2–15+ locations from a single dashboard
+- [Multi-site Networks](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Any business overseeing 2---15+ locations from a single dashboard
 - [Trades & Construction](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Businesses with mobile or site-based kit obligations
 - [Hospitality & Retail](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Venues and stores needing simple, consistent kit checks
 - [Disability, Aged Care & Allied Health](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#who-we-serve): Providers with ongoing WHS compliance obligations
@@ -44,11 +44,11 @@ SafetySight is designed for any SME in Australia or New Zealand that must mainta
 
 ## Getting Started
 
-- [Book a Demo](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): 15–30 min live walkthrough of the dashboard and mobile scanning
-- [30-Day Pilot](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): Full setup, QR tagging, and onboarding support — no credit card required
+- [Book a Demo](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): 15---30 min live walkthrough of the dashboard and mobile scanning
+- [30-Day Pilot](https://safetykitlandingpage-icsxz5x93-safetykits-projects.vercel.app/#contact): Full setup, QR tagging, and onboarding support --- no credit card required
 - Setup time: under 1 day for the first centre
 - Contact: info.safetysight@gmail.com
 
 ## About
 
-SafetySight is an early-stage SaaS company founded in Australia, focused on reducing first-aid kit compliance risk for SMEs across any industry — from childcare and healthcare to trades, hospitality, retail, and corporate offices. The platform is guidance and record-keeping software — it supports WHS readiness but does not certify legal compliance or replace professional WHS advice.
+SafetySight is an early-stage SaaS company founded in Australia, focused on reducing first-aid kit compliance risk for SMEs across any industry --- from childcare and healthcare to trades, hospitality, retail, and corporate offices. The platform is guidance and record-keeping software --- it supports WHS readiness but does not certify legal compliance or replace professional WHS advice.

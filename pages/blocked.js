@@ -42,9 +42,8 @@ export default function BlockedPage() {
             </div>
 
             <div className="pb-1">
-              <div className="h-0.5 w-9 bg-[#29dccb]" />
-              <p className="mt-4 text-[0.63rem] font-semibold uppercase tracking-[0.32em] text-[#9db9c8]">
-                Safer people. Stronger workplaces.
+              <p className="text-[0.63rem] font-semibold uppercase tracking-[0.32em] text-[#9db9c8]">
+                Turning Chaos into Clarity
               </p>
             </div>
           </section>

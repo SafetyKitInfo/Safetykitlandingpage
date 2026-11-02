@@ -20,21 +20,21 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-  			sk: {
-  				primary: '#0b5f78',
-  				primaryHover: '#08465b',
-  				primaryLight: '#dff6f7',
-  				accent: '#14b8a6',
+			 sk: {
+				primary: '#1FB6A6',
+				primaryHover: '#0F766E',
+				primaryLight: '#E8F7F5',
+				accent: '#D9A441',
   				success: '#10b981',
   				successLight: '#dff8ed',
   				successText: '#047857',
-  				warning: '#eab308',
+				warning: '#f59e0b',
   				danger: '#ef4444',
-  				text: '#102a43',
-  				muted: '#637381',
+				text: '#1F2937',
+				muted: '#626D7B',
   				surface: '#ffffff',
-  				surfaceMuted: '#f6faf9',
-  				border: '#d8e7ea',
+				surfaceMuted: '#F4F6F8',
+				border: '#D9E1E7',
   			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

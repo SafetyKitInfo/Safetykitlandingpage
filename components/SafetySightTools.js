@@ -134,7 +134,7 @@ function ToolsMockup() {
           </div>
         </div>
       </div>
-      <p className="mt-3 text-center text-xs text-slate-500">Illustrative interface — recommendations are reviewed by a person before submission.</p>
+      <p className="mt-3 text-center text-xs text-slate-500">Illustrative interface. Recommendations are reviewed by a person before submission.</p>
     </div>
   );
 }

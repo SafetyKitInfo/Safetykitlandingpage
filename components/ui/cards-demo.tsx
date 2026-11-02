@@ -5,7 +5,7 @@ const PROCESS_PHASES = [
     id: "process-1",
     title: "Compliance that runs itself",
     description:
-      "SafetySight monitors inspections, expiries, and risk rules in the background — nothing is missed without manual follow-up.",
+      "SafetySight monitors inspections, expiries and risk rules in the background, so nothing is missed without manual follow-up.",
     Icon: RefreshCw,
     iconBg: "bg-sk-primaryLight",
     iconColor: "text-sk-primary",
@@ -32,7 +32,7 @@ const PROCESS_PHASES = [
     id: "process-4",
     title: "Stronger audit readiness",
     description:
-      "Every inspection is automatically logged, time-stamped, and exportable — helping reduce audit prep time.",
+      "Every inspection is automatically logged, time-stamped and exportable, helping reduce audit preparation time.",
     Icon: ClipboardCheck,
     iconBg: "bg-sk-primaryLight",
     iconColor: "text-sk-primary",

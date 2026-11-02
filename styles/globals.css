@@ -7,7 +7,8 @@ html, body, #__next {
 }
 
 body {
-  @apply bg-slate-50 text-slate-800;
+  background: var(--ss-off-white);
+  color: var(--ss-text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,13 +19,27 @@ body {
   font-family: "DM Serif Display", Georgia, serif;
 }
 
+:root {
+  --ss-teal: #1FB6A6;
+  --ss-teal-dark: #0F766E;
+  --ss-off-white: #F4F6F8;
+  --ss-gold: #D9A441;
+  --ss-text: #1F2937;
+  --ss-text-muted: #626D7B;
+  --ss-border: #D9E1E7;
+  --ss-white: #FFFFFF;
+  --ss-success: #10B981;
+  --ss-warning: #F59E0B;
+  --ss-critical: #EF4444;
+}
+
 .hero-image-wash {
-  background: linear-gradient(90deg, rgba(251,251,248,.99) 0%, rgba(251,251,248,.94) 34%, rgba(251,251,248,.42) 59%, rgba(251,251,248,.05) 100%);
+  background: linear-gradient(90deg, rgba(244,246,248,.99) 0%, rgba(244,246,248,.95) 34%, rgba(244,246,248,.44) 59%, rgba(244,246,248,.06) 100%);
 }
 
 @media (max-width: 767px) {
   .hero-image-wash {
-    background: linear-gradient(180deg, rgba(251,251,248,.97) 0%, rgba(251,251,248,.90) 56%, rgba(251,251,248,.28) 100%);
+    background: linear-gradient(180deg, rgba(244,246,248,.98) 0%, rgba(244,246,248,.92) 56%, rgba(244,246,248,.30) 100%);
   }
 }
 
@@ -39,7 +54,7 @@ html {
   font-weight: 400;
   line-height: 1;
   letter-spacing: -.035em;
-  color: #102a43;
+  color: var(--ss-text);
 }
 
 .legal-copy h2 {
@@ -47,12 +62,12 @@ html {
   font-size: 1.25rem;
   font-weight: 800;
   line-height: 1.35;
-  color: #102a43;
+  color: var(--ss-text);
 }
 
 .legal-copy p,
 .legal-copy li {
-  color: #4c6473;
+  color: var(--ss-text-muted);
   line-height: 1.75;
 }
 
@@ -71,7 +86,7 @@ html {
 }
 
 .legal-copy a {
-  color: #075f69;
+  color: var(--ss-teal-dark);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -83,22 +98,22 @@ html {
   font-weight: 800;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #087578;
+  color: var(--ss-teal-dark);
 }
 
 .legal-copy .updated {
   font-size: .875rem;
   font-weight: 600;
-  color: #60717e;
+  color: var(--ss-text-muted);
 }
 
 .legal-copy .notice {
   margin-top: 2rem;
-  border-left: 3px solid #087578;
+  border-left: 3px solid var(--ss-teal);
   border-radius: 0 .75rem .75rem 0;
-  background: #edf7f5;
+  background: color-mix(in srgb, var(--ss-teal) 8%, white);
   padding: 1rem 1.25rem;
-  color: #30495b;
+  color: var(--ss-text);
   line-height: 1.7;
 }
 

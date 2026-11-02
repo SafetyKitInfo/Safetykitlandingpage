@@ -64,7 +64,7 @@ export default function TrustAndCompliance() {
               <ul className="space-y-2">
                 {col.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                    <span className="text-sk-success mt-0.5 font-bold flex-shrink-0">â€¢</span>
+                    <span className="text-sk-success mt-0.5 font-bold flex-shrink-0">--¢</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -86,9 +86,9 @@ export default function TrustAndCompliance() {
           <div className="flex-1">
             <h3 className="text-sm font-bold mb-2">Risk-Free Pilot</h3>
             <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-[#d9f4f3]">
-              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">â€¢</span>30-day pilot for 1â€“2 centres</span>
-              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">â€¢</span>Full setup support included</span>
-              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">â€¢</span>No obligation to continue</span>
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">--¢</span>30-day pilot for 1---2 centres</span>
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">--¢</span>Full setup support included</span>
+              <span className="flex items-center gap-1.5"><span className="text-[#37d5ca]">--¢</span>No obligation to continue</span>
             </div>
           </div>
           <a href="#contact" className="flex-shrink-0 bg-white text-sk-primary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-sk-surfaceMuted">
