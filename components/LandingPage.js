@@ -34,7 +34,7 @@ const plans = [
   },
   {
     name: 'Standard',
-    price: 'A$49',
+    price: 'A$90',
     priceDetail: '/month',
     bestFor: 'Keep routine checks moving as you grow',
     description: 'A practical plan for small teams managing several workplaces and kits.',
@@ -45,8 +45,8 @@ const plans = [
   },
   {
     name: 'Standard add-on',
-    price: 'A$20',
-    priceDetail: '/month',
+    price: 'A$30',
+    priceDetail: '/month per location',
     bestFor: 'Add capacity without changing plans',
     description: 'Extend Standard one location at a time as your organisation expands.',
     included: ['1 additional location', '5 additional first-aid kits', '5 additional SightScans each month', 'Up to 5 locations total'],
@@ -55,10 +55,10 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: 'A$149',
-    priceDetail: '/month · fixed',
-    bestFor: 'Run a larger operation for one fixed price',
-    description: 'More capacity for growing organisations that want predictable monthly pricing.',
+    price: 'A$300',
+    priceDetail: '/month',
+    bestFor: 'Run a larger operation with predictable pricing',
+    description: 'Ten locations at the same A$30 per-location monthly rate.',
     included: ['10 locations', '50 first-aid kits', '60 SightScans each month'],
     cta: 'Choose Pro',
     href: SIGN_UP_URL,
@@ -68,7 +68,7 @@ const plans = [
     price: 'Custom quote',
     priceDetail: '',
     bestFor: 'Coordinate a larger rollout',
-    description: 'Shape a setup around your organisation, with agreed limits and help getting teams started.',
+    description: 'Shape a negotiated package around your organisation, rollout needs and required support.',
     included: ['Allowances agreed for your rollout', 'Services agreed for your organisation'],
     cta: 'Contact sales',
     href: 'mailto:info.safetysight@gmail.com?subject=SafetySight%20Enterprise',
@@ -282,7 +282,7 @@ export default function LandingPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-sm leading-relaxed text-[#626D7B]">Prices are in Australian dollars. Standard add-ons increase capacity one location at a time, up to 5 locations total.</p>
+          <p className="mt-6 text-sm leading-relaxed text-[#626D7B]">Prices are in Australian dollars. Standard and Pro use a consistent A$30 per-location monthly rate. Enterprise pricing is negotiated. Standard add-ons increase capacity one location at a time, up to 5 locations total.</p>
         </div>
       </section>
 
