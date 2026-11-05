@@ -21,60 +21,6 @@ const workflow = [
   { number: '03', title: 'Keep the history', copy: 'Retain a clear record of what was checked, when and by whom.', Icon: FileClock },
 ]
 
-const plans = [
-  {
-    name: 'Free',
-    price: 'A$0',
-    priceDetail: '',
-    bestFor: 'Get your first kits organised',
-    description: 'Start with one site, build a more consistent check routine and see how SafetySight fits your team.',
-    included: ['1 location', '3 first-aid kits', '5 trial SightScans'],
-    cta: 'Create free account',
-    href: SIGN_UP_URL,
-  },
-  {
-    name: 'Standard',
-    price: 'A$90',
-    priceDetail: '/month',
-    bestFor: 'Keep routine checks moving as you grow',
-    description: 'A practical plan for small teams managing several workplaces and kits.',
-    included: ['3 locations', '15 first-aid kits', '20 SightScans each month'],
-    cta: 'Start Standard',
-    href: SIGN_UP_URL,
-    featured: true,
-  },
-  {
-    name: 'Standard add-on',
-    price: 'A$30',
-    priceDetail: '/month per location',
-    bestFor: 'Add capacity without changing plans',
-    description: 'Extend Standard one location at a time as your organisation expands.',
-    included: ['1 additional location', '5 additional first-aid kits', '5 additional SightScans each month', 'Up to 5 locations total'],
-    cta: 'Add to Standard',
-    href: SIGN_UP_URL,
-  },
-  {
-    name: 'Pro',
-    price: 'A$300',
-    priceDetail: '/month',
-    bestFor: 'Run a larger operation with predictable pricing',
-    description: 'Ten locations at the same A$30 per-location monthly rate.',
-    included: ['10 locations', '50 first-aid kits', '60 SightScans each month'],
-    cta: 'Choose Pro',
-    href: SIGN_UP_URL,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom quote',
-    priceDetail: '',
-    bestFor: 'Coordinate a larger rollout',
-    description: 'Shape a negotiated package around your organisation, rollout needs and required support.',
-    included: ['Allowances agreed for your rollout', 'Services agreed for your organisation'],
-    cta: 'Contact sales',
-    href: 'mailto:info.safetysight@gmail.com?subject=SafetySight%20Enterprise',
-  },
-]
-
 const productItems = [
   { name: 'Gauze swabs', date: '12 Mar 2027', state: 'Review soon', tone: 'warning' },
   { name: 'Antiseptic wipes', date: '14 Aug 2027', state: 'Recorded', tone: 'ok' },
@@ -169,7 +115,7 @@ export default function LandingPage() {
         <div className="mx-auto flex h-16 max-w-[1360px] items-center justify-between rounded-full border border-white/70 bg-white/90 px-4 shadow-[0_10px_35px_rgba(16,42,67,0.10)] backdrop-blur-xl sm:px-6">
           <Brand className="h-12 w-auto" />
           <div className="hidden items-center gap-7 text-sm font-semibold text-[#626D7B] md:flex">
-            <a href="#product" className="hover:text-[#0F766E]">Product</a><a href="#workflow" className="hover:text-[#0F766E]">How it works</a><a href="#pricing" className="hover:text-[#0F766E]">Pricing</a><a href="#about" className="hover:text-[#0F766E]">About</a><a href="#scope" className="hover:text-[#0F766E]">Scope</a>
+            <a href="#product" className="hover:text-[#0F766E]">Product</a><a href="#workflow" className="hover:text-[#0F766E]">How it works</a><a href="/pricing" className="hover:text-[#0F766E]">Pricing</a><a href="#about" className="hover:text-[#0F766E]">About</a><a href="#scope" className="hover:text-[#0F766E]">Scope</a>
           </div>
           <div className="hidden items-center gap-4 sm:flex">
             <a href={SIGN_IN_URL} className="px-2 py-2 text-sm font-semibold text-[#626D7B] hover:text-[#0F766E]">Sign in</a><PrimaryLink className="min-h-10 px-5 py-2">Sign up</PrimaryLink>
@@ -181,7 +127,7 @@ export default function LandingPage() {
         {mobileOpen && (
           <div className="mx-auto mt-2 max-w-[1360px] rounded-2xl border border-[#D9E1E7] bg-white p-4 shadow-xl md:hidden">
             <div className="grid gap-1 text-sm font-semibold text-[#374151]">
-              {[["#product", "Product"], ["#workflow", "How it works"], ["#pricing", "Pricing"], ["#about", "About"], ["#scope", "Scope"]].map(([href, label]) => <a key={href} href={href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 hover:bg-[#E8F7F5]">{label}</a>)}
+              {[["#product", "Product"], ["#workflow", "How it works"], ["/pricing", "Pricing"], ["#about", "About"], ["#scope", "Scope"]].map(([href, label]) => <a key={href} href={href} onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-3 hover:bg-[#E8F7F5]">{label}</a>)}
               <a href={SIGN_IN_URL} className="rounded-lg px-3 py-3 hover:bg-[#E8F7F5]">Sign in</a><PrimaryLink className="mt-2 w-full">Sign up</PrimaryLink>
             </div>
           </div>
@@ -254,38 +200,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="pricing" className="scroll-mt-20 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-            <div>
-              <div className="mb-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#626D7B]">Choose a plan</div>
-              <h2 className="max-w-xl font-serif-display text-4xl leading-[1.05] text-[#1F2937] sm:text-5xl">A practical place to start, with room to grow.</h2>
-            </div>
-            <p className="max-w-2xl text-lg leading-relaxed text-[#626D7B] lg:justify-self-end">Choose a plan based on the number of locations, kits and SightScans your organisation needs.</p>
-          </div>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {plans.map((plan) => (
-              <article key={plan.name} className={`relative flex min-h-[390px] flex-col rounded-[1.25rem] border p-7 sm:p-8 ${plan.featured ? 'border-[#1FB6A6] bg-[#E8F7F5] shadow-[0_18px_45px_rgba(31,41,55,0.09)]' : 'border-[#D9E1E7] bg-white'}`}>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#0F766E]">{plan.name}</p>
-                <div className="mt-5 flex min-h-[54px] items-end gap-2">
-                  <p className={`${plan.price.length > 8 ? 'text-3xl' : 'text-4xl'} font-extrabold tracking-[-0.035em] text-[#1F2937]`}>{plan.price}</p>
-                  <p className="pb-1 text-sm font-semibold text-[#626D7B]">{plan.priceDetail}</p>
-                </div>
-                <h3 className="mt-6 max-w-xs text-2xl font-bold leading-tight text-[#1F2937]">{plan.bestFor}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#626D7B]">{plan.description}</p>
-                <div className="my-7 h-px bg-[#D9E1E7]" />
-                <ul className="flex-1 space-y-4">
-                  {plan.included.map((item) => <li key={item} className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-[#374151]"><Check size={18} className="mt-0.5 shrink-0 text-[#1FB6A6]" aria-hidden="true" />{item}</li>)}
-                </ul>
-                <a href={plan.href} className={`mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F766E] focus-visible:ring-offset-2 ${plan.featured ? 'bg-[#0F766E] text-white' : 'border border-[#D9E1E7] text-[#0F766E] hover:border-[#0F766E] hover:bg-[#E8F7F5]'}`}>{plan.cta}<ArrowRight size={17} aria-hidden="true" /></a>
-              </article>
-            ))}
-          </div>
-          <p className="mt-6 text-sm leading-relaxed text-[#626D7B]">Prices are in Australian dollars. Standard and Pro use a consistent A$30 per-location monthly rate. Enterprise pricing is negotiated. Standard add-ons increase capacity one location at a time, up to 5 locations total.</p>
-        </div>
-      </section>
-
       <section className="relative isolate overflow-hidden py-24 sm:py-32">
         <img src="/images/queensland-landscape.png" alt="Regional Queensland landscape" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" /><div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-[1px]" />
         <div className="mx-auto max-w-4xl px-5 text-center">
@@ -300,7 +214,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="bg-[#1F2937] py-10 text-[#D9E1E7]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-center md:justify-between"><div><a href="#top" aria-label="SafetySight home" className="inline-flex w-fit"><img src="/images/safetysight-logo.png" alt="SafetySight" className="w-44 object-contain" /></a><p className="mt-1 text-xs font-semibold tracking-wide text-[#AEB8C5]">Turning Chaos into Clarity</p></div><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm"><a href="#product" className="hover:text-white">Product</a><a href="#workflow" className="hover:text-white">How it works</a><a href="#pricing" className="hover:text-white">Pricing</a><a href="#scope" className="hover:text-white">Product scope</a><a href="#about" className="hover:text-white">About</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="mailto:info.safetysight@gmail.com?subject=Security%20enquiry" className="hover:text-white">Security</a></div><p className="text-xs">© {new Date().getFullYear()} SafetySight</p></div>
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-center md:justify-between"><div><a href="#top" aria-label="SafetySight home" className="inline-flex w-fit"><img src="/images/safetysight-logo.png" alt="SafetySight" className="w-44 object-contain" /></a><p className="mt-1 text-xs font-semibold tracking-wide text-[#AEB8C5]">Turning Chaos into Clarity</p></div><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm"><a href="#product" className="hover:text-white">Product</a><a href="#workflow" className="hover:text-white">How it works</a><a href="/pricing" className="hover:text-white">Pricing</a><a href="#scope" className="hover:text-white">Product scope</a><a href="#about" className="hover:text-white">About</a><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><a href="mailto:info.safetysight@gmail.com?subject=Security%20enquiry" className="hover:text-white">Security</a></div><p className="text-xs">© {new Date().getFullYear()} SafetySight</p></div>
       </footer>
     </div>
   )
